@@ -1,0 +1,11 @@
+{
+  "name": "fun-project-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "collect": "node scripts/collect-public-data.mjs",
+    "check": "node scripts/smoke-test.mjs"
+  }
+}
+

@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日趣味项目总览仪表盘</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --panel-strong: #eef6f5;
+      --ink: #172026;
+      --muted: #5d6875;
+      --line: #d9e0e8;
+      --teal: #0f766e;
+      --teal-dark: #115e59;
+      --amber: #b45309;
+      --rose: #be123c;
+      --blue: #2563eb;
+      --shadow: 0 18px 46px rgba(23, 32, 38, 0.08);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--teal-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button {
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      color: var(--ink);
+      cursor: pointer;
+      transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    button:hover {
+      border-color: var(--teal);
+      transform: translateY(-1px);
+    }
+
+    button[aria-pressed="true"] {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #ffffff;
+    }
+
+    .shell {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 36px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+      padding: 18px 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.65rem, 4vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 860px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      white-space: nowrap;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .metric {
+      min-height: 108px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 2.05rem;
+      line-height: 1;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    section {
+      margin-top: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 16px 0;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .panel-body {
+      padding: 16px;
+    }
+
+    .narrative {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
+      gap: 18px;
+      margin: 18px 0;
+    }
+
+    .story {
+      padding: 18px;
+      border-left: 4px solid var(--teal);
+      background: var(--panel-strong);
+      border-radius: var(--radius);
+    }
+
+    .story p {
+      margin: 0;
+    }
+
+    .highlight-list,
+    .change-list,
+    .timeline-list,
+    .check-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .highlight-list a,
+    .change-list a {
+      font-weight: 700;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .status-row:last-child {
+      border-bottom: 0;
+    }
+
+    .status-pill {
+      min-width: 74px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e6f4f1;
+      color: var(--teal-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .status-pill.is-missing {
+      background: #fff4e5;
+      color: var(--amber);
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) repeat(3, minmax(130px, 0.36fr));
+      gap: 10px;
+      align-items: center;
+      margin: 18px 0 12px;
+    }
+
+    .toolbar input,
+    .toolbar select {
+      min-height: 42px;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      color: var(--ink);
+      padding: 0 12px;
+    }
+
+    .view-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 14px;
+    }
+
+    .view-tabs button {
+      padding: 0 12px;
+    }
+
+    .feedback {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .project-card {
+      display: grid;
+      gap: 12px;
+      min-height: 260px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .project-title {
+      display: flex;
+      gap: 10px;
+      align-items: start;
+      justify-content: space-between;
+    }
+
+    .project-title h3 {
+      margin: 0;
+      overflow-wrap: anywhere;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 0.76rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge.today {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .badge.review {
+      background: #ffe4e6;
+      color: var(--rose);
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .card-actions a,
+    .card-actions button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 11px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+    }
+
+    .card-actions a {
+      border: 1px solid var(--teal);
+      background: var(--teal);
+      color: #ffffff;
+    }
+
+    .details {
+      display: none;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+
+    .details.is-open {
+      display: block;
+    }
+
+    .detail-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .detail-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.82rem;
+    }
+
+    .detail-item p {
+      margin: 0;
+    }
+
+    .file-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .file-pill {
+      max-width: 100%;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      overflow-wrap: anywhere;
+    }
+
+    .chart {
+      display: grid;
+      gap: 10px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr) 30px;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.86rem;
+    }
+
+    .bar-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .bar-track {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e9edf3;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--teal), var(--blue));
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .timeline-date {
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .empty {
+      padding: 22px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 980px) {
+      .metric-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .main-grid,
+      .narrative {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100% - 22px, 1180px);
+        padding-top: 16px;
+      }
+
+      .topbar {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .metric-grid,
+      .project-grid,
+      .toolbar {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        min-height: 92px;
+      }
+
+      .project-card {
+        min-height: auto;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Fun project dashboard</p>
+        <h1 id="page-title">每日趣味项目总览仪表盘</h1>
+        <p id="page-subtitle" class="subtitle">正在载入公开 GitHub 项目数据。</p>
+      </div>
+      <a id="repo-link" class="source-link" href="https://github.com/bte808/fun-project-dashboard">Dashboard 仓库</a>
+    </header>
+
+    <main>
+      <section class="metric-grid" id="metrics" aria-label="总览指标"></section>
+
+      <section class="narrative" aria-label="今日叙事">
+        <div class="story">
+          <h2>今天发生了什么</h2>
+          <p id="today-story" class="subtitle">待补充</p>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <h2>最值得点开</h2>
+          </div>
+          <div class="panel-body">
+            <ul id="highlights" class="highlight-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="main-grid">
+        <div>
+          <section aria-label="筛选控件">
+            <div class="view-tabs" id="view-tabs"></div>
+            <div class="toolbar">
+              <input id="search" type="search" placeholder="搜索项目、用途、技术栈" autocomplete="off" aria-label="搜索项目">
+              <select id="tech-filter" aria-label="按技术筛选"></select>
+              <select id="type-filter" aria-label="按类型筛选"></select>
+              <select id="sort-select" aria-label="排序方式">
+                <option value="updated-desc">最近更新优先</option>
+                <option value="created-desc">最新创建优先</option>
+                <option value="name-asc">名称 A-Z</option>
+                <option value="commits-desc">今日 commit 多优先</option>
+              </select>
+            </div>
+            <p id="feedback" class="feedback">待补充</p>
+          </section>
+
+          <section aria-label="项目卡片网格">
+            <div id="project-grid" class="project-grid"></div>
+          </section>
+        </div>
+
+        <aside>
+          <section class="panel" aria-label="技术分布">
+            <div class="panel-header">
+              <h2>技术分布</h2>
+            </div>
+            <div class="panel-body">
+              <div id="tech-chart" class="chart"></div>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="今日变动">
+            <div class="panel-header">
+              <h2>今日变动</h2>
+            </div>
+            <div class="panel-body">
+              <ul id="change-list" class="change-list"></ul>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="项目时间线">
+            <div class="panel-header">
+              <h2>项目时间线</h2>
+            </div>
+            <div class="panel-body">
+              <ul id="timeline" class="timeline-list"></ul>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="自动化检测">
+            <div class="panel-header">
+              <h2>自动化检测</h2>
+            </div>
+            <div class="panel-body">
+              <div id="automation-checks" class="check-list"></div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer id="footer">Dashboard version 0.1.0</footer>
+  </div>
+
+  <script src="data/projects.js"></script>
+  <script>
+    const dashboardData = window.FUN_PROJECT_DASHBOARD_DATA || {
+      meta: { title: "每日趣味项目总览仪表盘", todayStory: "数据未载入。", highlights: [] },
+      metrics: { totalProjects: 0, todayNew: 0, todayUpdated: 0, todayCommits: 0, needsReview: 0, techDistribution: {} },
+      projects: []
+    };
+
+    const state = {
+      view: "today",
+      query: "",
+      tech: "all",
+      type: "all",
+      sort: "updated-desc",
+      expanded: new Set()
+    };
+
+    const elements = {
+      title: document.querySelector("#page-title"),
+      subtitle: document.querySelector("#page-subtitle"),
+      repoLink: document.querySelector("#repo-link"),
+      metrics: document.querySelector("#metrics"),
+      todayStory: document.querySelector("#today-story"),
+      highlights: document.querySelector("#highlights"),
+      viewTabs: document.querySelector("#view-tabs"),
+      search: document.querySelector("#search"),
+      techFilter: document.querySelector("#tech-filter"),
+      typeFilter: document.querySelector("#type-filter"),
+      sortSelect: document.querySelector("#sort-select"),
+      feedback: document.querySelector("#feedback"),
+      projectGrid: document.querySelector("#project-grid"),
+      techChart: document.querySelector("#tech-chart"),
+      changeList: document.querySelector("#change-list"),
+      timeline: document.querySelector("#timeline"),
+      automationChecks: document.querySelector("#automation-checks"),
+      footer: document.querySelector("#footer")
+    };
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function formatDate(value) {
+      if (!value) return "待补充";
+      return new Intl.DateTimeFormat("zh-CN", {
+        timeZone: "Asia/Shanghai",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).format(new Date(value));
+    }
+
+    function formatDateTime(value) {
+      if (!value) return "待补充";
+      return new Intl.DateTimeFormat("zh-CN", {
+        timeZone: "Asia/Shanghai",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+      }).format(new Date(value));
+    }
+
+    function projectSearchText(project) {
+      return [
+        project.name,
+        project.description,
+        project.primaryLanguage,
+        project.type,
+        project.readme.oneLine,
+        project.readme.usefulness,
+        project.readme.whyFun,
+        project.readme.runCommand
+      ].join(" ").toLowerCase();
+    }
+
+    function getFilteredProjects() {
+      const query = state.query.trim().toLowerCase();
+      let projects = dashboardData.projects.filter((project) => {
+        if (state.view === "today" && !project.today.updated) return false;
+        if (state.view === "review" && !project.needsReview) return false;
+        if (state.tech !== "all" && project.primaryLanguage !== state.tech) return false;
+        if (state.type !== "all" && project.type !== state.type) return false;
+        if (query && !projectSearchText(project).includes(query)) return false;
+        return true;
+      });
+
+      projects = projects.slice().sort((a, b) => {
+        if (state.sort === "name-asc") return a.name.localeCompare(b.name);
+        if (state.sort === "created-desc") return new Date(b.createdAt) - new Date(a.createdAt);
+        if (state.sort === "commits-desc") return b.today.commitCount - a.today.commitCount || new Date(b.updatedAt) - new Date(a.updatedAt);
+        return new Date(b.updatedAt) - new Date(a.updatedAt);
+      });
+
+      return projects;
+    }
+
+    function renderMetrics() {
+      const metrics = [
+        ["项目数", dashboardData.metrics.totalProjects],
+        ["今日新建", dashboardData.metrics.todayNew],
+        ["今日更新", dashboardData.metrics.todayUpdated],
+        ["今日 commit", dashboardData.metrics.todayCommits],
+        ["需要复查", dashboardData.metrics.needsReview]
+      ];
+
+      elements.metrics.innerHTML = metrics.map(([label, value]) => `
+        <div class="metric">
+          <span>${escapeHtml(label)}</span>
+          <strong>${escapeHtml(value)}</strong>
+        </div>
+      `).join("");
+    }
+
+    function renderHighlights() {
+      const highlights = dashboardData.meta.highlights || [];
+      elements.highlights.innerHTML = highlights.length
+        ? highlights.map((item) => `
+          <li>
+            <a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a>
+            <div class="muted">${escapeHtml(item.reason)}</div>
+          </li>
+        `).join("")
+        : `<li class="muted">未检测到今日值得置顶的公开变动。</li>`;
+    }
+
+    function renderViewTabs() {
+      const views = [
+        ["today", "今日更新", dashboardData.projects.filter((project) => project.today.updated).length],
+        ["all", "全部项目", dashboardData.projects.length],
+        ["review", "需要复查", dashboardData.projects.filter((project) => project.needsReview).length]
+      ];
+
+      elements.viewTabs.innerHTML = views.map(([key, label, count]) => `
+        <button type="button" data-view="${key}" aria-pressed="${state.view === key}">
+          ${escapeHtml(label)} ${escapeHtml(count)}
+        </button>
+      `).join("");
+    }
+
+    function renderFilters() {
+      const techs = [...new Set(dashboardData.projects.map((project) => project.primaryLanguage))].sort();
+      const types = [...new Set(dashboardData.projects.map((project) => project.type))].sort();
+
+      elements.techFilter.innerHTML = `<option value="all">全部技术</option>${techs.map((tech) => `
+        <option value="${escapeHtml(tech)}">${escapeHtml(tech)}</option>
+      `).join("")}`;
+      elements.typeFilter.innerHTML = `<option value="all">全部类型</option>${types.map((type) => `
+        <option value="${escapeHtml(type)}">${escapeHtml(type)}</option>
+      `).join("")}`;
+      elements.techFilter.value = state.tech;
+      elements.typeFilter.value = state.type;
+    }
+
+    function renderTechChart() {
+      const entries = Object.entries(dashboardData.metrics.techDistribution || {}).sort((a, b) => b[1] - a[1]);
+      const max = Math.max(...entries.map(([, count]) => count), 1);
+      elements.techChart.innerHTML = entries.length
+        ? entries.map(([label, count]) => `
+          <div class="bar-row">
+            <span class="bar-label" title="${escapeHtml(label)}">${escapeHtml(label)}</span>
+            <span class="bar-track"><span class="bar-fill" style="width: ${(count / max) * 100}%"></span></span>
+            <strong>${escapeHtml(count)}</strong>
+          </div>
+        `).join("")
+        : `<div class="empty">暂无技术分布。</div>`;
+    }
+
+    function renderChanges() {
+      const projects = dashboardData.projects.filter((project) => project.today.updated);
+      const items = projects.flatMap((project) => {
+        if (!project.today.commits.length) {
+          return [{
+            project,
+            label: "仓库更新时间落在今日，但未检测到今日 commit 明细。",
+            url: project.url,
+            time: project.updatedAt
+          }];
+        }
+        return project.today.commits.map((commit) => ({
+          project,
+          label: commit.message,
+          url: commit.url,
+          time: commit.committedAt
+        }));
+      }).sort((a, b) => new Date(b.time) - new Date(a.time));
+
+      elements.changeList.innerHTML = items.length
+        ? items.map((item) => `
+          <li>
+            <a href="${escapeHtml(item.url)}">${escapeHtml(item.project.name)}</a>
+            <div>${escapeHtml(item.label)}</div>
+            <div class="muted">${escapeHtml(formatDateTime(item.time))}</div>
+          </li>
+        `).join("")
+        : `<li class="muted">未检测到今日公开变动。</li>`;
+    }
+
+    function renderTimeline() {
+      const grouped = dashboardData.projects.reduce((acc, project) => {
+        const date = project.createdDateShanghai || "待补充";
+        if (!acc[date]) acc[date] = [];
+        acc[date].push(project);
+        return acc;
+      }, {});
+
+      elements.timeline.innerHTML = Object.entries(grouped)
+        .sort((a, b) => b[0].localeCompare(a[0]))
+        .map(([date, projects]) => `
+          <li class="timeline-item">
+            <div class="timeline-date">${escapeHtml(date)}</div>
+            <div>
+              ${projects.map((project) => `
+                <div><a href="${escapeHtml(project.url)}">${escapeHtml(project.name)}</a> <span class="muted">${escapeHtml(project.type)}</span></div>
+              `).join("")}
+            </div>
+          </li>
+        `).join("");
+    }
+
+    function renderAutomationChecks() {
+      const labels = {
+        dailyIncubator: "每日孵化",
+        oldProjectMaintenance: "旧项目维护",
+        wednesdayBooster: "周三加料",
+        sundayHealthCheck: "周日体检"
+      };
+      const checks = dashboardData.meta.automationChecks || {};
+
+      elements.automationChecks.innerHTML = Object.entries(labels).map(([key, label]) => {
+        const check = checks[key] || { label: "未检测到", status: "not_detected", note: "未检测到公开结果。" };
+        return `
+          <div class="status-row">
+            <span class="status-pill ${check.status === "detected" ? "" : "is-missing"}">${escapeHtml(check.label)}</span>
+            <div>
+              <strong>${escapeHtml(label)}</strong>
+              <div class="muted">${escapeHtml(check.note)}</div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderProjects() {
+      const projects = getFilteredProjects();
+      elements.feedback.textContent = `当前显示 ${projects.length} 个项目；搜索和筛选会即时更新卡片、详情和状态。`;
+
+      if (!projects.length) {
+        elements.projectGrid.innerHTML = `<div class="empty">没有匹配当前条件的项目。</div>`;
+        return;
+      }
+
+      elements.projectGrid.innerHTML = projects.map((project) => {
+        const open = state.expanded.has(project.name);
+        const fileText = project.today.files.length
+          ? project.today.files.map((file) => `<span class="file-pill">${escapeHtml(file.status)} · ${escapeHtml(file.filename)}</span>`).join("")
+          : `<span class="file-pill">今日未检测到文件明细</span>`;
+        const commitText = project.today.commits.length
+          ? project.today.commits.map((commit) => `<div><a href="${escapeHtml(commit.url)}">${escapeHtml(commit.shortSha)}</a> ${escapeHtml(commit.message)}</div>`).join("")
+          : `<div class="muted">今日未检测到 commit 明细。</div>`;
+
+        return `
+          <article class="project-card">
+            <div class="project-title">
+              <h3><a href="${escapeHtml(project.url)}">${escapeHtml(project.name)}</a></h3>
+            </div>
+            <div class="badge-row">
+              <span class="badge">${escapeHtml(project.primaryLanguage)}</span>
+              <span class="badge">${escapeHtml(project.type)}</span>
+              ${project.today.created ? `<span class="badge today">今日新建</span>` : ""}
+              ${project.today.updated ? `<span class="badge today">今日更新</span>` : ""}
+              ${project.needsReview ? `<span class="badge review">需要复查</span>` : ""}
+            </div>
+            <p><strong>能干嘛：</strong>${escapeHtml(project.readme.oneLine)}</p>
+            <p><strong>有什么用：</strong>${escapeHtml(project.readme.usefulness)}</p>
+            <p><strong>为什么好玩：</strong>${escapeHtml(project.readme.whyFun)}</p>
+            <div class="card-actions">
+              <a href="${escapeHtml(project.url)}">打开仓库</a>
+              <button type="button" data-toggle="${escapeHtml(project.name)}" aria-expanded="${open}">
+                ${open ? "收起详情" : "展开详情"}
+              </button>
+            </div>
+            <div class="details ${open ? "is-open" : ""}" id="details-${escapeHtml(project.name)}">
+              <div class="detail-grid">
+                <div class="detail-item">
+                  <strong>创建 / 更新</strong>
+                  <p>${escapeHtml(formatDate(project.createdAt))} / ${escapeHtml(formatDate(project.updatedAt))}</p>
+                </div>
+                <div class="detail-item">
+                  <strong>运行方式或验证线索</strong>
+                  <p>${escapeHtml(project.readme.runCommand)}</p>
+                </div>
+                <div class="detail-item">
+                  <strong>最近验证结果</strong>
+                  <p>${escapeHtml(project.readme.verification)}</p>
+                </div>
+                <div class="detail-item">
+                  <strong>今日 commit</strong>
+                  ${commitText}
+                </div>
+                <div class="detail-item">
+                  <strong>今日新增 / 修改文件</strong>
+                  <div class="file-list">${fileText}</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function renderAll() {
+      elements.title.textContent = dashboardData.meta.title;
+      elements.subtitle.textContent = `${dashboardData.meta.todayStory} 数据源：${dashboardData.meta.source}。`;
+      elements.repoLink.href = dashboardData.meta.repositoryUrl;
+      elements.todayStory.textContent = dashboardData.meta.todayStory;
+      elements.footer.textContent = `Dashboard version 0.1.0 · 最近更新时间 ${formatDateTime(dashboardData.meta.generatedAt)} · ${dashboardData.meta.scanRule}`;
+
+      renderMetrics();
+      renderHighlights();
+      renderViewTabs();
+      renderFilters();
+      renderTechChart();
+      renderChanges();
+      renderTimeline();
+      renderAutomationChecks();
+      renderProjects();
+    }
+
+    elements.viewTabs.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-view]");
+      if (!button) return;
+      state.view = button.dataset.view;
+      renderViewTabs();
+      renderProjects();
+    });
+
+    elements.search.addEventListener("input", (event) => {
+      state.query = event.target.value;
+      renderProjects();
+    });
+
+    elements.techFilter.addEventListener("change", (event) => {
+      state.tech = event.target.value;
+      renderProjects();
+    });
+
+    elements.typeFilter.addEventListener("change", (event) => {
+      state.type = event.target.value;
+      renderProjects();
+    });
+
+    elements.sortSelect.addEventListener("change", (event) => {
+      state.sort = event.target.value;
+      renderProjects();
+    });
+
+    elements.projectGrid.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-toggle]");
+      if (!button) return;
+      const projectName = button.dataset.toggle;
+      if (state.expanded.has(projectName)) {
+        state.expanded.delete(projectName);
+      } else {
+        state.expanded.add(projectName);
+      }
+      renderProjects();
+    });
+
+    renderAll();
+  </script>
+</body>
+</html>
+

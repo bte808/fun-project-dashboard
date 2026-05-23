@@ -159,10 +159,12 @@ function runCommandFrom(text = "") {
 function inferType(repoName, readme, description) {
   const name = repoName.toLowerCase();
   const haystack = `${repoName} ${readme} ${description || ""}`.toLowerCase();
-  if (/meeting|brief/.test(name)) return "效率工具";
-  if (/audio|sound|music|orbit|sequencer/.test(haystack)) return "音频互动";
-  if (/concept|learn|study|quiz|bridge|c语言|c concept/.test(haystack)) return "学习练习";
-  if (/dice|puzzle|game|route|signal|chain|tap|hue|color/.test(haystack)) return "浏览器小游戏";
+  if (/meeting|brief|link|janitor|rename|blueprint/.test(name)) return "效率工具";
+  if (/pulse-poem|orbit-mods/.test(name) || /\b(audio|music|rhythm|sequencer)\b|orbit sequencer/.test(haystack)) return "音频互动";
+  if (/time-heist|dice-target|signal-bento|hue-chain|trace-tap/.test(name)) return "浏览器小游戏";
+  if (/claim|ledger/.test(name) || /\bacademic[- ]writing\b|\bevidence ledger\b/.test(haystack)) return "文字创作";
+  if (/concept|learn|study|quiz|bridge|c语言|c concept|recall prompt/.test(haystack)) return "学习练习";
+  if (/dice|puzzle|game|route|signal|chain|tap|hue|color|time heist/.test(haystack)) return "浏览器小游戏";
   if (/meeting|notes|brief|action/.test(haystack)) return "效率工具";
   if (/poem|writing|story|poetry|text/.test(haystack)) return "文字创作";
   return "互动小品";

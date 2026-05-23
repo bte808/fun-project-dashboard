@@ -6,7 +6,7 @@
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-05-23",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-05-23T09:02:10.131Z",
+    "generatedAt": "2026-05-23T14:04:51.277Z",
     "generatedAtShanghaiDate": "2026-05-23",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
@@ -14,7 +14,7 @@
       "startIso": "2026-05-22T16:00:00.000Z",
       "endIso": "2026-05-23T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 3 个新建项目、3 个今日有变动的项目，共 4 个 commit。",
+    "todayStory": "今天公开仓库中检测到 3 个新建项目、5 个今日有变动的项目，共 9 个 commit。",
     "automationChecks": {
       "dailyIncubator": {
         "status": "detected",
@@ -22,9 +22,9 @@
         "note": "公开 fun-* 仓库中检测到 3 个今天创建的项目。"
       },
       "oldProjectMaintenance": {
-        "status": "not_detected",
-        "label": "未检测到",
-        "note": "未检测到今天维护旧项目的公开 commit。"
+        "status": "detected",
+        "label": "已检测到",
+        "note": "检测到 2 个旧项目今天有公开 commit。"
       },
       "wednesdayBooster": {
         "status": "not_detected",
@@ -52,14 +52,19 @@
         "name": "fun-20260523-c-claim-ledger",
         "url": "https://github.com/bte808/fun-20260523-c-claim-ledger",
         "reason": "今天新建；Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger"
+      },
+      {
+        "name": "fun-20260522-b-link-janitor",
+        "url": "https://github.com/bte808/fun-20260522-b-link-janitor",
+        "reason": "今天更新 1 个 commit；Local-first link cleaner for deduping tab dumps and stripping custom tracking params"
       }
     ]
   },
   "metrics": {
     "totalProjects": 12,
     "todayNew": 3,
-    "todayUpdated": 3,
-    "todayCommits": 4,
+    "todayUpdated": 5,
+    "todayCommits": 9,
     "needsReview": 10,
     "techDistribution": {
       "JavaScript": 12
@@ -72,12 +77,12 @@
       "description": "Tiny browser game about rebuilding a scrambled museum timeline",
       "defaultBranch": "main",
       "createdAt": "2026-05-23T03:09:03Z",
-      "updatedAt": "2026-05-23T03:09:16Z",
+      "updatedAt": "2026-05-23T10:12:43Z",
       "createdDateShanghai": "2026-05-23",
       "updatedDateShanghai": "2026-05-23",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 18860,
+        "JavaScript": 19228,
         "CSS": 6678,
         "HTML": 2130
       },
@@ -92,8 +97,38 @@
       "today": {
         "created": true,
         "updated": true,
-        "commitCount": 1,
+        "commitCount": 2,
         "commits": [
+          {
+            "sha": "3226652df453bf7d71d20fadfd6603f6c43e2d1f",
+            "shortSha": "3226652",
+            "url": "https://github.com/bte808/fun-20260523-a-time-heist/commit/3226652df453bf7d71d20fadfd6603f6c43e2d1f",
+            "message": "Fix time heist lock transition",
+            "committedAt": "2026-05-23T10:12:24Z",
+            "files": [
+              {
+                "filename": "LICENSE",
+                "status": "added",
+                "additions": 21,
+                "deletions": 0,
+                "changes": 21
+              },
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 21,
+                "deletions": 5,
+                "changes": 26
+              }
+            ]
+          },
           {
             "sha": "21ffbb82c561e623a89173dda48d765025ed7030",
             "shortSha": "21ffbb8",
@@ -174,6 +209,12 @@
             "deletions": 0
           },
           {
+            "filename": "LICENSE",
+            "status": "added",
+            "additions": 21,
+            "deletions": 0
+          },
+          {
             "filename": "package.json",
             "status": "added",
             "additions": 18,
@@ -220,16 +261,16 @@
       "description": "Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger",
       "defaultBranch": "main",
       "createdAt": "2026-05-23T03:04:38Z",
-      "updatedAt": "2026-05-23T03:04:52Z",
+      "updatedAt": "2026-05-23T10:50:20Z",
       "createdDateShanghai": "2026-05-23",
       "updatedDateShanghai": "2026-05-23",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 17968,
-        "CSS": 7665,
-        "HTML": 4530
+        "JavaScript": 19938,
+        "CSS": 8467,
+        "HTML": 4626
       },
-      "type": "音频互动",
+      "type": "文字创作",
       "readme": {
         "oneLine": "Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger",
         "usefulness": "Checking a literature-review paragraph before adding it to a paper draft. Turning lecture notes into a source-aware revision checklist. Reviewing lab-report conclusions against observation notes. Marking which claims in...",
@@ -240,8 +281,45 @@
       "today": {
         "created": true,
         "updated": true,
-        "commitCount": 1,
+        "commitCount": 2,
         "commits": [
+          {
+            "sha": "c9ce67e56fbc440b04b26fd544e9443ade20086c",
+            "shortSha": "c9ce67e",
+            "url": "https://github.com/bte808/fun-20260523-c-claim-ledger/commit/c9ce67e56fbc440b04b26fd544e9443ade20086c",
+            "message": "Add claim status filters",
+            "committedAt": "2026-05-23T10:50:11Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 1,
+                "deletions": 0,
+                "changes": 1
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 1,
+                "deletions": 0,
+                "changes": 1
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 73,
+                "deletions": 8,
+                "changes": 81
+              },
+              {
+                "filename": "src/styles.css",
+                "status": "modified",
+                "additions": 50,
+                "deletions": 0,
+                "changes": 50
+              }
+            ]
+          },
           {
             "sha": "6eede9deb20a6f28ec8179453666d1ad51da4df2",
             "shortSha": "6eede9d",
@@ -368,16 +446,16 @@
       "description": "Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames.",
       "defaultBranch": "main",
       "createdAt": "2026-05-23T03:00:14Z",
-      "updatedAt": "2026-05-23T03:02:40Z",
+      "updatedAt": "2026-05-23T10:28:49Z",
       "createdDateShanghai": "2026-05-23",
       "updatedDateShanghai": "2026-05-23",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 12204,
+        "JavaScript": 15088,
         "CSS": 4549,
-        "HTML": 4119
+        "HTML": 4388
       },
-      "type": "文字创作",
+      "type": "效率工具",
       "readme": {
         "oneLine": "Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames.",
         "usefulness": "People often know how they want a folder renamed but do not want to risk touching files blindly. This keeps the planning step fast, private, and reversible.",
@@ -388,8 +466,59 @@
       "today": {
         "created": true,
         "updated": true,
-        "commitCount": 2,
+        "commitCount": 3,
         "commits": [
+          {
+            "sha": "c1877a6b8e43d0acd8cf179cdfbbaba99127e08c",
+            "shortSha": "c1877a6",
+            "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint/commit/c1877a6b8e43d0acd8cf179cdfbbaba99127e08c",
+            "message": "Add safer cross-platform rename exports",
+            "committedAt": "2026-05-23T10:28:29Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 3,
+                "changes": 7
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 0,
+                "changes": 4
+              },
+              {
+                "filename": "scripts/check-static.js",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 0,
+                "changes": 3
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 19,
+                "deletions": 1,
+                "changes": 20
+              },
+              {
+                "filename": "src/renameBlueprint.mjs",
+                "status": "modified",
+                "additions": 37,
+                "deletions": 2,
+                "changes": 39
+              },
+              {
+                "filename": "test/renameBlueprint.test.js",
+                "status": "modified",
+                "additions": 30,
+                "deletions": 1,
+                "changes": 31
+              }
+            ]
+          },
           {
             "sha": "de8d4e09e2bec6d026bbfe321a52de926dc4e0ab",
             "shortSha": "de8d4e0",
@@ -568,21 +697,21 @@
     {
       "name": "fun-20260522-b-link-janitor",
       "url": "https://github.com/bte808/fun-20260522-b-link-janitor",
-      "description": "待补充",
+      "description": "Local-first link cleaner for deduping tab dumps and stripping custom tracking params",
       "defaultBranch": "main",
       "createdAt": "2026-05-22T04:05:27Z",
-      "updatedAt": "2026-05-22T04:05:35Z",
+      "updatedAt": "2026-05-23T09:49:21Z",
       "createdDateShanghai": "2026-05-22",
-      "updatedDateShanghai": "2026-05-22",
+      "updatedDateShanghai": "2026-05-23",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 16513,
-        "CSS": 5555,
-        "HTML": 2965
+        "JavaScript": 18234,
+        "CSS": 6100,
+        "HTML": 3695
       },
       "type": "效率工具",
       "readme": {
-        "oneLine": "Link Janitor is a local-first webpage for turning messy pasted link dumps into a clean, grouped export.",
+        "oneLine": "Local-first link cleaner for deduping tab dumps and stripping custom tracking params",
         "usefulness": "Link dumps are noisy. This keeps the cleanup step private, fast, and repeatable, with no login, API key, extension, or server-side storage.",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5182",
@@ -590,10 +719,112 @@
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "abe395384519c2904ee6ade727b10f7b998b6646",
+            "shortSha": "abe3953",
+            "url": "https://github.com/bte808/fun-20260522-b-link-janitor/commit/abe395384519c2904ee6ade727b10f7b998b6646",
+            "message": "Add custom tracking cleanup",
+            "committedAt": "2026-05-23T09:48:56Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 2,
+                "changes": 6
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 11,
+                "deletions": 4,
+                "changes": 15
+              },
+              {
+                "filename": "scripts/check-static.js",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 0,
+                "changes": 3
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 7,
+                "deletions": 2,
+                "changes": 9
+              },
+              {
+                "filename": "src/linkJanitor.mjs",
+                "status": "modified",
+                "additions": 18,
+                "deletions": 1,
+                "changes": 19
+              },
+              {
+                "filename": "src/styles.css",
+                "status": "modified",
+                "additions": 39,
+                "deletions": 1,
+                "changes": 40
+              },
+              {
+                "filename": "test/linkJanitor.test.js",
+                "status": "modified",
+                "additions": 12,
+                "deletions": 1,
+                "changes": 13
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 11,
+            "deletions": 4
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 2
+          },
+          {
+            "filename": "scripts/check-static.js",
+            "status": "modified",
+            "additions": 3,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 7,
+            "deletions": 2
+          },
+          {
+            "filename": "src/linkJanitor.mjs",
+            "status": "modified",
+            "additions": 18,
+            "deletions": 1
+          },
+          {
+            "filename": "src/styles.css",
+            "status": "modified",
+            "additions": 39,
+            "deletions": 1
+          },
+          {
+            "filename": "test/linkJanitor.test.js",
+            "status": "modified",
+            "additions": 12,
+            "deletions": 1
+          }
+        ]
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -613,7 +844,7 @@
         "CSS": 6093,
         "HTML": 2194
       },
-      "type": "学习练习",
+      "type": "浏览器小游戏",
       "readme": {
         "oneLine": "Daily color-chain browser puzzle with answer reveals",
         "usefulness": "It is a quick color-sense warmup. Designers can use it as a playful hue-matching drill, and anyone else can play a complete round in under a minute.",
@@ -703,16 +934,16 @@
       "description": "待补充",
       "defaultBranch": "main",
       "createdAt": "2026-05-21T02:12:25Z",
-      "updatedAt": "2026-05-21T02:12:33Z",
+      "updatedAt": "2026-05-23T09:29:19Z",
       "createdDateShanghai": "2026-05-21",
-      "updatedDateShanghai": "2026-05-21",
+      "updatedDateShanghai": "2026-05-23",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 15803,
-        "CSS": 7126,
+        "JavaScript": 17078,
+        "CSS": 7326,
         "HTML": 2956
       },
-      "type": "学习练习",
+      "type": "浏览器小游戏",
       "readme": {
         "oneLine": "Trace Tap is a tiny browser game about debugging by following clues through a call graph. Each round gives you an incident log, a clickable graph, and a short objective:...",
         "usefulness": "Modern developer tools keep making code relationships more visible. Recent public inspiration included a JavaScript Showoff thread with a graph visualizer and cycle finder, a small \"who called this function\" code analys...",
@@ -722,10 +953,73 @@
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "2ce0df7ca820a819c993ff2747b7a2c5a9613cbd",
+            "shortSha": "2ce0df7",
+            "url": "https://github.com/bte808/fun-20260521-trace-tap/commit/2ce0df7ca820a819c993ff2747b7a2c5a9613cbd",
+            "message": "Improve trace feedback",
+            "committedAt": "2026-05-23T09:29:00Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 1,
+                "changes": 4
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 29,
+                "deletions": 2,
+                "changes": 31
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 10,
+                "deletions": 0,
+                "changes": 10
+              },
+              {
+                "filename": "test/smoke.test.mjs",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 0,
+                "changes": 4
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 3,
+            "deletions": 1
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 29,
+            "deletions": 2
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 10,
+            "deletions": 0
+          },
+          {
+            "filename": "test/smoke.test.mjs",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 0
+          }
+        ]
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"

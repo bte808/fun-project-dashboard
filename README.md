@@ -8,6 +8,7 @@
 - 展示项目数、今日新建、今日更新、今日 commit 数、需要复查项目数和技术分布。
 - 按日期展示项目时间线，按项目卡片展示仓库链接、用途、趣味点、运行方式、验证线索和今日文件变动。
 - 支持搜索、技术筛选、类型筛选、排序、今日更新 / 全部项目 / 需要复查视图切换，以及项目详情展开。
+- 一键复制当天摘要，方便把项目数、新建/维护状态和值得点开的项目贴进日报或聊天。
 
 ## 有什么用
 
@@ -46,12 +47,13 @@ python3 -m http.server 5173
 手动刷新数据：
 
 ```bash
-RUN_DATE=2026-05-21 npm run collect
+RUN_DATE=YYYY-MM-DD npm run collect
 npm run check
 ```
+
+如果要让采集更稳定，可以临时传入 `GITHUB_TOKEN`，它只用于读取公开仓库 API，不会写入数据文件。
 
 ## 来源区
 
 - GitHub public repository API
 - `bte808` 公开仓库 README 与公开 commit 数据
-

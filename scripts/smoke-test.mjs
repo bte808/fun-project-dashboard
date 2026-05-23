@@ -35,12 +35,16 @@ const requiredText = [
   "今日 commit",
   "技术分布",
   "今日变动",
-  "项目时间线"
+  "项目时间线",
+  "复制今日摘要"
 ];
 
 for (const text of requiredText) {
   assert(html.includes(text), `index.html missing required text: ${text}`);
 }
 
-console.log(`Smoke test passed: ${data.projects.length} projects, ${data.metrics.todayCommits} commits today.`);
+assert(html.includes("id=\"copy-summary\""), "index.html is missing the copy summary button");
+assert(html.includes("function buildShareSummary"), "index.html is missing share summary builder");
+assert(html.includes("navigator.clipboard"), "index.html is missing clipboard support");
 
+console.log(`Smoke test passed: ${data.projects.length} projects, ${data.metrics.todayCommits} commits today.`);

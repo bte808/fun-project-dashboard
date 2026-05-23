@@ -109,7 +109,16 @@
       font-size: 1rem;
     }
 
-    .source-link {
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .source-link,
+    .summary-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -120,6 +129,12 @@
       background: #ffffff;
       box-shadow: var(--shadow);
       white-space: nowrap;
+    }
+
+    .summary-button.is-copied {
+      border-color: var(--teal);
+      background: var(--teal);
+      color: #ffffff;
     }
 
     .metric-grid {
@@ -511,6 +526,10 @@
         align-items: start;
       }
 
+      .top-actions {
+        justify-content: flex-start;
+      }
+
       .metric-grid,
       .project-grid,
       .toolbar {
@@ -539,7 +558,10 @@
         <h1 id="page-title">每日趣味项目总览仪表盘</h1>
         <p id="page-subtitle" class="subtitle">正在载入公开 GitHub 项目数据。</p>
       </div>
-      <a id="repo-link" class="source-link" href="https://github.com/bte808/fun-project-dashboard">Dashboard 仓库</a>
+      <div class="top-actions">
+        <button id="copy-summary" class="summary-button" type="button">复制今日摘要</button>
+        <a id="repo-link" class="source-link" href="https://github.com/bte808/fun-project-dashboard">Dashboard 仓库</a>
+      </div>
     </header>
 
     <main>
@@ -575,7 +597,7 @@
                 <option value="commits-desc">今日 commit 多优先</option>
               </select>
             </div>
-            <p id="feedback" class="feedback">待补充</p>
+            <p id="feedback" class="feedback" aria-live="polite">待补充</p>
           </section>
 
           <section aria-label="项目卡片网格">
@@ -647,6 +669,7 @@
       title: document.querySelector("#page-title"),
       subtitle: document.querySelector("#page-subtitle"),
       repoLink: document.querySelector("#repo-link"),
+      copySummary: document.querySelector("#copy-summary"),
       metrics: document.querySelector("#metrics"),
       todayStory: document.querySelector("#today-story"),
       highlights: document.querySelector("#highlights"),
@@ -705,6 +728,60 @@
         project.readme.whyFun,
         project.readme.runCommand
       ].join(" ").toLowerCase();
+    }
+
+    function buildShareSummary() {
+      const meta = dashboardData.meta || {};
+      const metrics = dashboardData.metrics || {};
+      const highlights = (meta.highlights || [])
+        .slice(0, 3)
+        .map((item) => `${item.name}: ${item.reason}`);
+
+      return [
+        meta.title || "每日趣味项目总览仪表盘",
+        meta.todayStory || "暂无今日摘要。",
+        `项目数 ${metrics.totalProjects ?? 0}｜今日新建 ${metrics.todayNew ?? 0}｜今日更新 ${metrics.todayUpdated ?? 0}｜需要复查 ${metrics.needsReview ?? 0}`,
+        `值得点开：${highlights.length ? highlights.join("；") : "暂无"}`,
+        `来源：${meta.repositoryUrl || elements.repoLink.href}`
+      ].join("\n");
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch (error) {
+          // Fall through to the selection-based fallback for local file previews.
+        }
+      }
+
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const ok = document.execCommand("copy");
+      textarea.remove();
+      return ok;
+    }
+
+    async function handleCopySummary() {
+      const summary = buildShareSummary();
+      const copied = await copyText(summary);
+      if (copied) {
+        elements.feedback.textContent = "已复制今日摘要，可直接粘贴到日报或聊天。";
+        elements.copySummary.textContent = "已复制";
+        elements.copySummary.classList.add("is-copied");
+        window.setTimeout(() => {
+          elements.copySummary.textContent = "复制今日摘要";
+          elements.copySummary.classList.remove("is-copied");
+        }, 1600);
+      } else {
+        elements.feedback.textContent = `复制受限，可手动选中：${summary}`;
+      }
     }
 
     function getFilteredProjects() {
@@ -1000,8 +1077,11 @@
       renderProjects();
     });
 
+    elements.copySummary.addEventListener("click", () => {
+      handleCopySummary();
+    });
+
     renderAll();
   </script>
 </body>
 </html>
-

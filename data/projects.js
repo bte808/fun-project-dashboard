@@ -1,25 +1,25 @@
 window.FUN_PROJECT_DASHBOARD_DATA = {
   "meta": {
-    "title": "2026-05-21 每日趣味项目总览仪表盘",
+    "title": "2026-05-23 每日趣味项目总览仪表盘",
     "owner": "bte808",
     "repository": "fun-project-dashboard",
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
-    "runDate": "2026-05-21",
+    "runDate": "2026-05-23",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-05-21T14:15:15.533Z",
-    "generatedAtShanghaiDate": "2026-05-21",
+    "generatedAt": "2026-05-23T09:02:10.131Z",
+    "generatedAtShanghaiDate": "2026-05-23",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
     "todayWindowUtc": {
-      "startIso": "2026-05-20T16:00:00.000Z",
-      "endIso": "2026-05-21T15:59:59.999Z"
+      "startIso": "2026-05-22T16:00:00.000Z",
+      "endIso": "2026-05-23T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 4 个新建项目、4 个今日有变动的项目，共 4 个 commit。",
+    "todayStory": "今天公开仓库中检测到 3 个新建项目、3 个今日有变动的项目，共 4 个 commit。",
     "automationChecks": {
       "dailyIncubator": {
         "status": "detected",
         "label": "已检测到",
-        "note": "公开 fun-* 仓库中检测到 4 个今天创建的项目。"
+        "note": "公开 fun-* 仓库中检测到 3 个今天创建的项目。"
       },
       "oldProjectMaintenance": {
         "status": "not_detected",
@@ -39,58 +39,53 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     },
     "highlights": [
       {
-        "name": "fun-20260521-hue-chain",
-        "url": "https://github.com/bte808/fun-20260521-hue-chain",
-        "reason": "今天新建；Hue Chain Rally is a tiny static browser game where you match a target color by chaining 3-5 neighboring color chips. Each chain blends into one guess, then the game sco..."
+        "name": "fun-20260523-b-rename-blueprint",
+        "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint",
+        "reason": "今天新建；Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames."
       },
       {
-        "name": "fun-20260521-c-concept-bridge",
-        "url": "https://github.com/bte808/fun-20260521-c-concept-bridge",
-        "reason": "今天新建；Concept Bridge is a tiny local academic helper that turns rough study notes into a concept map, recall prompts, and exportable review material."
+        "name": "fun-20260523-a-time-heist",
+        "url": "https://github.com/bte808/fun-20260523-a-time-heist",
+        "reason": "今天新建；Time Heist Shuffle is a quick timeline puzzle. A museum time heist has scrambled six fictional artifacts, and the player has to rebuild the order from earliest to latest..."
       },
       {
-        "name": "fun-20260521-b-meeting-brief",
-        "url": "https://github.com/bte808/fun-20260521-b-meeting-brief",
-        "reason": "今天新建；Local meeting notes cleaner that turns rough notes into action briefs"
-      },
-      {
-        "name": "fun-20260521-trace-tap",
-        "url": "https://github.com/bte808/fun-20260521-trace-tap",
-        "reason": "今天新建；Trace Tap is a tiny browser game about debugging by following clues through a call graph. Each round gives you an incident log, a clickable graph, and a short objective:..."
+        "name": "fun-20260523-c-claim-ledger",
+        "url": "https://github.com/bte808/fun-20260523-c-claim-ledger",
+        "reason": "今天新建；Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger"
       }
     ]
   },
   "metrics": {
-    "totalProjects": 8,
-    "todayNew": 4,
-    "todayUpdated": 4,
+    "totalProjects": 12,
+    "todayNew": 3,
+    "todayUpdated": 3,
     "todayCommits": 4,
-    "needsReview": 6,
+    "needsReview": 10,
     "techDistribution": {
-      "JavaScript": 8
+      "JavaScript": 12
     }
   },
   "projects": [
     {
-      "name": "fun-20260521-hue-chain",
-      "url": "https://github.com/bte808/fun-20260521-hue-chain",
-      "description": "待补充",
+      "name": "fun-20260523-a-time-heist",
+      "url": "https://github.com/bte808/fun-20260523-a-time-heist",
+      "description": "Tiny browser game about rebuilding a scrambled museum timeline",
       "defaultBranch": "main",
-      "createdAt": "2026-05-21T12:26:54Z",
-      "updatedAt": "2026-05-21T12:27:02Z",
-      "createdDateShanghai": "2026-05-21",
-      "updatedDateShanghai": "2026-05-21",
+      "createdAt": "2026-05-23T03:09:03Z",
+      "updatedAt": "2026-05-23T03:09:16Z",
+      "createdDateShanghai": "2026-05-23",
+      "updatedDateShanghai": "2026-05-23",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 16566,
-        "CSS": 5385,
-        "HTML": 2194
+        "JavaScript": 18860,
+        "CSS": 6678,
+        "HTML": 2130
       },
       "type": "浏览器小游戏",
       "readme": {
-        "oneLine": "Hue Chain Rally is a tiny static browser game where you match a target color by chaining 3-5 neighboring color chips. Each chain blends into one guess, then the game sco...",
-        "usefulness": "It is a quick color-sense warmup. Designers can use it as a playful hue-matching drill, and anyone else can play a complete round in under a minute.",
-        "whyFun": "The board always hides a perfect chain, but the player only sees the colors. That makes each round a small visual deduction puzzle: do you trust your eyes, add one more chip, or submit before over-mixing?",
+        "oneLine": "Time Heist Shuffle is a quick timeline puzzle. A museum time heist has scrambled six fictional artifacts, and the player has to rebuild the order from earliest to latest...",
+        "usefulness": "It is a small shareable puzzle format that can be opened from any static host. The game loop is short enough for one break but structured enough to support daily cases later.",
+        "whyFun": "The player gets immediate tactile feedback: cards move, visual artifacts change state, and a locked guess reveals which pieces are close without ending the case. The theme turns a simple ordering puzzle into a tiny muse...",
         "runCommand": "npm start",
         "verification": "待补充"
       },
@@ -100,11 +95,159 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "commitCount": 1,
         "commits": [
           {
-            "sha": "2b84afffee17e9f5298d57ad816919c137ed506e",
-            "shortSha": "2b84aff",
-            "url": "https://github.com/bte808/fun-20260521-hue-chain/commit/2b84afffee17e9f5298d57ad816919c137ed506e",
-            "message": "Build Hue Chain Rally game",
-            "committedAt": "2026-05-21T12:26:44Z",
+            "sha": "21ffbb82c561e623a89173dda48d765025ed7030",
+            "shortSha": "21ffbb8",
+            "url": "https://github.com/bte808/fun-20260523-a-time-heist/commit/21ffbb82c561e623a89173dda48d765025ed7030",
+            "message": "Build Time Heist Shuffle game",
+            "committedAt": "2026-05-23T03:08:52Z",
+            "files": [
+              {
+                "filename": ".gitignore",
+                "status": "added",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "README.md",
+                "status": "added",
+                "additions": 68,
+                "deletions": 0,
+                "changes": 68
+              },
+              {
+                "filename": "index.html",
+                "status": "added",
+                "additions": 59,
+                "deletions": 0,
+                "changes": 59
+              },
+              {
+                "filename": "package.json",
+                "status": "added",
+                "additions": 18,
+                "deletions": 0,
+                "changes": 18
+              },
+              {
+                "filename": "scripts/smoke-test.mjs",
+                "status": "added",
+                "additions": 39,
+                "deletions": 0,
+                "changes": 39
+              },
+              {
+                "filename": "src/app.js",
+                "status": "added",
+                "additions": 257,
+                "deletions": 0,
+                "changes": 257
+              },
+              {
+                "filename": "src/game.js",
+                "status": "added",
+                "additions": 287,
+                "deletions": 0,
+                "changes": 287
+              },
+              {
+                "filename": "src/styles.css",
+                "status": "added",
+                "additions": 426,
+                "deletions": 0,
+                "changes": 426
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": ".gitignore",
+            "status": "added",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "index.html",
+            "status": "added",
+            "additions": 59,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "added",
+            "additions": 18,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "added",
+            "additions": 68,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/smoke-test.mjs",
+            "status": "added",
+            "additions": 39,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "added",
+            "additions": 257,
+            "deletions": 0
+          },
+          {
+            "filename": "src/game.js",
+            "status": "added",
+            "additions": 287,
+            "deletions": 0
+          },
+          {
+            "filename": "src/styles.css",
+            "status": "added",
+            "additions": 426,
+            "deletions": 0
+          }
+        ]
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260523-c-claim-ledger",
+      "url": "https://github.com/bte808/fun-20260523-c-claim-ledger",
+      "description": "Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-23T03:04:38Z",
+      "updatedAt": "2026-05-23T03:04:52Z",
+      "createdDateShanghai": "2026-05-23",
+      "updatedDateShanghai": "2026-05-23",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 17968,
+        "CSS": 7665,
+        "HTML": 4530
+      },
+      "type": "音频互动",
+      "readme": {
+        "oneLine": "Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger",
+        "usefulness": "Checking a literature-review paragraph before adding it to a paper draft. Turning lecture notes into a source-aware revision checklist. Reviewing lab-report conclusions against observation notes. Marking which claims in...",
+        "whyFun": "待补充",
+        "runCommand": "npm start",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": true,
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "6eede9deb20a6f28ec8179453666d1ad51da4df2",
+            "shortSha": "6eede9d",
+            "url": "https://github.com/bte808/fun-20260523-c-claim-ledger/commit/6eede9deb20a6f28ec8179453666d1ad51da4df2",
+            "message": "Ship Claim Ledger Lite",
+            "committedAt": "2026-05-23T03:04:29Z",
             "files": [
               {
                 "filename": ".gitignore",
@@ -116,58 +259,51 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
               {
                 "filename": "README.md",
                 "status": "added",
-                "additions": 63,
+                "additions": 99,
                 "deletions": 0,
-                "changes": 63
-              },
-              {
-                "filename": "favicon.svg",
-                "status": "added",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
+                "changes": 99
               },
               {
                 "filename": "index.html",
                 "status": "added",
-                "additions": 60,
+                "additions": 117,
                 "deletions": 0,
-                "changes": 60
+                "changes": 117
               },
               {
                 "filename": "package.json",
                 "status": "added",
-                "additions": 18,
+                "additions": 20,
                 "deletions": 0,
-                "changes": 18
+                "changes": 20
+              },
+              {
+                "filename": "scripts/smoke-test.mjs",
+                "status": "added",
+                "additions": 31,
+                "deletions": 0,
+                "changes": 31
               },
               {
                 "filename": "src/app.js",
                 "status": "added",
-                "additions": 316,
+                "additions": 196,
                 "deletions": 0,
-                "changes": 316
+                "changes": 196
               },
               {
-                "filename": "src/game.js",
+                "filename": "src/logic.js",
                 "status": "added",
-                "additions": 240,
+                "additions": 306,
                 "deletions": 0,
-                "changes": 240
+                "changes": 306
               },
               {
-                "filename": "styles.css",
+                "filename": "src/styles.css",
                 "status": "added",
-                "additions": 344,
+                "additions": 530,
                 "deletions": 0,
-                "changes": 344
-              },
-              {
-                "filename": "test/game.test.mjs",
-                "status": "added",
-                "additions": 41,
-                "deletions": 0,
-                "changes": 41
+                "changes": 530
               }
             ]
           }
@@ -180,176 +316,9 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
             "deletions": 0
           },
           {
-            "filename": "favicon.svg",
-            "status": "added",
-            "additions": 7,
-            "deletions": 0
-          },
-          {
             "filename": "index.html",
             "status": "added",
-            "additions": 60,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 18,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 63,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "added",
-            "additions": 316,
-            "deletions": 0
-          },
-          {
-            "filename": "src/game.js",
-            "status": "added",
-            "additions": 240,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 344,
-            "deletions": 0
-          },
-          {
-            "filename": "test/game.test.mjs",
-            "status": "added",
-            "additions": 41,
-            "deletions": 0
-          }
-        ]
-      },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
-    },
-    {
-      "name": "fun-20260521-c-concept-bridge",
-      "url": "https://github.com/bte808/fun-20260521-c-concept-bridge",
-      "description": "待补充",
-      "defaultBranch": "main",
-      "createdAt": "2026-05-21T12:25:14Z",
-      "updatedAt": "2026-05-21T12:25:23Z",
-      "createdDateShanghai": "2026-05-21",
-      "updatedDateShanghai": "2026-05-21",
-      "primaryLanguage": "JavaScript",
-      "languages": {
-        "JavaScript": 18741,
-        "CSS": 5666,
-        "HTML": 3014
-      },
-      "type": "学习练习",
-      "readme": {
-        "oneLine": "Concept Bridge is a tiny local academic helper that turns rough study notes into a concept map, recall prompts, and exportable review material.",
-        "usefulness": "Concept maps are good for learning because they force you to name relationships, not just list terms. Concept Bridge makes the first draft fast, then keeps the output checkable. It is useful when a learner has a dense p...",
-        "whyFun": "待补充",
-        "runCommand": "npm start",
-        "verification": "待补充"
-      },
-      "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "3be13550f779264c4e41c1e693272214a4736f53",
-            "shortSha": "3be1355",
-            "url": "https://github.com/bte808/fun-20260521-c-concept-bridge/commit/3be13550f779264c4e41c1e693272214a4736f53",
-            "message": "Create Concept Bridge study tool",
-            "committedAt": "2026-05-21T12:25:05Z",
-            "files": [
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 80,
-                "deletions": 0,
-                "changes": 80
-              },
-              {
-                "filename": "favicon.svg",
-                "status": "added",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 77,
-                "deletions": 0,
-                "changes": 77
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 20,
-                "deletions": 0,
-                "changes": 20
-              },
-              {
-                "filename": "src/app.js",
-                "status": "added",
-                "additions": 269,
-                "deletions": 0,
-                "changes": 269
-              },
-              {
-                "filename": "src/concept-engine.js",
-                "status": "added",
-                "additions": 325,
-                "deletions": 0,
-                "changes": 325
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 386,
-                "deletions": 0,
-                "changes": 386
-              },
-              {
-                "filename": "test/concept-engine.test.mjs",
-                "status": "added",
-                "additions": 34,
-                "deletions": 0,
-                "changes": 34
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "favicon.svg",
-            "status": "added",
-            "additions": 7,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 77,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
+            "additions": 117,
             "deletions": 0
           },
           {
@@ -361,31 +330,31 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
           {
             "filename": "README.md",
             "status": "added",
-            "additions": 80,
+            "additions": 99,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/smoke-test.mjs",
+            "status": "added",
+            "additions": 31,
             "deletions": 0
           },
           {
             "filename": "src/app.js",
             "status": "added",
-            "additions": 269,
+            "additions": 196,
             "deletions": 0
           },
           {
-            "filename": "src/concept-engine.js",
+            "filename": "src/logic.js",
             "status": "added",
-            "additions": 325,
+            "additions": 306,
             "deletions": 0
           },
           {
-            "filename": "styles.css",
+            "filename": "src/styles.css",
             "status": "added",
-            "additions": 386,
-            "deletions": 0
-          },
-          {
-            "filename": "test/concept-engine.test.mjs",
-            "status": "added",
-            "additions": 34,
+            "additions": 530,
             "deletions": 0
           }
         ]
@@ -394,46 +363,69 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "visibilitySource": "GitHub public repository data"
     },
     {
-      "name": "fun-20260521-b-meeting-brief",
-      "url": "https://github.com/bte808/fun-20260521-b-meeting-brief",
-      "description": "Local meeting notes cleaner that turns rough notes into action briefs",
+      "name": "fun-20260523-b-rename-blueprint",
+      "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint",
+      "description": "Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-21T12:23:45Z",
-      "updatedAt": "2026-05-21T12:24:48Z",
-      "createdDateShanghai": "2026-05-21",
-      "updatedDateShanghai": "2026-05-21",
+      "createdAt": "2026-05-23T03:00:14Z",
+      "updatedAt": "2026-05-23T03:02:40Z",
+      "createdDateShanghai": "2026-05-23",
+      "updatedDateShanghai": "2026-05-23",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 15502,
-        "CSS": 6030,
-        "HTML": 4080
+        "JavaScript": 12204,
+        "CSS": 4549,
+        "HTML": 4119
       },
-      "type": "效率工具",
+      "type": "文字创作",
       "readme": {
-        "oneLine": "Local meeting notes cleaner that turns rough notes into action briefs",
-        "usefulness": "Meeting notes often end as a half-cleaned paste from chat, class, calls, or planning docs. This tool gives you the practical middle step: paste rough text, get a structured handoff, then move on.",
-        "whyFun": "It makes a messy text blob feel organized in one click. The small parser is intentionally transparent, so it is easy to tweak the rules and immediately see better briefs.",
-        "runCommand": "python3 -m http.server 5181",
-        "verification": "The checks cover parsing behavior and a lightweight static scan for expected files, browser hooks, responsive CSS, and accidental secret/local-path strings."
+        "oneLine": "Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames.",
+        "usefulness": "People often know how they want a folder renamed but do not want to risk touching files blindly. This keeps the planning step fast, private, and reversible.",
+        "whyFun": "待补充",
+        "runCommand": "python3 -m http.server 5183",
+        "verification": "待补充"
       },
       "today": {
         "created": true,
         "updated": true,
-        "commitCount": 1,
+        "commitCount": 2,
         "commits": [
           {
-            "sha": "0efdb2cd8c07bef00d00ab58e0c22dcf369c0dc8",
-            "shortSha": "0efdb2c",
-            "url": "https://github.com/bte808/fun-20260521-b-meeting-brief/commit/0efdb2cd8c07bef00d00ab58e0c22dcf369c0dc8",
-            "message": "Ship Meeting Brief",
-            "committedAt": "2026-05-21T12:24:41Z",
+            "sha": "de8d4e09e2bec6d026bbfe321a52de926dc4e0ab",
+            "shortSha": "de8d4e0",
+            "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint/commit/de8d4e09e2bec6d026bbfe321a52de926dc4e0ab",
+            "message": "Add local favicon",
+            "committedAt": "2026-05-23T03:02:28Z",
+            "files": [
+              {
+                "filename": "favicon.svg",
+                "status": "added",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 1,
+                "deletions": 0,
+                "changes": 1
+              }
+            ]
+          },
+          {
+            "sha": "3ded971413bb0712a9c49d5b6476a7231ef3617b",
+            "shortSha": "3ded971",
+            "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint/commit/3ded971413bb0712a9c49d5b6476a7231ef3617b",
+            "message": "Ship Rename Blueprint",
+            "committedAt": "2026-05-23T03:00:07Z",
             "files": [
               {
                 "filename": ".gitignore",
                 "status": "added",
-                "additions": 7,
+                "additions": 4,
                 "deletions": 0,
-                "changes": 7
+                "changes": 4
               },
               {
                 "filename": "LICENSE",
@@ -445,23 +437,16 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
               {
                 "filename": "README.md",
                 "status": "added",
-                "additions": 80,
+                "additions": 55,
                 "deletions": 0,
-                "changes": 80
-              },
-              {
-                "filename": "favicon.svg",
-                "status": "added",
-                "additions": 6,
-                "deletions": 0,
-                "changes": 6
+                "changes": 55
               },
               {
                 "filename": "index.html",
                 "status": "added",
-                "additions": 93,
+                "additions": 103,
                 "deletions": 0,
-                "changes": 93
+                "changes": 103
               },
               {
                 "filename": "package.json",
@@ -471,39 +456,39 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
                 "changes": 18
               },
               {
-                "filename": "scripts/static-check.mjs",
+                "filename": "scripts/check-static.js",
                 "status": "added",
-                "additions": 25,
+                "additions": 23,
                 "deletions": 0,
-                "changes": 25
+                "changes": 23
               },
               {
                 "filename": "src/app.js",
                 "status": "added",
-                "additions": 168,
+                "additions": 181,
                 "deletions": 0,
-                "changes": 168
+                "changes": 181
               },
               {
-                "filename": "src/parser.js",
+                "filename": "src/renameBlueprint.mjs",
+                "status": "added",
+                "additions": 143,
+                "deletions": 0,
+                "changes": 143
+              },
+              {
+                "filename": "src/styles.css",
                 "status": "added",
                 "additions": 292,
                 "deletions": 0,
                 "changes": 292
               },
               {
-                "filename": "styles.css",
+                "filename": "test/renameBlueprint.test.js",
                 "status": "added",
-                "additions": 392,
+                "additions": 52,
                 "deletions": 0,
-                "changes": 392
-              },
-              {
-                "filename": "test/parser.test.mjs",
-                "status": "added",
-                "additions": 40,
-                "deletions": 0,
-                "changes": 40
+                "changes": 52
               }
             ]
           }
@@ -512,19 +497,19 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
           {
             "filename": ".gitignore",
             "status": "added",
-            "additions": 7,
+            "additions": 4,
             "deletions": 0
           },
           {
             "filename": "favicon.svg",
             "status": "added",
-            "additions": 6,
+            "additions": 5,
             "deletions": 0
           },
           {
             "filename": "index.html",
             "status": "added",
-            "additions": 93,
+            "additions": 103,
             "deletions": 0
           },
           {
@@ -542,40 +527,172 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
           {
             "filename": "README.md",
             "status": "added",
-            "additions": 80,
+            "additions": 55,
             "deletions": 0
           },
           {
-            "filename": "scripts/static-check.mjs",
+            "filename": "scripts/check-static.js",
             "status": "added",
-            "additions": 25,
+            "additions": 23,
             "deletions": 0
           },
           {
             "filename": "src/app.js",
             "status": "added",
-            "additions": 168,
+            "additions": 181,
             "deletions": 0
           },
           {
-            "filename": "src/parser.js",
+            "filename": "src/renameBlueprint.mjs",
+            "status": "added",
+            "additions": 143,
+            "deletions": 0
+          },
+          {
+            "filename": "src/styles.css",
             "status": "added",
             "additions": 292,
             "deletions": 0
           },
           {
-            "filename": "styles.css",
+            "filename": "test/renameBlueprint.test.js",
             "status": "added",
-            "additions": 392,
-            "deletions": 0
-          },
-          {
-            "filename": "test/parser.test.mjs",
-            "status": "added",
-            "additions": 40,
+            "additions": 52,
             "deletions": 0
           }
         ]
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260522-b-link-janitor",
+      "url": "https://github.com/bte808/fun-20260522-b-link-janitor",
+      "description": "待补充",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-22T04:05:27Z",
+      "updatedAt": "2026-05-22T04:05:35Z",
+      "createdDateShanghai": "2026-05-22",
+      "updatedDateShanghai": "2026-05-22",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 16513,
+        "CSS": 5555,
+        "HTML": 2965
+      },
+      "type": "效率工具",
+      "readme": {
+        "oneLine": "Link Janitor is a local-first webpage for turning messy pasted link dumps into a clean, grouped export.",
+        "usefulness": "Link dumps are noisy. This keeps the cleanup step private, fast, and repeatable, with no login, API key, extension, or server-side storage.",
+        "whyFun": "待补充",
+        "runCommand": "python3 -m http.server 5182",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260521-hue-chain",
+      "url": "https://github.com/bte808/fun-20260521-hue-chain",
+      "description": "Daily color-chain browser puzzle with answer reveals",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-21T12:26:54Z",
+      "updatedAt": "2026-05-22T09:09:14Z",
+      "createdDateShanghai": "2026-05-21",
+      "updatedDateShanghai": "2026-05-22",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 18244,
+        "CSS": 6093,
+        "HTML": 2194
+      },
+      "type": "学习练习",
+      "readme": {
+        "oneLine": "Daily color-chain browser puzzle with answer reveals",
+        "usefulness": "It is a quick color-sense warmup. Designers can use it as a playful hue-matching drill, and anyone else can play a complete round in under a minute.",
+        "whyFun": "The board always hides a perfect chain, but the player only sees the colors until submitting. That makes each round a small visual deduction puzzle: do you trust your eyes, add one more chip, or submit before over-mixin...",
+        "runCommand": "npm start",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260521-c-concept-bridge",
+      "url": "https://github.com/bte808/fun-20260521-c-concept-bridge",
+      "description": "Local study-notes helper that turns rough notes into concept maps and recall prompts",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-21T12:25:14Z",
+      "updatedAt": "2026-05-22T10:46:33Z",
+      "createdDateShanghai": "2026-05-21",
+      "updatedDateShanghai": "2026-05-22",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 19778,
+        "CSS": 5666,
+        "HTML": 3090
+      },
+      "type": "学习练习",
+      "readme": {
+        "oneLine": "Local study-notes helper that turns rough notes into concept maps and recall prompts",
+        "usefulness": "Concept maps are good for learning because they force you to name relationships, not just list terms. Concept Bridge makes the first draft fast, then keeps the output checkable. It is useful when a learner has a dense p...",
+        "whyFun": "待补充",
+        "runCommand": "npm start",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260521-b-meeting-brief",
+      "url": "https://github.com/bte808/fun-20260521-b-meeting-brief",
+      "description": "Local meeting notes cleaner that turns rough notes into action briefs",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-21T12:23:45Z",
+      "updatedAt": "2026-05-22T10:26:46Z",
+      "createdDateShanghai": "2026-05-21",
+      "updatedDateShanghai": "2026-05-22",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 18779,
+        "CSS": 6118,
+        "HTML": 4248
+      },
+      "type": "效率工具",
+      "readme": {
+        "oneLine": "Local meeting notes cleaner that turns rough notes into action briefs",
+        "usefulness": "Meeting notes often end as a half-cleaned paste from chat, class, calls, or planning docs. This tool gives you the practical middle step: paste rough text, get a structured handoff, then move on.",
+        "whyFun": "It makes a messy text blob feel organized in one click. The small parser is intentionally transparent, so it is easy to tweak the rules and immediately see better briefs.",
+        "runCommand": "python3 -m http.server 5181",
+        "verification": "The checks cover parsing behavior and a lightweight static scan for expected files, browser hooks, responsive CSS, and accidental secret/local-path strings."
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": false,
       "visibilitySource": "GitHub public repository data"
@@ -604,139 +721,11 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "verification": "待补充"
       },
       "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "0b9dbdec5c131ca505a64cd73ef5998c9f889b55",
-            "shortSha": "0b9dbde",
-            "url": "https://github.com/bte808/fun-20260521-trace-tap/commit/0b9dbdec5c131ca505a64cd73ef5998c9f889b55",
-            "message": "Build Trace Tap game",
-            "committedAt": "2026-05-21T02:12:15Z",
-            "files": [
-              {
-                "filename": ".gitignore",
-                "status": "added",
-                "additions": 8,
-                "deletions": 0,
-                "changes": 8
-              },
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 75,
-                "deletions": 0,
-                "changes": 75
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 80,
-                "deletions": 0,
-                "changes": 80
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 18,
-                "deletions": 0,
-                "changes": 18
-              },
-              {
-                "filename": "src/app.js",
-                "status": "added",
-                "additions": 235,
-                "deletions": 0,
-                "changes": 235
-              },
-              {
-                "filename": "src/puzzles.js",
-                "status": "added",
-                "additions": 242,
-                "deletions": 0,
-                "changes": 242
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 464,
-                "deletions": 0,
-                "changes": 464
-              },
-              {
-                "filename": "test/smoke.test.mjs",
-                "status": "added",
-                "additions": 40,
-                "deletions": 0,
-                "changes": 40
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 8,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 80,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 18,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 75,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "added",
-            "additions": 235,
-            "deletions": 0
-          },
-          {
-            "filename": "src/puzzles.js",
-            "status": "added",
-            "additions": 242,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 464,
-            "deletions": 0
-          },
-          {
-            "filename": "test/smoke.test.mjs",
-            "status": "added",
-            "additions": 40,
-            "deletions": 0
-          }
-        ]
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -744,21 +733,21 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     {
       "name": "fun-20260520-dice-target",
       "url": "https://github.com/bte808/fun-20260520-dice-target",
-      "description": "待补充",
+      "description": "Tiny daily browser dice target puzzle with keyboard-friendly arithmetic sprints",
       "defaultBranch": "main",
       "createdAt": "2026-05-20T05:32:30Z",
-      "updatedAt": "2026-05-20T05:32:38Z",
+      "updatedAt": "2026-05-22T10:08:52Z",
       "createdDateShanghai": "2026-05-20",
-      "updatedDateShanghai": "2026-05-20",
+      "updatedDateShanghai": "2026-05-22",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 14226,
-        "CSS": 5619,
-        "HTML": 3384
+        "JavaScript": 16715,
+        "CSS": 5794,
+        "HTML": 3566
       },
       "type": "浏览器小游戏",
       "readme": {
-        "oneLine": "Dice Target Sprint is a tiny browser math puzzle. You get five dice and one target number. Pick two dice, choose an operation, merge them, and keep going until every die...",
+        "oneLine": "Tiny daily browser dice target puzzle with keyboard-friendly arithmetic sprints",
         "usefulness": "Recent public posts showed a renewed interest in daily dice puzzles and small mental-workout games: https://www.reddit.com/r/SideProject/comments/1t3bejg/i_built_a_simple_puzzle_game_5_dice_1_target/ described the compa...",
         "whyFun": "待补充",
         "runCommand": "npm start",
@@ -777,21 +766,21 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     {
       "name": "fun-20260519-pulse-poem",
       "url": "https://github.com/bte808/fun-20260519-pulse-poem",
-      "description": "待补充",
+      "description": "Turn short text into a playable pulse rhythm with audio and haptic feedback",
       "defaultBranch": "main",
       "createdAt": "2026-05-19T02:13:06Z",
-      "updatedAt": "2026-05-19T02:15:09Z",
+      "updatedAt": "2026-05-22T09:48:03Z",
       "createdDateShanghai": "2026-05-19",
-      "updatedDateShanghai": "2026-05-19",
+      "updatedDateShanghai": "2026-05-22",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 15121,
+        "JavaScript": 18538,
         "CSS": 5386,
-        "HTML": 2691
+        "HTML": 2787
       },
       "type": "音频互动",
       "readme": {
-        "oneLine": "Pulse Poem turns a short line of text into a tiny playable rhythm. Type a phrase, choose a mood, and play it back as animated pulses with optional Web Audio ticks and mo...",
+        "oneLine": "Turn short text into a playable pulse rhythm with audio and haptic feedback",
         "usefulness": "I wanted a small browser toy that makes writing feel physical. The idea was sparked by a recent JavaScript community thread where someone showed an audio-to-haptics web experiment: https://www.reddit.com/r/javascript/co...",
         "whyFun": "The result feels like a pocket drum machine made from your own sentence. A boring line can become a tiny beat, and on phones with vibration support it becomes tactile instead of only visual.",
         "runCommand": "npm start",
@@ -813,20 +802,20 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "description": "Tiny browser puzzle about routing a pulse through a snack-sized signal board",
       "defaultBranch": "main",
       "createdAt": "2026-05-18T02:10:56Z",
-      "updatedAt": "2026-05-18T02:11:03Z",
+      "updatedAt": "2026-05-22T09:27:39Z",
       "createdDateShanghai": "2026-05-18",
-      "updatedDateShanghai": "2026-05-18",
+      "updatedDateShanghai": "2026-05-22",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 15663,
+        "JavaScript": 17630,
         "CSS": 7363,
-        "HTML": 3295
+        "HTML": 3431
       },
       "type": "浏览器小游戏",
       "readme": {
         "oneLine": "Tiny browser puzzle about routing a pulse through a snack-sized signal board",
         "usefulness": "Signal Bento turns path planning into immediate feedback. You can see exactly where a decision changes the route, which makes it useful for teaching sequencing, debugging, and simple systems thinking without making play...",
-        "whyFun": "The whole loop is tactile and short: place one turn, watch the pulse move, adjust, then try for a cleaner score. The **Hint** button keeps every board finishable, so the puzzle stays playful instead of getting stuck.",
+        "whyFun": "The whole loop is tactile and short: place one turn, watch the pulse move, adjust, then try for a cleaner score. The **Hint** button keeps every board finishable, so the puzzle stays playful instead of getting stuck. Co...",
         "runCommand": "npm run start",
         "verification": "待补充"
       },

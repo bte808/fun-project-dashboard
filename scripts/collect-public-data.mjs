@@ -335,7 +335,7 @@ async function main() {
   })));
   const commitText = todayCommits.map((commit) => commit.message).join("\n");
   const wednesdayMatches = todayCommits.filter((commit) => /周三|wednesday|加料|extra|bonus/i.test(commit.message));
-  const sundayMatches = todayCommits.filter((commit) => /周日|sunday|体检|health|audit|复查/i.test(commit.message));
+  const sundayMatches = todayCommits.filter((commit) => /周日|sunday|体检|health|audit|复查|weekly check/i.test(commit.message));
 
   const highlights = todayUpdatedProjects
     .slice()

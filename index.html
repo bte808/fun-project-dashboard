@@ -173,6 +173,14 @@
       align-items: start;
     }
 
+    .main-grid > *,
+    .narrative > *,
+    .metric-grid > *,
+    .project-grid > *,
+    .toolbar > * {
+      min-width: 0;
+    }
+
     section {
       margin-top: 18px;
     }
@@ -320,6 +328,15 @@
       border-radius: var(--radius);
       background: #ffffff;
       box-shadow: var(--shadow);
+    }
+
+    .project-card > * {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .project-card p {
+      overflow-wrap: anywhere;
     }
 
     .project-title {

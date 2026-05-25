@@ -6,7 +6,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-05-25",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-05-25T10:03:57.738Z",
+    "generatedAt": "2026-05-25T14:07:17.397Z",
     "generatedAtShanghaiDate": "2026-05-25",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
@@ -14,7 +14,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "startIso": "2026-05-24T16:00:00.000Z",
       "endIso": "2026-05-25T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 3 个新建项目、3 个今日有变动的项目，共 5 个 commit。",
+    "todayStory": "今天公开仓库中检测到 3 个新建项目、5 个今日有变动的项目，共 7 个 commit。",
     "automationChecks": {
       "dailyIncubator": {
         "status": "detected",
@@ -22,9 +22,9 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "note": "公开 fun-* 仓库中检测到 3 个今天创建的项目。"
       },
       "oldProjectMaintenance": {
-        "status": "not_detected",
-        "label": "未检测到",
-        "note": "未检测到今天维护旧项目的公开 commit。"
+        "status": "detected",
+        "label": "已检测到",
+        "note": "检测到 2 个旧项目今天有公开 commit。"
       },
       "wednesdayBooster": {
         "status": "not_detected",
@@ -52,6 +52,11 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "name": "fun-20260525-b-handoff-card",
         "url": "https://github.com/bte808/fun-20260525-b-handoff-card",
         "reason": "今天新建；Local-first handoff note formatter for messy work or study notes"
+      },
+      {
+        "name": "fun-20260523-b-rename-blueprint",
+        "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint",
+        "reason": "今天更新 1 个 commit；Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames."
       }
     ],
     "collectionWarnings": []
@@ -59,8 +64,8 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
   "metrics": {
     "totalProjects": 15,
     "todayNew": 3,
-    "todayUpdated": 3,
-    "todayCommits": 5,
+    "todayUpdated": 5,
+    "todayCommits": 7,
     "needsReview": 13,
     "techDistribution": {
       "JavaScript": 15
@@ -762,14 +767,14 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "description": "Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames.",
       "defaultBranch": "main",
       "createdAt": "2026-05-23T03:00:14Z",
-      "updatedAt": "2026-05-24T11:40:42Z",
+      "updatedAt": "2026-05-25T10:37:24Z",
       "createdDateShanghai": "2026-05-23",
-      "updatedDateShanghai": "2026-05-24",
+      "updatedDateShanghai": "2026-05-25",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 15100,
-        "CSS": 4549,
-        "HTML": 4444
+        "JavaScript": 18209,
+        "CSS": 4770,
+        "HTML": 4682
       },
       "type": "效率工具",
       "readme": {
@@ -781,10 +786,112 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "3b1415479b382ebfaaba8614d4e54c7038f1d9eb",
+            "shortSha": "3b14154",
+            "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint/commit/3b1415479b382ebfaaba8614d4e54c7038f1d9eb",
+            "message": "Improve rename warning exports",
+            "committedAt": "2026-05-25T10:37:13Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 2,
+                "deletions": 2,
+                "changes": 4
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 9,
+                "deletions": 9,
+                "changes": 18
+              },
+              {
+                "filename": "scripts/check-static.js",
+                "status": "modified",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 7,
+                "deletions": 6,
+                "changes": 13
+              },
+              {
+                "filename": "src/renameBlueprint.mjs",
+                "status": "modified",
+                "additions": 91,
+                "deletions": 14,
+                "changes": 105
+              },
+              {
+                "filename": "src/styles.css",
+                "status": "modified",
+                "additions": 14,
+                "deletions": 0,
+                "changes": 14
+              },
+              {
+                "filename": "test/renameBlueprint.test.js",
+                "status": "modified",
+                "additions": 28,
+                "deletions": 4,
+                "changes": 32
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 9,
+            "deletions": 9
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 2,
+            "deletions": 2
+          },
+          {
+            "filename": "scripts/check-static.js",
+            "status": "modified",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 7,
+            "deletions": 6
+          },
+          {
+            "filename": "src/renameBlueprint.mjs",
+            "status": "modified",
+            "additions": 91,
+            "deletions": 14
+          },
+          {
+            "filename": "src/styles.css",
+            "status": "modified",
+            "additions": 14,
+            "deletions": 0
+          },
+          {
+            "filename": "test/renameBlueprint.test.js",
+            "status": "modified",
+            "additions": 28,
+            "deletions": 4
+          }
+        ]
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -861,14 +968,14 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "description": "Local study-notes helper that turns rough notes into concept maps and recall prompts",
       "defaultBranch": "main",
       "createdAt": "2026-05-21T12:25:14Z",
-      "updatedAt": "2026-05-24T10:48:03Z",
+      "updatedAt": "2026-05-25T10:55:28Z",
       "createdDateShanghai": "2026-05-21",
-      "updatedDateShanghai": "2026-05-24",
+      "updatedDateShanghai": "2026-05-25",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 21020,
-        "CSS": 5666,
-        "HTML": 3160
+        "JavaScript": 23096,
+        "CSS": 6294,
+        "HTML": 3304
       },
       "type": "学习练习",
       "readme": {
@@ -880,10 +987,99 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "2200a110fe470f5ab4a433d808763ee3a6d8328d",
+            "shortSha": "2200a11",
+            "url": "https://github.com/bte808/fun-20260521-c-concept-bridge/commit/2200a110fe470f5ab4a433d808763ee3a6d8328d",
+            "message": "Add source sentence ledger",
+            "committedAt": "2026-05-25T10:53:15Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 2,
+                "deletions": 0,
+                "changes": 2
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 0,
+                "changes": 4
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 20,
+                "deletions": 1,
+                "changes": 21
+              },
+              {
+                "filename": "src/concept-engine.js",
+                "status": "modified",
+                "additions": 30,
+                "deletions": 8,
+                "changes": 38
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 43,
+                "deletions": 6,
+                "changes": 49
+              },
+              {
+                "filename": "test/concept-engine.test.mjs",
+                "status": "modified",
+                "additions": 11,
+                "deletions": 1,
+                "changes": 12
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 2,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 20,
+            "deletions": 1
+          },
+          {
+            "filename": "src/concept-engine.js",
+            "status": "modified",
+            "additions": 30,
+            "deletions": 8
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 43,
+            "deletions": 6
+          },
+          {
+            "filename": "test/concept-engine.test.mjs",
+            "status": "modified",
+            "additions": 11,
+            "deletions": 1
+          }
+        ]
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"

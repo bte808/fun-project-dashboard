@@ -1,30 +1,30 @@
 {
   "meta": {
-    "title": "2026-05-24 每日趣味项目总览仪表盘",
+    "title": "2026-05-25 每日趣味项目总览仪表盘",
     "owner": "bte808",
     "repository": "fun-project-dashboard",
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
-    "runDate": "2026-05-24",
+    "runDate": "2026-05-25",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-05-24T14:06:02.612Z",
-    "generatedAtShanghaiDate": "2026-05-24",
+    "generatedAt": "2026-05-25T10:03:57.738Z",
+    "generatedAtShanghaiDate": "2026-05-25",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
     "todayWindowUtc": {
-      "startIso": "2026-05-23T16:00:00.000Z",
-      "endIso": "2026-05-24T15:59:59.999Z"
+      "startIso": "2026-05-24T16:00:00.000Z",
+      "endIso": "2026-05-25T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 0 个新建项目、9 个今日有变动的项目，共 9 个 commit。",
+    "todayStory": "今天公开仓库中检测到 3 个新建项目、3 个今日有变动的项目，共 5 个 commit。",
     "automationChecks": {
       "dailyIncubator": {
-        "status": "not_detected",
-        "label": "未检测到",
-        "note": "未检测到今天新建的公开 fun-* 项目。"
-      },
-      "oldProjectMaintenance": {
         "status": "detected",
         "label": "已检测到",
-        "note": "检测到 9 个旧项目今天有公开 commit。"
+        "note": "公开 fun-* 仓库中检测到 3 个今天创建的项目。"
+      },
+      "oldProjectMaintenance": {
+        "status": "not_detected",
+        "label": "未检测到",
+        "note": "未检测到今天维护旧项目的公开 commit。"
       },
       "wednesdayBooster": {
         "status": "not_detected",
@@ -32,45 +32,664 @@
         "note": "未检测到周三加料结果；今日 commit 信息为：有提交但无加料标识。"
       },
       "sundayHealthCheck": {
-        "status": "detected",
-        "label": "已检测到",
-        "note": "检测到 1 个疑似周日体检相关 commit。"
+        "status": "not_detected",
+        "label": "未检测到",
+        "note": "未检测到周日体检结果。"
       }
     },
     "highlights": [
       {
-        "name": "fun-20260523-a-time-heist",
-        "url": "https://github.com/bte808/fun-20260523-a-time-heist",
-        "reason": "今天更新 1 个 commit；Time Heist Shuffle is a quick timeline puzzle. A museum time heist has scrambled six fictional artifacts, and the player has to rebuild the order from earliest to latest..."
+        "name": "fun-20260525-c-unit-lens",
+        "url": "https://github.com/bte808/fun-20260525-c-unit-lens",
+        "reason": "今天新建；Local dimensional-analysis study helper for checking formulas and exporting Markdown ledgers"
       },
       {
-        "name": "fun-20260523-c-claim-ledger",
-        "url": "https://github.com/bte808/fun-20260523-c-claim-ledger",
-        "reason": "今天更新 1 个 commit；Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger"
+        "name": "fun-20260525-a-pocket-ante",
+        "url": "https://github.com/bte808/fun-20260525-a-pocket-ante",
+        "reason": "今天新建；Pocket Ante Rally is a quick five-card sprint. Each run deals three seven-card tables from the daily seed. The player picks five cards, tries to beat the ante, then adds..."
       },
       {
-        "name": "fun-20260523-b-rename-blueprint",
-        "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint",
-        "reason": "今天更新 1 个 commit；Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames."
-      },
-      {
-        "name": "fun-20260521-c-concept-bridge",
-        "url": "https://github.com/bte808/fun-20260521-c-concept-bridge",
-        "reason": "今天更新 1 个 commit；Local study-notes helper that turns rough notes into concept maps and recall prompts"
+        "name": "fun-20260525-b-handoff-card",
+        "url": "https://github.com/bte808/fun-20260525-b-handoff-card",
+        "reason": "今天新建；Local-first handoff note formatter for messy work or study notes"
       }
-    ]
+    ],
+    "collectionWarnings": []
   },
   "metrics": {
-    "totalProjects": 12,
-    "todayNew": 0,
-    "todayUpdated": 9,
-    "todayCommits": 9,
-    "needsReview": 10,
+    "totalProjects": 15,
+    "todayNew": 3,
+    "todayUpdated": 3,
+    "todayCommits": 5,
+    "needsReview": 13,
     "techDistribution": {
-      "JavaScript": 12
+      "JavaScript": 15
     }
   },
   "projects": [
+    {
+      "name": "fun-20260525-c-unit-lens",
+      "url": "https://github.com/bte808/fun-20260525-c-unit-lens",
+      "description": "Local dimensional-analysis study helper for checking formulas and exporting Markdown ledgers",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-25T03:14:05Z",
+      "updatedAt": "2026-05-25T09:53:02Z",
+      "createdDateShanghai": "2026-05-25",
+      "updatedDateShanghai": "2026-05-25",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 37934,
+        "CSS": 6303,
+        "HTML": 2979
+      },
+      "type": "学习练习",
+      "readme": {
+        "oneLine": "Local dimensional-analysis study helper for checking formulas and exporting Markdown ledgers",
+        "usefulness": "Physics, engineering, chemistry, or data-analysis review where formulas are easy to memorize but hard to sanity-check. Lab notebook prep before substituting numbers into a derived equation. Teaching assistants checking...",
+        "whyFun": "待补充",
+        "runCommand": "npm run start",
+        "verification": "This runs JavaScript syntax checks plus a smoke test for the formula parser, implicit multiplication, balanced sample, mismatch sample, mixed-addition guard, exponent guards, function guard, identifier extraction, Markd..."
+      },
+      "today": {
+        "created": true,
+        "updated": true,
+        "commitCount": 2,
+        "commits": [
+          {
+            "sha": "9633b9314b56e135a50e967bc6d242375ffbb22e",
+            "shortSha": "9633b93",
+            "url": "https://github.com/bte808/fun-20260525-c-unit-lens/commit/9633b9314b56e135a50e967bc6d242375ffbb22e",
+            "message": "Improve Unit Lens report export",
+            "committedAt": "2026-05-25T09:52:46Z",
+            "files": [
+              {
+                "filename": ".github/workflows/ci.yml",
+                "status": "added",
+                "additions": 20,
+                "deletions": 0,
+                "changes": 20
+              },
+              {
+                "filename": ".gitignore",
+                "status": "added",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 4,
+                "changes": 8
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 1,
+                "changes": 5
+              },
+              {
+                "filename": "scripts/smoke-test.mjs",
+                "status": "modified",
+                "additions": 53,
+                "deletions": 1,
+                "changes": 54
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 23,
+                "deletions": 1,
+                "changes": 24
+              },
+              {
+                "filename": "src/unit-engine.js",
+                "status": "modified",
+                "additions": 66,
+                "deletions": 5,
+                "changes": 71
+              }
+            ]
+          },
+          {
+            "sha": "968f7cf030c2dd3fbe8cade471e1a2f26f010bc0",
+            "shortSha": "968f7cf",
+            "url": "https://github.com/bte808/fun-20260525-c-unit-lens/commit/968f7cf030c2dd3fbe8cade471e1a2f26f010bc0",
+            "message": "Ship Unit Lens",
+            "committedAt": "2026-05-25T03:09:57Z",
+            "files": [
+              {
+                "filename": "LICENSE",
+                "status": "added",
+                "additions": 21,
+                "deletions": 0,
+                "changes": 21
+              },
+              {
+                "filename": "README.md",
+                "status": "added",
+                "additions": 79,
+                "deletions": 0,
+                "changes": 79
+              },
+              {
+                "filename": "favicon.svg",
+                "status": "added",
+                "additions": 6,
+                "deletions": 0,
+                "changes": 6
+              },
+              {
+                "filename": "index.html",
+                "status": "added",
+                "additions": 87,
+                "deletions": 0,
+                "changes": 87
+              },
+              {
+                "filename": "package.json",
+                "status": "added",
+                "additions": 20,
+                "deletions": 0,
+                "changes": 20
+              },
+              {
+                "filename": "scripts/smoke-test.mjs",
+                "status": "added",
+                "additions": 63,
+                "deletions": 0,
+                "changes": 63
+              },
+              {
+                "filename": "src/app.js",
+                "status": "added",
+                "additions": 257,
+                "deletions": 0,
+                "changes": 257
+              },
+              {
+                "filename": "src/styles.css",
+                "status": "added",
+                "additions": 407,
+                "deletions": 0,
+                "changes": 407
+              },
+              {
+                "filename": "src/unit-engine.js",
+                "status": "added",
+                "additions": 748,
+                "deletions": 0,
+                "changes": 748
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": ".github/workflows/ci.yml",
+            "status": "added",
+            "additions": 20,
+            "deletions": 0
+          },
+          {
+            "filename": ".gitignore",
+            "status": "added",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "favicon.svg",
+            "status": "added",
+            "additions": 6,
+            "deletions": 0
+          },
+          {
+            "filename": "index.html",
+            "status": "added",
+            "additions": 87,
+            "deletions": 0
+          },
+          {
+            "filename": "LICENSE",
+            "status": "added",
+            "additions": 21,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "added",
+            "additions": 20,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "added",
+            "additions": 79,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/smoke-test.mjs",
+            "status": "added",
+            "additions": 63,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "added",
+            "additions": 257,
+            "deletions": 0
+          },
+          {
+            "filename": "src/styles.css",
+            "status": "added",
+            "additions": 407,
+            "deletions": 0
+          },
+          {
+            "filename": "src/unit-engine.js",
+            "status": "added",
+            "additions": 748,
+            "deletions": 0
+          }
+        ]
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260525-b-handoff-card",
+      "url": "https://github.com/bte808/fun-20260525-b-handoff-card",
+      "description": "Local-first handoff note formatter for messy work or study notes",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-25T02:29:56Z",
+      "updatedAt": "2026-05-25T02:30:03Z",
+      "createdDateShanghai": "2026-05-25",
+      "updatedDateShanghai": "2026-05-25",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 15762,
+        "CSS": 6333,
+        "HTML": 2491
+      },
+      "type": "学习练习",
+      "readme": {
+        "oneLine": "Local-first handoff note formatter for messy work or study notes",
+        "usefulness": "Small notes lose value when they are not shaped before the next person, next study session, or next AI/tool handoff sees them. This project was inspired by recent public discussion around local note organization, especi...",
+        "whyFun": "待补充",
+        "runCommand": "python3 -m http.server 5185",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": true,
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "0798472fd01ebad736bae67f03772bfd03e53204",
+            "shortSha": "0798472",
+            "url": "https://github.com/bte808/fun-20260525-b-handoff-card/commit/0798472fd01ebad736bae67f03772bfd03e53204",
+            "message": "Ship Handoff Card",
+            "committedAt": "2026-05-25T02:29:45Z",
+            "files": [
+              {
+                "filename": ".gitignore",
+                "status": "added",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "LICENSE",
+                "status": "added",
+                "additions": 21,
+                "deletions": 0,
+                "changes": 21
+              },
+              {
+                "filename": "README.md",
+                "status": "added",
+                "additions": 58,
+                "deletions": 0,
+                "changes": 58
+              },
+              {
+                "filename": "app.js",
+                "status": "added",
+                "additions": 135,
+                "deletions": 0,
+                "changes": 135
+              },
+              {
+                "filename": "index.html",
+                "status": "added",
+                "additions": 73,
+                "deletions": 0,
+                "changes": 73
+              },
+              {
+                "filename": "package.json",
+                "status": "added",
+                "additions": 19,
+                "deletions": 0,
+                "changes": 19
+              },
+              {
+                "filename": "scripts/check.mjs",
+                "status": "added",
+                "additions": 28,
+                "deletions": 0,
+                "changes": 28
+              },
+              {
+                "filename": "src/handoffCard.mjs",
+                "status": "added",
+                "additions": 269,
+                "deletions": 0,
+                "changes": 269
+              },
+              {
+                "filename": "styles.css",
+                "status": "added",
+                "additions": 394,
+                "deletions": 0,
+                "changes": 394
+              },
+              {
+                "filename": "test/handoffCard.test.mjs",
+                "status": "added",
+                "additions": 54,
+                "deletions": 0,
+                "changes": 54
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": ".gitignore",
+            "status": "added",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "app.js",
+            "status": "added",
+            "additions": 135,
+            "deletions": 0
+          },
+          {
+            "filename": "index.html",
+            "status": "added",
+            "additions": 73,
+            "deletions": 0
+          },
+          {
+            "filename": "LICENSE",
+            "status": "added",
+            "additions": 21,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "added",
+            "additions": 19,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "added",
+            "additions": 58,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/check.mjs",
+            "status": "added",
+            "additions": 28,
+            "deletions": 0
+          },
+          {
+            "filename": "src/handoffCard.mjs",
+            "status": "added",
+            "additions": 269,
+            "deletions": 0
+          },
+          {
+            "filename": "styles.css",
+            "status": "added",
+            "additions": 394,
+            "deletions": 0
+          },
+          {
+            "filename": "test/handoffCard.test.mjs",
+            "status": "added",
+            "additions": 54,
+            "deletions": 0
+          }
+        ]
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260525-a-pocket-ante",
+      "url": "https://github.com/bte808/fun-20260525-a-pocket-ante",
+      "description": "Daily seeded five-card browser sprint with charm scoring",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-25T02:13:23Z",
+      "updatedAt": "2026-05-25T09:14:43Z",
+      "createdDateShanghai": "2026-05-25",
+      "updatedDateShanghai": "2026-05-25",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 24923,
+        "CSS": 7236,
+        "HTML": 2440
+      },
+      "type": "浏览器小游戏",
+      "readme": {
+        "oneLine": "Pocket Ante Rally is a quick five-card sprint. Each run deals three seven-card tables from the daily seed. The player picks five cards, tries to beat the ante, then adds...",
+        "usefulness": "It is a static, portable mini-game format for quick breaks. The whole loop fits on one page, making it easy to share, host on GitHub Pages, or remix with a different featured seed.",
+        "whyFun": "The player has to read the same seven cards through different lenses. A plain pair can become strong with Pair Press, low cards can suddenly matter with Low Sparks, and the final table feels different from the first wit...",
+        "runCommand": "npm start",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": true,
+        "updated": true,
+        "commitCount": 2,
+        "commits": [
+          {
+            "sha": "cf222d82e71a5e06f72428fd225605b831868403",
+            "shortSha": "cf222d8",
+            "url": "https://github.com/bte808/fun-20260525-a-pocket-ante/commit/cf222d82e71a5e06f72428fd225605b831868403",
+            "message": "Improve Pocket Ante accessibility flow",
+            "committedAt": "2026-05-25T09:14:18Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 6,
+                "deletions": 3,
+                "changes": 9
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 18,
+                "deletions": 3,
+                "changes": 21
+              },
+              {
+                "filename": "scripts/smoke-test.mjs",
+                "status": "modified",
+                "additions": 59,
+                "deletions": 1,
+                "changes": 60
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 111,
+                "deletions": 17,
+                "changes": 128
+              },
+              {
+                "filename": "src/styles.css",
+                "status": "modified",
+                "additions": 51,
+                "deletions": 4,
+                "changes": 55
+              }
+            ]
+          },
+          {
+            "sha": "b725b846f2d1aa443fc93f25ddad68553a89f04f",
+            "shortSha": "b725b84",
+            "url": "https://github.com/bte808/fun-20260525-a-pocket-ante/commit/b725b846f2d1aa443fc93f25ddad68553a89f04f",
+            "message": "Build Pocket Ante Rally game",
+            "committedAt": "2026-05-25T02:13:14Z",
+            "files": [
+              {
+                "filename": ".gitignore",
+                "status": "added",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "LICENSE",
+                "status": "added",
+                "additions": 21,
+                "deletions": 0,
+                "changes": 21
+              },
+              {
+                "filename": "README.md",
+                "status": "added",
+                "additions": 74,
+                "deletions": 0,
+                "changes": 74
+              },
+              {
+                "filename": "favicon.svg",
+                "status": "added",
+                "additions": 7,
+                "deletions": 0,
+                "changes": 7
+              },
+              {
+                "filename": "index.html",
+                "status": "added",
+                "additions": 57,
+                "deletions": 0,
+                "changes": 57
+              },
+              {
+                "filename": "package.json",
+                "status": "added",
+                "additions": 18,
+                "deletions": 0,
+                "changes": 18
+              },
+              {
+                "filename": "scripts/smoke-test.mjs",
+                "status": "added",
+                "additions": 63,
+                "deletions": 0,
+                "changes": 63
+              },
+              {
+                "filename": "src/app.js",
+                "status": "added",
+                "additions": 327,
+                "deletions": 0,
+                "changes": 327
+              },
+              {
+                "filename": "src/game.js",
+                "status": "added",
+                "additions": 313,
+                "deletions": 0,
+                "changes": 313
+              },
+              {
+                "filename": "src/styles.css",
+                "status": "added",
+                "additions": 379,
+                "deletions": 0,
+                "changes": 379
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": ".gitignore",
+            "status": "added",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "favicon.svg",
+            "status": "added",
+            "additions": 7,
+            "deletions": 0
+          },
+          {
+            "filename": "index.html",
+            "status": "added",
+            "additions": 57,
+            "deletions": 0
+          },
+          {
+            "filename": "LICENSE",
+            "status": "added",
+            "additions": 21,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "added",
+            "additions": 18,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "added",
+            "additions": 74,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/smoke-test.mjs",
+            "status": "added",
+            "additions": 63,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "added",
+            "additions": 327,
+            "deletions": 0
+          },
+          {
+            "filename": "src/game.js",
+            "status": "added",
+            "additions": 313,
+            "deletions": 0
+          },
+          {
+            "filename": "src/styles.css",
+            "status": "added",
+            "additions": 379,
+            "deletions": 0
+          }
+        ]
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
     {
       "name": "fun-20260523-a-time-heist",
       "url": "https://github.com/bte808/fun-20260523-a-time-heist",
@@ -96,34 +715,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "51149365037dac771df99c2f37236dd05b0b6ad2",
-            "shortSha": "5114936",
-            "url": "https://github.com/bte808/fun-20260523-a-time-heist/commit/51149365037dac771df99c2f37236dd05b0b6ad2",
-            "message": "Fix local asset cache for weekly check",
-            "committedAt": "2026-05-24T11:40:37Z",
-            "files": [
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 2,
-                "changes": 4
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 2
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -153,60 +748,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "92b0d961394b59ce7967024b7fc60026d40f8979",
-            "shortSha": "92b0d96",
-            "url": "https://github.com/bte808/fun-20260523-c-claim-ledger/commit/92b0d961394b59ce7967024b7fc60026d40f8979",
-            "message": "Fix asset cache and license metadata",
-            "committedAt": "2026-05-24T11:40:37Z",
-            "files": [
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 4,
-                "deletions": 0,
-                "changes": 4
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 2,
-                "changes": 4
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 2
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 4,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -236,47 +781,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "6694e4eb88d1d1cf135ed8f1dda5aa2dde3de78d",
-            "shortSha": "6694e4e",
-            "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint/commit/6694e4eb88d1d1cf135ed8f1dda5aa2dde3de78d",
-            "message": "Fix local asset cache validation",
-            "committedAt": "2026-05-24T11:40:37Z",
-            "files": [
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 2,
-                "changes": 4
-              },
-              {
-                "filename": "scripts/check-static.js",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 1,
-                "changes": 2
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 2
-          },
-          {
-            "filename": "scripts/check-static.js",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 1
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -372,86 +880,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "157e186faa76ed117e0b185d909e418ba6196ab9",
-            "shortSha": "157e186",
-            "url": "https://github.com/bte808/fun-20260521-c-concept-bridge/commit/157e186faa76ed117e0b185d909e418ba6196ab9",
-            "message": "Add recall prompt CSV export",
-            "committedAt": "2026-05-24T10:47:51Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 1,
-                "changes": 2
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 12,
-                "deletions": 1,
-                "changes": 13
-              },
-              {
-                "filename": "src/concept-engine.js",
-                "status": "modified",
-                "additions": 18,
-                "deletions": 0,
-                "changes": 18
-              },
-              {
-                "filename": "test/concept-engine.test.mjs",
-                "status": "modified",
-                "additions": 17,
-                "deletions": 1,
-                "changes": 18
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 1
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 12,
-            "deletions": 1
-          },
-          {
-            "filename": "src/concept-engine.js",
-            "status": "modified",
-            "additions": 18,
-            "deletions": 0
-          },
-          {
-            "filename": "test/concept-engine.test.mjs",
-            "status": "modified",
-            "additions": 17,
-            "deletions": 1
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -481,60 +913,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "8c3a0e2be75ef2913cfb8475c617a041969d92df",
-            "shortSha": "8c3a0e2",
-            "url": "https://github.com/bte808/fun-20260521-b-meeting-brief/commit/8c3a0e2be75ef2913cfb8475c617a041969d92df",
-            "message": "Refresh brief when options change",
-            "committedAt": "2026-05-24T10:28:29Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "scripts/static-check.mjs",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 5,
-                "deletions": 0,
-                "changes": 5
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/static-check.mjs",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 5,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": false,
       "visibilitySource": "GitHub public repository data"
@@ -597,73 +979,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "d76a7fc84e192ff4d70c974c195651e7802a4223",
-            "shortSha": "d76a7fc",
-            "url": "https://github.com/bte808/fun-20260520-dice-target/commit/d76a7fc84e192ff4d70c974c195651e7802a4223",
-            "message": "Add dice sprint local best",
-            "committedAt": "2026-05-24T10:09:25Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 1,
-                "changes": 3
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 63,
-                "deletions": 2,
-                "changes": 65
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 6,
-                "deletions": 0,
-                "changes": 6
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 1
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 63,
-            "deletions": 2
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 6,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -693,86 +1012,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "33a58c3673db47e0323486c49c5e6f47ce33049f",
-            "shortSha": "33a58c3",
-            "url": "https://github.com/bte808/fun-20260519-pulse-poem/commit/33a58c3673db47e0323486c49c5e6f47ce33049f",
-            "message": "Add score download fallback",
-            "committedAt": "2026-05-24T09:48:44Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 2,
-                "changes": 4
-              },
-              {
-                "filename": "app.js",
-                "status": "modified",
-                "additions": 38,
-                "deletions": 5,
-                "changes": 43
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "src/pulse.js",
-                "status": "modified",
-                "additions": 4,
-                "deletions": 0,
-                "changes": 4
-              },
-              {
-                "filename": "tests/pulse.test.js",
-                "status": "modified",
-                "additions": 6,
-                "deletions": 0,
-                "changes": 6
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "app.js",
-            "status": "modified",
-            "additions": 38,
-            "deletions": 5
-          },
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 2
-          },
-          {
-            "filename": "src/pulse.js",
-            "status": "modified",
-            "additions": 4,
-            "deletions": 0
-          },
-          {
-            "filename": "tests/pulse.test.js",
-            "status": "modified",
-            "additions": 6,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": false,
       "visibilitySource": "GitHub public repository data"
@@ -802,73 +1045,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "faadb310c55f4162c54395834b9c9f55d611464e",
-            "shortSha": "faadb31",
-            "url": "https://github.com/bte808/fun-20260518-signal-bento/commit/faadb310c55f4162c54395834b9c9f55d611464e",
-            "message": "Add keyboard controls",
-            "committedAt": "2026-05-24T09:31:27Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 4,
-                "deletions": 1,
-                "changes": 5
-              },
-              {
-                "filename": "app.js",
-                "status": "modified",
-                "additions": 85,
-                "deletions": 4,
-                "changes": 89
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 39,
-                "deletions": 9,
-                "changes": 48
-              },
-              {
-                "filename": "scripts/smoke-test.cjs",
-                "status": "modified",
-                "additions": 31,
-                "deletions": 2,
-                "changes": 33
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "app.js",
-            "status": "modified",
-            "additions": 85,
-            "deletions": 4
-          },
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 39,
-            "deletions": 9
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 4,
-            "deletions": 1
-          },
-          {
-            "filename": "scripts/smoke-test.cjs",
-            "status": "modified",
-            "additions": 31,
-            "deletions": 2
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -898,86 +1078,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "c669855c7afa05f66acbfcfb9103ee2341355f28",
-            "shortSha": "c669855",
-            "url": "https://github.com/bte808/fun-20260517-orbit-mods/commit/c669855c7afa05f66acbfcfb9103ee2341355f28",
-            "message": "Add starter orbit presets",
-            "committedAt": "2026-05-24T09:07:32Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 5,
-                "deletions": 3,
-                "changes": 8
-              },
-              {
-                "filename": "app.js",
-                "status": "modified",
-                "additions": 84,
-                "deletions": 3,
-                "changes": 87
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 5,
-                "deletions": 0,
-                "changes": 5
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 17,
-                "deletions": 0,
-                "changes": 17
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "app.js",
-            "status": "modified",
-            "additions": 84,
-            "deletions": 3
-          },
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 5,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 5,
-            "deletions": 3
-          },
-          {
-            "filename": "scripts/check.mjs",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 17,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"

@@ -8,6 +8,7 @@ const apiBase = "https://api.github.com";
 const token = process.env.GITHUB_TOKEN || "";
 const startIso = new Date(`${runDate}T00:00:00+08:00`).toISOString();
 const endIso = new Date(`${runDate}T23:59:59.999+08:00`).toISOString();
+const maxGithubRetries = Number(process.env.GITHUB_MAX_RETRIES || 2);
 
 const funReadmeSignals = [
   /每日趣味项目/,
@@ -27,25 +28,67 @@ function headers(extra = {}) {
   };
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function rateLimitSummary(response) {
+  const remaining = response.headers.get("x-ratelimit-remaining");
+  const reset = response.headers.get("x-ratelimit-reset");
+  if (!remaining && !reset) return "";
+
+  const resetIso = reset ? new Date(Number(reset) * 1000).toISOString() : "unknown";
+  return ` rate_limit_remaining=${remaining ?? "unknown"} reset_at=${resetIso}`;
+}
+
+function shouldRetryStatus(status, text = "") {
+  return status === 429
+    || status === 502
+    || status === 503
+    || status === 504
+    || (status === 403 && /rate limit|secondary rate limit/i.test(text));
+}
+
 async function github(path, options = {}) {
-  const response = await fetch(`${apiBase}${path}`, {
-    headers: headers(options.headers || {})
-  });
+  const attempts = options.retries ?? maxGithubRetries;
 
-  if (response.status === 404 && options.optional) {
-    return null;
+  for (let attempt = 0; attempt <= attempts; attempt += 1) {
+    let response;
+    try {
+      response = await fetch(`${apiBase}${path}`, {
+        headers: headers(options.headers || {})
+      });
+    } catch (error) {
+      if (attempt < attempts) {
+        await sleep(400 * (attempt + 1));
+        continue;
+      }
+      throw new Error(`GitHub request failed for ${path}: ${error.message}`);
+    }
+
+    if (response.status === 404 && options.optional) {
+      return null;
+    }
+
+    if (!response.ok) {
+      const text = await response.text();
+      if (attempt < attempts && shouldRetryStatus(response.status, text)) {
+        await sleep(500 * (attempt + 1));
+        continue;
+      }
+      throw new Error(
+        `GitHub API ${response.status} for ${path}:${rateLimitSummary(response)} ${text.slice(0, 240)}`.trim()
+      );
+    }
+
+    if (options.raw) {
+      return response.text();
+    }
+
+    return response.json();
   }
 
-  if (!response.ok) {
-    const text = await response.text();
-    throw new Error(`GitHub API ${response.status} for ${path}: ${text.slice(0, 240)}`);
-  }
-
-  if (options.raw) {
-    return response.text();
-  }
-
-  return response.json();
+  throw new Error(`GitHub request exhausted retries for ${path}`);
 }
 
 async function paginate(path) {
@@ -263,10 +306,16 @@ function statusFromText(matches, detectedNote, missingNote) {
 async function main() {
   const repos = await paginate(`/users/${owner}/repos?type=owner&sort=created&direction=desc`);
   const candidates = [];
+  const collectionWarnings = [];
 
   for (const repo of repos) {
     if (repo.private || repo.fork || repo.archived || repo.name === dashboardRepo) continue;
-    const readme = await readmeFor(repo);
+    let readme = "";
+    try {
+      readme = await readmeFor(repo);
+    } catch (error) {
+      collectionWarnings.push(`README 获取失败 ${repo.name}: ${error.message}`);
+    }
     const isFunByName = /^fun-/i.test(repo.name);
     const isFunByReadme = funReadmeSignals.some((pattern) => pattern.test(readme));
     if (!isFunByName && !isFunByReadme) continue;
@@ -277,7 +326,23 @@ async function main() {
 
   for (const item of candidates) {
     const { repo, readme } = item;
-    const [commits, languages] = await Promise.all([repoCommits(repo), languagesFor(repo)]);
+    const repoWarnings = [];
+    const [commitsResult, languagesResult] = await Promise.allSettled([repoCommits(repo), languagesFor(repo)]);
+    const commits = commitsResult.status === "fulfilled" ? commitsResult.value : [];
+    const languages = languagesResult.status === "fulfilled" ? languagesResult.value : {};
+
+    if (commitsResult.status === "rejected") {
+      repoWarnings.push(`commit 获取失败: ${commitsResult.reason.message}`);
+    }
+
+    if (languagesResult.status === "rejected") {
+      repoWarnings.push(`language 获取失败: ${languagesResult.reason.message}`);
+    }
+
+    if (repoWarnings.length) {
+      collectionWarnings.push(`${repo.name}: ${repoWarnings.join("；")}`);
+    }
+
     const readmeInfo = extractReadmeInfo(readme, repo.description || "");
     const createdDateShanghai = dateInShanghai(repo.created_at);
     const updatedDateShanghai = dateInShanghai(repo.updated_at);
@@ -387,7 +452,8 @@ async function main() {
           "未检测到周日体检结果。"
         )
       },
-      highlights
+      highlights,
+      collectionWarnings
     },
     metrics: {
       totalProjects: projects.length,

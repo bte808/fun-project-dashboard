@@ -1,18 +1,18 @@
 window.FUN_PROJECT_DASHBOARD_DATA = {
   "meta": {
-    "title": "2026-05-27 每日趣味项目总览仪表盘",
+    "title": "2026-05-28 每日趣味项目总览仪表盘",
     "owner": "bte808",
     "repository": "fun-project-dashboard",
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
-    "runDate": "2026-05-27",
+    "runDate": "2026-05-28",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-05-27T14:03:02.654Z",
-    "generatedAtShanghaiDate": "2026-05-27",
+    "generatedAt": "2026-05-28T14:04:03.413Z",
+    "generatedAtShanghaiDate": "2026-05-28",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
     "todayWindowUtc": {
-      "startIso": "2026-05-26T16:00:00.000Z",
-      "endIso": "2026-05-27T15:59:59.999Z"
+      "startIso": "2026-05-27T16:00:00.000Z",
+      "endIso": "2026-05-28T15:59:59.999Z"
     },
     "todayStory": "今天公开仓库中检测到 3 个新建项目、6 个今日有变动的项目，共 9 个 commit。",
     "automationChecks": {
@@ -39,73 +39,527 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     },
     "highlights": [
       {
-        "name": "fun-20260527-c-prereq-scout",
-        "url": "https://github.com/bte808/fun-20260527-c-prereq-scout",
-        "reason": "今天新建；Local-first prerequisite-aware study planner for course review"
+        "name": "fun-20260528-c-uncertainty-budget",
+        "url": "https://github.com/bte808/fun-20260528-c-uncertainty-budget",
+        "reason": "今天新建；Local-first uncertainty budget worksheet for lab reports and measurement review"
       },
       {
-        "name": "fun-20260527-b-move-window",
-        "url": "https://github.com/bte808/fun-20260527-b-move-window",
-        "reason": "今天新建；Local-first move-date checklist planner."
+        "name": "fun-20260528-b-runbook-card",
+        "url": "https://github.com/bte808/fun-20260528-b-runbook-card",
+        "reason": "今天新建；Local-first runbook card builder for rough process notes"
+      },
+      {
+        "name": "fun-20260528-a-scanline-sprint",
+        "url": "https://github.com/bte808/fun-20260528-a-scanline-sprint",
+        "reason": "今天新建；Daily scanline reflex browser game with optional synth feedback"
       },
       {
         "name": "fun-20260527-a-tiny-planet-hop",
         "url": "https://github.com/bte808/fun-20260527-a-tiny-planet-hop",
-        "reason": "今天新建；Tiny Planet Hop is a tiny browser runner where you orbit a toy planet, hop over red craters, grab yellow starbits, and try to reach the sunrise gate before the timer run..."
-      },
-      {
-        "name": "fun-20260526-c-quiz-map",
-        "url": "https://github.com/bte808/fun-20260526-c-quiz-map",
-        "reason": "今天更新 1 个 commit；Local-first quiz result mapper for study review plans"
+        "reason": "今天更新 1 个 commit；Tiny circular runner about hopping around a daily seeded toy planet"
       }
     ],
     "collectionWarnings": []
   },
   "metrics": {
-    "totalProjects": 21,
+    "totalProjects": 24,
     "todayNew": 3,
     "todayUpdated": 6,
     "todayCommits": 9,
-    "needsReview": 17,
+    "needsReview": 19,
     "techDistribution": {
-      "JavaScript": 21
+      "JavaScript": 24
     }
   },
   "projects": [
     {
-      "name": "fun-20260527-a-tiny-planet-hop",
-      "url": "https://github.com/bte808/fun-20260527-a-tiny-planet-hop",
-      "description": "待补充",
+      "name": "fun-20260528-c-uncertainty-budget",
+      "url": "https://github.com/bte808/fun-20260528-c-uncertainty-budget",
+      "description": "Local-first uncertainty budget worksheet for lab reports and measurement review",
       "defaultBranch": "main",
-      "createdAt": "2026-05-27T05:48:36Z",
-      "updatedAt": "2026-05-27T05:48:44Z",
-      "createdDateShanghai": "2026-05-27",
-      "updatedDateShanghai": "2026-05-27",
+      "createdAt": "2026-05-28T02:56:53Z",
+      "updatedAt": "2026-05-28T10:47:53Z",
+      "createdDateShanghai": "2026-05-28",
+      "updatedDateShanghai": "2026-05-28",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 27088,
-        "CSS": 5222,
-        "HTML": 3127
+        "JavaScript": 20606,
+        "HTML": 6152,
+        "CSS": 5959
       },
-      "type": "音频互动",
+      "type": "学习练习",
       "readme": {
-        "oneLine": "Tiny Planet Hop is a tiny browser runner where you orbit a toy planet, hop over red craters, grab yellow starbits, and try to reach the sunrise gate before the timer run...",
-        "usefulness": "This was built for the 2026-05-27 daily fun-project incubation run, worker A, with the fixed direction \"fun\". The public-web scan focused on recent Show HN posts from 2026-05-27. The inspiration was the quick \"open it a...",
-        "whyFun": "The player is always moving, so each choice is tiny and urgent: jump now, wait half a beat, or risk clipping a crater to keep a combo alive. The whole run fits in under a minute, but the daily seed, three speeds, starbi...",
-        "runCommand": "npm start",
-        "verification": "The smoke test verifies deterministic daily stage generation, the Asia/Shanghai date helper, jump controls, hazard resolution, a finishable skilled Breezy run, and share text."
+        "oneLine": "Local-first uncertainty budget worksheet for lab reports and measurement review",
+        "usefulness": "Preparing a physics, chemistry, metrology, or engineering lab report. Checking whether an experiment notebook clearly separates Type A, Type B, calibration, resolution, and model sources. Comparing which instrument or p...",
+        "whyFun": "待补充",
+        "runCommand": "python3 -m http.server 5182",
+        "verification": "待补充"
       },
       "today": {
         "created": true,
         "updated": true,
-        "commitCount": 1,
+        "commitCount": 2,
         "commits": [
           {
-            "sha": "c3a52bee9142d808de5cc1c25525a671106d6c75",
-            "shortSha": "c3a52be",
-            "url": "https://github.com/bte808/fun-20260527-a-tiny-planet-hop/commit/c3a52bee9142d808de5cc1c25525a671106d6c75",
-            "message": "Initial Tiny Planet Hop game",
-            "committedAt": "2026-05-27T05:48:26Z",
+            "sha": "3fb25fe1ab97079e565714c9481ba8abe9e1e11c",
+            "shortSha": "3fb25fe",
+            "url": "https://github.com/bte808/fun-20260528-c-uncertainty-budget/commit/3fb25fe1ab97079e565714c9481ba8abe9e1e11c",
+            "message": "Add uncertainty budget JSON backups",
+            "committedAt": "2026-05-28T10:47:41Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 2,
+                "changes": 6
+              },
+              {
+                "filename": "app.js",
+                "status": "modified",
+                "additions": 71,
+                "deletions": 10,
+                "changes": 81
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 0,
+                "changes": 3
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 0,
+                "changes": 4
+              },
+              {
+                "filename": "test.js",
+                "status": "modified",
+                "additions": 25,
+                "deletions": 0,
+                "changes": 25
+              }
+            ]
+          },
+          {
+            "sha": "159f0b3731f1b5a9b99e13c9bda9931cb407dc8c",
+            "shortSha": "159f0b3",
+            "url": "https://github.com/bte808/fun-20260528-c-uncertainty-budget/commit/159f0b3731f1b5a9b99e13c9bda9931cb407dc8c",
+            "message": "Initial uncertainty budget worksheet",
+            "committedAt": "2026-05-28T02:56:52Z",
+            "files": [
+              {
+                "filename": ".gitignore",
+                "status": "added",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "LICENSE",
+                "status": "added",
+                "additions": 21,
+                "deletions": 0,
+                "changes": 21
+              },
+              {
+                "filename": "README.md",
+                "status": "added",
+                "additions": 85,
+                "deletions": 0,
+                "changes": 85
+              },
+              {
+                "filename": "app.js",
+                "status": "added",
+                "additions": 444,
+                "deletions": 0,
+                "changes": 444
+              },
+              {
+                "filename": "index.html",
+                "status": "added",
+                "additions": 159,
+                "deletions": 0,
+                "changes": 159
+              },
+              {
+                "filename": "package.json",
+                "status": "added",
+                "additions": 20,
+                "deletions": 0,
+                "changes": 20
+              },
+              {
+                "filename": "styles.css",
+                "status": "added",
+                "additions": 383,
+                "deletions": 0,
+                "changes": 383
+              },
+              {
+                "filename": "test.js",
+                "status": "added",
+                "additions": 59,
+                "deletions": 0,
+                "changes": 59
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": ".gitignore",
+            "status": "added",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "app.js",
+            "status": "added",
+            "additions": 444,
+            "deletions": 0
+          },
+          {
+            "filename": "index.html",
+            "status": "added",
+            "additions": 159,
+            "deletions": 0
+          },
+          {
+            "filename": "LICENSE",
+            "status": "added",
+            "additions": 21,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "added",
+            "additions": 20,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "added",
+            "additions": 85,
+            "deletions": 0
+          },
+          {
+            "filename": "styles.css",
+            "status": "added",
+            "additions": 383,
+            "deletions": 0
+          },
+          {
+            "filename": "test.js",
+            "status": "added",
+            "additions": 59,
+            "deletions": 0
+          }
+        ]
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260528-b-runbook-card",
+      "url": "https://github.com/bte808/fun-20260528-b-runbook-card",
+      "description": "Local-first runbook card builder for rough process notes",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-28T02:53:32Z",
+      "updatedAt": "2026-05-28T10:28:22Z",
+      "createdDateShanghai": "2026-05-28",
+      "updatedDateShanghai": "2026-05-28",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 22296,
+        "CSS": 6745,
+        "HTML": 2731
+      },
+      "type": "学习练习",
+      "readme": {
+        "oneLine": "Local-first runbook card builder for rough process notes",
+        "usefulness": "Useful procedures often start as scattered notes in chat, docs, or a personal list. That is enough to remember the work, but not enough to run it cleanly under time pressure. Runbook Card converts those notes into a lig...",
+        "whyFun": "It gives rough notes a visible \"readiness\" score and turns them into a tidy command card. You can tighten the card by adding an owner, goal, due time, verification step, and follow-up step, then watch the draft become r...",
+        "runCommand": "python3 -m http.server 5198 --bind localhost",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": true,
+        "updated": true,
+        "commitCount": 2,
+        "commits": [
+          {
+            "sha": "145ed22a81a825ff0828b6951e7b4e4c5d69c2a3",
+            "shortSha": "145ed22",
+            "url": "https://github.com/bte808/fun-20260528-b-runbook-card/commit/145ed22a81a825ff0828b6951e7b4e4c5d69c2a3",
+            "message": "Make focus window pace-aware",
+            "committedAt": "2026-05-28T10:28:10Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 3,
+                "changes": 7
+              },
+              {
+                "filename": "app.js",
+                "status": "modified",
+                "additions": 9,
+                "deletions": 3,
+                "changes": 12
+              },
+              {
+                "filename": "src/runbook.js",
+                "status": "modified",
+                "additions": 35,
+                "deletions": 3,
+                "changes": 38
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 7,
+                "deletions": 0,
+                "changes": 7
+              },
+              {
+                "filename": "test/runbook.test.mjs",
+                "status": "modified",
+                "additions": 14,
+                "deletions": 1,
+                "changes": 15
+              }
+            ]
+          },
+          {
+            "sha": "349377d7b5905a5e8adc812640a22f684f20b6f7",
+            "shortSha": "349377d",
+            "url": "https://github.com/bte808/fun-20260528-b-runbook-card/commit/349377d7b5905a5e8adc812640a22f684f20b6f7",
+            "message": "Ship runbook card builder",
+            "committedAt": "2026-05-28T02:53:24Z",
+            "files": [
+              {
+                "filename": ".gitignore",
+                "status": "added",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "LICENSE",
+                "status": "added",
+                "additions": 21,
+                "deletions": 0,
+                "changes": 21
+              },
+              {
+                "filename": "README.md",
+                "status": "added",
+                "additions": 94,
+                "deletions": 0,
+                "changes": 94
+              },
+              {
+                "filename": "app.js",
+                "status": "added",
+                "additions": 246,
+                "deletions": 0,
+                "changes": 246
+              },
+              {
+                "filename": "index.html",
+                "status": "added",
+                "additions": 77,
+                "deletions": 0,
+                "changes": 77
+              },
+              {
+                "filename": "package.json",
+                "status": "added",
+                "additions": 19,
+                "deletions": 0,
+                "changes": 19
+              },
+              {
+                "filename": "scripts/check.mjs",
+                "status": "added",
+                "additions": 74,
+                "deletions": 0,
+                "changes": 74
+              },
+              {
+                "filename": "src/runbook.js",
+                "status": "added",
+                "additions": 223,
+                "deletions": 0,
+                "changes": 223
+              },
+              {
+                "filename": "styles.css",
+                "status": "added",
+                "additions": 441,
+                "deletions": 0,
+                "changes": 441
+              },
+              {
+                "filename": "test/runbook.test.mjs",
+                "status": "added",
+                "additions": 54,
+                "deletions": 0,
+                "changes": 54
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": ".gitignore",
+            "status": "added",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "app.js",
+            "status": "added",
+            "additions": 246,
+            "deletions": 0
+          },
+          {
+            "filename": "index.html",
+            "status": "added",
+            "additions": 77,
+            "deletions": 0
+          },
+          {
+            "filename": "LICENSE",
+            "status": "added",
+            "additions": 21,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "added",
+            "additions": 19,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "added",
+            "additions": 94,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/check.mjs",
+            "status": "added",
+            "additions": 74,
+            "deletions": 0
+          },
+          {
+            "filename": "src/runbook.js",
+            "status": "added",
+            "additions": 223,
+            "deletions": 0
+          },
+          {
+            "filename": "styles.css",
+            "status": "added",
+            "additions": 441,
+            "deletions": 0
+          },
+          {
+            "filename": "test/runbook.test.mjs",
+            "status": "added",
+            "additions": 54,
+            "deletions": 0
+          }
+        ]
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260528-a-scanline-sprint",
+      "url": "https://github.com/bte808/fun-20260528-a-scanline-sprint",
+      "description": "Daily scanline reflex browser game with optional synth feedback",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-28T02:26:12Z",
+      "updatedAt": "2026-05-28T10:09:04Z",
+      "createdDateShanghai": "2026-05-28",
+      "updatedDateShanghai": "2026-05-28",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 28474,
+        "CSS": 7234,
+        "HTML": 4451
+      },
+      "type": "浏览器小游戏",
+      "readme": {
+        "oneLine": "Daily scanline reflex browser game with optional synth feedback",
+        "usefulness": "This was built for the 2026-05-28 daily fun-project incubation run, worker A, with the fixed direction \"fun\". The public-web scan focused on recent Show HN posts from 2026-05-28. The direct inspiration was the playful t...",
+        "whyFun": "The game is readable in one glance but gets tense quickly: the next correct button is always visible, yet the scan beam keeps shrinking your decision window. The result is a small \"one more run\" loop with visible pixels...",
+        "runCommand": "npm start",
+        "verification": "The smoke test verifies deterministic daily rounds, the Asia/Shanghai date helper, correct and wrong input handling, beam timeout behavior, a finishable perfect run, and share text."
+      },
+      "today": {
+        "created": true,
+        "updated": true,
+        "commitCount": 2,
+        "commits": [
+          {
+            "sha": "e3517037eb0af6c57966d59ca5a48e06f682e6b0",
+            "shortSha": "e351703",
+            "url": "https://github.com/bte808/fun-20260528-a-scanline-sprint/commit/e3517037eb0af6c57966d59ca5a48e06f682e6b0",
+            "message": "Add optional synth feedback",
+            "committedAt": "2026-05-28T10:08:57Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 3,
+                "changes": 6
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 2,
+                "changes": 5
+              },
+              {
+                "filename": "package.json",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 1,
+                "changes": 4
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 134,
+                "deletions": 2,
+                "changes": 136
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 7,
+                "deletions": 1,
+                "changes": 8
+              }
+            ]
+          },
+          {
+            "sha": "fdbdf47fc7e2e913e9d582e824672c4c055cbdd0",
+            "shortSha": "fdbdf47",
+            "url": "https://github.com/bte808/fun-20260528-a-scanline-sprint/commit/fdbdf47fc7e2e913e9d582e824672c4c055cbdd0",
+            "message": "Initial Scanline Sprint",
+            "committedAt": "2026-05-28T02:26:10Z",
             "files": [
               {
                 "filename": "LICENSE",
@@ -117,23 +571,23 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
               {
                 "filename": "README.md",
                 "status": "added",
-                "additions": 67,
+                "additions": 65,
                 "deletions": 0,
-                "changes": 67
+                "changes": 65
               },
               {
                 "filename": "favicon.svg",
                 "status": "added",
-                "additions": 7,
+                "additions": 11,
                 "deletions": 0,
-                "changes": 7
+                "changes": 11
               },
               {
                 "filename": "index.html",
                 "status": "added",
-                "additions": 88,
+                "additions": 122,
                 "deletions": 0,
-                "changes": 88
+                "changes": 122
               },
               {
                 "filename": "package.json",
@@ -145,30 +599,30 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
               {
                 "filename": "scripts/smoke-test.mjs",
                 "status": "added",
-                "additions": 79,
+                "additions": 77,
                 "deletions": 0,
-                "changes": 79
+                "changes": 77
               },
               {
                 "filename": "src/app.js",
                 "status": "added",
-                "additions": 493,
+                "additions": 395,
                 "deletions": 0,
-                "changes": 493
+                "changes": 395
               },
               {
                 "filename": "src/game.js",
                 "status": "added",
-                "additions": 367,
+                "additions": 373,
                 "deletions": 0,
-                "changes": 367
+                "changes": 373
               },
               {
                 "filename": "styles.css",
                 "status": "added",
-                "additions": 321,
+                "additions": 457,
                 "deletions": 0,
-                "changes": 321
+                "changes": 457
               }
             ]
           }
@@ -177,13 +631,13 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
           {
             "filename": "favicon.svg",
             "status": "added",
-            "additions": 7,
+            "additions": 11,
             "deletions": 0
           },
           {
             "filename": "index.html",
             "status": "added",
-            "additions": 88,
+            "additions": 122,
             "deletions": 0
           },
           {
@@ -201,32 +655,167 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
           {
             "filename": "README.md",
             "status": "added",
-            "additions": 67,
+            "additions": 65,
             "deletions": 0
           },
           {
             "filename": "scripts/smoke-test.mjs",
             "status": "added",
-            "additions": 79,
+            "additions": 77,
             "deletions": 0
           },
           {
             "filename": "src/app.js",
             "status": "added",
-            "additions": 493,
+            "additions": 395,
             "deletions": 0
           },
           {
             "filename": "src/game.js",
             "status": "added",
-            "additions": 367,
+            "additions": 373,
             "deletions": 0
           },
           {
             "filename": "styles.css",
             "status": "added",
-            "additions": 321,
+            "additions": 457,
             "deletions": 0
+          }
+        ]
+      },
+      "needsReview": false,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260527-a-tiny-planet-hop",
+      "url": "https://github.com/bte808/fun-20260527-a-tiny-planet-hop",
+      "description": "Tiny circular runner about hopping around a daily seeded toy planet",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-27T05:48:36Z",
+      "updatedAt": "2026-05-28T09:09:34Z",
+      "createdDateShanghai": "2026-05-27",
+      "updatedDateShanghai": "2026-05-28",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 27565,
+        "CSS": 5233,
+        "HTML": 3241
+      },
+      "type": "音频互动",
+      "readme": {
+        "oneLine": "Tiny circular runner about hopping around a daily seeded toy planet",
+        "usefulness": "This was built for the 2026-05-27 daily fun-project incubation run, worker A, with the fixed direction \"fun\". The public-web scan focused on recent Show HN posts from 2026-05-27. The inspiration was the quick \"open it a...",
+        "whyFun": "The player is always moving, so each choice is tiny and urgent: jump now, wait half a beat, or risk clipping a crater to keep a combo alive. The whole run fits in under a minute, but the daily seed, route preview, three...",
+        "runCommand": "npm start",
+        "verification": "The smoke test verifies deterministic daily stage generation, route summary text, the Asia/Shanghai date helper, jump controls, hazard resolution, a finishable skilled Breezy run, and share text."
+      },
+      "today": {
+        "created": false,
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "69518823331ad6abd419c124c205fb1c8a1d6b21",
+            "shortSha": "6951882",
+            "url": "https://github.com/bte808/fun-20260527-a-tiny-planet-hop/commit/69518823331ad6abd419c124c205fb1c8a1d6b21",
+            "message": "Fix Tiny Planet restart flow",
+            "committedAt": "2026-05-28T09:09:18Z",
+            "files": [
+              {
+                "filename": ".gitignore",
+                "status": "added",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 3,
+                "changes": 7
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 6,
+                "deletions": 2,
+                "changes": 8
+              },
+              {
+                "filename": "scripts/smoke-test.mjs",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 1,
+                "changes": 4
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 5,
+                "deletions": 2,
+                "changes": 7
+              },
+              {
+                "filename": "src/game.js",
+                "status": "modified",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 1,
+                "deletions": 1,
+                "changes": 2
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": ".gitignore",
+            "status": "added",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 2
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 3
+          },
+          {
+            "filename": "scripts/smoke-test.mjs",
+            "status": "modified",
+            "additions": 3,
+            "deletions": 1
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 5,
+            "deletions": 2
+          },
+          {
+            "filename": "src/game.js",
+            "status": "modified",
+            "additions": 5,
+            "deletions": 0
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 1,
+            "deletions": 1
           }
         ]
       },
@@ -257,273 +846,11 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "verification": "待补充"
       },
       "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 3,
-        "commits": [
-          {
-            "sha": "291b1282176f405868e18f729f4f6c677c3df311",
-            "shortSha": "291b128",
-            "url": "https://github.com/bte808/fun-20260527-c-prereq-scout/commit/291b1282176f405868e18f729f4f6c677c3df311",
-            "message": "Add next focus recommendation",
-            "committedAt": "2026-05-27T10:33:42Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 1,
-                "changes": 3
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 10,
-                "deletions": 0,
-                "changes": 10
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              },
-              {
-                "filename": "src/prereq-scout.js",
-                "status": "modified",
-                "additions": 95,
-                "deletions": 2,
-                "changes": 97
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 28,
-                "deletions": 0,
-                "changes": 28
-              },
-              {
-                "filename": "test/prereq-scout.test.mjs",
-                "status": "modified",
-                "additions": 9,
-                "deletions": 0,
-                "changes": 9
-              }
-            ]
-          },
-          {
-            "sha": "f006105e0f4f0f99ac8161ce79d3d87b1e9e796a",
-            "shortSha": "f006105",
-            "url": "https://github.com/bte808/fun-20260527-c-prereq-scout/commit/f006105e0f4f0f99ac8161ce79d3d87b1e9e796a",
-            "message": "Add local draft persistence",
-            "committedAt": "2026-05-27T09:59:30Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 5,
-                "deletions": 0,
-                "changes": 5
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "modified",
-                "additions": 4,
-                "deletions": 0,
-                "changes": 4
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 47,
-                "deletions": 9,
-                "changes": 56
-              },
-              {
-                "filename": "src/prereq-scout.js",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 1,
-                "changes": 2
-              },
-              {
-                "filename": "test/prereq-scout.test.mjs",
-                "status": "modified",
-                "additions": 8,
-                "deletions": 1,
-                "changes": 9
-              }
-            ]
-          },
-          {
-            "sha": "a789b402a9b6900454ed94430205c3d03725e1b0",
-            "shortSha": "a789b40",
-            "url": "https://github.com/bte808/fun-20260527-c-prereq-scout/commit/a789b402a9b6900454ed94430205c3d03725e1b0",
-            "message": "feat: add prereq scout study planner",
-            "committedAt": "2026-05-27T05:34:53Z",
-            "files": [
-              {
-                "filename": ".gitignore",
-                "status": "added",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              },
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 96,
-                "deletions": 0,
-                "changes": 96
-              },
-              {
-                "filename": "favicon.svg",
-                "status": "added",
-                "additions": 4,
-                "deletions": 0,
-                "changes": 4
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 103,
-                "deletions": 0,
-                "changes": 103
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 19,
-                "deletions": 0,
-                "changes": 19
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "added",
-                "additions": 60,
-                "deletions": 0,
-                "changes": 60
-              },
-              {
-                "filename": "src/app.js",
-                "status": "added",
-                "additions": 97,
-                "deletions": 0,
-                "changes": 97
-              },
-              {
-                "filename": "src/prereq-scout.js",
-                "status": "added",
-                "additions": 456,
-                "deletions": 0,
-                "changes": 456
-              },
-              {
-                "filename": "src/sample-data.js",
-                "status": "added",
-                "additions": 8,
-                "deletions": 0,
-                "changes": 8
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 288,
-                "deletions": 0,
-                "changes": 288
-              },
-              {
-                "filename": "test/prereq-scout.test.mjs",
-                "status": "added",
-                "additions": 28,
-                "deletions": 0,
-                "changes": 28
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 2,
-            "deletions": 0
-          },
-          {
-            "filename": "favicon.svg",
-            "status": "added",
-            "additions": 4,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 103,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 19,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 96,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/check.mjs",
-            "status": "added",
-            "additions": 60,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "added",
-            "additions": 97,
-            "deletions": 0
-          },
-          {
-            "filename": "src/prereq-scout.js",
-            "status": "added",
-            "additions": 456,
-            "deletions": 0
-          },
-          {
-            "filename": "src/sample-data.js",
-            "status": "added",
-            "additions": 8,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 288,
-            "deletions": 0
-          },
-          {
-            "filename": "test/prereq-scout.test.mjs",
-            "status": "added",
-            "additions": 28,
-            "deletions": 0
-          }
-        ]
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -552,190 +879,11 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "verification": "待补充"
       },
       "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 2,
-        "commits": [
-          {
-            "sha": "a410a9594fb5e836122e80b01654a1a3034bda07",
-            "shortSha": "a410a95",
-            "url": "https://github.com/bte808/fun-20260527-b-move-window/commit/a410a9594fb5e836122e80b01654a1a3034bda07",
-            "message": "Add next checkpoint focus",
-            "committedAt": "2026-05-27T09:46:24Z",
-            "files": [
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "app.js",
-                "status": "modified",
-                "additions": 49,
-                "deletions": 0,
-                "changes": 49
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 95,
-                "deletions": 0,
-                "changes": 95
-              },
-              {
-                "filename": "test/planner.test.mjs",
-                "status": "modified",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
-              }
-            ]
-          },
-          {
-            "sha": "332c317ab4ed89560c10df9c2273b308bd06fd24",
-            "shortSha": "332c317",
-            "url": "https://github.com/bte808/fun-20260527-b-move-window/commit/332c317ab4ed89560c10df9c2273b308bd06fd24",
-            "message": "Create Move Window planner",
-            "committedAt": "2026-05-27T05:27:15Z",
-            "files": [
-              {
-                "filename": ".gitignore",
-                "status": "added",
-                "additions": 5,
-                "deletions": 0,
-                "changes": 5
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 67,
-                "deletions": 0,
-                "changes": 67
-              },
-              {
-                "filename": "app.js",
-                "status": "added",
-                "additions": 518,
-                "deletions": 0,
-                "changes": 518
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 140,
-                "deletions": 0,
-                "changes": 140
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 19,
-                "deletions": 0,
-                "changes": 19
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "added",
-                "additions": 34,
-                "deletions": 0,
-                "changes": 34
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 452,
-                "deletions": 0,
-                "changes": 452
-              },
-              {
-                "filename": "test/planner.test.mjs",
-                "status": "added",
-                "additions": 31,
-                "deletions": 0,
-                "changes": 31
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 5,
-            "deletions": 0
-          },
-          {
-            "filename": "app.js",
-            "status": "added",
-            "additions": 518,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 140,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 19,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 67,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/check.mjs",
-            "status": "added",
-            "additions": 34,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 452,
-            "deletions": 0
-          },
-          {
-            "filename": "test/planner.test.mjs",
-            "status": "added",
-            "additions": 31,
-            "deletions": 0
-          }
-        ]
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -765,86 +913,10 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "02f96ceff3c832bc4dd8e8b0d34fef1a64da321d",
-            "shortSha": "02f96ce",
-            "url": "https://github.com/bte808/fun-20260526-c-quiz-map/commit/02f96ceff3c832bc4dd8e8b0d34fef1a64da321d",
-            "message": "Add next review actions",
-            "committedAt": "2026-05-27T11:04:44Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 1,
-                "changes": 4
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "src/quiz-map.js",
-                "status": "modified",
-                "additions": 38,
-                "deletions": 1,
-                "changes": 39
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 8,
-                "deletions": 0,
-                "changes": 8
-              },
-              {
-                "filename": "test/quiz-map.test.mjs",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 1
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 0
-          },
-          {
-            "filename": "src/quiz-map.js",
-            "status": "modified",
-            "additions": 38,
-            "deletions": 1
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 8,
-            "deletions": 0
-          },
-          {
-            "filename": "test/quiz-map.test.mjs",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -907,60 +979,10 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "2578a9f54ce0ea54d0d3f5a46121ad9e164f2085",
-            "shortSha": "2578a9f",
-            "url": "https://github.com/bte808/fun-20260526-a-odd-tile/commit/2578a9f54ce0ea54d0d3f5a46121ad9e164f2085",
-            "message": "Improve odd tile sprint start flow",
-            "committedAt": "2026-05-27T10:20:33Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 7,
-                "deletions": 5,
-                "changes": 12
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 3,
-                "changes": 6
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 10,
-                "deletions": 3,
-                "changes": 13
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 3
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 7,
-            "deletions": 5
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 10,
-            "deletions": 3
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": false,
       "visibilitySource": "GitHub public repository data"
@@ -1169,12 +1191,12 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "description": "Local-first link cleaner for deduping tab dumps and stripping custom tracking params",
       "defaultBranch": "main",
       "createdAt": "2026-05-22T04:05:27Z",
-      "updatedAt": "2026-05-23T09:49:21Z",
+      "updatedAt": "2026-05-28T09:47:54Z",
       "createdDateShanghai": "2026-05-22",
-      "updatedDateShanghai": "2026-05-23",
+      "updatedDateShanghai": "2026-05-28",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 18234,
+        "JavaScript": 21560,
         "CSS": 6100,
         "HTML": 3695
       },
@@ -1188,10 +1210,73 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "18051e84cb73ebea933f3cebe39fbed1f4fa8148",
+            "shortSha": "18051e8",
+            "url": "https://github.com/bte808/fun-20260522-b-link-janitor/commit/18051e84cb73ebea933f3cebe39fbed1f4fa8148",
+            "message": "Improve link cleanup export feedback",
+            "committedAt": "2026-05-28T09:47:37Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 6,
+                "deletions": 4,
+                "changes": 10
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 21,
+                "deletions": 2,
+                "changes": 23
+              },
+              {
+                "filename": "src/linkJanitor.mjs",
+                "status": "modified",
+                "additions": 64,
+                "deletions": 2,
+                "changes": 66
+              },
+              {
+                "filename": "test/linkJanitor.test.js",
+                "status": "modified",
+                "additions": 35,
+                "deletions": 0,
+                "changes": 35
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 4
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 21,
+            "deletions": 2
+          },
+          {
+            "filename": "src/linkJanitor.mjs",
+            "status": "modified",
+            "additions": 64,
+            "deletions": 2
+          },
+          {
+            "filename": "test/linkJanitor.test.js",
+            "status": "modified",
+            "additions": 35,
+            "deletions": 0
+          }
+        ]
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -1301,14 +1386,14 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "description": "待补充",
       "defaultBranch": "main",
       "createdAt": "2026-05-21T02:12:25Z",
-      "updatedAt": "2026-05-23T09:29:19Z",
+      "updatedAt": "2026-05-28T09:32:34Z",
       "createdDateShanghai": "2026-05-21",
-      "updatedDateShanghai": "2026-05-23",
+      "updatedDateShanghai": "2026-05-28",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 17078,
-        "CSS": 7326,
-        "HTML": 2956
+        "JavaScript": 18306,
+        "CSS": 7443,
+        "HTML": 3063
       },
       "type": "浏览器小游戏",
       "readme": {
@@ -1320,10 +1405,99 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "ead85222c251440e4c389a98bfa451a3b70c0359",
+            "shortSha": "ead8522",
+            "url": "https://github.com/bte808/fun-20260521-trace-tap/commit/ead85222c251440e4c389a98bfa451a3b70c0359",
+            "message": "Add failed-trace prefix repair",
+            "committedAt": "2026-05-28T09:32:28Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 2,
+                "changes": 6
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 1,
+                "deletions": 0,
+                "changes": 1
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 24,
+                "deletions": 1,
+                "changes": 25
+              },
+              {
+                "filename": "src/puzzles.js",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 0,
+                "changes": 4
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 8,
+                "deletions": 0,
+                "changes": 8
+              },
+              {
+                "filename": "test/smoke.test.mjs",
+                "status": "modified",
+                "additions": 6,
+                "deletions": 1,
+                "changes": 7
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 1,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 2
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 24,
+            "deletions": 1
+          },
+          {
+            "filename": "src/puzzles.js",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 0
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 8,
+            "deletions": 0
+          },
+          {
+            "filename": "test/smoke.test.mjs",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 1
+          }
+        ]
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -1353,99 +1527,10 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "96b4bb56cd2aac69e5d9fd021053ae56d18aeacc",
-            "shortSha": "96b4bb5",
-            "url": "https://github.com/bte808/fun-20260520-dice-target/commit/96b4bb56cd2aac69e5d9fd021053ae56d18aeacc",
-            "message": "Add practice archive mode",
-            "committedAt": "2026-05-27T11:32:13Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 13,
-                "deletions": 1,
-                "changes": 14
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 13,
-                "deletions": 0,
-                "changes": 13
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 53,
-                "deletions": 3,
-                "changes": 56
-              },
-              {
-                "filename": "src/puzzle.js",
-                "status": "modified",
-                "additions": 13,
-                "deletions": 0,
-                "changes": 13
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 76,
-                "deletions": 1,
-                "changes": 77
-              },
-              {
-                "filename": "test/puzzle.test.mjs",
-                "status": "modified",
-                "additions": 17,
-                "deletions": 1,
-                "changes": 18
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 13,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 13,
-            "deletions": 1
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 53,
-            "deletions": 3
-          },
-          {
-            "filename": "src/puzzle.js",
-            "status": "modified",
-            "additions": 13,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 76,
-            "deletions": 1
-          },
-          {
-            "filename": "test/puzzle.test.mjs",
-            "status": "modified",
-            "additions": 17,
-            "deletions": 1
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"

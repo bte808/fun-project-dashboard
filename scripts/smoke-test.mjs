@@ -23,11 +23,15 @@ assert(data.projects.length === data.metrics.totalProjects, "metrics.totalProjec
 assert(data.metrics.todayCommits === data.projects.reduce((sum, project) => sum + project.today.commitCount, 0), "today commit count mismatch");
 assert(data.metrics.todayNew === data.projects.filter((project) => project.today.created).length, "today new count mismatch");
 assert(data.metrics.todayUpdated === data.projects.filter((project) => project.today.updated).length, "today updated count mismatch");
+assert(data.metrics.totalStars === data.projects.reduce((sum, project) => sum + (project.stars?.total || 0), 0), "total star count mismatch");
+assert(data.metrics.todayStarDelta === data.projects.reduce((sum, project) => sum + (project.stars?.todayDelta || 0), 0), "today star delta mismatch");
 assert(data.meta?.runDate, "meta.runDate is required");
 assert(data.meta?.repositoryUrl, "meta.repositoryUrl is required");
+assert(data.meta?.starChangeNote, "meta.starChangeNote is required");
 assert(typeof data.meta?.todayStory === "string" && data.meta.todayStory.length > 0, "meta.todayStory is required");
 assert(data.projects.every((project) => Array.isArray(project.today?.commits)), "every project must include today.commits");
 assert(data.projects.every((project) => Array.isArray(project.today?.files)), "every project must include today.files");
+assert(data.projects.every((project) => typeof project.stars?.total === "number"), "every project must include stars.total");
 
 const dataContext = { window: {} };
 vm.runInNewContext(dataScript, dataContext, { filename: "data/projects.js" });
@@ -48,6 +52,8 @@ const requiredText = [
   "今日新建",
   "今日更新",
   "今日 commit",
+  "总 star",
+  "今日 star 变化",
   "技术分布",
   "今日变动",
   "项目时间线",

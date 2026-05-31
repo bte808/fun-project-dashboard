@@ -91,11 +91,12 @@ async function github(path, options = {}) {
   throw new Error(`GitHub request exhausted retries for ${path}`);
 }
 
-async function paginate(path) {
+async function paginate(path, options = {}) {
   const items = [];
   for (let page = 1; page <= 10; page += 1) {
     const connector = path.includes("?") ? "&" : "?";
-    const batch = await github(`${path}${connector}per_page=100&page=${page}`);
+    const batch = await github(`${path}${connector}per_page=100&page=${page}`, options);
+    if (!Array.isArray(batch)) break;
     items.push(...batch);
     if (batch.length < 100) break;
   }
@@ -295,6 +296,22 @@ async function languagesFor(repo) {
   return result || {};
 }
 
+async function todayStarsFor(repo) {
+  if (!repo.stargazers_count) return [];
+
+  const stargazers = await paginate(`/repos/${owner}/${repo.name}/stargazers`, {
+    optional: true,
+    headers: { "Accept": "application/vnd.github.star+json" }
+  });
+
+  return stargazers
+    .filter((entry) => entry.starred_at && entry.starred_at >= startIso && entry.starred_at <= endIso)
+    .map((entry) => ({
+      starredAt: entry.starred_at,
+      user: entry.user?.login || "unknown"
+    }));
+}
+
 function statusFromText(matches, detectedNote, missingNote) {
   return {
     status: matches.length > 0 ? "detected" : "not_detected",
@@ -327,9 +344,14 @@ async function main() {
   for (const item of candidates) {
     const { repo, readme } = item;
     const repoWarnings = [];
-    const [commitsResult, languagesResult] = await Promise.allSettled([repoCommits(repo), languagesFor(repo)]);
+    const [commitsResult, languagesResult, starsResult] = await Promise.allSettled([
+      repoCommits(repo),
+      languagesFor(repo),
+      todayStarsFor(repo)
+    ]);
     const commits = commitsResult.status === "fulfilled" ? commitsResult.value : [];
     const languages = languagesResult.status === "fulfilled" ? languagesResult.value : {};
+    const todayStars = starsResult.status === "fulfilled" ? starsResult.value : [];
 
     if (commitsResult.status === "rejected") {
       repoWarnings.push(`commit 获取失败: ${commitsResult.reason.message}`);
@@ -337,6 +359,10 @@ async function main() {
 
     if (languagesResult.status === "rejected") {
       repoWarnings.push(`language 获取失败: ${languagesResult.reason.message}`);
+    }
+
+    if (starsResult.status === "rejected") {
+      repoWarnings.push(`star 获取失败: ${starsResult.reason.message}`);
     }
 
     if (repoWarnings.length) {
@@ -370,6 +396,11 @@ async function main() {
       primaryLanguage: repo.language || "待补充",
       languages,
       type: inferType(repo.name, readme, repo.description || ""),
+      stars: {
+        total: repo.stargazers_count || 0,
+        todayDelta: todayStars.length,
+        todayStargazers: todayStars
+      },
       readme: readmeInfo,
       today: {
         created: createdToday,
@@ -398,6 +429,8 @@ async function main() {
     project: project.name,
     projectUrl: project.url
   })));
+  const totalStars = projects.reduce((sum, project) => sum + project.stars.total, 0);
+  const todayStarDelta = projects.reduce((sum, project) => sum + project.stars.todayDelta, 0);
   const commitText = todayCommits.map((commit) => commit.message).join("\n");
   const wednesdayMatches = todayCommits.filter((commit) => /周三|wednesday|加料|extra|bonus/i.test(commit.message));
   const sundayMatches = todayCommits.filter((commit) => /周日|sunday|体检|health|audit|复查|weekly check/i.test(commit.message));
@@ -410,8 +443,8 @@ async function main() {
       name: project.name,
       url: project.url,
       reason: project.today.created
-        ? `今天新建；${project.readme.oneLine}`
-        : `今天更新 ${project.today.commitCount} 个 commit；${project.readme.oneLine}`
+        ? `今天新建；${project.readme.oneLine}；当前 ${project.stars.total} star`
+        : `今天更新 ${project.today.commitCount} 个 commit；${project.readme.oneLine}；当前 ${project.stars.total} star`
     }));
 
   const data = {
@@ -428,8 +461,9 @@ async function main() {
       scanRule: "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
       todayWindowUtc: { startIso, endIso },
       todayStory: todayUpdatedProjects.length
-        ? `今天公开仓库中检测到 ${todayNewProjects.length} 个新建项目、${todayUpdatedProjects.length} 个今日有变动的项目，共 ${todayCommits.length} 个 commit。`
-        : "今天未检测到公开趣味项目仓库的可见变动。",
+        ? `今天公开仓库中检测到 ${todayNewProjects.length} 个新建项目、${todayUpdatedProjects.length} 个今日有变动的项目，共 ${todayCommits.length} 个 commit；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`
+        : `今天未检测到公开趣味项目仓库的可见变动；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`,
+      starChangeNote: "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
       automationChecks: {
         dailyIncubator: statusFromText(
           todayNewProjects,
@@ -460,6 +494,8 @@ async function main() {
       todayNew: todayNewProjects.length,
       todayUpdated: todayUpdatedProjects.length,
       todayCommits: todayCommits.length,
+      totalStars,
+      todayStarDelta,
       needsReview: projects.filter((project) => project.needsReview).length,
       techDistribution
     },

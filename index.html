@@ -602,7 +602,7 @@
         </div>
         <div class="panel">
           <div class="panel-header">
-            <h2>最值得点开</h2>
+            <h2>最值得点开 / star</h2>
           </div>
           <div class="panel-body">
             <ul id="highlights" class="highlight-list"></ul>
@@ -680,7 +680,7 @@
   <script>
     const dashboardData = window.FUN_PROJECT_DASHBOARD_DATA || {
       meta: { title: "每日趣味项目总览仪表盘", todayStory: "数据未载入。", highlights: [] },
-      metrics: { totalProjects: 0, todayNew: 0, todayUpdated: 0, todayCommits: 0, needsReview: 0, techDistribution: {} },
+      metrics: { totalProjects: 0, todayNew: 0, todayUpdated: 0, todayCommits: 0, totalStars: 0, todayStarDelta: 0, needsReview: 0, techDistribution: {} },
       projects: []
     };
 
@@ -776,7 +776,8 @@
       return [
         meta.title || "每日趣味项目总览仪表盘",
         meta.todayStory || "暂无今日摘要。",
-        `项目数 ${metrics.totalProjects ?? 0}｜今日新建 ${metrics.todayNew ?? 0}｜今日更新 ${metrics.todayUpdated ?? 0}｜需要复查 ${metrics.needsReview ?? 0}`,
+        `项目数 ${metrics.totalProjects ?? 0}｜今日新建 ${metrics.todayNew ?? 0}｜今日更新 ${metrics.todayUpdated ?? 0}｜今日 commit ${metrics.todayCommits ?? 0}`,
+        `总 star ${metrics.totalStars ?? 0}｜今日 star 变化 +${metrics.todayStarDelta ?? 0}｜需要复查 ${metrics.needsReview ?? 0}`,
         `值得点开：${highlights.length ? highlights.join("；") : "暂无"}`,
         `来源：${meta.repositoryUrl || elements.repoLink.href}`
       ].join("\n");
@@ -847,6 +848,8 @@
         ["今日新建", dashboardData.metrics.todayNew],
         ["今日更新", dashboardData.metrics.todayUpdated],
         ["今日 commit", dashboardData.metrics.todayCommits],
+        ["总 star", dashboardData.metrics.totalStars ?? 0],
+        ["今日 star 变化", `+${dashboardData.metrics.todayStarDelta ?? 0}`],
         ["需要复查", dashboardData.metrics.needsReview]
       ];
 
@@ -1013,8 +1016,10 @@
             <div class="badge-row">
               <span class="badge">${escapeHtml(project.primaryLanguage)}</span>
               <span class="badge">${escapeHtml(project.type)}</span>
+              <span class="badge">★ ${escapeHtml(project.stars?.total ?? 0)}</span>
               ${project.today.created ? `<span class="badge today">今日新建</span>` : ""}
               ${project.today.updated ? `<span class="badge today">今日更新</span>` : ""}
+              ${project.stars?.todayDelta ? `<span class="badge today">今日 +${escapeHtml(project.stars.todayDelta)} star</span>` : ""}
               ${project.needsReview ? `<span class="badge review">需要复查</span>` : ""}
             </div>
             <p><strong>能干嘛：</strong>${escapeHtml(project.readme.oneLine)}</p>
@@ -1031,6 +1036,10 @@
                 <div class="detail-item">
                   <strong>创建 / 更新</strong>
                   <p>${escapeHtml(formatDate(project.createdAt))} / ${escapeHtml(formatDate(project.updatedAt))}</p>
+                </div>
+                <div class="detail-item">
+                  <strong>star</strong>
+                  <p>当前 ${escapeHtml(project.stars?.total ?? 0)}；今日变化 +${escapeHtml(project.stars?.todayDelta ?? 0)}</p>
                 </div>
                 <div class="detail-item">
                   <strong>运行方式或验证线索</strong>

@@ -1,5 +1,8 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
+import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
+import path from "node:path";
 import process from "node:process";
+import { fileURLToPath } from "node:url";
 
 const owner = process.env.GITHUB_OWNER || "bte808";
 const dashboardRepo = process.env.DASHBOARD_REPO || "fun-project-dashboard";
@@ -9,6 +12,9 @@ const token = process.env.GITHUB_TOKEN || "";
 const startIso = new Date(`${runDate}T00:00:00+08:00`).toISOString();
 const endIso = new Date(`${runDate}T23:59:59.999+08:00`).toISOString();
 const maxGithubRetries = Number(process.env.GITHUB_MAX_RETRIES || 2);
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const workspaceRoot = process.env.LOCAL_FUN_REPO_ROOT
+  || path.resolve(scriptDir, "..", "..");
 
 const funReadmeSignals = [
   /每日趣味项目/,
@@ -219,7 +225,7 @@ function extractReadmeInfo(readme, description) {
   const useSection = section(readme, [/能干嘛/, /有什么用/, /use/i, /why/i, /purpose/i, /玩法/, /how it works/i]);
   const funSection = section(readme, [/为什么好玩/, /why.*fun/i, /fun/i, /亮点/, /highlights/i]);
   const runSection = section(readme, [/如何运行/, /本地运行/, /run/i, /usage/i, /start/i, /验证/, /verification/i]);
-  const verificationSection = section(readme, [/验证/, /verification/i, /checks/i, /test/i]);
+  const verificationSection = section(readme, [/验证/, /validation/i, /verification/i, /checks/i, /test/i]);
 
   const oneLine = compact(oneLineSection || description || firstParagraph(readme), 170);
   const usefulness = compact(useSection, 220);
@@ -312,6 +318,282 @@ async function todayStarsFor(repo) {
     }));
 }
 
+function git(args, cwd) {
+  return execFileSync("git", args, {
+    cwd,
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "ignore"]
+  });
+}
+
+function tryGit(args, cwd) {
+  try {
+    return git(args, cwd).trim();
+  } catch {
+    return "";
+  }
+}
+
+function normalizeGithubUrl(value = "") {
+  const trimmed = value.trim();
+  const sshMatch = trimmed.match(/^git@github\.com:([^/]+)\/(.+?)(?:\.git)?$/i);
+  const httpsMatch = trimmed.match(/^https:\/\/github\.com\/([^/]+)\/(.+?)(?:\.git)?$/i);
+  const match = sshMatch || httpsMatch;
+  if (!match) return null;
+  return {
+    owner: match[1],
+    name: match[2],
+    htmlUrl: `https://github.com/${match[1]}/${match[2]}`
+  };
+}
+
+async function readPreviousData() {
+  try {
+    return JSON.parse(await readFile("data/projects.json", "utf8"));
+  } catch {
+    return { projects: [] };
+  }
+}
+
+function previousProjectMap(previousData) {
+  return new Map((previousData.projects || []).map((project) => [project.name, project]));
+}
+
+function isoFromGitDate(value) {
+  return value ? new Date(value).toISOString() : null;
+}
+
+function earliestIso(...values) {
+  return values
+    .filter(Boolean)
+    .sort((a, b) => new Date(a) - new Date(b))[0] || null;
+}
+
+function localCommitFiles(repoPath, sha) {
+  const statusLines = tryGit(["diff-tree", "--root", "--no-commit-id", "--name-status", "-r", sha], repoPath)
+    .split(/\r?\n/)
+    .filter(Boolean);
+  const statusMap = new Map();
+
+  for (const line of statusLines) {
+    const parts = line.split("\t");
+    const statusToken = parts[0] || "modified";
+    const filename = parts[parts.length - 1] || "";
+    const status = statusToken.startsWith("A")
+      ? "added"
+      : statusToken.startsWith("D")
+        ? "removed"
+        : statusToken.startsWith("R")
+          ? "renamed"
+          : "modified";
+    if (filename) statusMap.set(filename, status);
+  }
+
+  return tryGit(["show", "--format=", "--numstat", sha], repoPath)
+    .split(/\r?\n/)
+    .filter(Boolean)
+    .map((line) => {
+      const [additions, deletions, ...rest] = line.split("\t");
+      const filename = rest.join("\t");
+      const added = Number.parseInt(additions, 10);
+      const removed = Number.parseInt(deletions, 10);
+      return {
+        filename,
+        status: statusMap.get(filename) || "modified",
+        additions: Number.isFinite(added) ? added : 0,
+        deletions: Number.isFinite(removed) ? removed : 0,
+        changes: (Number.isFinite(added) ? added : 0) + (Number.isFinite(removed) ? removed : 0)
+      };
+    });
+}
+
+function localCommits(repoPath, repoUrl) {
+  const output = tryGit([
+    "log",
+    `--since=${startIso}`,
+    `--until=${endIso}`,
+    "--pretty=format:%H%x1f%cI%x1f%s%x1e"
+  ], repoPath);
+
+  return output
+    .split("\x1e")
+    .map((record) => record.trim())
+    .filter(Boolean)
+    .map((record) => {
+      const [sha, committedAt, message] = record.split("\x1f");
+      return {
+        sha,
+        shortSha: sha.slice(0, 7),
+        url: `${repoUrl}/commit/${sha}`,
+        message: message || "待补充",
+        committedAt: isoFromGitDate(committedAt),
+        files: localCommitFiles(repoPath, sha)
+      };
+    });
+}
+
+async function trackedLanguageBytes(repoPath) {
+  const extensionLanguages = new Map([
+    [".js", "JavaScript"],
+    [".mjs", "JavaScript"],
+    [".cjs", "JavaScript"],
+    [".ts", "TypeScript"],
+    [".tsx", "TypeScript"],
+    [".jsx", "JavaScript"],
+    [".css", "CSS"],
+    [".html", "HTML"],
+    [".svg", "SVG"],
+    [".py", "Python"],
+    [".swift", "Swift"],
+    [".json", "JSON"],
+    [".md", "Markdown"]
+  ]);
+  const files = tryGit(["ls-files", "-z"], repoPath)
+    .split("\0")
+    .filter(Boolean);
+  const languages = {};
+
+  for (const file of files) {
+    const ext = path.extname(file).toLowerCase();
+    const language = extensionLanguages.get(ext);
+    if (!language) continue;
+    try {
+      const info = await stat(path.join(repoPath, file));
+      languages[language] = (languages[language] || 0) + info.size;
+    } catch {
+      // Ignore files that disappeared from the local checkout.
+    }
+  }
+
+  return languages;
+}
+
+function packageDescription(repoPath) {
+  try {
+    const raw = execFileSync("git", ["show", "HEAD:package.json"], {
+      cwd: repoPath,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"]
+    });
+    return JSON.parse(raw).description || "";
+  } catch {
+    return "";
+  }
+}
+
+function localReadme(repoPath) {
+  return tryGit(["show", "HEAD:README.md"], repoPath)
+    || tryGit(["show", "HEAD:readme.md"], repoPath)
+    || "";
+}
+
+function localFirstCommitDate(repoPath) {
+  const rootSha = tryGit(["rev-list", "--max-parents=0", "HEAD"], repoPath)
+    .split(/\s+/)
+    .filter(Boolean)[0];
+  return rootSha ? tryGit(["show", "-s", "--format=%cI", rootSha], repoPath) : "";
+}
+
+function defaultBranch(repoPath, previous) {
+  const head = tryGit(["symbolic-ref", "--quiet", "--short", "refs/remotes/origin/HEAD"], repoPath)
+    .replace(/^origin\//, "");
+  return head || previous?.defaultBranch || tryGit(["rev-parse", "--abbrev-ref", "HEAD"], repoPath) || "main";
+}
+
+async function localMirrorCandidates(previousData) {
+  const entries = await readdir(workspaceRoot, { withFileTypes: true });
+  const candidates = [];
+  const previous = previousProjectMap(previousData);
+
+  for (const entry of entries) {
+    if (!entry.isDirectory() || !/^fun-/i.test(entry.name) || entry.name === dashboardRepo) continue;
+    const repoPath = path.join(workspaceRoot, entry.name);
+    const origin = normalizeGithubUrl(tryGit(["remote", "get-url", "origin"], repoPath));
+    if (!origin || origin.owner !== owner || origin.name !== entry.name) continue;
+    const readme = localReadme(repoPath);
+    const isFunByReadme = funReadmeSignals.some((pattern) => pattern.test(readme));
+    if (!/^fun-/i.test(entry.name) && !isFunByReadme) continue;
+
+    candidates.push({
+      name: entry.name,
+      path: repoPath,
+      url: origin.htmlUrl,
+      previous: previous.get(entry.name),
+      readme
+    });
+  }
+
+  return candidates;
+}
+
+async function collectFromLocalMirrors(apiError) {
+  const previousData = await readPreviousData();
+  const candidates = await localMirrorCandidates(previousData);
+  const projects = [];
+
+  for (const candidate of candidates) {
+    const latestCommitDate = tryGit(["log", "-1", "--format=%cI"], candidate.path);
+    const firstCommitDate = localFirstCommitDate(candidate.path);
+    const commits = localCommits(candidate.path, candidate.url);
+    const languages = await trackedLanguageBytes(candidate.path);
+    const readmeInfo = extractReadmeInfo(candidate.readme, candidate.previous?.description || packageDescription(candidate.path));
+    const createdAt = earliestIso(candidate.previous?.createdAt, isoFromGitDate(firstCommitDate))
+      || new Date(0).toISOString();
+    const updatedAt = isoFromGitDate(latestCommitDate) || candidate.previous?.updatedAt || createdAt;
+    const createdDateShanghai = dateInShanghai(createdAt);
+    const updatedDateShanghai = dateInShanghai(updatedAt);
+    const todayFiles = summarizeFiles(commits.flatMap((commit) => commit.files));
+    const todayCommitCount = commits.length;
+    const description = packageDescription(candidate.path)
+      || candidate.previous?.description
+      || (readmeInfo.oneLine !== "待补充" ? readmeInfo.oneLine : "待补充");
+    const primaryLanguage = candidate.previous?.primaryLanguage
+      || Object.entries(languages).sort((a, b) => b[1] - a[1])[0]?.[0]
+      || "待补充";
+    const needsReview = [
+      readmeInfo.oneLine,
+      readmeInfo.usefulness,
+      readmeInfo.whyFun,
+      readmeInfo.runCommand,
+      readmeInfo.verification
+    ].some((value) => value === "待补充");
+
+    projects.push({
+      name: candidate.name,
+      url: candidate.url,
+      description,
+      defaultBranch: defaultBranch(candidate.path, candidate.previous),
+      createdAt,
+      updatedAt,
+      createdDateShanghai,
+      updatedDateShanghai,
+      primaryLanguage,
+      languages: Object.keys(languages).length ? languages : candidate.previous?.languages || {},
+      type: inferType(candidate.name, candidate.readme, description),
+      stars: {
+        total: candidate.previous?.stars?.total || 0,
+        todayDelta: 0,
+        todayStargazers: []
+      },
+      readme: readmeInfo,
+      today: {
+        created: createdDateShanghai === runDate,
+        updated: todayCommitCount > 0 || updatedDateShanghai === runDate,
+        commitCount: todayCommitCount,
+        commits,
+        files: todayFiles
+      },
+      needsReview,
+      visibilitySource: "Local GitHub origin mirror; public API unavailable this run"
+    });
+  }
+
+  return buildData(projects, [
+    `GitHub API 获取失败，已降级使用本机 GitHub origin 镜像：${apiError.message}`,
+    "本轮无法刷新公开可见性、仓库描述、GitHub updated_at、总 star 或今日 star 变化；star 沿用上一轮公开快照，新仓库按 0 处理。"
+  ], "Local GitHub origin mirrors with previous public snapshot fallback");
+}
+
 function statusFromText(matches, detectedNote, missingNote) {
   return {
     status: matches.length > 0 ? "detected" : "not_detected",
@@ -320,8 +602,120 @@ function statusFromText(matches, detectedNote, missingNote) {
   };
 }
 
+function buildData(projects, collectionWarnings = [], source = "GitHub public repository API") {
+  projects.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+  const techDistribution = projects.reduce((acc, project) => {
+    acc[project.primaryLanguage] = (acc[project.primaryLanguage] || 0) + 1;
+    return acc;
+  }, {});
+
+  const todayNewProjects = projects.filter((project) => project.today.created);
+  const todayUpdatedProjects = projects.filter((project) => project.today.updated);
+  const oldMaintenance = projects.filter((project) => !project.today.created && project.today.commitCount > 0);
+  const todayCommits = projects.flatMap((project) => project.today.commits.map((commit) => ({
+    ...commit,
+    project: project.name,
+    projectUrl: project.url
+  })));
+  const totalStars = projects.reduce((sum, project) => sum + project.stars.total, 0);
+  const todayStarDelta = projects.reduce((sum, project) => sum + project.stars.todayDelta, 0);
+  const commitText = todayCommits.map((commit) => commit.message).join("\n");
+  const wednesdayMatches = todayCommits.filter((commit) => /周三|wednesday|加料|extra|bonus/i.test(commit.message));
+  const sundayMatches = todayCommits.filter((commit) => /周日|sunday|体检|health|audit|复查|weekly check/i.test(commit.message));
+
+  const highlights = todayUpdatedProjects
+    .slice()
+    .sort((a, b) => b.today.commitCount - a.today.commitCount || new Date(b.createdAt) - new Date(a.createdAt))
+    .slice(0, 4)
+    .map((project) => ({
+      name: project.name,
+      url: project.url,
+      reason: project.today.created
+        ? `今天新建；${project.readme.oneLine}；当前 ${project.stars.total} star`
+        : `今天更新 ${project.today.commitCount} 个 commit；${project.readme.oneLine}；当前 ${project.stars.total} star`
+    }));
+
+  return {
+    meta: {
+      title: `${runDate} 每日趣味项目总览仪表盘`,
+      owner,
+      repository: dashboardRepo,
+      repositoryUrl: `https://github.com/${owner}/${dashboardRepo}`,
+      runDate,
+      timezone: "Asia/Shanghai",
+      generatedAt: new Date().toISOString(),
+      generatedAtShanghaiDate: dateInShanghai(new Date().toISOString()),
+      source,
+      scanRule: "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
+      todayWindowUtc: { startIso, endIso },
+      todayStory: todayUpdatedProjects.length
+        ? `今天公开仓库中检测到 ${todayNewProjects.length} 个新建项目、${todayUpdatedProjects.length} 个今日有变动的项目，共 ${todayCommits.length} 个 commit；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`
+        : `今天未检测到公开趣味项目仓库的可见变动；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`,
+      starChangeNote: source === "GitHub public repository API"
+        ? "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。"
+        : "本轮 GitHub API 不可用，今日 star 变化无法确认；页面保留上一轮公开快照中的总 star，新项目按 0 处理。",
+      automationChecks: {
+        dailyIncubator: statusFromText(
+          todayNewProjects,
+          (matches) => `公开 fun-* 仓库中检测到 ${matches.length} 个今天创建的项目。`,
+          "未检测到今天新建的公开 fun-* 项目。"
+        ),
+        oldProjectMaintenance: statusFromText(
+          oldMaintenance,
+          (matches) => `检测到 ${matches.length} 个旧项目今天有公开 commit。`,
+          "未检测到今天维护旧项目的公开 commit。"
+        ),
+        wednesdayBooster: statusFromText(
+          wednesdayMatches,
+          (matches) => `检测到 ${matches.length} 个疑似周三加料相关 commit。`,
+          `未检测到周三加料结果；今日 commit 信息为：${commitText ? "有提交但无加料标识" : "无可见提交"}。`
+        ),
+        sundayHealthCheck: statusFromText(
+          sundayMatches,
+          (matches) => `检测到 ${matches.length} 个疑似周日体检相关 commit。`,
+          "未检测到周日体检结果。"
+        )
+      },
+      highlights,
+      collectionWarnings
+    },
+    metrics: {
+      totalProjects: projects.length,
+      todayNew: todayNewProjects.length,
+      todayUpdated: todayUpdatedProjects.length,
+      todayCommits: todayCommits.length,
+      totalStars,
+      todayStarDelta,
+      needsReview: projects.filter((project) => project.needsReview).length,
+      techDistribution
+    },
+    projects
+  };
+}
+
+async function writeDashboardData(data) {
+  await mkdir("data", { recursive: true });
+  await writeFile("data/projects.json", `${JSON.stringify(data, null, 2)}\n`, "utf8");
+  await writeFile(
+    "data/projects.js",
+    `window.FUN_PROJECT_DASHBOARD_DATA = ${JSON.stringify(data, null, 2)};\n`,
+    "utf8"
+  );
+
+  console.log(JSON.stringify(data.metrics, null, 2));
+}
+
 async function main() {
-  const repos = await paginate(`/users/${owner}/repos?type=owner&sort=created&direction=desc`);
+  let repos;
+  try {
+    repos = await paginate(`/users/${owner}/repos?type=owner&sort=created&direction=desc`);
+  } catch (error) {
+    const data = await collectFromLocalMirrors(error);
+    await writeDashboardData(data);
+    return;
+  }
+
   const candidates = [];
   const collectionWarnings = [];
 

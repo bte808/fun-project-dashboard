@@ -669,6 +669,15 @@
               <div id="automation-checks" class="check-list"></div>
             </div>
           </section>
+
+          <section class="panel" aria-label="数据提示">
+            <div class="panel-header">
+              <h2>数据提示</h2>
+            </div>
+            <div class="panel-body">
+              <ul id="data-notes" class="change-list"></ul>
+            </div>
+          </section>
         </aside>
       </div>
     </main>
@@ -712,6 +721,7 @@
       changeList: document.querySelector("#change-list"),
       timeline: document.querySelector("#timeline"),
       automationChecks: document.querySelector("#automation-checks"),
+      dataNotes: document.querySelector("#data-notes"),
       footer: document.querySelector("#footer")
     };
 
@@ -990,6 +1000,18 @@
       }).join("");
     }
 
+    function renderDataNotes() {
+      const meta = dashboardData.meta || {};
+      const notes = [
+        meta.starChangeNote,
+        ...(meta.collectionWarnings || [])
+      ].filter(Boolean);
+
+      elements.dataNotes.innerHTML = notes.length
+        ? notes.map((note) => `<li class="muted">${escapeHtml(note)}</li>`).join("")
+        : `<li class="muted">未检测到数据采集告警。</li>`;
+    }
+
     function renderProjects() {
       const projects = getFilteredProjects();
       elements.feedback.textContent = `当前显示 ${projects.length} 个项目；搜索和筛选会即时更新卡片、详情和状态。`;
@@ -1079,6 +1101,7 @@
       renderChanges();
       renderTimeline();
       renderAutomationChecks();
+      renderDataNotes();
       renderProjects();
     }
 

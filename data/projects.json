@@ -1,31 +1,31 @@
 {
   "meta": {
-    "title": "2026-05-31 每日趣味项目总览仪表盘",
+    "title": "2026-06-01 每日趣味项目总览仪表盘",
     "owner": "bte808",
     "repository": "fun-project-dashboard",
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
-    "runDate": "2026-05-31",
+    "runDate": "2026-06-01",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-05-31T14:06:05.170Z",
-    "generatedAtShanghaiDate": "2026-05-31",
-    "source": "GitHub public repository API",
+    "generatedAt": "2026-06-01T14:07:28.433Z",
+    "generatedAtShanghaiDate": "2026-06-01",
+    "source": "Local GitHub origin mirrors with previous public snapshot fallback",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
     "todayWindowUtc": {
-      "startIso": "2026-05-30T16:00:00.000Z",
-      "endIso": "2026-05-31T15:59:59.999Z"
+      "startIso": "2026-05-31T16:00:00.000Z",
+      "endIso": "2026-06-01T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 6 个新建项目、11 个今日有变动的项目，共 18 个 commit；当前总 star 0，今日可见 star 变化 +0。",
-    "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
+    "todayStory": "今天公开仓库中检测到 3 个新建项目、8 个今日有变动的项目，共 9 个 commit；当前总 star 0，今日可见 star 变化 +0。",
+    "starChangeNote": "本轮 GitHub API 不可用，今日 star 变化无法确认；页面保留上一轮公开快照中的总 star，新项目按 0 处理。",
     "automationChecks": {
       "dailyIncubator": {
         "status": "detected",
         "label": "已检测到",
-        "note": "公开 fun-* 仓库中检测到 6 个今天创建的项目。"
+        "note": "公开 fun-* 仓库中检测到 3 个今天创建的项目。"
       },
       "oldProjectMaintenance": {
         "status": "detected",
         "label": "已检测到",
-        "note": "检测到 4 个旧项目今天有公开 commit。"
+        "note": "检测到 5 个旧项目今天有公开 commit。"
       },
       "wednesdayBooster": {
         "status": "not_detected",
@@ -33,62 +33,68 @@
         "note": "未检测到周三加料结果；今日 commit 信息为：有提交但无加料标识。"
       },
       "sundayHealthCheck": {
-        "status": "detected",
-        "label": "已检测到",
-        "note": "检测到 2 个疑似周日体检相关 commit。"
+        "status": "not_detected",
+        "label": "未检测到",
+        "note": "未检测到周日体检结果。"
       }
     },
     "highlights": [
       {
-        "name": "fun-20260531-b-flow-cost-card",
-        "url": "https://github.com/bte808/fun-20260531-b-flow-cost-card",
-        "reason": "今天新建；Local-first AI workflow cost and latency forecaster；当前 0 star"
+        "name": "fun-20260601-a-puff-pilot",
+        "url": "https://github.com/bte808/fun-20260601-a-puff-pilot",
+        "reason": "今天新建；A tiny no-dependency browser timing game about piloting a breath puff through target rings.；当前 0 star"
       },
       {
-        "name": "fun-20260531-c-extra-cite-gap",
-        "url": "https://github.com/bte808/fun-20260531-c-extra-cite-gap",
-        "reason": "今天新建；Local-first citation gap auditor for academic drafts and reference keys；当前 0 star"
+        "name": "fun-20260601-c-rebuttal-board",
+        "url": "https://github.com/bte808/fun-20260601-c-rebuttal-board",
+        "reason": "今天新建；Local-first reviewer feedback board for academic rebuttals and revision planning.；当前 0 star"
       },
       {
-        "name": "fun-20260531-a-rave-relay",
-        "url": "https://github.com/bte808/fun-20260531-a-rave-relay",
-        "reason": "今天新建；Tiny no-dependency browser rhythm game: catch colorful rave pulses before the relay drops.；当前 0 star"
+        "name": "fun-20260601-b-paste-privacy-card",
+        "url": "https://github.com/bte808/fun-20260601-b-paste-privacy-card",
+        "reason": "今天新建；Local-first paste privacy scanner and redaction card.；当前 0 star"
       },
       {
-        "name": "fun-20260531-b-extra-paste-grid",
-        "url": "https://github.com/bte808/fun-20260531-b-extra-paste-grid",
-        "reason": "今天新建；Local-first messy text to clean CSV, Markdown, and JSON tables；当前 0 star"
+        "name": "fun-20260530-b-extension-risk-card",
+        "url": "https://github.com/bte808/fun-20260530-b-extension-risk-card",
+        "reason": "今天更新 1 个 commit；Local-first VS Code extension install risk card generator.；当前 0 star"
       }
     ],
-    "collectionWarnings": []
+    "collectionWarnings": [
+      "GitHub API 获取失败，已降级使用本机 GitHub origin 镜像：GitHub request failed for /users/bte808/repos?type=owner&sort=created&direction=desc&per_page=100&page=1: fetch failed",
+      "本轮无法刷新公开可见性、仓库描述、GitHub updated_at、总 star 或今日 star 变化；star 沿用上一轮公开快照，新仓库按 0 处理。"
+    ]
   },
   "metrics": {
-    "totalProjects": 36,
-    "todayNew": 6,
-    "todayUpdated": 11,
-    "todayCommits": 18,
+    "totalProjects": 39,
+    "todayNew": 3,
+    "todayUpdated": 8,
+    "todayCommits": 9,
     "totalStars": 0,
     "todayStarDelta": 0,
-    "needsReview": 31,
+    "needsReview": 28,
     "techDistribution": {
-      "JavaScript": 36
+      "JavaScript": 39
     }
   },
   "projects": [
     {
-      "name": "fun-20260531-c-interleave-mixer",
-      "url": "https://github.com/bte808/fun-20260531-c-interleave-mixer",
-      "description": "Local-first interleaved practice session mixer for study review",
+      "name": "fun-20260601-c-rebuttal-board",
+      "url": "https://github.com/bte808/fun-20260601-c-rebuttal-board",
+      "description": "Local-first reviewer feedback board for academic rebuttals and revision planning.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-31T03:01:13Z",
-      "updatedAt": "2026-05-31T11:35:01Z",
-      "createdDateShanghai": "2026-05-31",
-      "updatedDateShanghai": "2026-05-31",
+      "createdAt": "2026-06-01T03:18:43.000Z",
+      "updatedAt": "2026-06-01T03:18:43.000Z",
+      "createdDateShanghai": "2026-06-01",
+      "updatedDateShanghai": "2026-06-01",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 28079,
-        "CSS": 5995,
-        "HTML": 4188
+        "Markdown": 3437,
+        "SVG": 371,
+        "HTML": 3233,
+        "JSON": 478,
+        "JavaScript": 26853,
+        "CSS": 5820
       },
       "type": "学习练习",
       "stars": {
@@ -97,11 +103,11 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first interleaved practice session mixer for study review",
-        "usefulness": "Many study plans accidentally become blocked practice: all of chapter 1, then all of chapter 2, then all of chapter 3. Interleave Mixer makes the switching visible. It gives you a session you can actually run, export, a...",
+        "oneLine": "Local-first reviewer feedback board for academic rebuttals and revision planning.",
+        "usefulness": "Academic feedback often arrives as scattered paragraphs across reviewers, supervisors, and self-review notes. The hard part is not only answering politely; it is finding which comments require evidence, which need a man...",
         "whyFun": "待补充",
-        "runCommand": "python3 -m http.server 5211",
-        "verification": "待补充"
+        "runCommand": "python3 -m http.server 5221 --bind 127.0.0.1",
+        "verification": "verify:browser starts a local static server, opens the app in a headless Chrome-compatible browser, checks the default sample, performs a custom-input interaction, and validates a 390x844 mobile viewport for horizontal..."
       },
       "today": {
         "created": true,
@@ -109,11 +115,11 @@
         "commitCount": 1,
         "commits": [
           {
-            "sha": "0f9e00ef5023c1d6e6f1a45e35e5de4d0effc8d9",
-            "shortSha": "0f9e00e",
-            "url": "https://github.com/bte808/fun-20260531-c-interleave-mixer/commit/0f9e00ef5023c1d6e6f1a45e35e5de4d0effc8d9",
-            "message": "Ship interleave mixer study tool",
-            "committedAt": "2026-05-31T03:01:00Z",
+            "sha": "b6a9ab253961ab50fa82e0606fdc10d78ea4a20b",
+            "shortSha": "b6a9ab2",
+            "url": "https://github.com/bte808/fun-20260601-c-rebuttal-board/commit/b6a9ab253961ab50fa82e0606fdc10d78ea4a20b",
+            "message": "Ship rebuttal board academic tool",
+            "committedAt": "2026-06-01T03:18:43.000Z",
             "files": [
               {
                 "filename": ".gitignore",
@@ -139,9 +145,9 @@
               {
                 "filename": "README.md",
                 "status": "added",
-                "additions": 102,
+                "additions": 78,
                 "deletions": 0,
-                "changes": 102
+                "changes": 78
               },
               {
                 "filename": "docs/demo.png",
@@ -160,9 +166,9 @@
               {
                 "filename": "index.html",
                 "status": "added",
-                "additions": 108,
+                "additions": 88,
                 "deletions": 0,
-                "changes": 108
+                "changes": 88
               },
               {
                 "filename": "package.json",
@@ -174,44 +180,44 @@
               {
                 "filename": "scripts/check-static.mjs",
                 "status": "added",
-                "additions": 56,
+                "additions": 59,
                 "deletions": 0,
-                "changes": 56
+                "changes": 59
               },
               {
                 "filename": "scripts/verify-browser.mjs",
                 "status": "added",
-                "additions": 211,
+                "additions": 223,
                 "deletions": 0,
-                "changes": 211
+                "changes": 223
               },
               {
                 "filename": "src/app.js",
                 "status": "added",
-                "additions": 183,
+                "additions": 160,
                 "deletions": 0,
-                "changes": 183
+                "changes": 160
               },
               {
-                "filename": "src/interleaveMixer.js",
+                "filename": "src/rebuttalBoard.js",
                 "status": "added",
-                "additions": 345,
+                "additions": 279,
                 "deletions": 0,
-                "changes": 345
+                "changes": 279
               },
               {
                 "filename": "src/styles.css",
                 "status": "added",
-                "additions": 405,
+                "additions": 376,
                 "deletions": 0,
-                "changes": 405
+                "changes": 376
               },
               {
-                "filename": "test/interleaveMixer.test.js",
+                "filename": "test/rebuttalBoard.test.js",
                 "status": "added",
-                "additions": 52,
+                "additions": 49,
                 "deletions": 0,
-                "changes": 52
+                "changes": 49
               }
             ]
           }
@@ -244,7 +250,7 @@
           {
             "filename": "index.html",
             "status": "added",
-            "additions": 108,
+            "additions": 88,
             "deletions": 0
           },
           {
@@ -262,205 +268,99 @@
           {
             "filename": "README.md",
             "status": "added",
-            "additions": 102,
+            "additions": 78,
             "deletions": 0
           },
           {
             "filename": "scripts/check-static.mjs",
             "status": "added",
-            "additions": 56,
+            "additions": 59,
             "deletions": 0
           },
           {
             "filename": "scripts/verify-browser.mjs",
             "status": "added",
-            "additions": 211,
+            "additions": 223,
             "deletions": 0
           },
           {
             "filename": "src/app.js",
             "status": "added",
-            "additions": 183,
+            "additions": 160,
             "deletions": 0
           },
           {
-            "filename": "src/interleaveMixer.js",
+            "filename": "src/rebuttalBoard.js",
             "status": "added",
-            "additions": 345,
+            "additions": 279,
             "deletions": 0
           },
           {
             "filename": "src/styles.css",
             "status": "added",
-            "additions": 405,
+            "additions": 376,
             "deletions": 0
           },
           {
-            "filename": "test/interleaveMixer.test.js",
+            "filename": "test/rebuttalBoard.test.js",
             "status": "added",
-            "additions": 52,
+            "additions": 49,
             "deletions": 0
           }
         ]
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
-      "name": "fun-20260531-b-flow-cost-card",
-      "url": "https://github.com/bte808/fun-20260531-b-flow-cost-card",
-      "description": "Local-first AI workflow cost and latency forecaster",
+      "name": "fun-20260601-b-paste-privacy-card",
+      "url": "https://github.com/bte808/fun-20260601-b-paste-privacy-card",
+      "description": "Local-first paste privacy scanner and redaction card.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-31T02:30:31Z",
-      "updatedAt": "2026-05-31T11:35:00Z",
-      "createdDateShanghai": "2026-05-31",
-      "updatedDateShanghai": "2026-05-31",
+      "createdAt": "2026-06-01T03:17:39.000Z",
+      "updatedAt": "2026-06-01T03:17:39.000Z",
+      "createdDateShanghai": "2026-06-01",
+      "updatedDateShanghai": "2026-06-01",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 30681,
-        "CSS": 6114,
-        "HTML": 3019
+        "Markdown": 3205,
+        "SVG": 526,
+        "HTML": 4823,
+        "JSON": 608,
+        "JavaScript": 26862,
+        "CSS": 6819
       },
-      "type": "学习练习",
+      "type": "效率工具",
       "stars": {
         "total": 0,
         "todayDelta": 0,
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first AI workflow cost and latency forecaster",
-        "usefulness": "Small AI workflows often start cheap and fast, then become expensive or slow after retries, tool calls, higher traffic, or a few oversized prompts. FlowCost Card makes the hidden run-rate visible before you ship. Inspir...",
+        "oneLine": "Local-first paste privacy scanner and redaction card.",
+        "usefulness": "People often paste logs, prompts, repro steps, and support notes into public or semi-public tools. One missed token or private URL can create cleanup work. This tool is a fast pre-share stop: input text, inspect finding...",
         "whyFun": "待补充",
         "runCommand": "npm run serve",
-        "verification": "Local checks: npm test runs calculation tests and static wiring checks. npm run verify:browser starts a local server, opens temporary headless Chrome sessions, edits the tool at desktop and 390 x 844 mobile sizes, check..."
+        "verification": "The browser verification opens the app in headless Chrome at desktop and 390x844 mobile sizes, runs a real scan, checks the redacted output, confirms the Markdown checklist, and fails on horizontal overflow."
       },
       "today": {
         "created": true,
         "updated": true,
-        "commitCount": 3,
+        "commitCount": 1,
         "commits": [
           {
-            "sha": "9d8546dc2f8be7db9cc3b778153b19480295c88d",
-            "shortSha": "9d8546d",
-            "url": "https://github.com/bte808/fun-20260531-b-flow-cost-card/commit/9d8546dc2f8be7db9cc3b778153b19480295c88d",
-            "message": "Polish OSS project metadata",
-            "committedAt": "2026-05-31T04:00:09Z",
-            "files": [
-              {
-                "filename": ".github/ISSUE_TEMPLATE/bug_report.yml",
-                "status": "added",
-                "additions": 32,
-                "deletions": 0,
-                "changes": 32
-              },
-              {
-                "filename": ".github/ISSUE_TEMPLATE/calculation_case.yml",
-                "status": "added",
-                "additions": 36,
-                "deletions": 0,
-                "changes": 36
-              },
-              {
-                "filename": ".github/ISSUE_TEMPLATE/config.yml",
-                "status": "added",
-                "additions": 6,
-                "deletions": 0,
-                "changes": 6
-              },
-              {
-                "filename": ".github/ISSUE_TEMPLATE/feature_request.yml",
-                "status": "added",
-                "additions": 28,
-                "deletions": 0,
-                "changes": 28
-              },
-              {
-                "filename": "CHANGELOG.md",
-                "status": "added",
-                "additions": 9,
-                "deletions": 0,
-                "changes": 9
-              },
-              {
-                "filename": "CONTRIBUTING.md",
-                "status": "added",
-                "additions": 41,
-                "deletions": 0,
-                "changes": 41
-              },
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 42,
-                "deletions": 1,
-                "changes": 43
-              },
-              {
-                "filename": "SECURITY.md",
-                "status": "added",
-                "additions": 24,
-                "deletions": 0,
-                "changes": 24
-              },
-              {
-                "filename": "docs/demo.png",
-                "status": "added",
-                "additions": 0,
-                "deletions": 0,
-                "changes": 0
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 4,
-                "deletions": 2,
-                "changes": 6
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "modified",
-                "additions": 12,
-                "deletions": 0,
-                "changes": 12
-              },
-              {
-                "filename": "scripts/verify-browser.mjs",
-                "status": "modified",
-                "additions": 10,
-                "deletions": 4,
-                "changes": 14
-              }
-            ]
-          },
-          {
-            "sha": "7e63ffe81bec745ec655f9a921fae3980bdaebd3",
-            "shortSha": "7e63ffe",
-            "url": "https://github.com/bte808/fun-20260531-b-flow-cost-card/commit/7e63ffe81bec745ec655f9a921fae3980bdaebd3",
-            "message": "Add live demo link",
-            "committedAt": "2026-05-31T02:33:01Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              }
-            ]
-          },
-          {
-            "sha": "750c096abe5305fb15de0adf97bc45c716c2396c",
-            "shortSha": "750c096",
-            "url": "https://github.com/bte808/fun-20260531-b-flow-cost-card/commit/750c096abe5305fb15de0adf97bc45c716c2396c",
-            "message": "Ship FlowCost Card",
-            "committedAt": "2026-05-31T02:30:24Z",
+            "sha": "439916ea0becb468fcabbff6a9b1af02613c9d19",
+            "shortSha": "439916e",
+            "url": "https://github.com/bte808/fun-20260601-b-paste-privacy-card/commit/439916ea0becb468fcabbff6a9b1af02613c9d19",
+            "message": "Ship paste privacy card",
+            "committedAt": "2026-06-01T03:17:39.000Z",
             "files": [
               {
                 "filename": ".gitignore",
                 "status": "added",
-                "additions": 7,
+                "additions": 8,
                 "deletions": 0,
-                "changes": 7
+                "changes": 8
               },
               {
                 "filename": "LICENSE",
@@ -472,16 +372,294 @@
               {
                 "filename": "README.md",
                 "status": "added",
-                "additions": 92,
+                "additions": 100,
                 "deletions": 0,
-                "changes": 92
+                "changes": 100
+              },
+              {
+                "filename": "docs/demo.png",
+                "status": "added",
+                "additions": 0,
+                "deletions": 0,
+                "changes": 0
+              },
+              {
+                "filename": "docs/mobile-demo.png",
+                "status": "added",
+                "additions": 0,
+                "deletions": 0,
+                "changes": 0
               },
               {
                 "filename": "favicon.svg",
                 "status": "added",
-                "additions": 6,
+                "additions": 7,
                 "deletions": 0,
-                "changes": 6
+                "changes": 7
+              },
+              {
+                "filename": "index.html",
+                "status": "added",
+                "additions": 133,
+                "deletions": 0,
+                "changes": 133
+              },
+              {
+                "filename": "package.json",
+                "status": "added",
+                "additions": 23,
+                "deletions": 0,
+                "changes": 23
+              },
+              {
+                "filename": "scripts/check.mjs",
+                "status": "added",
+                "additions": 55,
+                "deletions": 0,
+                "changes": 55
+              },
+              {
+                "filename": "scripts/verify-browser.mjs",
+                "status": "added",
+                "additions": 249,
+                "deletions": 0,
+                "changes": 249
+              },
+              {
+                "filename": "src/app.js",
+                "status": "added",
+                "additions": 191,
+                "deletions": 0,
+                "changes": 191
+              },
+              {
+                "filename": "src/redactor-core.js",
+                "status": "added",
+                "additions": 324,
+                "deletions": 0,
+                "changes": 324
+              },
+              {
+                "filename": "styles.css",
+                "status": "added",
+                "additions": 447,
+                "deletions": 0,
+                "changes": 447
+              },
+              {
+                "filename": "tests/core.test.mjs",
+                "status": "added",
+                "additions": 49,
+                "deletions": 0,
+                "changes": 49
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": ".gitignore",
+            "status": "added",
+            "additions": 8,
+            "deletions": 0
+          },
+          {
+            "filename": "docs/demo.png",
+            "status": "added",
+            "additions": 0,
+            "deletions": 0
+          },
+          {
+            "filename": "docs/mobile-demo.png",
+            "status": "added",
+            "additions": 0,
+            "deletions": 0
+          },
+          {
+            "filename": "favicon.svg",
+            "status": "added",
+            "additions": 7,
+            "deletions": 0
+          },
+          {
+            "filename": "index.html",
+            "status": "added",
+            "additions": 133,
+            "deletions": 0
+          },
+          {
+            "filename": "LICENSE",
+            "status": "added",
+            "additions": 21,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "added",
+            "additions": 23,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "added",
+            "additions": 100,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/check.mjs",
+            "status": "added",
+            "additions": 55,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/verify-browser.mjs",
+            "status": "added",
+            "additions": 249,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "added",
+            "additions": 191,
+            "deletions": 0
+          },
+          {
+            "filename": "src/redactor-core.js",
+            "status": "added",
+            "additions": 324,
+            "deletions": 0
+          },
+          {
+            "filename": "styles.css",
+            "status": "added",
+            "additions": 447,
+            "deletions": 0
+          },
+          {
+            "filename": "tests/core.test.mjs",
+            "status": "added",
+            "additions": 49,
+            "deletions": 0
+          }
+        ]
+      },
+      "needsReview": true,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
+    },
+    {
+      "name": "fun-20260601-a-puff-pilot",
+      "url": "https://github.com/bte808/fun-20260601-a-puff-pilot",
+      "description": "A tiny no-dependency browser timing game about piloting a breath puff through target rings.",
+      "defaultBranch": "main",
+      "createdAt": "2026-06-01T02:15:03.000Z",
+      "updatedAt": "2026-06-01T09:12:44.000Z",
+      "createdDateShanghai": "2026-06-01",
+      "updatedDateShanghai": "2026-06-01",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "Markdown": 3269,
+        "SVG": 2038,
+        "HTML": 3183,
+        "JSON": 531,
+        "JavaScript": 28382,
+        "CSS": 5194
+      },
+      "type": "浏览器小游戏",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "A tiny no-dependency browser timing game about piloting a breath puff through target rings.",
+        "usefulness": "It is playable in one click and one button: the tension comes from deciding when to hold and when to release. The route is seeded by the Asia/Shanghai date, so everyone gets the same short challenge each day. Scoring is...",
+        "whyFun": "It is playable in one click and one button: the tension comes from deciding when to hold and when to release. The route is seeded by the Asia/Shanghai date, so everyone gets the same short challenge each day. Scoring is...",
+        "runCommand": "npm run serve",
+        "verification": "The project includes npm run check, which verifies required files, mobile CSS coverage, README positioning, deterministic daily route generation, and scoring invariants. With the local server running, npm run verify:bro..."
+      },
+      "today": {
+        "created": true,
+        "updated": true,
+        "commitCount": 2,
+        "commits": [
+          {
+            "sha": "490fbc55d5ea7602dbf2852039966bc0ffa2e106",
+            "shortSha": "490fbc5",
+            "url": "https://github.com/bte808/fun-20260601-a-puff-pilot/commit/490fbc55d5ea7602dbf2852039966bc0ffa2e106",
+            "message": "Add Puff Pilot route profile sharing",
+            "committedAt": "2026-06-01T09:12:44.000Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 4,
+                "changes": 8
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 0,
+                "changes": 4
+              },
+              {
+                "filename": "scripts/browser-smoke.mjs",
+                "status": "modified",
+                "additions": 49,
+                "deletions": 1,
+                "changes": 50
+              },
+              {
+                "filename": "scripts/check.mjs",
+                "status": "modified",
+                "additions": 39,
+                "deletions": 2,
+                "changes": 41
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 22,
+                "deletions": 1,
+                "changes": 23
+              },
+              {
+                "filename": "src/core.js",
+                "status": "modified",
+                "additions": 23,
+                "deletions": 0,
+                "changes": 23
+              }
+            ]
+          },
+          {
+            "sha": "ac0962db3bdd958b230445dcc62b20f6ea8e5040",
+            "shortSha": "ac0962d",
+            "url": "https://github.com/bte808/fun-20260601-a-puff-pilot/commit/ac0962db3bdd958b230445dcc62b20f6ea8e5040",
+            "message": "Ship Puff Pilot browser game",
+            "committedAt": "2026-06-01T02:15:03.000Z",
+            "files": [
+              {
+                "filename": "LICENSE",
+                "status": "added",
+                "additions": 21,
+                "deletions": 0,
+                "changes": 21
+              },
+              {
+                "filename": "README.md",
+                "status": "added",
+                "additions": 78,
+                "deletions": 0,
+                "changes": 78
+              },
+              {
+                "filename": "docs/preview.svg",
+                "status": "added",
+                "additions": 29,
+                "deletions": 0,
+                "changes": 29
               },
               {
                 "filename": "index.html",
@@ -493,614 +671,59 @@
               {
                 "filename": "package.json",
                 "status": "added",
-                "additions": 22,
+                "additions": 20,
                 "deletions": 0,
-                "changes": 22
+                "changes": 20
+              },
+              {
+                "filename": "scripts/browser-smoke.mjs",
+                "status": "added",
+                "additions": 221,
+                "deletions": 0,
+                "changes": 221
               },
               {
                 "filename": "scripts/check.mjs",
                 "status": "added",
-                "additions": 37,
+                "additions": 45,
                 "deletions": 0,
-                "changes": 37
-              },
-              {
-                "filename": "scripts/verify-browser.mjs",
-                "status": "added",
-                "additions": 245,
-                "deletions": 0,
-                "changes": 245
+                "changes": 45
               },
               {
                 "filename": "src/app.js",
                 "status": "added",
-                "additions": 248,
+                "additions": 372,
                 "deletions": 0,
-                "changes": 248
+                "changes": 372
               },
               {
-                "filename": "src/flow-cost-core.js",
+                "filename": "src/core.js",
                 "status": "added",
-                "additions": 339,
+                "additions": 99,
                 "deletions": 0,
-                "changes": 339
+                "changes": 99
               },
               {
-                "filename": "styles.css",
+                "filename": "src/styles.css",
                 "status": "added",
-                "additions": 395,
+                "additions": 336,
                 "deletions": 0,
-                "changes": 395
-              },
-              {
-                "filename": "tests/core.test.mjs",
-                "status": "added",
-                "additions": 60,
-                "deletions": 0,
-                "changes": 60
+                "changes": 336
               }
             ]
           }
         ],
         "files": [
           {
-            "filename": ".github/ISSUE_TEMPLATE/bug_report.yml",
+            "filename": "docs/preview.svg",
             "status": "added",
-            "additions": 32,
-            "deletions": 0
-          },
-          {
-            "filename": ".github/ISSUE_TEMPLATE/calculation_case.yml",
-            "status": "added",
-            "additions": 36,
-            "deletions": 0
-          },
-          {
-            "filename": ".github/ISSUE_TEMPLATE/config.yml",
-            "status": "added",
-            "additions": 6,
-            "deletions": 0
-          },
-          {
-            "filename": ".github/ISSUE_TEMPLATE/feature_request.yml",
-            "status": "added",
-            "additions": 28,
-            "deletions": 0
-          },
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 7,
-            "deletions": 0
-          },
-          {
-            "filename": "CHANGELOG.md",
-            "status": "added",
-            "additions": 9,
-            "deletions": 0
-          },
-          {
-            "filename": "CONTRIBUTING.md",
-            "status": "added",
-            "additions": 41,
-            "deletions": 0
-          },
-          {
-            "filename": "docs/demo.png",
-            "status": "added",
-            "additions": 0,
-            "deletions": 0
-          },
-          {
-            "filename": "favicon.svg",
-            "status": "added",
-            "additions": 6,
+            "additions": 29,
             "deletions": 0
           },
           {
             "filename": "index.html",
             "status": "added",
             "additions": 85,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 22,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 92,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/check.mjs",
-            "status": "added",
-            "additions": 37,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/verify-browser.mjs",
-            "status": "added",
-            "additions": 245,
-            "deletions": 0
-          },
-          {
-            "filename": "SECURITY.md",
-            "status": "added",
-            "additions": 24,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "added",
-            "additions": 248,
-            "deletions": 0
-          },
-          {
-            "filename": "src/flow-cost-core.js",
-            "status": "added",
-            "additions": 339,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 395,
-            "deletions": 0
-          },
-          {
-            "filename": "tests/core.test.mjs",
-            "status": "added",
-            "additions": 60,
-            "deletions": 0
-          }
-        ]
-      },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
-    },
-    {
-      "name": "fun-20260531-a-rave-relay",
-      "url": "https://github.com/bte808/fun-20260531-a-rave-relay",
-      "description": "Tiny no-dependency browser rhythm game: catch colorful rave pulses before the relay drops.",
-      "defaultBranch": "main",
-      "createdAt": "2026-05-31T02:14:58Z",
-      "updatedAt": "2026-05-31T11:37:22Z",
-      "createdDateShanghai": "2026-05-31",
-      "updatedDateShanghai": "2026-05-31",
-      "primaryLanguage": "JavaScript",
-      "languages": {
-        "JavaScript": 25743,
-        "CSS": 7217,
-        "HTML": 4494
-      },
-      "type": "音频互动",
-      "stars": {
-        "total": 0,
-        "todayDelta": 0,
-        "todayStargazers": []
-      },
-      "readme": {
-        "oneLine": "Tiny no-dependency browser rhythm game: catch colorful rave pulses before the relay drops.",
-        "usefulness": "A full run is 18 pulses, so one attempt takes less than a minute. The daily setlist is deterministic, which makes scores easy to compare. Timing grades, combo bonuses, a hype meter, local best score, and copyable result...",
-        "whyFun": "A full run is 18 pulses, so one attempt takes less than a minute. The daily setlist is deterministic, which makes scores easy to compare. Timing grades, combo bonuses, a hype meter, local best score, and copyable result...",
-        "runCommand": "python3 -m http.server 5212",
-        "verification": "待补充"
-      },
-      "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 2,
-        "commits": [
-          {
-            "sha": "fb1bd6b14e5b97cf6fbad8f008928a7fea8977e8",
-            "shortSha": "fb1bd6b",
-            "url": "https://github.com/bte808/fun-20260531-a-rave-relay/commit/fb1bd6b14e5b97cf6fbad8f008928a7fea8977e8",
-            "message": "Add browser verification for weekly audit",
-            "committedAt": "2026-05-31T11:37:17Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 10,
-                "deletions": 0,
-                "changes": 10
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 1,
-                "changes": 4
-              },
-              {
-                "filename": "scripts/verify-browser.mjs",
-                "status": "added",
-                "additions": 252,
-                "deletions": 0,
-                "changes": 252
-              }
-            ]
-          },
-          {
-            "sha": "cb4e4b4cd1f14b08c5cd9f9b6bfd4dedf5e68225",
-            "shortSha": "cb4e4b4",
-            "url": "https://github.com/bte808/fun-20260531-a-rave-relay/commit/cb4e4b4cd1f14b08c5cd9f9b6bfd4dedf5e68225",
-            "message": "Ship Rave Relay browser game",
-            "committedAt": "2026-05-31T02:14:47Z",
-            "files": [
-              {
-                "filename": ".gitignore",
-                "status": "added",
-                "additions": 5,
-                "deletions": 0,
-                "changes": 5
-              },
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 67,
-                "deletions": 0,
-                "changes": 67
-              },
-              {
-                "filename": "docs/rave-relay-mobile.png",
-                "status": "added",
-                "additions": 0,
-                "deletions": 0,
-                "changes": 0
-              },
-              {
-                "filename": "docs/rave-relay-preview.png",
-                "status": "added",
-                "additions": 0,
-                "deletions": 0,
-                "changes": 0
-              },
-              {
-                "filename": "game.js",
-                "status": "added",
-                "additions": 441,
-                "deletions": 0,
-                "changes": 441
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 114,
-                "deletions": 0,
-                "changes": 114
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 19,
-                "deletions": 0,
-                "changes": 19
-              },
-              {
-                "filename": "scripts/check.js",
-                "status": "added",
-                "additions": 43,
-                "deletions": 0,
-                "changes": 43
-              },
-              {
-                "filename": "scripts/test-core.js",
-                "status": "added",
-                "additions": 72,
-                "deletions": 0,
-                "changes": 72
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 436,
-                "deletions": 0,
-                "changes": 436
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 5,
-            "deletions": 0
-          },
-          {
-            "filename": "docs/rave-relay-mobile.png",
-            "status": "added",
-            "additions": 0,
-            "deletions": 0
-          },
-          {
-            "filename": "docs/rave-relay-preview.png",
-            "status": "added",
-            "additions": 0,
-            "deletions": 0
-          },
-          {
-            "filename": "game.js",
-            "status": "added",
-            "additions": 441,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 114,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 19,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 67,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/check.js",
-            "status": "added",
-            "additions": 43,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/test-core.js",
-            "status": "added",
-            "additions": 72,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/verify-browser.mjs",
-            "status": "added",
-            "additions": 252,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 436,
-            "deletions": 0
-          }
-        ]
-      },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
-    },
-    {
-      "name": "fun-20260531-c-extra-cite-gap",
-      "url": "https://github.com/bte808/fun-20260531-c-extra-cite-gap",
-      "description": "Local-first citation gap auditor for academic drafts and reference keys",
-      "defaultBranch": "main",
-      "createdAt": "2026-05-30T19:34:42Z",
-      "updatedAt": "2026-05-31T10:29:55Z",
-      "createdDateShanghai": "2026-05-31",
-      "updatedDateShanghai": "2026-05-31",
-      "primaryLanguage": "JavaScript",
-      "languages": {
-        "JavaScript": 32129,
-        "CSS": 6326,
-        "HTML": 4134
-      },
-      "type": "学习练习",
-      "stars": {
-        "total": 0,
-        "todayDelta": 0,
-        "todayStargazers": []
-      },
-      "readme": {
-        "oneLine": "Local-first citation gap auditor for academic drafts and reference keys",
-        "usefulness": "Academic drafts often fail in small, boring places: a \\cite{...} key goes stale, a reference dump contains unused entries, or a strong claim survives without a source marker. A tiny local checker is useful because it ca...",
-        "whyFun": "待补充",
-        "runCommand": "python3 -m http.server 5201 --bind localhost",
-        "verification": "待补充"
-      },
-      "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 3,
-        "commits": [
-          {
-            "sha": "70514f79f8dc63f55ed2c28a2f8ec87f9d6c85fc",
-            "shortSha": "70514f7",
-            "url": "https://github.com/bte808/fun-20260531-c-extra-cite-gap/commit/70514f79f8dc63f55ed2c28a2f8ec87f9d6c85fc",
-            "message": "Add next review move guidance",
-            "committedAt": "2026-05-31T10:29:33Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 10,
-                "deletions": 0,
-                "changes": 10
-              },
-              {
-                "filename": "src/citeGap.js",
-                "status": "modified",
-                "additions": 66,
-                "deletions": 0,
-                "changes": 66
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 25,
-                "deletions": 0,
-                "changes": 25
-              },
-              {
-                "filename": "test/citeGap.test.js",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              }
-            ]
-          },
-          {
-            "sha": "fe989afd9f03cbf30386fee3661841f9b4b622ff",
-            "shortSha": "fe989af",
-            "url": "https://github.com/bte808/fun-20260531-c-extra-cite-gap/commit/fe989afd9f03cbf30386fee3661841f9b4b622ff",
-            "message": "Add embedded favicon",
-            "committedAt": "2026-05-30T19:38:27Z",
-            "files": [
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "scripts/check.js",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 1,
-                "changes": 2
-              }
-            ]
-          },
-          {
-            "sha": "47a69ddeb8aa73432907bea96f01eb2cb0ea3db2",
-            "shortSha": "47a69dd",
-            "url": "https://github.com/bte808/fun-20260531-c-extra-cite-gap/commit/47a69ddeb8aa73432907bea96f01eb2cb0ea3db2",
-            "message": "Ship citation gap audit",
-            "committedAt": "2026-05-30T19:34:33Z",
-            "files": [
-              {
-                "filename": ".gitignore",
-                "status": "added",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
-              },
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 102,
-                "deletions": 0,
-                "changes": 102
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 91,
-                "deletions": 0,
-                "changes": 91
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 20,
-                "deletions": 0,
-                "changes": 20
-              },
-              {
-                "filename": "scripts/browser-smoke.js",
-                "status": "added",
-                "additions": 255,
-                "deletions": 0,
-                "changes": 255
-              },
-              {
-                "filename": "scripts/check.js",
-                "status": "added",
-                "additions": 66,
-                "deletions": 0,
-                "changes": 66
-              },
-              {
-                "filename": "src/app.js",
-                "status": "added",
-                "additions": 195,
-                "deletions": 0,
-                "changes": 195
-              },
-              {
-                "filename": "src/citeGap.js",
-                "status": "added",
-                "additions": 294,
-                "deletions": 0,
-                "changes": 294
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 410,
-                "deletions": 0,
-                "changes": 410
-              },
-              {
-                "filename": "test/citeGap.test.js",
-                "status": "added",
-                "additions": 45,
-                "deletions": 0,
-                "changes": 45
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 7,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 91,
             "deletions": 0
           },
           {
@@ -1118,64 +741,222 @@
           {
             "filename": "README.md",
             "status": "added",
-            "additions": 102,
+            "additions": 78,
             "deletions": 0
           },
           {
-            "filename": "scripts/browser-smoke.js",
+            "filename": "scripts/browser-smoke.mjs",
             "status": "added",
-            "additions": 255,
+            "additions": 221,
             "deletions": 0
           },
           {
-            "filename": "scripts/check.js",
+            "filename": "scripts/check.mjs",
             "status": "added",
-            "additions": 66,
+            "additions": 45,
             "deletions": 0
           },
           {
             "filename": "src/app.js",
             "status": "added",
-            "additions": 195,
+            "additions": 372,
             "deletions": 0
           },
           {
-            "filename": "src/citeGap.js",
+            "filename": "src/core.js",
             "status": "added",
-            "additions": 294,
+            "additions": 99,
             "deletions": 0
           },
           {
-            "filename": "styles.css",
+            "filename": "src/styles.css",
             "status": "added",
-            "additions": 410,
-            "deletions": 0
-          },
-          {
-            "filename": "test/citeGap.test.js",
-            "status": "added",
-            "additions": 45,
+            "additions": 336,
             "deletions": 0
           }
         ]
       },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "needsReview": false,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
-      "name": "fun-20260531-b-extra-paste-grid",
-      "url": "https://github.com/bte808/fun-20260531-b-extra-paste-grid",
-      "description": "Local-first messy text to clean CSV, Markdown, and JSON tables",
+      "name": "fun-20260531-c-interleave-mixer",
+      "url": "https://github.com/bte808/fun-20260531-c-interleave-mixer",
+      "description": "Local-first interleaved practice session mixer for study review.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-30T19:33:59Z",
-      "updatedAt": "2026-05-30T19:37:13Z",
+      "createdAt": "2026-05-31T03:01:00.000Z",
+      "updatedAt": "2026-05-31T03:01:00.000Z",
       "createdDateShanghai": "2026-05-31",
       "updatedDateShanghai": "2026-05-31",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 4541,
+        "SVG": 473,
+        "HTML": 4188,
+        "JSON": 468,
+        "JavaScript": 28079,
+        "CSS": 5995
+      },
+      "type": "学习练习",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "Local-first interleaved practice session mixer for study review.",
+        "usefulness": "Many study plans accidentally become blocked practice: all of chapter 1, then all of chapter 2, then all of chapter 3. Interleave Mixer makes the switching visible. It gives you a session you can actually run, export, a...",
+        "whyFun": "待补充",
+        "runCommand": "python3 -m http.server 5211",
+        "verification": "The browser verifier launches local Chrome in headless mode, opens the static page, checks the sample render, simulates custom input, verifies Markdown preview output, captures the README screenshot, and repeats layout..."
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
+    },
+    {
+      "name": "fun-20260531-b-flow-cost-card",
+      "url": "https://github.com/bte808/fun-20260531-b-flow-cost-card",
+      "description": "Local-first AI workflow cost and latency forecaster.",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-31T02:30:24.000Z",
+      "updatedAt": "2026-05-31T04:00:09.000Z",
+      "createdDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-05-31",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "Markdown": 8289,
+        "SVG": 394,
+        "HTML": 3019,
+        "JSON": 613,
+        "JavaScript": 30681,
+        "CSS": 6114
+      },
+      "type": "学习练习",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "Local-first AI workflow cost and latency forecaster.",
+        "usefulness": "Small AI workflows often start cheap and fast, then become expensive or slow after retries, tool calls, higher traffic, or a few oversized prompts. FlowCost Card makes the hidden run-rate visible before you ship. Inspir...",
+        "whyFun": "待补充",
+        "runCommand": "npm run serve",
+        "verification": "Local checks: npm test runs calculation tests and static wiring checks. npm run verify:browser starts a local server, opens temporary headless Chrome sessions, edits the tool at desktop and 390 x 844 mobile sizes, check..."
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
+    },
+    {
+      "name": "fun-20260531-a-rave-relay",
+      "url": "https://github.com/bte808/fun-20260531-a-rave-relay",
+      "description": "Tiny no-dependency browser rhythm game: catch colorful rave pulses before the relay drops.",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-31T02:14:47.000Z",
+      "updatedAt": "2026-05-31T11:37:17.000Z",
+      "createdDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-05-31",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "Markdown": 2886,
+        "JavaScript": 25743,
+        "HTML": 4494,
+        "JSON": 581,
+        "CSS": 7217
+      },
+      "type": "音频互动",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "Tiny no-dependency browser rhythm game: catch colorful rave pulses before the relay drops.",
+        "usefulness": "A full run is 18 pulses, so one attempt takes less than a minute. The daily setlist is deterministic, which makes scores easy to compare. Timing grades, combo bonuses, a hype meter, local best score, and copyable result...",
+        "whyFun": "A full run is 18 pulses, so one attempt takes less than a minute. The daily setlist is deterministic, which makes scores easy to compare. Timing grades, combo bonuses, a hype meter, local best score, and copyable result...",
+        "runCommand": "python3 -m http.server 5212",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
+    },
+    {
+      "name": "fun-20260531-c-extra-cite-gap",
+      "url": "https://github.com/bte808/fun-20260531-c-extra-cite-gap",
+      "description": "Local-first citation gap auditor for academic drafts and reference keys.",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-30T19:34:33.000Z",
+      "updatedAt": "2026-05-31T10:29:33.000Z",
+      "createdDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-05-31",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "Markdown": 4869,
+        "HTML": 4134,
+        "JSON": 483,
+        "JavaScript": 32129,
+        "CSS": 6326
+      },
+      "type": "学习练习",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "Local-first citation gap auditor for academic drafts and reference keys.",
+        "usefulness": "Academic drafts often fail in small, boring places: a \\cite{...} key goes stale, a reference dump contains unused entries, or a strong claim survives without a source marker. A tiny local checker is useful because it ca...",
+        "whyFun": "待补充",
+        "runCommand": "python3 -m http.server 5201 --bind localhost",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
+    },
+    {
+      "name": "fun-20260531-b-extra-paste-grid",
+      "url": "https://github.com/bte808/fun-20260531-b-extra-paste-grid",
+      "description": "Local-first messy text to clean table utility.",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-30T19:33:50.000Z",
+      "updatedAt": "2026-05-30T19:37:08.000Z",
+      "createdDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-05-31",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "Markdown": 4228,
         "JavaScript": 29596,
-        "CSS": 5876,
-        "HTML": 4000
+        "HTML": 4000,
+        "JSON": 482,
+        "CSS": 5876
       },
       "type": "效率工具",
       "stars": {
@@ -1184,193 +965,39 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first messy text to clean CSV, Markdown, and JSON tables",
+        "oneLine": "Local-first messy text to clean table utility.",
         "usefulness": "Small teams keep losing time between chat notes, link dumps, task lists, spreadsheet rows, and issue descriptions. Recent public product launches keep circling the same need: less app switching, faster lightweight sprea...",
         "whyFun": "待补充",
         "runCommand": "npm run serve",
         "verification": "This repo includes a lightweight Node smoke test: It checks the parser, output formats, static file wiring, mobile CSS breakpoint presence, README/license presence, and that no runtime dependencies were added. With a lo..."
       },
       "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 2,
-        "commits": [
-          {
-            "sha": "8695770675e7eefc20526529fe352311db6b6d88",
-            "shortSha": "8695770",
-            "url": "https://github.com/bte808/fun-20260531-b-extra-paste-grid/commit/8695770675e7eefc20526529fe352311db6b6d88",
-            "message": "Add inline favicon",
-            "committedAt": "2026-05-30T19:37:08Z",
-            "files": [
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 4,
-                "deletions": 0,
-                "changes": 4
-              }
-            ]
-          },
-          {
-            "sha": "9c5fb1b94dcff1ff179087c6a6025fe783d3e6f1",
-            "shortSha": "9c5fb1b",
-            "url": "https://github.com/bte808/fun-20260531-b-extra-paste-grid/commit/9c5fb1b94dcff1ff179087c6a6025fe783d3e6f1",
-            "message": "Ship PasteGrid local text cleaner",
-            "committedAt": "2026-05-30T19:33:50Z",
-            "files": [
-              {
-                "filename": ".gitignore",
-                "status": "added",
-                "additions": 5,
-                "deletions": 0,
-                "changes": 5
-              },
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 107,
-                "deletions": 0,
-                "changes": 107
-              },
-              {
-                "filename": "app.js",
-                "status": "added",
-                "additions": 202,
-                "deletions": 0,
-                "changes": 202
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 98,
-                "deletions": 0,
-                "changes": 98
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "scripts/verify-browser.mjs",
-                "status": "added",
-                "additions": 226,
-                "deletions": 0,
-                "changes": 226
-              },
-              {
-                "filename": "scripts/verify.mjs",
-                "status": "added",
-                "additions": 60,
-                "deletions": 0,
-                "changes": 60
-              },
-              {
-                "filename": "src/pastegrid-core.js",
-                "status": "added",
-                "additions": 537,
-                "deletions": 0,
-                "changes": 537
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 375,
-                "deletions": 0,
-                "changes": 375
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 5,
-            "deletions": 0
-          },
-          {
-            "filename": "app.js",
-            "status": "added",
-            "additions": 202,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 98,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 107,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/verify-browser.mjs",
-            "status": "added",
-            "additions": 226,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/verify.mjs",
-            "status": "added",
-            "additions": 60,
-            "deletions": 0
-          },
-          {
-            "filename": "src/pastegrid-core.js",
-            "status": "added",
-            "additions": 537,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 375,
-            "deletions": 0
-          }
-        ]
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260531-a-extra-glyph-gate",
       "url": "https://github.com/bte808/fun-20260531-a-extra-glyph-gate",
-      "description": "Tiny no-dependency browser game: match glyphs before the gate closes.",
+      "description": "A fast no-dependency browser game about matching glyphs before the gate closes.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-30T19:33:00Z",
-      "updatedAt": "2026-05-31T12:11:38Z",
+      "createdAt": "2026-05-30T19:32:51.000Z",
+      "updatedAt": "2026-05-31T12:11:13.000Z",
       "createdDateShanghai": "2026-05-31",
       "updatedDateShanghai": "2026-05-31",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 3066,
+        "SVG": 583,
+        "HTML": 3311,
+        "JSON": 712,
         "JavaScript": 14403,
-        "CSS": 6569,
-        "HTML": 3311
+        "CSS": 6569
       },
       "type": "学习练习",
       "stars": {
@@ -1379,214 +1006,39 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Tiny no-dependency browser game: match glyphs before the gate closes.",
+        "oneLine": "A fast no-dependency browser game about matching glyphs before the gate closes.",
         "usefulness": "It is a low-friction reaction and pattern-matching toy. You can open it, play one complete round, and know immediately whether you can beat your previous score. It is also small enough to study as a clean static-game te...",
         "whyFun": "The rule is obvious at a glance: match the exact color and shape. The fun comes from the timer shrinking, the nine gates staying visible, and the streak bonus tempting you to move faster than you should. A good run feel...",
         "runCommand": "npm start",
-        "verification": "待补充"
+        "verification": "The smoke test verifies deck generation, scoring, summaries, share text, required static files, and the browser verification hook."
       },
       "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 2,
-        "commits": [
-          {
-            "sha": "65be55b1a69acd1a4d3206926f8a76a0a331d3d5",
-            "shortSha": "65be55b",
-            "url": "https://github.com/bte808/fun-20260531-a-extra-glyph-gate/commit/65be55b1a69acd1a4d3206926f8a76a0a331d3d5",
-            "message": "Improve glyph gate keyboard flow",
-            "committedAt": "2026-05-31T12:11:13Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 0,
-                "changes": 1
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 2,
-                "changes": 4
-              },
-              {
-                "filename": "scripts/smoke-test.mjs",
-                "status": "modified",
-                "additions": 6,
-                "deletions": 0,
-                "changes": 6
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 13,
-                "deletions": 1,
-                "changes": 14
-              }
-            ]
-          },
-          {
-            "sha": "1dae08229d667a2bef1f28f34b3fa8a0598a837b",
-            "shortSha": "1dae082",
-            "url": "https://github.com/bte808/fun-20260531-a-extra-glyph-gate/commit/1dae08229d667a2bef1f28f34b3fa8a0598a837b",
-            "message": "Ship Glyph Gate Sprint browser game",
-            "committedAt": "2026-05-30T19:32:51Z",
-            "files": [
-              {
-                "filename": ".gitignore",
-                "status": "added",
-                "additions": 5,
-                "deletions": 0,
-                "changes": 5
-              },
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 92,
-                "deletions": 0,
-                "changes": 92
-              },
-              {
-                "filename": "favicon.svg",
-                "status": "added",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 85,
-                "deletions": 0,
-                "changes": 85
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 25,
-                "deletions": 0,
-                "changes": 25
-              },
-              {
-                "filename": "scripts/smoke-test.mjs",
-                "status": "added",
-                "additions": 53,
-                "deletions": 0,
-                "changes": 53
-              },
-              {
-                "filename": "src/app.js",
-                "status": "added",
-                "additions": 289,
-                "deletions": 0,
-                "changes": 289
-              },
-              {
-                "filename": "src/game.js",
-                "status": "added",
-                "additions": 95,
-                "deletions": 0,
-                "changes": 95
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 428,
-                "deletions": 0,
-                "changes": 428
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 5,
-            "deletions": 0
-          },
-          {
-            "filename": "favicon.svg",
-            "status": "added",
-            "additions": 7,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 85,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 25,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 92,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/smoke-test.mjs",
-            "status": "added",
-            "additions": 53,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "added",
-            "additions": 289,
-            "deletions": 0
-          },
-          {
-            "filename": "src/game.js",
-            "status": "added",
-            "additions": 95,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 428,
-            "deletions": 0
-          }
-        ]
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "needsReview": false,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260530-c-repro-notebook",
       "url": "https://github.com/bte808/fun-20260530-c-repro-notebook",
-      "description": "Local-first notebook reproducibility card generator for study and research notes",
+      "description": "A local-first notebook reproducibility card generator for study and research notes.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-30T02:54:31Z",
-      "updatedAt": "2026-05-30T02:54:43Z",
+      "createdAt": "2026-05-30T02:54:24.000Z",
+      "updatedAt": "2026-05-30T02:54:24.000Z",
       "createdDateShanghai": "2026-05-30",
       "updatedDateShanghai": "2026-05-30",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 3560,
+        "SVG": 514,
+        "HTML": 3632,
+        "JSON": 477,
         "JavaScript": 22506,
-        "CSS": 7478,
-        "HTML": 3632
+        "CSS": 7478
       },
       "type": "学习练习",
       "stars": {
@@ -1595,7 +1047,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first notebook reproducibility card generator for study and research notes",
+        "oneLine": "A local-first notebook reproducibility card generator for study and research notes.",
         "usefulness": "Notebook workflows are easy to understand while you are working, but hard to rerun later when the data source, package versions, random seed, or output files are only implicit. This tool gives the notebook a small \"hand...",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5197 --bind localhost",
@@ -1609,22 +1061,25 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260530-b-extension-risk-card",
       "url": "https://github.com/bte808/fun-20260530-b-extension-risk-card",
-      "description": "Local-first VS Code extension install risk card",
+      "description": "Local-first VS Code extension install risk card generator.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-30T02:31:46Z",
-      "updatedAt": "2026-05-30T02:32:02Z",
+      "createdAt": "2026-05-30T02:31:39.000Z",
+      "updatedAt": "2026-06-01T10:47:53.000Z",
       "createdDateShanghai": "2026-05-30",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-01",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 30331,
-        "CSS": 5803,
-        "HTML": 2908
+        "Markdown": 3543,
+        "SVG": 441,
+        "HTML": 3219,
+        "JSON": 574,
+        "JavaScript": 38374,
+        "CSS": 6073
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -1633,36 +1088,180 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first VS Code extension install risk card",
+        "oneLine": "Local-first VS Code extension install risk card generator.",
         "usefulness": "Small productivity extensions can save real time, but installing one into a work editor is still a trust decision. Extension Risk Card turns the parts worth checking into a short, repeatable checklist before you give a...",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5207 --bind localhost",
-        "verification": "verify:browser expects a Chromium-compatible browser. On non-macOS machines, set CHROME_BIN if Chrome is not on the normal command path."
+        "verification": "verify:browser expects a Chromium-compatible browser. On non-macOS machines, set CHROME_BIN if Chrome is not on the normal command path. Set VERIFY_URL=file:///absolute/path/to/index.html when a local server is unavaila..."
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "cfec61d6ad1be72688fc88f068b44bae47eddd41",
+            "shortSha": "cfec61d",
+            "url": "https://github.com/bte808/fun-20260530-b-extension-risk-card/commit/cfec61d6ad1be72688fc88f068b44bae47eddd41",
+            "message": "Add next review move guidance",
+            "committedAt": "2026-06-01T10:47:53.000Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 21,
+                "deletions": 1,
+                "changes": 22
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 6,
+                "deletions": 0,
+                "changes": 6
+              },
+              {
+                "filename": "package.json",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 1,
+                "changes": 5
+              },
+              {
+                "filename": "scripts/browser-verify.mjs",
+                "status": "modified",
+                "additions": 5,
+                "deletions": 1,
+                "changes": 6
+              },
+              {
+                "filename": "scripts/static-check.mjs",
+                "status": "modified",
+                "additions": 2,
+                "deletions": 0,
+                "changes": 2
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 6,
+                "deletions": 0,
+                "changes": 6
+              },
+              {
+                "filename": "src/risk-engine.js",
+                "status": "modified",
+                "additions": 81,
+                "deletions": 0,
+                "changes": 81
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 18,
+                "deletions": 0,
+                "changes": 18
+              },
+              {
+                "filename": "test/app-smoke.test.mjs",
+                "status": "added",
+                "additions": 153,
+                "deletions": 0,
+                "changes": 153
+              },
+              {
+                "filename": "test/risk-engine.test.mjs",
+                "status": "modified",
+                "additions": 5,
+                "deletions": 0,
+                "changes": 5
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 1
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 21,
+            "deletions": 1
+          },
+          {
+            "filename": "scripts/browser-verify.mjs",
+            "status": "modified",
+            "additions": 5,
+            "deletions": 1
+          },
+          {
+            "filename": "scripts/static-check.mjs",
+            "status": "modified",
+            "additions": 2,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 0
+          },
+          {
+            "filename": "src/risk-engine.js",
+            "status": "modified",
+            "additions": 81,
+            "deletions": 0
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 18,
+            "deletions": 0
+          },
+          {
+            "filename": "test/app-smoke.test.mjs",
+            "status": "added",
+            "additions": 153,
+            "deletions": 0
+          },
+          {
+            "filename": "test/risk-engine.test.mjs",
+            "status": "modified",
+            "additions": 5,
+            "deletions": 0
+          }
+        ]
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260530-a-consent-comet",
       "url": "https://github.com/bte808/fun-20260530-a-consent-comet",
-      "description": "A fast static browser game about triaging permission comets.",
+      "description": "A fast static browser game about triaging incoming permission comets.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-30T02:15:03Z",
-      "updatedAt": "2026-05-30T02:15:20Z",
+      "createdAt": "2026-05-30T02:14:53.000Z",
+      "updatedAt": "2026-05-30T02:14:53.000Z",
       "createdDateShanghai": "2026-05-30",
       "updatedDateShanghai": "2026-05-30",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2506,
+        "SVG": 478,
+        "HTML": 4032,
+        "JSON": 490,
         "JavaScript": 19583,
-        "CSS": 9504,
-        "HTML": 4032
+        "CSS": 9504
       },
       "type": "学习练习",
       "stars": {
@@ -1671,11 +1270,11 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "A fast static browser game about triaging permission comets.",
+        "oneLine": "A fast static browser game about triaging incoming permission comets.",
         "usefulness": "It turns a common digital reflex into a quick practice loop: slow down just enough to separate small local actions from broad or unclear requests. The game is intentionally short, so it can be played once and shared wit...",
         "whyFun": "The cards are readable at a glance, but streak pressure makes the choices feel arcade-fast. A clean run feels like sweeping a noisy orbit into order; a wrong approve or deny visibly dents focus and breaks the streak.",
         "runCommand": "npm start",
-        "verification": "待补充"
+        "verification": "The smoke test verifies the Shanghai date helper, deterministic daily deck generation, card action rules, scoring, focus damage, perfect-run completion, share text, and required static files."
       },
       "today": {
         "created": false,
@@ -1684,23 +1283,25 @@
         "commits": [],
         "files": []
       },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "needsReview": false,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260529-c-lit-scope-grid",
       "url": "https://github.com/bte808/fun-20260529-c-lit-scope-grid",
-      "description": "Local-first literature review matrix builder for paper reading notes",
+      "description": "Local-first literature review matrix builder for paper reading notes.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-29T02:51:14Z",
-      "updatedAt": "2026-05-29T10:27:44Z",
+      "createdAt": "2026-05-29T02:51:06.000Z",
+      "updatedAt": "2026-05-29T10:27:30.000Z",
       "createdDateShanghai": "2026-05-29",
       "updatedDateShanghai": "2026-05-29",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 4574,
         "JavaScript": 26122,
-        "CSS": 6806,
-        "HTML": 3494
+        "HTML": 3494,
+        "JSON": 418,
+        "CSS": 6806
       },
       "type": "学习练习",
       "stars": {
@@ -1709,11 +1310,11 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first literature review matrix builder for paper reading notes",
+        "oneLine": "Local-first literature review matrix builder for paper reading notes.",
         "usefulness": "Traditional literature matrix templates are helpful, but filling them manually often hides missing evidence pointers, limitations, or thin themes. Lit Scope Grid keeps the workflow small: paste notes, inspect the matrix...",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5191 --bind localhost",
-        "verification": "待补充"
+        "verification": "The app should load without a blank screen, parse the default sample, render the matrix, support theme filtering, and export Markdown/CSV without requiring a private environment."
       },
       "today": {
         "created": false,
@@ -1723,22 +1324,25 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260529-a-buffer-relay",
       "url": "https://github.com/bte808/fun-20260529-a-buffer-relay",
-      "description": "Two-slot packet relay browser puzzle",
+      "description": "A tiny browser puzzle about routing a packet stream through only two buffer slots.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-29T02:46:23Z",
-      "updatedAt": "2026-05-29T09:08:29Z",
+      "createdAt": "2026-05-29T02:46:09.000Z",
+      "updatedAt": "2026-05-29T09:08:14.000Z",
       "createdDateShanghai": "2026-05-29",
       "updatedDateShanghai": "2026-05-29",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2606,
+        "SVG": 506,
+        "HTML": 4487,
+        "JSON": 574,
         "JavaScript": 26933,
-        "CSS": 6756,
-        "HTML": 4487
+        "CSS": 6756
       },
       "type": "学习练习",
       "stars": {
@@ -1747,11 +1351,11 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Two-slot packet relay browser puzzle",
+        "oneLine": "A tiny browser puzzle about routing a packet stream through only two buffer slots.",
         "usefulness": "It turns an abstract systems idea into a quick tactile challenge. The game makes limited memory feel concrete: you only have two slots, and every overwrite can make the target sequence impossible.",
         "whyFun": "The puzzles are small enough to learn in one round but still reward planning. Clean pair flips build combo points, wrong emits create glitches, and perfect runs feel like snapping a tiny packet machine into sync.",
         "runCommand": "npm start",
-        "verification": "待补充"
+        "verification": "The smoke test verifies the Asia/Shanghai date helper, every level's two-slot solvability, core actions, failure handling, scoring, and share text."
       },
       "today": {
         "created": false,
@@ -1760,8 +1364,8 @@
         "commits": [],
         "files": []
       },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "needsReview": false,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260529-b-return-window",
@@ -1769,14 +1373,16 @@
       "description": "Local-first return deadline tracker with next-action cues and calendar reminders",
       "defaultBranch": "main",
       "createdAt": "2026-05-29T02:42:20Z",
-      "updatedAt": "2026-05-29T09:27:40Z",
+      "updatedAt": "2026-05-29T09:27:26.000Z",
       "createdDateShanghai": "2026-05-29",
       "updatedDateShanghai": "2026-05-29",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2064,
+        "HTML": 4512,
+        "JSON": 290,
         "JavaScript": 17982,
-        "CSS": 6505,
-        "HTML": 4512
+        "CSS": 6505
       },
       "type": "效率工具",
       "stars": {
@@ -1799,21 +1405,23 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260528-c-uncertainty-budget",
       "url": "https://github.com/bte808/fun-20260528-c-uncertainty-budget",
-      "description": "Local-first uncertainty budget worksheet for lab reports and measurement review",
+      "description": "A local uncertainty-budget worksheet for lab reports and measurement review.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-28T02:56:53Z",
-      "updatedAt": "2026-05-28T10:47:53Z",
+      "createdAt": "2026-05-28T02:56:52.000Z",
+      "updatedAt": "2026-06-01T10:48:25.000Z",
       "createdDateShanghai": "2026-05-28",
-      "updatedDateShanghai": "2026-05-28",
+      "updatedDateShanghai": "2026-06-01",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 20606,
-        "HTML": 6152,
+        "Markdown": 4837,
+        "JavaScript": 22467,
+        "HTML": 6280,
+        "JSON": 533,
         "CSS": 5959
       },
       "type": "学习练习",
@@ -1823,36 +1431,127 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first uncertainty budget worksheet for lab reports and measurement review",
+        "oneLine": "A local uncertainty-budget worksheet for lab reports and measurement review.",
         "usefulness": "Preparing a physics, chemistry, metrology, or engineering lab report. Checking whether an experiment notebook clearly separates Type A, Type B, calibration, resolution, and model sources. Comparing which instrument or p...",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5182",
-        "verification": "待补充"
+        "verification": "The checks cover distribution conversion, sensitivity weighting, combined and expanded uncertainty, relative uncertainty, ranking, report text, Markdown output, JSON backup round-trips, and static JavaScript syntax."
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "6d33366b5ac8e133b238699336d34a1d3b00e852",
+            "shortSha": "6d33366",
+            "url": "https://github.com/bte808/fun-20260528-c-uncertainty-budget/commit/6d33366b5ac8e133b238699336d34a1d3b00e852",
+            "message": "Add rounding hint to uncertainty reports",
+            "committedAt": "2026-06-01T10:48:25.000Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 2,
+                "changes": 6
+              },
+              {
+                "filename": "app.js",
+                "status": "modified",
+                "additions": 29,
+                "deletions": 1,
+                "changes": 30
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 4,
+                "deletions": 0,
+                "changes": 4
+              },
+              {
+                "filename": "package.json",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 0,
+                "changes": 3
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 1,
+                "deletions": 1,
+                "changes": 2
+              },
+              {
+                "filename": "test.js",
+                "status": "modified",
+                "additions": 16,
+                "deletions": 0,
+                "changes": 16
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "app.js",
+            "status": "modified",
+            "additions": 29,
+            "deletions": 1
+          },
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "modified",
+            "additions": 3,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 4,
+            "deletions": 2
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 1,
+            "deletions": 1
+          },
+          {
+            "filename": "test.js",
+            "status": "modified",
+            "additions": 16,
+            "deletions": 0
+          }
+        ]
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260528-b-runbook-card",
       "url": "https://github.com/bte808/fun-20260528-b-runbook-card",
-      "description": "Local-first runbook card builder for rough process notes",
+      "description": "Local-first runbook card builder for turning rough notes into executable checklists.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-28T02:53:32Z",
-      "updatedAt": "2026-05-28T10:28:22Z",
+      "createdAt": "2026-05-28T02:53:24.000Z",
+      "updatedAt": "2026-05-28T10:28:10.000Z",
       "createdDateShanghai": "2026-05-28",
       "updatedDateShanghai": "2026-05-28",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 3402,
         "JavaScript": 22296,
-        "CSS": 6745,
-        "HTML": 2731
+        "HTML": 2731,
+        "JSON": 425,
+        "CSS": 6745
       },
       "type": "学习练习",
       "stars": {
@@ -1861,49 +1560,11 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first runbook card builder for rough process notes",
+        "oneLine": "Local-first runbook card builder for turning rough notes into executable checklists.",
         "usefulness": "Useful procedures often start as scattered notes in chat, docs, or a personal list. That is enough to remember the work, but not enough to run it cleanly under time pressure. Runbook Card converts those notes into a lig...",
         "whyFun": "It gives rough notes a visible \"readiness\" score and turns them into a tidy command card. You can tighten the card by adding an owner, goal, due time, verification step, and follow-up step, then watch the draft become r...",
         "runCommand": "python3 -m http.server 5198 --bind localhost",
-        "verification": "待补充"
-      },
-      "today": {
-        "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
-      },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
-    },
-    {
-      "name": "fun-20260528-a-scanline-sprint",
-      "url": "https://github.com/bte808/fun-20260528-a-scanline-sprint",
-      "description": "Daily scanline reflex browser game with optional synth feedback",
-      "defaultBranch": "main",
-      "createdAt": "2026-05-28T02:26:12Z",
-      "updatedAt": "2026-05-28T10:09:04Z",
-      "createdDateShanghai": "2026-05-28",
-      "updatedDateShanghai": "2026-05-28",
-      "primaryLanguage": "JavaScript",
-      "languages": {
-        "JavaScript": 28474,
-        "CSS": 7234,
-        "HTML": 4451
-      },
-      "type": "浏览器小游戏",
-      "stars": {
-        "total": 0,
-        "todayDelta": 0,
-        "todayStargazers": []
-      },
-      "readme": {
-        "oneLine": "Daily scanline reflex browser game with optional synth feedback",
-        "usefulness": "This was built for the 2026-05-28 daily fun-project incubation run, worker A, with the fixed direction \"fun\". The public-web scan focused on recent Show HN posts from 2026-05-28. The direct inspiration was the playful t...",
-        "whyFun": "The game is readable in one glance but gets tense quickly: the next correct button is always visible, yet the scan beam keeps shrinking your decision window. The result is a small \"one more run\" loop with visible pixels...",
-        "runCommand": "npm start",
-        "verification": "The smoke test verifies deterministic daily rounds, the Asia/Shanghai date helper, correct and wrong input handling, beam timeout behavior, a finishable perfect run, and share text."
+        "verification": "The app has no runtime dependencies. Tests use Node's built-in test runner."
       },
       "today": {
         "created": false,
@@ -1913,22 +1574,25 @@
         "files": []
       },
       "needsReview": false,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
-      "name": "fun-20260527-a-tiny-planet-hop",
-      "url": "https://github.com/bte808/fun-20260527-a-tiny-planet-hop",
-      "description": "Tiny circular runner about hopping around a daily seeded toy planet",
+      "name": "fun-20260528-a-scanline-sprint",
+      "url": "https://github.com/bte808/fun-20260528-a-scanline-sprint",
+      "description": "A tiny scanline reflex game about feeding a pixel pipeline before the beam catches you.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-27T05:48:36Z",
-      "updatedAt": "2026-05-28T09:09:34Z",
-      "createdDateShanghai": "2026-05-27",
-      "updatedDateShanghai": "2026-05-28",
+      "createdAt": "2026-05-28T02:26:10.000Z",
+      "updatedAt": "2026-06-01T10:41:55.000Z",
+      "createdDateShanghai": "2026-05-28",
+      "updatedDateShanghai": "2026-06-01",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 27565,
-        "CSS": 5233,
-        "HTML": 3241
+        "Markdown": 3942,
+        "SVG": 731,
+        "HTML": 4938,
+        "JSON": 601,
+        "JavaScript": 31261,
+        "CSS": 8322
       },
       "type": "音频互动",
       "stars": {
@@ -1937,7 +1601,150 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Tiny circular runner about hopping around a daily seeded toy planet",
+        "oneLine": "A tiny scanline reflex game about feeding a pixel pipeline before the beam catches you.",
+        "usefulness": "This was built for the 2026-05-28 daily fun-project incubation run, worker A, with the fixed direction \"fun\". The public-web scan focused on recent Show HN posts from 2026-05-28. The direct inspiration was the playful t...",
+        "whyFun": "The game is readable in one glance but gets tense quickly: the next correct button is always visible, yet the scan beam keeps shrinking your decision window. The result is a small \"one more run\" loop with visible pixels...",
+        "runCommand": "npm start",
+        "verification": "The smoke test verifies deterministic daily rounds, custom seed normalization, the Asia/Shanghai date helper, correct and wrong input handling, beam timeout behavior, a finishable perfect run, and share text."
+      },
+      "today": {
+        "created": false,
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "739999a582efa5e0b347127b65296a063756fa60",
+            "shortSha": "739999a",
+            "url": "https://github.com/bte808/fun-20260528-a-scanline-sprint/commit/739999a582efa5e0b347127b65296a063756fa60",
+            "message": "Add replayable challenge seeds",
+            "committedAt": "2026-06-01T10:41:55.000Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 22,
+                "deletions": 1,
+                "changes": 23
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 13,
+                "deletions": 4,
+                "changes": 17
+              },
+              {
+                "filename": "package.json",
+                "status": "modified",
+                "additions": 2,
+                "deletions": 0,
+                "changes": 2
+              },
+              {
+                "filename": "scripts/smoke-test.mjs",
+                "status": "modified",
+                "additions": 7,
+                "deletions": 1,
+                "changes": 8
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 75,
+                "deletions": 3,
+                "changes": 78
+              },
+              {
+                "filename": "src/game.js",
+                "status": "modified",
+                "additions": 13,
+                "deletions": 2,
+                "changes": 15
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 62,
+                "deletions": 0,
+                "changes": 62
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 13,
+            "deletions": 4
+          },
+          {
+            "filename": "package.json",
+            "status": "modified",
+            "additions": 2,
+            "deletions": 0
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 22,
+            "deletions": 1
+          },
+          {
+            "filename": "scripts/smoke-test.mjs",
+            "status": "modified",
+            "additions": 7,
+            "deletions": 1
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 75,
+            "deletions": 3
+          },
+          {
+            "filename": "src/game.js",
+            "status": "modified",
+            "additions": 13,
+            "deletions": 2
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 62,
+            "deletions": 0
+          }
+        ]
+      },
+      "needsReview": false,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
+    },
+    {
+      "name": "fun-20260527-a-tiny-planet-hop",
+      "url": "https://github.com/bte808/fun-20260527-a-tiny-planet-hop",
+      "description": "A tiny circular runner about hopping around a toy planet before the timer burns down.",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-27T05:48:26.000Z",
+      "updatedAt": "2026-05-28T09:09:18.000Z",
+      "createdDateShanghai": "2026-05-27",
+      "updatedDateShanghai": "2026-05-28",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "Markdown": 2930,
+        "SVG": 488,
+        "HTML": 3241,
+        "JSON": 515,
+        "JavaScript": 27565,
+        "CSS": 5233
+      },
+      "type": "音频互动",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "A tiny circular runner about hopping around a toy planet before the timer burns down.",
         "usefulness": "This was built for the 2026-05-27 daily fun-project incubation run, worker A, with the fixed direction \"fun\". The public-web scan focused on recent Show HN posts from 2026-05-27. The inspiration was the quick \"open it a...",
         "whyFun": "The player is always moving, so each choice is tiny and urgent: jump now, wait half a beat, or risk clipping a crater to keep a combo alive. The whole run fits in under a minute, but the daily seed, route preview, three...",
         "runCommand": "npm start",
@@ -1951,22 +1758,25 @@
         "files": []
       },
       "needsReview": false,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260527-c-prereq-scout",
       "url": "https://github.com/bte808/fun-20260527-c-prereq-scout",
-      "description": "Local-first prerequisite-aware study planner for course review",
+      "description": "A local prerequisite-aware study planner for course review.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-27T05:35:02Z",
-      "updatedAt": "2026-05-27T10:33:57Z",
+      "createdAt": "2026-05-27T05:34:53.000Z",
+      "updatedAt": "2026-06-01T09:50:14.000Z",
       "createdDateShanghai": "2026-05-27",
-      "updatedDateShanghai": "2026-05-27",
+      "updatedDateShanghai": "2026-06-01",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 25014,
-        "CSS": 4998,
-        "HTML": 4068
+        "Markdown": 4529,
+        "SVG": 227,
+        "HTML": 4237,
+        "JSON": 392,
+        "JavaScript": 27418,
+        "CSS": 5510
       },
       "type": "学习练习",
       "stars": {
@@ -1975,36 +1785,140 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first prerequisite-aware study planner for course review",
+        "oneLine": "A local prerequisite-aware study planner for course review.",
         "usefulness": "Planning a chapter review before an exam Organizing a methods refresher before reading a paper Seeing which lab concepts must be stabilized before data analysis Turning a lecture outline into a concrete next-study seque...",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5181",
-        "verification": "待补充"
+        "verification": "The validation covers parsing, missing prerequisites, cycle detection, route generation, and a static check for required files, mobile CSS, README caveats, and sample output quality."
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "ff8fd2b740fa9066701ca163ae630ad5285d4847",
+            "shortSha": "ff8fd2b",
+            "url": "https://github.com/bte808/fun-20260527-c-prereq-scout/commit/ff8fd2b740fa9066701ca163ae630ad5285d4847",
+            "message": "Add Prereq Scout starter sheets",
+            "committedAt": "2026-06-01T09:50:14.000Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 6,
+                "deletions": 3,
+                "changes": 9
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 6,
+                "deletions": 2,
+                "changes": 8
+              },
+              {
+                "filename": "scripts/check.mjs",
+                "status": "modified",
+                "additions": 8,
+                "deletions": 0,
+                "changes": 8
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 17,
+                "deletions": 3,
+                "changes": 20
+              },
+              {
+                "filename": "src/sample-data.js",
+                "status": "modified",
+                "additions": 30,
+                "deletions": 2,
+                "changes": 32
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 30,
+                "deletions": 0,
+                "changes": 30
+              },
+              {
+                "filename": "test/prereq-scout.test.mjs",
+                "status": "modified",
+                "additions": 13,
+                "deletions": 1,
+                "changes": 14
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 2
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 6,
+            "deletions": 3
+          },
+          {
+            "filename": "scripts/check.mjs",
+            "status": "modified",
+            "additions": 8,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 17,
+            "deletions": 3
+          },
+          {
+            "filename": "src/sample-data.js",
+            "status": "modified",
+            "additions": 30,
+            "deletions": 2
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 30,
+            "deletions": 0
+          },
+          {
+            "filename": "test/prereq-scout.test.mjs",
+            "status": "modified",
+            "additions": 13,
+            "deletions": 1
+          }
+        ]
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260527-b-move-window",
       "url": "https://github.com/bte808/fun-20260527-b-move-window",
       "description": "Local-first move-date checklist planner.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-27T05:29:10Z",
-      "updatedAt": "2026-05-27T09:46:55Z",
+      "createdAt": "2026-05-27T05:27:15.000Z",
+      "updatedAt": "2026-06-01T09:30:30.000Z",
       "createdDateShanghai": "2026-05-27",
-      "updatedDateShanghai": "2026-05-27",
+      "updatedDateShanghai": "2026-06-01",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 20085,
-        "CSS": 8200,
-        "HTML": 6483
+        "Markdown": 2601,
+        "JavaScript": 23115,
+        "HTML": 6556,
+        "JSON": 394,
+        "CSS": 8200
       },
       "type": "文字创作",
       "stars": {
@@ -2017,80 +1931,33 @@
         "usefulness": "Moving checklists are useful, but they often live as long articles or generic PDFs. Move Window keeps the helpful part: one date goes in, a dated plan comes out, and you can keep checking items off in the browser.",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5197",
-        "verification": "待补充"
-      },
-      "today": {
-        "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
-      },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
-    },
-    {
-      "name": "fun-20260526-c-quiz-map",
-      "url": "https://github.com/bte808/fun-20260526-c-quiz-map",
-      "description": "Local-first quiz-to-knowledge-map review planner with CSV flashcard export.",
-      "defaultBranch": "main",
-      "createdAt": "2026-05-26T03:01:16Z",
-      "updatedAt": "2026-05-31T10:52:53Z",
-      "createdDateShanghai": "2026-05-26",
-      "updatedDateShanghai": "2026-05-31",
-      "primaryLanguage": "JavaScript",
-      "languages": {
-        "JavaScript": 35791,
-        "CSS": 8011,
-        "HTML": 4586
-      },
-      "type": "学习练习",
-      "stars": {
-        "total": 0,
-        "todayDelta": 0,
-        "todayStargazers": []
-      },
-      "readme": {
-        "oneLine": "Local-first quiz-to-knowledge-map review planner with CSV flashcard export.",
-        "usefulness": "Quiz Map is useful after a short diagnostic quiz, lab-methods check, reading group quiz, exam review session, or teaching-assistant office hour. It helps turn \"I got 7/12\" into \"I missed sampling bias twice, and that we...",
-        "whyFun": "待补充",
-        "runCommand": "python3 -m http.server 5179",
-        "verification": "待补充"
+        "verification": "The app has no runtime dependencies. Tests use Node's built-in test runner."
       },
       "today": {
         "created": false,
         "updated": true,
-        "commitCount": 2,
+        "commitCount": 1,
         "commits": [
           {
-            "sha": "880234d5dbab66cabb3d43f80ae00b5a63ca51c6",
-            "shortSha": "880234d",
-            "url": "https://github.com/bte808/fun-20260526-c-quiz-map/commit/880234d5dbab66cabb3d43f80ae00b5a63ca51c6",
-            "message": "Add live demo link",
-            "committedAt": "2026-05-31T10:52:48Z",
+            "sha": "a446beafb730e47bb70396c03faec92dedbfc337",
+            "shortSha": "a446bea",
+            "url": "https://github.com/bte808/fun-20260527-b-move-window/commit/a446beafb730e47bb70396c03faec92dedbfc337",
+            "message": "Add calendar export for move checkpoints",
+            "committedAt": "2026-06-01T09:30:30.000Z",
             "files": [
               {
                 "filename": "README.md",
                 "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              }
-            ]
-          },
-          {
-            "sha": "edb129ed1d2cd9c03c01ca4019a7fb5d0cbc4683",
-            "shortSha": "edb129e",
-            "url": "https://github.com/bte808/fun-20260526-c-quiz-map/commit/edb129ed1d2cd9c03c01ca4019a7fb5d0cbc4683",
-            "message": "Add review-card CSV export",
-            "committedAt": "2026-05-31T10:51:17Z",
-            "files": [
+                "additions": 4,
+                "deletions": 2,
+                "changes": 6
+              },
               {
-                "filename": "README.md",
+                "filename": "app.js",
                 "status": "modified",
-                "additions": 17,
+                "additions": 85,
                 "deletions": 0,
-                "changes": 17
+                "changes": 85
               },
               {
                 "filename": "index.html",
@@ -2102,42 +1969,34 @@
               {
                 "filename": "package.json",
                 "status": "modified",
-                "additions": 4,
-                "deletions": 1,
-                "changes": 5
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 35,
-                "deletions": 12,
-                "changes": 47
-              },
-              {
-                "filename": "src/quiz-map.js",
-                "status": "modified",
-                "additions": 104,
-                "deletions": 0,
-                "changes": 104
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
                 "additions": 1,
-                "deletions": 5,
-                "changes": 6
+                "deletions": 0,
+                "changes": 1
               },
               {
-                "filename": "test/quiz-map.test.mjs",
+                "filename": "scripts/check.mjs",
                 "status": "modified",
-                "additions": 14,
+                "additions": 2,
                 "deletions": 0,
-                "changes": 14
+                "changes": 2
+              },
+              {
+                "filename": "test/planner.test.mjs",
+                "status": "modified",
+                "additions": 3,
+                "deletions": 0,
+                "changes": 3
               }
             ]
           }
         ],
         "files": [
+          {
+            "filename": "app.js",
+            "status": "modified",
+            "additions": 85,
+            "deletions": 0
+          },
           {
             "filename": "index.html",
             "status": "modified",
@@ -2147,70 +2006,61 @@
           {
             "filename": "package.json",
             "status": "modified",
-            "additions": 4,
-            "deletions": 1
+            "additions": 1,
+            "deletions": 0
           },
           {
             "filename": "README.md",
             "status": "modified",
-            "additions": 17,
+            "additions": 4,
+            "deletions": 2
+          },
+          {
+            "filename": "scripts/check.mjs",
+            "status": "modified",
+            "additions": 2,
             "deletions": 0
           },
           {
-            "filename": "src/app.js",
+            "filename": "test/planner.test.mjs",
             "status": "modified",
-            "additions": 35,
-            "deletions": 12
-          },
-          {
-            "filename": "src/quiz-map.js",
-            "status": "modified",
-            "additions": 104,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 5
-          },
-          {
-            "filename": "test/quiz-map.test.mjs",
-            "status": "modified",
-            "additions": 14,
+            "additions": 3,
             "deletions": 0
           }
         ]
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
-      "name": "fun-20260526-b-cable-card",
-      "url": "https://github.com/bte808/fun-20260526-b-cable-card",
-      "description": "Offline USB-C cable capability card and label generator",
+      "name": "fun-20260526-c-quiz-map",
+      "url": "https://github.com/bte808/fun-20260526-c-quiz-map",
+      "description": "A local quiz-result knowledge map for study review planning.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-26T02:34:42Z",
-      "updatedAt": "2026-05-26T10:41:58Z",
+      "createdAt": "2026-05-26T03:01:09.000Z",
+      "updatedAt": "2026-05-31T10:52:48.000Z",
       "createdDateShanghai": "2026-05-26",
-      "updatedDateShanghai": "2026-05-26",
+      "updatedDateShanghai": "2026-05-31",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 22424,
-        "CSS": 7354,
-        "HTML": 7058
+        "Markdown": 4932,
+        "SVG": 408,
+        "HTML": 4586,
+        "JSON": 448,
+        "JavaScript": 35791,
+        "CSS": 8011
       },
-      "type": "效率工具",
+      "type": "学习练习",
       "stars": {
         "total": 0,
         "todayDelta": 0,
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Offline USB-C cable capability card and label generator",
-        "usefulness": "The project was inspired by recent public discussion around cable confusion, especially WhatCable on Product Hunt: https://www.producthunt.com/products/whatcable WhatCable reads cable capability data where the platform...",
+        "oneLine": "A local quiz-result knowledge map for study review planning.",
+        "usefulness": "Quiz Map is useful after a short diagnostic quiz, lab-methods check, reading group quiz, exam review session, or teaching-assistant office hour. It helps turn \"I got 7/12\" into \"I missed sampling bias twice, and that we...",
         "whyFun": "待补充",
-        "runCommand": "python3 -m http.server 5196",
+        "runCommand": "python3 -m http.server 5179",
         "verification": "待补充"
       },
       "today": {
@@ -2221,22 +2071,65 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
+    },
+    {
+      "name": "fun-20260526-b-cable-card",
+      "url": "https://github.com/bte808/fun-20260526-b-cable-card",
+      "description": "Offline USB-C cable capability card and label generator.",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-26T02:34:35.000Z",
+      "updatedAt": "2026-05-26T10:39:45.000Z",
+      "createdDateShanghai": "2026-05-26",
+      "updatedDateShanghai": "2026-05-26",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "Markdown": 2270,
+        "JavaScript": 22424,
+        "HTML": 7058,
+        "JSON": 386,
+        "CSS": 7354
+      },
+      "type": "效率工具",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "Offline USB-C cable capability card and label generator.",
+        "usefulness": "The project was inspired by recent public discussion around cable confusion, especially WhatCable on Product Hunt: https://www.producthunt.com/products/whatcable WhatCable reads cable capability data where the platform...",
+        "whyFun": "待补充",
+        "runCommand": "python3 -m http.server 5196",
+        "verification": "The app has no runtime dependencies. Tests use Node's built-in test runner."
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260526-a-odd-tile",
       "url": "https://github.com/bte808/fun-20260526-a-odd-tile",
-      "description": "Daily visual sprint: spot the one odd generated tile with optional high-contrast mode.",
+      "description": "A tiny daily visual sprint where you find the one tile that breaks the pattern.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-26T02:15:02Z",
-      "updatedAt": "2026-05-31T10:12:15Z",
+      "createdAt": "2026-05-26T02:14:52.000Z",
+      "updatedAt": "2026-05-31T10:12:03.000Z",
       "createdDateShanghai": "2026-05-26",
       "updatedDateShanghai": "2026-05-31",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2791,
+        "SVG": 449,
+        "HTML": 2309,
+        "JSON": 435,
         "JavaScript": 14721,
-        "CSS": 7234,
-        "HTML": 2309
+        "CSS": 7234
       },
       "type": "学习练习",
       "stars": {
@@ -2245,7 +2138,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Daily visual sprint: spot the one odd generated tile with optional high-contrast mode.",
+        "oneLine": "A tiny daily visual sprint where you find the one tile that breaks the pattern.",
         "usefulness": "It is a quick visual warm-up. You can play a whole run in under two minutes, compare scores, or use it as a small attention reset between bigger tasks.",
         "whyFun": "The odd tile is not always louder. Sometimes it is a shifted dot, sometimes a rotated stripe, sometimes a chunkier ring. The board stays fair because every round is generated with exactly one odd tile, but the pattern l...",
         "runCommand": "python3 -m http.server 5186 --bind localhost",
@@ -2253,143 +2146,31 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "92e70109c763549a4f8b8dccef6f0d3a35181bbf",
-            "shortSha": "92e7010",
-            "url": "https://github.com/bte808/fun-20260526-a-odd-tile/commit/92e70109c763549a4f8b8dccef6f0d3a35181bbf",
-            "message": "Add high contrast odd tile mode",
-            "committedAt": "2026-05-31T10:12:03Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 7,
-                "deletions": 5,
-                "changes": 12
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 2,
-                "changes": 5
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              },
-              {
-                "filename": "scripts/check-files.mjs",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 40,
-                "deletions": 2,
-                "changes": 42
-              },
-              {
-                "filename": "src/game.js",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 2,
-                "changes": 5
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 52,
-                "deletions": 0,
-                "changes": 52
-              },
-              {
-                "filename": "test/game.test.js",
-                "status": "modified",
-                "additions": 26,
-                "deletions": 0,
-                "changes": 26
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 2
-          },
-          {
-            "filename": "package.json",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 7,
-            "deletions": 5
-          },
-          {
-            "filename": "scripts/check-files.mjs",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 40,
-            "deletions": 2
-          },
-          {
-            "filename": "src/game.js",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 2
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 52,
-            "deletions": 0
-          },
-          {
-            "filename": "test/game.test.js",
-            "status": "modified",
-            "additions": 26,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": false,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260525-c-unit-lens",
       "url": "https://github.com/bte808/fun-20260525-c-unit-lens",
-      "description": "Local-first dimensional-analysis helper with starter formula templates and Markdown ledgers",
+      "description": "Local dimensional-analysis study helper for checking formulas and exporting review notes.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-25T03:14:05Z",
-      "updatedAt": "2026-05-31T09:49:29Z",
+      "createdAt": "2026-05-25T03:09:57.000Z",
+      "updatedAt": "2026-05-31T09:49:03.000Z",
       "createdDateShanghai": "2026-05-25",
       "updatedDateShanghai": "2026-05-31",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 5051,
+        "SVG": 418,
+        "HTML": 3219,
+        "JSON": 585,
         "JavaScript": 41607,
-        "CSS": 6391,
-        "HTML": 3219
+        "CSS": 6391
       },
       "type": "学习练习",
       "stars": {
@@ -2398,7 +2179,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first dimensional-analysis helper with starter formula templates and Markdown ledgers",
+        "oneLine": "Local dimensional-analysis study helper for checking formulas and exporting review notes.",
         "usefulness": "Physics, engineering, chemistry, or data-analysis review where formulas are easy to memorize but hard to sanity-check. Lab notebook prep before substituting numbers into a derived equation. Teaching assistants checking...",
         "whyFun": "待补充",
         "runCommand": "npm run start",
@@ -2406,117 +2187,30 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "c5be0f08c7d5b273d9d794563ff452eb4b4c5603",
-            "shortSha": "c5be0f0",
-            "url": "https://github.com/bte808/fun-20260525-c-unit-lens/commit/c5be0f08c7d5b273d9d794563ff452eb4b4c5603",
-            "message": "Add Unit Lens formula templates",
-            "committedAt": "2026-05-31T09:49:03Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 9,
-                "deletions": 2,
-                "changes": 11
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
-              },
-              {
-                "filename": "scripts/smoke-test.mjs",
-                "status": "modified",
-                "additions": 26,
-                "deletions": 0,
-                "changes": 26
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 32,
-                "deletions": 3,
-                "changes": 35
-              },
-              {
-                "filename": "src/styles.css",
-                "status": "modified",
-                "additions": 8,
-                "deletions": 0,
-                "changes": 8
-              },
-              {
-                "filename": "src/unit-engine.js",
-                "status": "modified",
-                "additions": 61,
-                "deletions": 0,
-                "changes": 61
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 7,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 9,
-            "deletions": 2
-          },
-          {
-            "filename": "scripts/smoke-test.mjs",
-            "status": "modified",
-            "additions": 26,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 32,
-            "deletions": 3
-          },
-          {
-            "filename": "src/styles.css",
-            "status": "modified",
-            "additions": 8,
-            "deletions": 0
-          },
-          {
-            "filename": "src/unit-engine.js",
-            "status": "modified",
-            "additions": 61,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260525-b-handoff-card",
       "url": "https://github.com/bte808/fun-20260525-b-handoff-card",
-      "description": "Local-first Markdown handoff card generator for work, study, and personal notes",
+      "description": "Local-first handoff note formatter for messy work or study notes.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-25T02:29:56Z",
-      "updatedAt": "2026-05-31T09:32:44Z",
+      "createdAt": "2026-05-25T02:29:45.000Z",
+      "updatedAt": "2026-05-31T09:32:32.000Z",
       "createdDateShanghai": "2026-05-25",
       "updatedDateShanghai": "2026-05-31",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2407,
         "JavaScript": 23820,
-        "CSS": 6658,
-        "HTML": 3250
+        "HTML": 3250,
+        "JSON": 402,
+        "CSS": 6658
       },
       "type": "学习练习",
       "stars": {
@@ -2525,125 +2219,39 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first Markdown handoff card generator for work, study, and personal notes",
+        "oneLine": "Local-first handoff note formatter for messy work or study notes.",
         "usefulness": "Small notes lose value when they are not shaped before the next person, next study session, or next AI/tool handoff sees them. This project was inspired by recent public discussion around local note organization, especi...",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5185",
-        "verification": "待补充"
+        "verification": "The app is dependency-free. The tests use Node's built-in test runner."
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "009f8365a0eb646aed95f0b9ba447f65cccc334d",
-            "shortSha": "009f836",
-            "url": "https://github.com/bte808/fun-20260525-b-handoff-card/commit/009f8365a0eb646aed95f0b9ba447f65cccc334d",
-            "message": "Add mode-specific handoff samples",
-            "committedAt": "2026-05-31T09:32:32Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              },
-              {
-                "filename": "app.js",
-                "status": "modified",
-                "additions": 29,
-                "deletions": 10,
-                "changes": 39
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 8,
-                "deletions": 4,
-                "changes": 12
-              },
-              {
-                "filename": "src/handoffCard.mjs",
-                "status": "modified",
-                "additions": 35,
-                "deletions": 2,
-                "changes": 37
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 6,
-                "deletions": 0,
-                "changes": 6
-              },
-              {
-                "filename": "test/handoffCard.test.mjs",
-                "status": "modified",
-                "additions": 20,
-                "deletions": 1,
-                "changes": 21
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "app.js",
-            "status": "modified",
-            "additions": 29,
-            "deletions": 10
-          },
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 8,
-            "deletions": 4
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 0
-          },
-          {
-            "filename": "src/handoffCard.mjs",
-            "status": "modified",
-            "additions": 35,
-            "deletions": 2
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 6,
-            "deletions": 0
-          },
-          {
-            "filename": "test/handoffCard.test.mjs",
-            "status": "modified",
-            "additions": 20,
-            "deletions": 1
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260525-a-pocket-ante",
       "url": "https://github.com/bte808/fun-20260525-a-pocket-ante",
-      "description": "Daily seeded five-card browser sprint with charm scoring",
+      "description": "A tiny daily seeded poker-ish browser sprint about beating three antes with odd charms.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-25T02:13:23Z",
-      "updatedAt": "2026-05-25T09:14:43Z",
+      "createdAt": "2026-05-25T02:13:14.000Z",
+      "updatedAt": "2026-05-25T09:14:18.000Z",
       "createdDateShanghai": "2026-05-25",
       "updatedDateShanghai": "2026-05-25",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2750,
+        "SVG": 490,
+        "HTML": 2440,
+        "JSON": 516,
         "JavaScript": 24923,
-        "CSS": 7236,
-        "HTML": 2440
+        "CSS": 7236
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -2666,22 +2274,24 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260523-a-time-heist",
       "url": "https://github.com/bte808/fun-20260523-a-time-heist",
-      "description": "Tiny browser game about rebuilding a scrambled museum timeline",
+      "description": "A tiny browser game about rebuilding a scrambled museum timeline.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-23T03:09:03Z",
-      "updatedAt": "2026-05-29T10:06:08Z",
+      "createdAt": "2026-05-23T03:08:52.000Z",
+      "updatedAt": "2026-05-29T10:05:52.000Z",
       "createdDateShanghai": "2026-05-23",
       "updatedDateShanghai": "2026-05-29",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2653,
+        "HTML": 2262,
+        "JSON": 552,
         "JavaScript": 24240,
-        "CSS": 7307,
-        "HTML": 2262
+        "CSS": 7307
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -2704,22 +2314,24 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260523-c-claim-ledger",
       "url": "https://github.com/bte808/fun-20260523-c-claim-ledger",
-      "description": "Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger",
+      "description": "Local academic writing helper that turns draft claims and evidence snippets into a reviewable claim ledger.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-23T03:04:38Z",
-      "updatedAt": "2026-05-29T10:44:52Z",
+      "createdAt": "2026-05-23T03:04:29.000Z",
+      "updatedAt": "2026-05-29T10:44:40.000Z",
       "createdDateShanghai": "2026-05-23",
       "updatedDateShanghai": "2026-05-29",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 4091,
+        "HTML": 4674,
+        "JSON": 596,
         "JavaScript": 27377,
-        "CSS": 9086,
-        "HTML": 4674
+        "CSS": 9086
       },
       "type": "文字创作",
       "stars": {
@@ -2728,11 +2340,11 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local academic writing helper that turns draft claims and evidence notes into a reviewable ledger",
+        "oneLine": "Local academic writing helper that turns draft claims and evidence snippets into a reviewable claim ledger.",
         "usefulness": "Checking a literature-review paragraph before adding it to a paper draft. Turning lecture notes into a source-aware revision checklist. Reviewing lab-report conclusions against observation notes. Marking which claims in...",
         "whyFun": "待补充",
         "runCommand": "npm start",
-        "verification": "待补充"
+        "verification": "The check runs syntax validation for the browser modules and a Node smoke test for claim parsing, evidence linking, status counts, and Markdown export."
       },
       "today": {
         "created": false,
@@ -2742,22 +2354,25 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260523-b-rename-blueprint",
       "url": "https://github.com/bte808/fun-20260523-b-rename-blueprint",
-      "description": "Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames.",
+      "description": "Local-first batch rename preview tool that generates a safe plan and shell script from pasted filenames.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-23T03:00:14Z",
-      "updatedAt": "2026-05-25T10:37:24Z",
+      "createdAt": "2026-05-23T03:00:07.000Z",
+      "updatedAt": "2026-05-25T10:37:13.000Z",
       "createdDateShanghai": "2026-05-23",
       "updatedDateShanghai": "2026-05-25",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 1963,
+        "SVG": 336,
+        "HTML": 4682,
+        "JSON": 467,
         "JavaScript": 18209,
-        "CSS": 4770,
-        "HTML": 4682
+        "CSS": 4770
       },
       "type": "效率工具",
       "stars": {
@@ -2766,7 +2381,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames.",
+        "oneLine": "Local-first batch rename preview tool that generates a safe plan and shell script from pasted filenames.",
         "usefulness": "People often know how they want a folder renamed but do not want to risk touching files blindly. This keeps the planning step fast, private, and reversible.",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5183",
@@ -2780,22 +2395,24 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260522-b-link-janitor",
       "url": "https://github.com/bte808/fun-20260522-b-link-janitor",
-      "description": "Local-first link cleaner for deduping tab dumps and stripping custom tracking params",
+      "description": "Local-first tool for cleaning, deduplicating, grouping, and exporting messy link dumps.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-22T04:05:27Z",
-      "updatedAt": "2026-05-28T09:47:54Z",
+      "createdAt": "2026-05-22T04:05:19.000Z",
+      "updatedAt": "2026-05-28T09:47:37.000Z",
       "createdDateShanghai": "2026-05-22",
       "updatedDateShanghai": "2026-05-28",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2310,
+        "HTML": 3695,
+        "JSON": 445,
         "JavaScript": 21560,
-        "CSS": 6100,
-        "HTML": 3695
+        "CSS": 6100
       },
       "type": "效率工具",
       "stars": {
@@ -2804,11 +2421,11 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first link cleaner for deduping tab dumps and stripping custom tracking params",
+        "oneLine": "Local-first tool for cleaning, deduplicating, grouping, and exporting messy link dumps.",
         "usefulness": "Link dumps are noisy. This keeps the cleanup step private, fast, and repeatable, with no login, API key, extension, or server-side storage.",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5182",
-        "verification": "待补充"
+        "verification": "The app is static HTML/CSS/JS and should work offline after the files are loaded."
       },
       "today": {
         "created": false,
@@ -2818,22 +2435,25 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260521-hue-chain",
       "url": "https://github.com/bte808/fun-20260521-hue-chain",
-      "description": "Daily color-chain browser puzzle with answer reveals",
+      "description": "A tiny browser game about chaining color chips to match a target hue.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-21T12:26:54Z",
-      "updatedAt": "2026-05-26T09:13:35Z",
+      "createdAt": "2026-05-21T12:26:44.000Z",
+      "updatedAt": "2026-05-26T09:13:28.000Z",
       "createdDateShanghai": "2026-05-21",
       "updatedDateShanghai": "2026-05-26",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2453,
+        "SVG": 417,
+        "HTML": 2267,
+        "JSON": 405,
         "JavaScript": 20003,
-        "CSS": 6149,
-        "HTML": 2267
+        "CSS": 6149
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -2842,7 +2462,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Daily color-chain browser puzzle with answer reveals",
+        "oneLine": "A tiny browser game about chaining color chips to match a target hue.",
         "usefulness": "It is a quick color-sense warmup. Designers can use it as a playful hue-matching drill, and anyone else can play a complete round in under a minute.",
         "whyFun": "The board always hides a perfect chain, but the player only sees the colors until submitting. That makes each round a small visual deduction puzzle: do you trust your eyes, add one more chip, or submit before over-mixin...",
         "runCommand": "npm start",
@@ -2856,22 +2476,25 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260521-c-concept-bridge",
       "url": "https://github.com/bte808/fun-20260521-c-concept-bridge",
-      "description": "Local study-notes helper that turns rough notes into concept maps and recall prompts",
+      "description": "A local study-notes tool that turns rough notes into a concept map, recall prompts, and exportable review material.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-21T12:25:14Z",
-      "updatedAt": "2026-05-30T10:45:50Z",
+      "createdAt": "2026-05-21T12:25:05.000Z",
+      "updatedAt": "2026-05-30T10:45:44.000Z",
       "createdDateShanghai": "2026-05-21",
       "updatedDateShanghai": "2026-05-30",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 3560,
+        "SVG": 429,
+        "HTML": 3304,
+        "JSON": 556,
         "JavaScript": 23242,
-        "CSS": 6294,
-        "HTML": 3304
+        "CSS": 6294
       },
       "type": "学习练习",
       "stars": {
@@ -2880,7 +2503,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local study-notes helper that turns rough notes into concept maps and recall prompts",
+        "oneLine": "A local study-notes tool that turns rough notes into a concept map, recall prompts, and exportable review material.",
         "usefulness": "Concept maps are good for learning because they force you to name relationships, not just list terms. Concept Bridge makes the first draft fast, then keeps the output checkable. It is useful when a learner has a dense p...",
         "whyFun": "待补充",
         "runCommand": "npm start",
@@ -2894,22 +2517,25 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260521-b-meeting-brief",
       "url": "https://github.com/bte808/fun-20260521-b-meeting-brief",
-      "description": "Local meeting notes cleaner that turns rough notes into action briefs",
+      "description": "Local meeting notes cleaner that turns rough notes into action items, decisions, questions, and a follow-up brief.",
       "defaultBranch": "main",
       "createdAt": "2026-05-21T12:23:45Z",
-      "updatedAt": "2026-05-30T10:26:54Z",
+      "updatedAt": "2026-05-30T10:26:43.000Z",
       "createdDateShanghai": "2026-05-21",
       "updatedDateShanghai": "2026-05-30",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 3338,
+        "SVG": 338,
+        "HTML": 4248,
+        "JSON": 468,
         "JavaScript": 19849,
-        "CSS": 6118,
-        "HTML": 4248
+        "CSS": 6118
       },
       "type": "效率工具",
       "stars": {
@@ -2918,7 +2544,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local meeting notes cleaner that turns rough notes into action briefs",
+        "oneLine": "Local meeting notes cleaner that turns rough notes into action items, decisions, questions, and a follow-up brief.",
         "usefulness": "Meeting notes often end as a half-cleaned paste from chat, class, calls, or planning docs. This tool gives you the practical middle step: paste rough text, get a structured handoff, then move on.",
         "whyFun": "It makes a messy text blob feel organized in one click. The small parser is intentionally transparent, so it is easy to tweak the rules and immediately see better briefs.",
         "runCommand": "python3 -m http.server 5181",
@@ -2932,22 +2558,24 @@
         "files": []
       },
       "needsReview": false,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260521-trace-tap",
       "url": "https://github.com/bte808/fun-20260521-trace-tap",
-      "description": "Tiny debugging puzzle about tracing incident logs through a call graph",
+      "description": "A small browser game about tracing call paths to find root causes.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-21T02:12:25Z",
-      "updatedAt": "2026-05-31T11:36:31Z",
+      "createdAt": "2026-05-21T02:12:15.000Z",
+      "updatedAt": "2026-05-28T09:32:28.000Z",
       "createdDateShanghai": "2026-05-21",
-      "updatedDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-05-28",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 3256,
+        "HTML": 3063,
+        "JSON": 402,
         "JavaScript": 18306,
-        "CSS": 7443,
-        "HTML": 3063
+        "CSS": 7443
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -2956,36 +2584,39 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Tiny debugging puzzle about tracing incident logs through a call graph",
+        "oneLine": "A small browser game about tracing call paths to find root causes.",
         "usefulness": "Modern developer tools keep making code relationships more visible. Recent public inspiration included a JavaScript Showoff thread with a graph visualizer and cycle finder, a small \"who called this function\" code analys...",
         "whyFun": "The graph looks like a real incident map, but each round is short enough to solve by deduction. Hints lower your score, so there is a light push to trust the logs and commit to a trace.",
         "runCommand": "npm run start",
-        "verification": "待补充"
+        "verification": "The browser UI was also checked on desktop and mobile-sized viewports during the 2026-05-21, 2026-05-25, and 2026-05-28 automation runs."
       },
       "today": {
         "created": false,
-        "updated": true,
+        "updated": false,
         "commitCount": 0,
         "commits": [],
         "files": []
       },
-      "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "needsReview": false,
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260520-dice-target",
       "url": "https://github.com/bte808/fun-20260520-dice-target",
-      "description": "Tiny daily browser dice target puzzle with keyboard-friendly local-best arithmetic sprints",
+      "description": "A tiny daily dice target puzzle for the browser.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-20T05:32:30Z",
-      "updatedAt": "2026-05-30T10:11:36Z",
+      "createdAt": "2026-05-20T05:32:23.000Z",
+      "updatedAt": "2026-05-30T10:11:24.000Z",
       "createdDateShanghai": "2026-05-20",
       "updatedDateShanghai": "2026-05-30",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 5207,
+        "SVG": 486,
+        "HTML": 4562,
+        "JSON": 375,
         "JavaScript": 22692,
-        "CSS": 7780,
-        "HTML": 4562
+        "CSS": 7780
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -2994,7 +2625,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Tiny daily browser dice target puzzle with keyboard-friendly local-best arithmetic sprints",
+        "oneLine": "A tiny daily dice target puzzle for the browser.",
         "usefulness": "Recent public posts showed a renewed interest in daily dice puzzles and small mental-workout games: https://www.reddit.com/r/SideProject/comments/1t3bejg/i_built_a_simple_puzzle_game_5_dice_1_target/ described the compa...",
         "whyFun": "This version adds a **Practice archive** date picker. The daily sprint still opens on today's Asia/Shanghai seed, but the player can now load yesterday or any valid YYYY-MM-DD date and replay that day's deterministic th...",
         "runCommand": "npm start",
@@ -3008,22 +2639,25 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260519-pulse-poem",
       "url": "https://github.com/bte808/fun-20260519-pulse-poem",
-      "description": "Turn short text into a playable pulse rhythm with audio and haptic feedback",
+      "description": "Turn a short line of text into a playable pocket rhythm.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-19T02:13:06Z",
-      "updatedAt": "2026-05-30T09:50:30Z",
+      "createdAt": "2026-05-19T02:12:57.000Z",
+      "updatedAt": "2026-05-30T09:50:17.000Z",
       "createdDateShanghai": "2026-05-19",
       "updatedDateShanghai": "2026-05-30",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 2844,
         "JavaScript": 20894,
-        "CSS": 5386,
-        "HTML": 2942
+        "SVG": 328,
+        "HTML": 2942,
+        "JSON": 383,
+        "CSS": 5386
       },
       "type": "音频互动",
       "stars": {
@@ -3032,7 +2666,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Turn short text into a playable pulse rhythm with audio and haptic feedback",
+        "oneLine": "Turn a short line of text into a playable pocket rhythm.",
         "usefulness": "I wanted a small browser toy that makes writing feel physical. The idea was sparked by a recent JavaScript community thread where someone showed an audio-to-haptics web experiment: https://www.reddit.com/r/javascript/co...",
         "whyFun": "The result feels like a pocket drum machine made from your own sentence. A boring line can become a tiny beat, and on phones with vibration support it becomes tactile instead of only visual.",
         "runCommand": "npm start",
@@ -3046,22 +2680,25 @@
         "files": []
       },
       "needsReview": false,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260518-signal-bento",
       "url": "https://github.com/bte808/fun-20260518-signal-bento",
-      "description": "Tiny browser puzzle about routing a pulse through a snack-sized signal board",
+      "description": "A tiny browser puzzle about routing a pulse through a snack-sized signal board.",
       "defaultBranch": "main",
-      "createdAt": "2026-05-18T02:10:56Z",
-      "updatedAt": "2026-05-30T09:29:09Z",
+      "createdAt": "2026-05-18T02:10:45.000Z",
+      "updatedAt": "2026-05-30T09:29:03.000Z",
       "createdDateShanghai": "2026-05-18",
       "updatedDateShanghai": "2026-05-30",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 3259,
         "JavaScript": 22306,
-        "CSS": 7420,
-        "HTML": 4339
+        "SVG": 894,
+        "HTML": 4339,
+        "JSON": 407,
+        "CSS": 7420
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -3070,7 +2707,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Tiny browser puzzle about routing a pulse through a snack-sized signal board",
+        "oneLine": "A tiny browser puzzle about routing a pulse through a snack-sized signal board.",
         "usefulness": "Signal Bento turns path planning into immediate feedback. You can see exactly where a decision changes the route, which makes it useful for teaching sequencing, debugging, and simple systems thinking without making play...",
         "whyFun": "The whole loop is tactile and short: place one turn, watch the pulse move, adjust, then try for a cleaner score. The **Hint** button keeps every board finishable, so the puzzle stays playful instead of getting stuck. Co...",
         "runCommand": "npm run start",
@@ -3084,7 +2721,7 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     },
     {
       "name": "fun-20260517-orbit-mods",
@@ -3092,14 +2729,16 @@
       "description": "Tiny browser orbit sequencer with swappable music mods",
       "defaultBranch": "main",
       "createdAt": "2026-05-17T06:08:51Z",
-      "updatedAt": "2026-05-30T09:13:44Z",
+      "updatedAt": "2026-05-30T09:13:32.000Z",
       "createdDateShanghai": "2026-05-17",
       "updatedDateShanghai": "2026-05-30",
       "primaryLanguage": "JavaScript",
       "languages": {
+        "Markdown": 3809,
         "JavaScript": 27437,
-        "CSS": 6052,
-        "HTML": 4488
+        "HTML": 4488,
+        "JSON": 159,
+        "CSS": 6052
       },
       "type": "音频互动",
       "stars": {
@@ -3122,7 +2761,7 @@
         "files": []
       },
       "needsReview": true,
-      "visibilitySource": "GitHub public repository data"
+      "visibilitySource": "Local GitHub origin mirror; public API unavailable this run"
     }
   ]
 }

@@ -20,9 +20,14 @@ const funReadmeSignals = [
   /每日趣味项目/,
   /趣味项目孵化/,
   /daily fun project/i,
-  /fun project/i,
   /shipped toy/i
 ];
+
+function isExcludedRepository(repoName = "") {
+  const normalized = repoName.toLowerCase();
+  return normalized === dashboardRepo.toLowerCase()
+    || normalized === owner.toLowerCase();
+}
 
 function headers(extra = {}) {
   return {
@@ -647,7 +652,7 @@ function buildData(projects, collectionWarnings = [], source = "GitHub public re
       generatedAt: new Date().toISOString(),
       generatedAtShanghaiDate: dateInShanghai(new Date().toISOString()),
       source,
-      scanRule: "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
+      scanRule: "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
       todayWindowUtc: { startIso, endIso },
       todayStory: todayUpdatedProjects.length
         ? `今天公开仓库中检测到 ${todayNewProjects.length} 个新建项目、${todayUpdatedProjects.length} 个今日有变动的项目，共 ${todayCommits.length} 个 commit；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`
@@ -720,7 +725,7 @@ async function main() {
   const collectionWarnings = [];
 
   for (const repo of repos) {
-    if (repo.private || repo.fork || repo.archived || repo.name === dashboardRepo) continue;
+    if (repo.private || repo.fork || repo.archived || isExcludedRepository(repo.name)) continue;
     let readme = "";
     try {
       readme = await readmeFor(repo);
@@ -852,7 +857,7 @@ async function main() {
       generatedAt: new Date().toISOString(),
       generatedAtShanghaiDate: dateInShanghai(new Date().toISOString()),
       source: "GitHub public repository API",
-      scanRule: "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
+      scanRule: "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
       todayWindowUtc: { startIso, endIso },
       todayStory: todayUpdatedProjects.length
         ? `今天公开仓库中检测到 ${todayNewProjects.length} 个新建项目、${todayUpdatedProjects.length} 个今日有变动的项目，共 ${todayCommits.length} 个 commit；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`

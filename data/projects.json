@@ -1,36 +1,36 @@
 {
   "meta": {
-    "title": "2026-06-03 每日趣味项目总览仪表盘",
+    "title": "2026-06-05 每日趣味项目总览仪表盘",
     "owner": "bte808",
     "repository": "fun-project-dashboard",
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
-    "runDate": "2026-06-03",
+    "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-03T13:25:43.672Z",
-    "generatedAtShanghaiDate": "2026-06-03",
+    "generatedAt": "2026-06-04T18:17:51.725Z",
+    "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
-    "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard repo excluded from project stats.",
+    "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
     "todayWindowUtc": {
-      "startIso": "2026-06-02T16:00:00.000Z",
-      "endIso": "2026-06-03T15:59:59.999Z"
+      "startIso": "2026-06-04T16:00:00.000Z",
+      "endIso": "2026-06-05T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 3 个新建项目、9 个今日有变动的项目，共 10 个 commit；当前总 star 0，今日可见 star 变化 +0。",
+    "todayStory": "今天未检测到公开趣味项目仓库的可见变动；当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
     "automationChecks": {
       "dailyIncubator": {
-        "status": "detected",
-        "label": "已检测到",
-        "note": "公开 fun-* 仓库中检测到 3 个今天创建的项目。"
+        "status": "not_detected",
+        "label": "未检测到",
+        "note": "未检测到今天新建的公开 fun-* 项目。"
       },
       "oldProjectMaintenance": {
-        "status": "detected",
-        "label": "已检测到",
-        "note": "检测到 6 个旧项目今天有公开 commit。"
+        "status": "not_detected",
+        "label": "未检测到",
+        "note": "未检测到今天维护旧项目的公开 commit。"
       },
       "wednesdayBooster": {
         "status": "not_detected",
         "label": "未检测到",
-        "note": "未检测到周三加料结果；今日 commit 信息为：有提交但无加料标识。"
+        "note": "未检测到周三加料结果；今日 commit 信息为：无可见提交。"
       },
       "sundayHealthCheck": {
         "status": "not_detected",
@@ -38,43 +38,136 @@
         "note": "未检测到周日体检结果。"
       }
     },
-    "highlights": [
-      {
-        "name": "fun-20260603-a-route-rush",
-        "url": "https://github.com/bte808/fun-20260603-a-route-rush",
-        "reason": "今天新建；Daily browser puzzle where you queue shuttle commands, run the route, and chase a clean dock score.；当前 0 star"
-      },
-      {
-        "name": "fun-20260603-c-data-sanity-deck",
-        "url": "https://github.com/bte808/fun-20260603-c-data-sanity-deck",
-        "reason": "今天新建；Local-first CSV sanity checker for small academic datasets；当前 0 star"
-      },
-      {
-        "name": "fun-20260603-b-context-pack",
-        "url": "https://github.com/bte808/fun-20260603-b-context-pack",
-        "reason": "今天新建；Local-first context packer for budget-aware AI task briefs.；当前 0 star"
-      },
-      {
-        "name": "fun-20260602-b-batchline-forge",
-        "url": "https://github.com/bte808/fun-20260602-b-batchline-forge",
-        "reason": "今天更新 1 个 commit；Local-first template batch composer for turning rows into ready-to-copy text.；当前 0 star"
-      }
-    ],
+    "highlights": [],
     "collectionWarnings": []
   },
   "metrics": {
-    "totalProjects": 45,
-    "todayNew": 3,
-    "todayUpdated": 9,
-    "todayCommits": 10,
+    "totalProjects": 48,
+    "todayNew": 0,
+    "todayUpdated": 0,
+    "todayCommits": 0,
     "totalStars": 0,
     "todayStarDelta": 0,
-    "needsReview": 32,
+    "needsReview": 34,
     "techDistribution": {
-      "JavaScript": 45
+      "JavaScript": 48
     }
   },
   "projects": [
+    {
+      "name": "fun-20260604-a-star-sling",
+      "url": "https://github.com/bte808/fun-20260604-a-star-sling",
+      "description": "A tiny no-dependency daily canvas game about slinging a star core through a constellation field.",
+      "defaultBranch": "main",
+      "createdAt": "2026-06-04T02:56:19Z",
+      "updatedAt": "2026-06-04T02:56:35Z",
+      "createdDateShanghai": "2026-06-04",
+      "updatedDateShanghai": "2026-06-04",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 38384,
+        "CSS": 4215,
+        "HTML": 2945
+      },
+      "type": "浏览器小游戏",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "A tiny no-dependency daily canvas game about slinging a star core through a constellation field.",
+        "usefulness": "It is a low-friction browser toy for a quick break, a daily challenge, or a shareable score post. The whole project is small enough to read, fork, and remix without installing a framework.",
+        "whyFun": "The field is immediately readable: gold stars are rewards, red fields are danger, the teal ring is the dock. Every sling leaves a trail, so a missed shot gives useful feedback instead of feeling random.",
+        "runCommand": "npm run serve",
+        "verification": "Local checks cover: Required files and README sections. Deterministic daily field generation. A planned solver that completes the daily field with all stars and zero heat. Bad-shot behavior that cannot outscore a clean..."
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": false,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260604-b-safe-payout-card",
+      "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card",
+      "description": "Local-first safe payout calculator for indie makers and small operators.",
+      "defaultBranch": "main",
+      "createdAt": "2026-06-04T02:37:44Z",
+      "updatedAt": "2026-06-04T02:37:57Z",
+      "createdDateShanghai": "2026-06-04",
+      "updatedDateShanghai": "2026-06-04",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 32637,
+        "CSS": 6234,
+        "HTML": 6215
+      },
+      "type": "效率工具",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "Local-first safe payout calculator for indie makers and small operators.",
+        "usefulness": "Small businesses and indie projects often decide owner draws with scattered notes: a Stripe balance here, a tax guess there, an invoice list in chat. This app puts the reserve floor in one visible card so the payout dec...",
+        "whyFun": "待补充",
+        "runCommand": "npm run serve",
+        "verification": "The browser verification opens the static site in headless Chrome, tests the main calculation path, captures desktop/mobile screenshots, and checks for mobile overflow at 390x844."
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
+    {
+      "name": "fun-20260604-c-construct-canvas",
+      "url": "https://github.com/bte808/fun-20260604-c-construct-canvas",
+      "description": "Local-first construct and operational-definition canvas for research-methods planning.",
+      "defaultBranch": "main",
+      "createdAt": "2026-06-04T02:33:02Z",
+      "updatedAt": "2026-06-04T02:33:16Z",
+      "createdDateShanghai": "2026-06-04",
+      "updatedDateShanghai": "2026-06-04",
+      "primaryLanguage": "JavaScript",
+      "languages": {
+        "JavaScript": 31365,
+        "CSS": 6415,
+        "HTML": 4206
+      },
+      "type": "文字创作",
+      "stars": {
+        "total": 0,
+        "todayDelta": 0,
+        "todayStargazers": []
+      },
+      "readme": {
+        "oneLine": "Local-first construct and operational-definition canvas for research-methods planning.",
+        "usefulness": "Many early research ideas fail because the construct, variable role, measurement rule, and sample boundary are mixed together in prose. This tool keeps those pieces separate on one screen, so a learner can quickly see w...",
+        "whyFun": "待补充",
+        "runCommand": "python3 -m http.server 5254 --bind 127.0.0.1",
+        "verification": "待补充"
+      },
+      "today": {
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
+      },
+      "needsReview": true,
+      "visibilitySource": "GitHub public repository data"
+    },
     {
       "name": "fun-20260603-a-route-rush",
       "url": "https://github.com/bte808/fun-20260603-a-route-rush",
@@ -104,181 +197,11 @@
         "verification": "npm test checks required files, README coverage, deterministic daily generation, scoring, share text, and mobile CSS guardrails. npm run verify:browser opens the app in headless Chrome, checks desktop and 390x844 mobile..."
       },
       "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 2,
-        "commits": [
-          {
-            "sha": "d4c03637b9af3625167e31a2eac165e7f98d29d7",
-            "shortSha": "d4c0363",
-            "url": "https://github.com/bte808/fun-20260603-a-route-rush/commit/d4c03637b9af3625167e31a2eac165e7f98d29d7",
-            "message": "Add live demo link",
-            "committedAt": "2026-06-03T10:33:35Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              }
-            ]
-          },
-          {
-            "sha": "c205c48e7cf78622b222dabd211947a3534d97ac",
-            "shortSha": "c205c48",
-            "url": "https://github.com/bte808/fun-20260603-a-route-rush/commit/c205c48e7cf78622b222dabd211947a3534d97ac",
-            "message": "Ship Route Rush browser puzzle",
-            "committedAt": "2026-06-03T10:30:54Z",
-            "files": [
-              {
-                "filename": ".gitignore",
-                "status": "added",
-                "additions": 6,
-                "deletions": 0,
-                "changes": 6
-              },
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 77,
-                "deletions": 0,
-                "changes": 77
-              },
-              {
-                "filename": "docs/preview.svg",
-                "status": "added",
-                "additions": 58,
-                "deletions": 0,
-                "changes": 58
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 107,
-                "deletions": 0,
-                "changes": 107
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 23,
-                "deletions": 0,
-                "changes": 23
-              },
-              {
-                "filename": "scripts/browser-smoke.mjs",
-                "status": "added",
-                "additions": 277,
-                "deletions": 0,
-                "changes": 277
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "added",
-                "additions": 100,
-                "deletions": 0,
-                "changes": 100
-              },
-              {
-                "filename": "src/app.js",
-                "status": "added",
-                "additions": 414,
-                "deletions": 0,
-                "changes": 414
-              },
-              {
-                "filename": "src/core.js",
-                "status": "added",
-                "additions": 305,
-                "deletions": 0,
-                "changes": 305
-              },
-              {
-                "filename": "src/styles.css",
-                "status": "added",
-                "additions": 530,
-                "deletions": 0,
-                "changes": 530
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": ".gitignore",
-            "status": "added",
-            "additions": 6,
-            "deletions": 0
-          },
-          {
-            "filename": "docs/preview.svg",
-            "status": "added",
-            "additions": 58,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 107,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 23,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 77,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/browser-smoke.mjs",
-            "status": "added",
-            "additions": 277,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/check.mjs",
-            "status": "added",
-            "additions": 100,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "added",
-            "additions": 414,
-            "deletions": 0
-          },
-          {
-            "filename": "src/core.js",
-            "status": "added",
-            "additions": 305,
-            "deletions": 0
-          },
-          {
-            "filename": "src/styles.css",
-            "status": "added",
-            "additions": 530,
-            "deletions": 0
-          }
-        ]
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": false,
       "visibilitySource": "GitHub public repository data"
@@ -289,14 +212,14 @@
       "description": "Local-first CSV sanity checker for small academic datasets",
       "defaultBranch": "main",
       "createdAt": "2026-06-03T10:26:46Z",
-      "updatedAt": "2026-06-03T10:27:01Z",
+      "updatedAt": "2026-06-04T02:46:23Z",
       "createdDateShanghai": "2026-06-03",
-      "updatedDateShanghai": "2026-06-03",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 35981,
-        "CSS": 6063,
-        "HTML": 4242
+        "JavaScript": 38111,
+        "CSS": 6215,
+        "HTML": 4833
       },
       "type": "学习练习",
       "stars": {
@@ -312,178 +235,11 @@
         "verification": "verify:browser starts a local static server, opens the app in a headless Chrome-compatible browser, checks the default sample, performs a custom-input interaction, and validates a 390x844 mobile viewport for horizontal..."
       },
       "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "bdd6e7dd2aa04814b98c23449dfd2271b0411273",
-            "shortSha": "bdd6e7d",
-            "url": "https://github.com/bte808/fun-20260603-c-data-sanity-deck/commit/bdd6e7dd2aa04814b98c23449dfd2271b0411273",
-            "message": "Ship data sanity deck academic tool",
-            "committedAt": "2026-06-03T10:26:36Z",
-            "files": [
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 93,
-                "deletions": 0,
-                "changes": 93
-              },
-              {
-                "filename": "docs/demo.png",
-                "status": "added",
-                "additions": 0,
-                "deletions": 0,
-                "changes": 0
-              },
-              {
-                "filename": "favicon.svg",
-                "status": "added",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 114,
-                "deletions": 0,
-                "changes": 114
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 19,
-                "deletions": 0,
-                "changes": 19
-              },
-              {
-                "filename": "scripts/check-static.mjs",
-                "status": "added",
-                "additions": 62,
-                "deletions": 0,
-                "changes": 62
-              },
-              {
-                "filename": "scripts/verify-browser.mjs",
-                "status": "added",
-                "additions": 224,
-                "deletions": 0,
-                "changes": 224
-              },
-              {
-                "filename": "src/app.js",
-                "status": "added",
-                "additions": 214,
-                "deletions": 0,
-                "changes": 214
-              },
-              {
-                "filename": "src/dataSanity.js",
-                "status": "added",
-                "additions": 534,
-                "deletions": 0,
-                "changes": 534
-              },
-              {
-                "filename": "src/styles.css",
-                "status": "added",
-                "additions": 418,
-                "deletions": 0,
-                "changes": 418
-              },
-              {
-                "filename": "test/dataSanity.test.js",
-                "status": "added",
-                "additions": 36,
-                "deletions": 0,
-                "changes": 36
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "docs/demo.png",
-            "status": "added",
-            "additions": 0,
-            "deletions": 0
-          },
-          {
-            "filename": "favicon.svg",
-            "status": "added",
-            "additions": 7,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 114,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 19,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 93,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/check-static.mjs",
-            "status": "added",
-            "additions": 62,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/verify-browser.mjs",
-            "status": "added",
-            "additions": 224,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "added",
-            "additions": 214,
-            "deletions": 0
-          },
-          {
-            "filename": "src/dataSanity.js",
-            "status": "added",
-            "additions": 534,
-            "deletions": 0
-          },
-          {
-            "filename": "src/styles.css",
-            "status": "added",
-            "additions": 418,
-            "deletions": 0
-          },
-          {
-            "filename": "test/dataSanity.test.js",
-            "status": "added",
-            "additions": 36,
-            "deletions": 0
-          }
-        ]
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -517,191 +273,11 @@
         "verification": "Expected result: core tests pass, static checks pass, browser verification reports desktop and mobile with zero horizontal overflow."
       },
       "today": {
-        "created": true,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "2a8a7bafd953c74c12c18e912fa3e3afdae2cebf",
-            "shortSha": "2a8a7ba",
-            "url": "https://github.com/bte808/fun-20260603-b-context-pack/commit/2a8a7bafd953c74c12c18e912fa3e3afdae2cebf",
-            "message": "Ship context pack",
-            "committedAt": "2026-06-03T10:24:44Z",
-            "files": [
-              {
-                "filename": "LICENSE",
-                "status": "added",
-                "additions": 21,
-                "deletions": 0,
-                "changes": 21
-              },
-              {
-                "filename": "README.md",
-                "status": "added",
-                "additions": 109,
-                "deletions": 0,
-                "changes": 109
-              },
-              {
-                "filename": "docs/demo.png",
-                "status": "added",
-                "additions": 0,
-                "deletions": 0,
-                "changes": 0
-              },
-              {
-                "filename": "docs/mobile.png",
-                "status": "added",
-                "additions": 0,
-                "deletions": 0,
-                "changes": 0
-              },
-              {
-                "filename": "favicon.svg",
-                "status": "added",
-                "additions": 7,
-                "deletions": 0,
-                "changes": 7
-              },
-              {
-                "filename": "index.html",
-                "status": "added",
-                "additions": 119,
-                "deletions": 0,
-                "changes": 119
-              },
-              {
-                "filename": "package.json",
-                "status": "added",
-                "additions": 23,
-                "deletions": 0,
-                "changes": 23
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "added",
-                "additions": 46,
-                "deletions": 0,
-                "changes": 46
-              },
-              {
-                "filename": "scripts/verify-browser.mjs",
-                "status": "added",
-                "additions": 264,
-                "deletions": 0,
-                "changes": 264
-              },
-              {
-                "filename": "src/app.js",
-                "status": "added",
-                "additions": 221,
-                "deletions": 0,
-                "changes": 221
-              },
-              {
-                "filename": "src/core.js",
-                "status": "added",
-                "additions": 304,
-                "deletions": 0,
-                "changes": 304
-              },
-              {
-                "filename": "styles.css",
-                "status": "added",
-                "additions": 374,
-                "deletions": 0,
-                "changes": 374
-              },
-              {
-                "filename": "tests/core.test.mjs",
-                "status": "added",
-                "additions": 78,
-                "deletions": 0,
-                "changes": 78
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "docs/demo.png",
-            "status": "added",
-            "additions": 0,
-            "deletions": 0
-          },
-          {
-            "filename": "docs/mobile.png",
-            "status": "added",
-            "additions": 0,
-            "deletions": 0
-          },
-          {
-            "filename": "favicon.svg",
-            "status": "added",
-            "additions": 7,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "added",
-            "additions": 119,
-            "deletions": 0
-          },
-          {
-            "filename": "LICENSE",
-            "status": "added",
-            "additions": 21,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "added",
-            "additions": 23,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "added",
-            "additions": 109,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/check.mjs",
-            "status": "added",
-            "additions": 46,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/verify-browser.mjs",
-            "status": "added",
-            "additions": 264,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "added",
-            "additions": 221,
-            "deletions": 0
-          },
-          {
-            "filename": "src/core.js",
-            "status": "added",
-            "additions": 304,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "added",
-            "additions": 374,
-            "deletions": 0
-          },
-          {
-            "filename": "tests/core.test.mjs",
-            "status": "added",
-            "additions": 78,
-            "deletions": 0
-          }
-        ]
+        "created": false,
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -774,112 +350,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "0190d55d708797e8c47d1a83288b4178c495a883",
-            "shortSha": "0190d55",
-            "url": "https://github.com/bte808/fun-20260602-b-batchline-forge/commit/0190d55d708797e8c47d1a83288b4178c495a883",
-            "message": "Add template preset sharing",
-            "committedAt": "2026-06-03T12:46:18Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 8,
-                "deletions": 1,
-                "changes": 9
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 1,
-                "changes": 3
-              },
-              {
-                "filename": "scripts/verify-browser.mjs",
-                "status": "modified",
-                "additions": 45,
-                "deletions": 14,
-                "changes": 59
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 25,
-                "deletions": 5,
-                "changes": 30
-              },
-              {
-                "filename": "src/batchline-core.js",
-                "status": "modified",
-                "additions": 22,
-                "deletions": 0,
-                "changes": 22
-              },
-              {
-                "filename": "tests/core.test.mjs",
-                "status": "modified",
-                "additions": 19,
-                "deletions": 0,
-                "changes": 19
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 1
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 8,
-            "deletions": 1
-          },
-          {
-            "filename": "scripts/verify-browser.mjs",
-            "status": "modified",
-            "additions": 45,
-            "deletions": 14
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 25,
-            "deletions": 5
-          },
-          {
-            "filename": "src/batchline-core.js",
-            "status": "modified",
-            "additions": 22,
-            "deletions": 0
-          },
-          {
-            "filename": "tests/core.test.mjs",
-            "status": "modified",
-            "additions": 19,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -1042,14 +516,14 @@
       "description": "Local-first interleaved practice session mixer for study review",
       "defaultBranch": "main",
       "createdAt": "2026-05-31T03:01:13Z",
-      "updatedAt": "2026-05-31T11:35:01Z",
+      "updatedAt": "2026-06-04T02:50:35Z",
       "createdDateShanghai": "2026-05-31",
-      "updatedDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 28079,
+        "JavaScript": 31324,
         "CSS": 5995,
-        "HTML": 4188
+        "HTML": 4287
       },
       "type": "学习练习",
       "stars": {
@@ -1080,14 +554,14 @@
       "description": "Local-first AI workflow cost and latency forecaster",
       "defaultBranch": "main",
       "createdAt": "2026-05-31T02:30:31Z",
-      "updatedAt": "2026-05-31T11:35:00Z",
+      "updatedAt": "2026-06-03T14:14:01Z",
       "createdDateShanghai": "2026-05-31",
-      "updatedDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-06-03",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 30681,
-        "CSS": 6114,
-        "HTML": 3019
+        "JavaScript": 40419,
+        "CSS": 6303,
+        "HTML": 3334
       },
       "type": "学习练习",
       "stars": {
@@ -1099,7 +573,7 @@
         "oneLine": "Local-first AI workflow cost and latency forecaster",
         "usefulness": "Small AI workflows often start cheap and fast, then become expensive or slow after retries, tool calls, higher traffic, or a few oversized prompts. FlowCost Card makes the hidden run-rate visible before you ship. Inspir...",
         "whyFun": "待补充",
-        "runCommand": "npm run serve",
+        "runCommand": "待补充",
         "verification": "Local checks: npm test runs calculation tests and static wiring checks. npm run verify:browser starts a local server, opens temporary headless Chrome sessions, edits the tool at desktop and 390 x 844 mobile sizes, check..."
       },
       "today": {
@@ -1118,14 +592,14 @@
       "description": "Tiny no-dependency browser rhythm game: catch colorful rave pulses before the relay drops.",
       "defaultBranch": "main",
       "createdAt": "2026-05-31T02:14:58Z",
-      "updatedAt": "2026-05-31T11:37:22Z",
+      "updatedAt": "2026-06-04T02:51:45Z",
       "createdDateShanghai": "2026-05-31",
-      "updatedDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 25743,
-        "CSS": 7217,
-        "HTML": 4494
+        "JavaScript": 29266,
+        "CSS": 7208,
+        "HTML": 4592
       },
       "type": "音频互动",
       "stars": {
@@ -1194,14 +668,14 @@
       "description": "Local-first messy text to clean CSV, Markdown, and JSON tables",
       "defaultBranch": "main",
       "createdAt": "2026-05-30T19:33:59Z",
-      "updatedAt": "2026-05-30T19:37:13Z",
+      "updatedAt": "2026-06-04T02:51:22Z",
       "createdDateShanghai": "2026-05-31",
-      "updatedDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 29596,
-        "CSS": 5876,
-        "HTML": 4000
+        "JavaScript": 32613,
+        "CSS": 5887,
+        "HTML": 4098
       },
       "type": "效率工具",
       "stars": {
@@ -1270,14 +744,14 @@
       "description": "Local-first notebook reproducibility card generator for study and research notes",
       "defaultBranch": "main",
       "createdAt": "2026-05-30T02:54:31Z",
-      "updatedAt": "2026-05-30T02:54:43Z",
+      "updatedAt": "2026-06-03T15:21:18Z",
       "createdDateShanghai": "2026-05-30",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-03",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 22506,
-        "CSS": 7478,
-        "HTML": 3632
+        "JavaScript": 24921,
+        "CSS": 7539,
+        "HTML": 3962
       },
       "type": "学习练习",
       "stars": {
@@ -1305,17 +779,17 @@
     {
       "name": "fun-20260530-b-extension-risk-card",
       "url": "https://github.com/bte808/fun-20260530-b-extension-risk-card",
-      "description": "Local-first VS Code extension install risk card",
+      "description": "Local-first VS Code extension risk-card generator with install checklist and next review move.",
       "defaultBranch": "main",
       "createdAt": "2026-05-30T02:31:46Z",
-      "updatedAt": "2026-05-30T02:32:02Z",
+      "updatedAt": "2026-06-04T02:48:06Z",
       "createdDateShanghai": "2026-05-30",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 30331,
-        "CSS": 5803,
-        "HTML": 2908
+        "JavaScript": 39095,
+        "CSS": 6073,
+        "HTML": 3219
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -1324,11 +798,11 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Local-first VS Code extension install risk card",
+        "oneLine": "Local-first VS Code extension risk-card generator with install checklist and next review move.",
         "usefulness": "Small productivity extensions can save real time, but installing one into a work editor is still a trust decision. Extension Risk Card turns the parts worth checking into a short, repeatable checklist before you give a...",
         "whyFun": "待补充",
         "runCommand": "python3 -m http.server 5207 --bind localhost",
-        "verification": "verify:browser expects a Chromium-compatible browser. On non-macOS machines, set CHROME_BIN if Chrome is not on the normal command path."
+        "verification": "verify:browser expects a Chromium-compatible browser. On non-macOS machines, set CHROME_BIN if Chrome is not on the normal command path. Set VERIFY_URL=file:///absolute/path/to/index.html when a local server is unavaila..."
       },
       "today": {
         "created": false,
@@ -1346,14 +820,14 @@
       "description": "A fast static browser game about triaging permission comets.",
       "defaultBranch": "main",
       "createdAt": "2026-05-30T02:15:03Z",
-      "updatedAt": "2026-05-30T02:15:20Z",
+      "updatedAt": "2026-06-03T15:24:06Z",
       "createdDateShanghai": "2026-05-30",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-03",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 19583,
-        "CSS": 9504,
-        "HTML": 4032
+        "JavaScript": 22167,
+        "CSS": 10001,
+        "HTML": 4215
       },
       "type": "学习练习",
       "stars": {
@@ -1408,99 +882,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "ff529040972cf88069f34f1a1121a3fb1bdda147",
-            "shortSha": "ff52904",
-            "url": "https://github.com/bte808/fun-20260529-c-lit-scope-grid/commit/ff529040972cf88069f34f1a1121a3fb1bdda147",
-            "message": "Add Lit Scope starter sets",
-            "committedAt": "2026-06-03T12:18:06Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 10,
-                "deletions": 1,
-                "changes": 11
-              },
-              {
-                "filename": "app.js",
-                "status": "modified",
-                "additions": 32,
-                "deletions": 4,
-                "changes": 36
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 6,
-                "deletions": 3,
-                "changes": 9
-              },
-              {
-                "filename": "scripts/check.mjs",
-                "status": "modified",
-                "additions": 13,
-                "deletions": 0,
-                "changes": 13
-              },
-              {
-                "filename": "src/litScope.js",
-                "status": "modified",
-                "additions": 94,
-                "deletions": 1,
-                "changes": 95
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 24,
-                "deletions": 7,
-                "changes": 31
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "app.js",
-            "status": "modified",
-            "additions": 32,
-            "deletions": 4
-          },
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 6,
-            "deletions": 3
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 10,
-            "deletions": 1
-          },
-          {
-            "filename": "scripts/check.mjs",
-            "status": "modified",
-            "additions": 13,
-            "deletions": 0
-          },
-          {
-            "filename": "src/litScope.js",
-            "status": "modified",
-            "additions": 94,
-            "deletions": 1
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 24,
-            "deletions": 7
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -1511,14 +896,14 @@
       "description": "Two-slot packet relay browser puzzle",
       "defaultBranch": "main",
       "createdAt": "2026-05-29T02:46:23Z",
-      "updatedAt": "2026-05-29T09:08:29Z",
+      "updatedAt": "2026-06-04T02:53:40Z",
       "createdDateShanghai": "2026-05-29",
-      "updatedDateShanghai": "2026-05-29",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 26933,
-        "CSS": 6756,
-        "HTML": 4487
+        "JavaScript": 30670,
+        "CSS": 6783,
+        "HTML": 5028
       },
       "type": "学习练习",
       "stars": {
@@ -1531,7 +916,7 @@
         "usefulness": "It turns an abstract systems idea into a quick tactile challenge. The game makes limited memory feel concrete: you only have two slots, and every overwrite can make the target sequence impossible.",
         "whyFun": "The puzzles are small enough to learn in one round but still reward planning. Clean pair flips build combo points, wrong emits create glitches, and perfect runs feel like snapping a tiny packet machine into sync.",
         "runCommand": "npm start",
-        "verification": "The smoke test verifies the Asia/Shanghai date helper, every level's two-slot solvability, core actions, failure handling, scoring, and share text."
+        "verification": "The smoke test verifies the Asia/Shanghai date helper, every level's two-slot solvability, core actions, failure handling, scoring, challenge links, and share text."
       },
       "today": {
         "created": false,
@@ -1573,99 +958,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "c1f865b74c4de9e0afaa3ff877293f33291ec837",
-            "shortSha": "c1f865b",
-            "url": "https://github.com/bte808/fun-20260529-b-return-window/commit/c1f865b74c4de9e0afaa3ff877293f33291ec837",
-            "message": "Add copyable return cards",
-            "committedAt": "2026-06-03T12:15:15Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 11,
-                "deletions": 1,
-                "changes": 12
-              },
-              {
-                "filename": "docs/return-window-copy-card.png",
-                "status": "added",
-                "additions": 0,
-                "deletions": 0,
-                "changes": 0
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 4,
-                "deletions": 0,
-                "changes": 4
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 12,
-                "deletions": 1,
-                "changes": 13
-              },
-              {
-                "filename": "src/logic.js",
-                "status": "modified",
-                "additions": 26,
-                "deletions": 5,
-                "changes": 31
-              },
-              {
-                "filename": "tests/logic.test.mjs",
-                "status": "modified",
-                "additions": 18,
-                "deletions": 0,
-                "changes": 18
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "docs/return-window-copy-card.png",
-            "status": "added",
-            "additions": 0,
-            "deletions": 0
-          },
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 4,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 11,
-            "deletions": 1
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 12,
-            "deletions": 1
-          },
-          {
-            "filename": "src/logic.js",
-            "status": "modified",
-            "additions": 26,
-            "deletions": 5
-          },
-          {
-            "filename": "tests/logic.test.mjs",
-            "status": "modified",
-            "additions": 18,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -1790,14 +1086,14 @@
       "description": "Tiny circular runner about hopping around a daily seeded toy planet",
       "defaultBranch": "main",
       "createdAt": "2026-05-27T05:48:36Z",
-      "updatedAt": "2026-05-28T09:09:34Z",
+      "updatedAt": "2026-06-03T15:34:16Z",
       "createdDateShanghai": "2026-05-27",
-      "updatedDateShanghai": "2026-05-28",
+      "updatedDateShanghai": "2026-06-03",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 27565,
-        "CSS": 5233,
-        "HTML": 3241
+        "JavaScript": 29980,
+        "CSS": 5461,
+        "HTML": 3484
       },
       "type": "音频互动",
       "stars": {
@@ -1808,9 +1104,9 @@
       "readme": {
         "oneLine": "Tiny circular runner about hopping around a daily seeded toy planet",
         "usefulness": "This was built for the 2026-05-27 daily fun-project incubation run, worker A, with the fixed direction \"fun\". The public-web scan focused on recent Show HN posts from 2026-05-27. The inspiration was the quick \"open it a...",
-        "whyFun": "The player is always moving, so each choice is tiny and urgent: jump now, wait half a beat, or risk clipping a crater to keep a combo alive. The whole run fits in under a minute, but the daily seed, route preview, three...",
+        "whyFun": "The player is always moving, so each choice is tiny and urgent: jump now, wait half a beat, or risk clipping a crater to keep a combo alive. The whole run fits in under a minute, but the daily seed, route preview, share...",
         "runCommand": "npm start",
-        "verification": "The smoke test verifies deterministic daily stage generation, route summary text, the Asia/Shanghai date helper, jump controls, hazard resolution, a finishable skilled Breezy run, and share text."
+        "verification": "The smoke test verifies deterministic daily stage generation, route summary text, the Asia/Shanghai date helper, jump controls, hazard resolution, a finishable skilled Breezy run, and challenge share text."
       },
       "today": {
         "created": false,
@@ -1942,14 +1238,14 @@
       "description": "Offline USB-C cable capability card and label generator",
       "defaultBranch": "main",
       "createdAt": "2026-05-26T02:34:42Z",
-      "updatedAt": "2026-05-26T10:41:58Z",
+      "updatedAt": "2026-06-04T02:46:29Z",
       "createdDateShanghai": "2026-05-26",
-      "updatedDateShanghai": "2026-05-26",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 22424,
-        "CSS": 7354,
-        "HTML": 7058
+        "JavaScript": 24333,
+        "HTML": 7421,
+        "CSS": 7354
       },
       "type": "效率工具",
       "stars": {
@@ -2056,14 +1352,14 @@
       "description": "Local-first Markdown handoff card generator for work, study, and personal notes",
       "defaultBranch": "main",
       "createdAt": "2026-05-25T02:29:56Z",
-      "updatedAt": "2026-05-31T09:32:44Z",
+      "updatedAt": "2026-06-04T02:45:53Z",
       "createdDateShanghai": "2026-05-25",
-      "updatedDateShanghai": "2026-05-31",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 23820,
+        "JavaScript": 26072,
         "CSS": 6658,
-        "HTML": 3250
+        "HTML": 3320
       },
       "type": "学习练习",
       "stars": {
@@ -2156,112 +1452,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "a42ad4e9c67fd99bbc82cae5833c7983ca14e1c3",
-            "shortSha": "a42ad4e",
-            "url": "https://github.com/bte808/fun-20260523-a-time-heist/commit/a42ad4e9c67fd99bbc82cae5833c7983ca14e1c3",
-            "message": "Add public challenge links",
-            "committedAt": "2026-06-03T12:41:05Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 11,
-                "deletions": 2,
-                "changes": 13
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 15,
-                "deletions": 2,
-                "changes": 17
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              },
-              {
-                "filename": "scripts/smoke-test.mjs",
-                "status": "modified",
-                "additions": 13,
-                "deletions": 0,
-                "changes": 13
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 45,
-                "deletions": 2,
-                "changes": 47
-              },
-              {
-                "filename": "src/game.js",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 1,
-                "changes": 2
-              },
-              {
-                "filename": "src/styles.css",
-                "status": "modified",
-                "additions": 30,
-                "deletions": 0,
-                "changes": 30
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 15,
-            "deletions": 2
-          },
-          {
-            "filename": "package.json",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 11,
-            "deletions": 2
-          },
-          {
-            "filename": "scripts/smoke-test.mjs",
-            "status": "modified",
-            "additions": 13,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 45,
-            "deletions": 2
-          },
-          {
-            "filename": "src/game.js",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 1
-          },
-          {
-            "filename": "src/styles.css",
-            "status": "modified",
-            "additions": 30,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -2296,99 +1490,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "610ca0089a49bd039db5011fb5edc5baecf3a20c",
-            "shortSha": "610ca00",
-            "url": "https://github.com/bte808/fun-20260523-c-claim-ledger/commit/610ca0089a49bd039db5011fb5edc5baecf3a20c",
-            "message": "Add focused claim review plan",
-            "committedAt": "2026-06-03T12:44:34Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 17,
-                "deletions": 0,
-                "changes": 17
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 7,
-                "deletions": 2,
-                "changes": 9
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              },
-              {
-                "filename": "scripts/smoke-test.mjs",
-                "status": "modified",
-                "additions": 7,
-                "deletions": 1,
-                "changes": 8
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 17,
-                "deletions": 4,
-                "changes": 21
-              },
-              {
-                "filename": "src/logic.js",
-                "status": "modified",
-                "additions": 56,
-                "deletions": 0,
-                "changes": 56
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 7,
-            "deletions": 2
-          },
-          {
-            "filename": "package.json",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 17,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/smoke-test.mjs",
-            "status": "modified",
-            "additions": 7,
-            "deletions": 1
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 17,
-            "deletions": 4
-          },
-          {
-            "filename": "src/logic.js",
-            "status": "modified",
-            "additions": 56,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -2399,14 +1504,14 @@
       "description": "Local-first batch rename preview tool that exports safe rename plans and shell scripts from pasted filenames.",
       "defaultBranch": "main",
       "createdAt": "2026-05-23T03:00:14Z",
-      "updatedAt": "2026-05-25T10:37:24Z",
+      "updatedAt": "2026-06-03T15:25:46Z",
       "createdDateShanghai": "2026-05-23",
-      "updatedDateShanghai": "2026-05-25",
+      "updatedDateShanghai": "2026-06-03",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 18209,
-        "CSS": 4770,
-        "HTML": 4682
+        "JavaScript": 23433,
+        "HTML": 4773,
+        "CSS": 4770
       },
       "type": "效率工具",
       "stars": {
@@ -2499,73 +1604,10 @@
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "17cfd9b3c06136407cdc2dc903b9982595ef9b0d",
-            "shortSha": "17cfd9b",
-            "url": "https://github.com/bte808/fun-20260521-hue-chain/commit/17cfd9b3c06136407cdc2dc903b9982595ef9b0d",
-            "message": "Add shareable Hue Chain challenges",
-            "committedAt": "2026-06-03T12:12:40Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 15,
-                "deletions": 6,
-                "changes": 21
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 5,
-                "deletions": 4,
-                "changes": 9
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 3,
-                "deletions": 0,
-                "changes": 3
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 59,
-                "deletions": 9,
-                "changes": 68
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 5,
-            "deletions": 4
-          },
-          {
-            "filename": "package.json",
-            "status": "modified",
-            "additions": 3,
-            "deletions": 0
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 15,
-            "deletions": 6
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 59,
-            "deletions": 9
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"
@@ -2576,14 +1618,14 @@
       "description": "Local study-notes helper that turns rough notes into concept maps and recall prompts",
       "defaultBranch": "main",
       "createdAt": "2026-05-21T12:25:14Z",
-      "updatedAt": "2026-05-30T10:45:50Z",
+      "updatedAt": "2026-06-04T02:46:33Z",
       "createdDateShanghai": "2026-05-21",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 23242,
-        "CSS": 6294,
-        "HTML": 3304
+        "JavaScript": 26994,
+        "CSS": 6546,
+        "HTML": 3837
       },
       "type": "学习练习",
       "stars": {
@@ -2687,17 +1729,17 @@
     {
       "name": "fun-20260520-dice-target",
       "url": "https://github.com/bte808/fun-20260520-dice-target",
-      "description": "Tiny daily browser dice target puzzle with keyboard-friendly local-best arithmetic sprints",
+      "description": "Replayable daily dice target puzzle with shareable date challenges",
       "defaultBranch": "main",
       "createdAt": "2026-05-20T05:32:30Z",
-      "updatedAt": "2026-05-30T10:11:36Z",
+      "updatedAt": "2026-06-04T02:49:25Z",
       "createdDateShanghai": "2026-05-20",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 22692,
-        "CSS": 7780,
-        "HTML": 4562
+        "JavaScript": 24258,
+        "CSS": 7807,
+        "HTML": 4898
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -2706,7 +1748,7 @@
         "todayStargazers": []
       },
       "readme": {
-        "oneLine": "Tiny daily browser dice target puzzle with keyboard-friendly local-best arithmetic sprints",
+        "oneLine": "Replayable daily dice target puzzle with shareable date challenges",
         "usefulness": "Recent public posts showed a renewed interest in daily dice puzzles and small mental-workout games: https://www.reddit.com/r/SideProject/comments/1t3bejg/i_built_a_simple_puzzle_game_5_dice_1_target/ described the compa...",
         "whyFun": "This version adds a **Practice archive** date picker. The daily sprint still opens on today's Asia/Shanghai seed, but the player can now load yesterday or any valid YYYY-MM-DD date and replay that day's deterministic th...",
         "runCommand": "npm start",
@@ -2728,14 +1770,14 @@
       "description": "Turn short text into a playable pulse rhythm with audio and haptic feedback",
       "defaultBranch": "main",
       "createdAt": "2026-05-19T02:13:06Z",
-      "updatedAt": "2026-05-30T09:50:30Z",
+      "updatedAt": "2026-06-03T15:26:15Z",
       "createdDateShanghai": "2026-05-19",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-03",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 20894,
-        "CSS": 5386,
-        "HTML": 2942
+        "JavaScript": 23515,
+        "CSS": 5698,
+        "HTML": 3094
       },
       "type": "音频互动",
       "stars": {
@@ -2766,14 +1808,14 @@
       "description": "Tiny browser puzzle about routing a pulse through a snack-sized signal board",
       "defaultBranch": "main",
       "createdAt": "2026-05-18T02:10:56Z",
-      "updatedAt": "2026-05-30T09:29:09Z",
+      "updatedAt": "2026-06-03T15:28:43Z",
       "createdDateShanghai": "2026-05-18",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-03",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 22306,
-        "CSS": 7420,
-        "HTML": 4339
+        "JavaScript": 26708,
+        "CSS": 7826,
+        "HTML": 4647
       },
       "type": "浏览器小游戏",
       "stars": {
@@ -2804,14 +1846,14 @@
       "description": "Tiny browser orbit sequencer with swappable music mods",
       "defaultBranch": "main",
       "createdAt": "2026-05-17T06:08:51Z",
-      "updatedAt": "2026-05-30T09:13:44Z",
+      "updatedAt": "2026-06-04T02:46:17Z",
       "createdDateShanghai": "2026-05-17",
-      "updatedDateShanghai": "2026-05-30",
+      "updatedDateShanghai": "2026-06-04",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 27437,
+        "JavaScript": 29410,
         "CSS": 6052,
-        "HTML": 4488
+        "HTML": 4656
       },
       "type": "音频互动",
       "stars": {

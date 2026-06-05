@@ -56,6 +56,11 @@ assert(ossContributionLog.includes("Open / No Failing Checks"), "OSS contributio
 assert(ossContributionLog.includes("Needs User Action"), "OSS contribution log missing user-action section");
 assert(applicationBrief.includes(ossContributions.generatedAtShanghai), "application brief timestamp does not match OSS JSON");
 assert(applicationBrief.includes("Codex for OSS application evidence brief"), "application brief missing title");
+assert(applicationBrief.includes("Dashboard Evidence Infrastructure"), "application brief missing dashboard infrastructure section");
+assert(applicationBrief.includes("fun-project-dashboard v0.2.0"), "application brief missing latest dashboard release evidence");
+assert(applicationBrief.includes("Dashboard CI green run"), "application brief missing CI evidence");
+assert(applicationBrief.includes("MIT License"), "application brief missing license evidence");
+assert(applicationBrief.includes("DASHBOARD_DOM_SMOKE_ONLY=1 npm run check"), "application brief missing CI-compatible smoke command");
 assert(applicationBrief.includes("prebid/prebid.github.io#6598"), "application brief missing merged PR evidence");
 assert(applicationBrief.includes("Known User-Action Blockers"), "application brief missing blocker section");
 for (const item of expectedEvidenceHighlights) {

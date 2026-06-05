@@ -23,8 +23,42 @@ function listRows(items, mapper) {
   return items.length ? items.map(mapper).join("\n") : "- None.";
 }
 
+const dashboardEvidenceInfrastructure = [
+  {
+    label: "Latest release: fun-project-dashboard v0.2.0",
+    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0",
+    note: "Publishes the CI-backed OSS evidence dashboard with reviewer brief links, governance docs, status badges, and verification evidence."
+  },
+  {
+    label: "Dashboard CI green run",
+    url: "https://github.com/bte808/fun-project-dashboard/actions/runs/26999250848",
+    note: "Public GitHub Actions run for Node syntax checks and committed-data smoke verification."
+  },
+  {
+    label: "GitHub Pages deployment",
+    url: "https://github.com/bte808/fun-project-dashboard/actions/runs/26999250497",
+    note: "Public deployment run for the live dashboard."
+  },
+  {
+    label: "MIT License",
+    url: "https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE",
+    note: "GitHub license API recognizes the repository as MIT-licensed."
+  },
+  {
+    label: "Contributing guide",
+    url: "https://github.com/bte808/fun-project-dashboard/blob/main/CONTRIBUTING.md",
+    note: "Documents local verification, public-data boundaries, and contribution expectations."
+  },
+  {
+    label: "Security policy",
+    url: "https://github.com/bte808/fun-project-dashboard/blob/main/SECURITY.md",
+    note: "Documents token/privacy boundaries and coordinated reporting expectations."
+  }
+];
+
 function releaseReason(item) {
   const notes = {
+    "fun-project-dashboard v0.2.0": "Released the CI-backed OSS evidence dashboard with application brief links, public CI, Pages status badges, MIT license, contributing guide, security policy, code of conduct, and issue templates.",
     "maintainer-signal-board v0.7.0": "Released saved view presets; issue #12 closed; CI, Pages, local browser smoke, and live browser smoke passed.",
     "fun-20260604-b-safe-payout-card v0.2.0": "Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.",
     "fun-20260604-a-star-sling v1.0.1": "Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.",
@@ -33,8 +67,20 @@ function releaseReason(item) {
   return notes[item.name] || item.reason || "Public release evidence.";
 }
 
-function headingDate(meta, oss) {
-  return oss.generatedAtShanghai || meta.generatedAtShanghaiDate || meta.runDate || "unknown";
+function shanghaiDateTime(iso) {
+  if (!iso) return "unknown";
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  }).formatToParts(new Date(iso));
+  const map = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${map.year}-${map.month}-${map.day} ${map.hour}:${map.minute}:${map.second} CST`;
 }
 
 function buildBrief(projectsData, ossData) {
@@ -51,7 +97,7 @@ function buildBrief(projectsData, ossData) {
 
   return `# Codex for OSS application evidence brief
 
-Last generated: ${headingDate(meta, ossData)}.
+Last generated: ${shanghaiDateTime(meta.generatedAt)}.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -60,8 +106,13 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - Public dashboard: ${markdownLink("fun-project-dashboard", "https://bte808.github.io/fun-project-dashboard/")}
 - Dashboard source: ${markdownLink("bte808/fun-project-dashboard", meta.repositoryUrl || "https://github.com/bte808/fun-project-dashboard")}
 - Public project snapshot: ${metrics.totalProjects || 0} tracked projects, ${metrics.todayUpdated || 0} updated today, ${metrics.todayCommits || 0} public commits today.
+- OSS PR snapshot last verified: ${ossData.generatedAtShanghai || "unknown"}.
 - External OSS PR snapshot: ${pulls.length} tracked PRs, ${pullCounts.merged || 0} merged, ${pullCounts["open-green"] || 0} open with no failing checks, ${pullCounts["needs-user-action"] || 0} requiring user action.
 - Release and maintenance snapshot: ${highlightCounts.release || 0} own releases highlighted, ${highlightCounts.updated || 0} own projects updated today.
+
+## Dashboard Evidence Infrastructure
+
+${listRows(dashboardEvidenceInfrastructure, (item) => `- ${markdownLink(item.label, item.url)}: ${item.note}`)}
 
 ## Strongest Public Evidence
 
@@ -88,11 +139,14 @@ RUN_DATE=YYYY-MM-DD npm run collect
 GITHUB_TOKEN="$(gh auth token)" npm run collect:oss
 npm run brief
 npm run check
+DASHBOARD_DOM_SMOKE_ONLY=1 npm run check
 \`\`\`
 
 The generated artifacts are:
 
 - ${markdownLink("dashboard page", "https://bte808.github.io/fun-project-dashboard/")}
+- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0")}
+- ${markdownLink("Dashboard CI workflow", "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml")}
 - ${markdownLink("OSS contribution log", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md")}
 - ${markdownLink("machine-readable OSS PR snapshot", "https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json")}
 - ${markdownLink("this application evidence brief", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md")}

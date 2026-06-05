@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-05 10:31:50 CST.
+Last generated: 2026-06-05 14:39:33 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -9,8 +9,18 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - Public dashboard: [fun-project-dashboard](https://bte808.github.io/fun-project-dashboard/)
 - Dashboard source: [bte808/fun-project-dashboard](https://github.com/bte808/fun-project-dashboard)
 - Public project snapshot: 48 tracked projects, 2 updated today, 2 public commits today.
+- OSS PR snapshot last verified: 2026-06-05 10:31:50 CST.
 - External OSS PR snapshot: 15 tracked PRs, 3 merged, 10 open with no failing checks, 2 requiring user action.
-- Release and maintenance snapshot: 4 own releases highlighted, 2 own projects updated today.
+- Release and maintenance snapshot: 5 own releases highlighted, 2 own projects updated today.
+
+## Dashboard Evidence Infrastructure
+
+- [Latest release: fun-project-dashboard v0.2.0](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0): Publishes the CI-backed OSS evidence dashboard with reviewer brief links, governance docs, status badges, and verification evidence.
+- [Dashboard CI green run](https://github.com/bte808/fun-project-dashboard/actions/runs/26999250848): Public GitHub Actions run for Node syntax checks and committed-data smoke verification.
+- [GitHub Pages deployment](https://github.com/bte808/fun-project-dashboard/actions/runs/26999250497): Public deployment run for the live dashboard.
+- [MIT License](https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE): GitHub license API recognizes the repository as MIT-licensed.
+- [Contributing guide](https://github.com/bte808/fun-project-dashboard/blob/main/CONTRIBUTING.md): Documents local verification, public-data boundaries, and contribution expectations.
+- [Security policy](https://github.com/bte808/fun-project-dashboard/blob/main/SECURITY.md): Documents token/privacy boundaries and coordinated reporting expectations.
 
 ## Strongest Public Evidence
 
@@ -33,6 +43,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 
 ## Own Project Releases
 
+- [fun-project-dashboard v0.2.0](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0): Released the CI-backed OSS evidence dashboard with application brief links, public CI, Pages status badges, MIT license, contributing guide, security policy, code of conduct, and issue templates.
 - [maintainer-signal-board v0.7.0](https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.0): Released saved view presets; issue #12 closed; CI, Pages, local browser smoke, and live browser smoke passed.
 - [fun-20260604-b-safe-payout-card v0.2.0](https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0): Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.
 - [fun-20260604-a-star-sling v1.0.1](https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1): Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.
@@ -52,11 +63,14 @@ RUN_DATE=YYYY-MM-DD npm run collect
 GITHUB_TOKEN="$(gh auth token)" npm run collect:oss
 npm run brief
 npm run check
+DASHBOARD_DOM_SMOKE_ONLY=1 npm run check
 ```
 
 The generated artifacts are:
 
 - [dashboard page](https://bte808.github.io/fun-project-dashboard/)
+- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0)
+- [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
 - [OSS contribution log](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md)
 - [machine-readable OSS PR snapshot](https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json)
 - [this application evidence brief](https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md)

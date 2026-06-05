@@ -6,7 +6,7 @@
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T02:08:14.750Z",
+    "generatedAt": "2026-06-05T06:39:33.238Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -14,7 +14,7 @@
       "startIso": "2026-06-04T16:00:00.000Z",
       "endIso": "2026-06-05T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 11 条外部 OSS/release 证据置顶；当前总 star 0，今日可见 star 变化 +0。",
+    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 12 条外部 OSS/release 证据置顶；当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
     "automationChecks": {
       "dailyIncubator": {
@@ -87,6 +87,13 @@
         "reason": "外部 OSS PR open：维护者反馈内容可行；构建通过，但需要按项目规则补签 signed commit。",
         "status": "needs-action",
         "kind": "external-pr"
+      },
+      {
+        "name": "fun-project-dashboard v0.2.0",
+        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0",
+        "reason": "发布 CI-backed OSS evidence dashboard；包含申请 brief、公开 CI、Pages 状态 badge、MIT license、贡献指南、安全说明与 issue templates。",
+        "status": "release",
+        "kind": "own-release"
       },
       {
         "name": "maintainer-signal-board v0.7.0",

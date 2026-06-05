@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-05 20:45:51 CST.
+Last generated: 2026-06-05 20:54:28 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -9,13 +9,13 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - Public dashboard: [fun-project-dashboard](https://bte808.github.io/fun-project-dashboard/)
 - Dashboard source: [bte808/fun-project-dashboard](https://github.com/bte808/fun-project-dashboard)
 - Public project snapshot: 48 tracked projects, 2 updated today, 2 public commits today.
-- OSS PR snapshot last verified: 2026-06-05 20:46:23 CST.
+- OSS PR snapshot last verified: 2026-06-05 20:55:00 CST.
 - External OSS PR snapshot: 16 tracked PRs, 4 merged, 10 open with no failing checks, 2 requiring user action.
 - Release and maintenance snapshot: 5 own releases highlighted, 1 own projects updated today.
 
 ## Dashboard Evidence Infrastructure
 
-- [Latest release: fun-project-dashboard v0.2.6](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6): Freezes the RTK validation evidence packet with local cargo fmt, cargo test --all, and cargo clippy verification recorded while preserving transparent user-action blockers.
+- [Latest release: fun-project-dashboard v0.2.7](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.7): Freezes the PySpector evidence packet with FAQ and reporting-test PRs recorded while preserving RTK cargo validation and transparent user-action blockers.
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml): Public GitHub Actions workflow for Node syntax checks and committed-data smoke verification.
 - [GitHub Pages deployment workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment): Public deployment workflow for the live dashboard.
 - [MIT License](https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE): GitHub license API recognizes the repository as MIT-licensed.
@@ -44,7 +44,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 
 ## Own Project Releases
 
-- [fun-project-dashboard v0.2.6](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6): Released the RTK validation evidence packet with local cargo fmt, cargo test --all, and cargo clippy verification recorded while preserving transparent CLA/user-action blockers.
+- [fun-project-dashboard v0.2.7](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.7): Released the PySpector evidence packet with README FAQ and reporting-test PRs recorded while preserving RTK cargo validation and transparent CLA/user-action blockers.
 - [maintainer-signal-board v0.7.3](https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.3): Released REST Search API import support, deriving OWNER/REPO from repository_url and keeping closed REST search rows out of open maintainer load.
 - [fun-20260604-b-safe-payout-card v0.2.0](https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0): Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.
 - [fun-20260604-a-star-sling v1.0.1](https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1): Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.
@@ -71,7 +71,7 @@ The generated artifacts are:
 
 - [dashboard page](https://bte808.github.io/fun-project-dashboard/)
 - [reviewer packet](https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md)
-- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6)
+- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.7)
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
 - [OSS contribution log](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md)
 - [machine-readable OSS PR snapshot](https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json)

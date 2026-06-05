@@ -1,6 +1,6 @@
 # Reviewer packet
 
-Last updated: 2026-06-05 20:45:51 CST.
+Last updated: 2026-06-05 20:54:28 CST.
 
 This is the compact public checklist for reviewing the `bte808` daily fun project evidence surface. It only links to public GitHub or GitHub Pages URLs.
 
@@ -8,7 +8,7 @@ This is the compact public checklist for reviewing the `bte808` daily fun projec
 
 - Live dashboard: [bte808.github.io/fun-project-dashboard](https://bte808.github.io/fun-project-dashboard/)
 - Source repository: [bte808/fun-project-dashboard](https://github.com/bte808/fun-project-dashboard)
-- Latest release: [fun-project-dashboard v0.2.6](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6)
+- Latest release: [fun-project-dashboard v0.2.7](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.7)
 - Detailed application brief: [Codex OSS application evidence brief](https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md)
 
 ## Evidence at a glance

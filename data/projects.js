@@ -6,7 +6,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T12:45:51.906Z",
+    "generatedAt": "2026-06-05T12:54:28.628Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -103,16 +103,16 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "kind": "external-pr"
       },
       {
-        "name": "fun-project-dashboard v0.2.6",
-        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6",
-        "reason": "发布 RTK validation evidence packet；申请证据包记录 RTK ready-for-review PR 的本地 cargo fmt、cargo test --all、cargo clippy 验证，并保持 CLA/user-action blocker 透明。",
+        "name": "fun-project-dashboard v0.2.7",
+        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.7",
+        "reason": "发布 PySpector evidence packet；申请证据包记录 PySpector README FAQ PR 与 reporting test PR，并保留 RTK 本地 cargo 验证和 CLA/user-action blocker 透明。",
         "status": "release",
         "kind": "own-release"
       },
       {
         "name": "bte808 profile README evidence refresh",
         "url": "https://github.com/bte808/bte808",
-        "reason": "同步 GitHub profile 门面：新增 PySpector README FAQ PR 与 reporting test PR，RTK PR 已补充本地 cargo 验证，Cloudberry PR 已归入 merged，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.6。",
+        "reason": "同步 GitHub profile 门面：新增 PySpector README FAQ PR 与 reporting test PR，RTK PR 已补充本地 cargo 验证，Cloudberry PR 已归入 merged，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.7。",
         "status": "profile",
         "kind": "profile"
       },

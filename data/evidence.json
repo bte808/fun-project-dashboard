@@ -86,7 +86,7 @@
       "kind": "profile",
       "name": "bte808 profile README evidence refresh",
       "url": "https://github.com/bte808/bte808",
-      "reason": "同步 GitHub profile 门面：新增 PySpector README FAQ PR，RTK PR 已补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.6。"
+      "reason": "同步 GitHub profile 门面：新增 PySpector README FAQ PR 与 reporting test PR，RTK PR 已补充本地 cargo 验证，Cloudberry PR 已归入 merged，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.6。"
     },
     {
       "date": "2026-06-05",

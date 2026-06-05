@@ -5,7 +5,8 @@ import { fileURLToPath } from "node:url";
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const projectsPath = path.resolve(scriptDir, "..", "data", "projects.json");
 const ossPath = path.resolve(scriptDir, "..", "data", "oss-contributions.json");
-const outputPath = path.resolve(scriptDir, "..", "docs", "codex-oss-application-brief.md");
+const briefOutputPath = path.resolve(scriptDir, "..", "docs", "codex-oss-application-brief.md");
+const reviewerPacketOutputPath = path.resolve(scriptDir, "..", "docs", "reviewer-packet.md");
 
 function countBy(items, key) {
   return items.reduce((acc, item) => {
@@ -23,11 +24,15 @@ function listRows(items, mapper) {
   return items.length ? items.map(mapper).join("\n") : "- None.";
 }
 
+function listInlineLinks(items, mapper) {
+  return items.length ? items.map(mapper).join(", ") : "None.";
+}
+
 const dashboardEvidenceInfrastructure = [
   {
-    label: "Latest release: fun-project-dashboard v0.2.3",
-    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.3",
-    note: "Adds a standalone reviewer packet and keeps it wired into the live dashboard, README, generated evidence, and CI alignment checks."
+    label: "Latest release: fun-project-dashboard v0.2.4",
+    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4",
+    note: "Refreshes merged external OSS evidence and generates the reviewer packet from the same source data as the application brief."
   },
   {
     label: "Dashboard CI workflow",
@@ -58,7 +63,7 @@ const dashboardEvidenceInfrastructure = [
 
 function releaseReason(item) {
   const notes = {
-    "fun-project-dashboard v0.2.3": "Released the standalone reviewer packet: a one-page public checklist for release, CI, Pages, OSS PR status, license, governance, and reproducibility evidence.",
+    "fun-project-dashboard v0.2.4": "Released a fresh evidence snapshot after apache/cloudberry-site#373 merged, and made the reviewer packet generated from the same data as the application brief.",
     "maintainer-signal-board v0.7.0": "Released saved view presets; issue #12 closed; CI, Pages, local browser smoke, and live browser smoke passed.",
     "fun-20260604-b-safe-payout-card v0.2.0": "Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.",
     "fun-20260604-a-star-sling v1.0.1": "Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.",
@@ -146,11 +151,78 @@ The generated artifacts are:
 
 - ${markdownLink("dashboard page", "https://bte808.github.io/fun-project-dashboard/")}
 - ${markdownLink("reviewer packet", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md")}
-- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.3")}
+- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4")}
 - ${markdownLink("Dashboard CI workflow", "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml")}
 - ${markdownLink("OSS contribution log", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md")}
 - ${markdownLink("machine-readable OSS PR snapshot", "https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json")}
 - ${markdownLink("this application evidence brief", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md")}
+`;
+}
+
+function buildReviewerPacket(projectsData, ossData) {
+  const meta = projectsData.meta || {};
+  const metrics = projectsData.metrics || {};
+  const highlights = meta.highlights || [];
+  const pulls = ossData.pullRequests || [];
+  const pullCounts = countBy(pulls, "category");
+  const highlightCounts = countBy(highlights, "status");
+  const mergedPulls = pulls.filter((pull) => pull.category === "merged");
+  const openPulls = pulls.filter((pull) => pull.category === "open-green");
+  const blockedPulls = pulls.filter((pull) => pull.category === "needs-user-action");
+
+  return `# Reviewer packet
+
+Last updated: ${shanghaiDateTime(meta.generatedAt)}.
+
+This is the compact public checklist for reviewing the \`bte808\` daily fun project evidence surface. It only links to public GitHub or GitHub Pages URLs.
+
+## Start here
+
+- Live dashboard: ${markdownLink("bte808.github.io/fun-project-dashboard", "https://bte808.github.io/fun-project-dashboard/")}
+- Source repository: ${markdownLink("bte808/fun-project-dashboard", "https://github.com/bte808/fun-project-dashboard")}
+- Latest release: ${markdownLink("fun-project-dashboard v0.2.4", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4")}
+- Detailed application brief: ${markdownLink("Codex OSS application evidence brief", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md")}
+
+## Evidence at a glance
+
+- Public project snapshot: ${metrics.totalProjects || 0} tracked public projects, ${metrics.todayUpdated || 0} updated today, ${metrics.todayCommits || 0} public commits today.
+- External OSS PR snapshot: ${pulls.length} tracked PRs, ${pullCounts.merged || 0} merged, ${pullCounts["open-green"] || 0} open with no failing checks, ${pullCounts["needs-user-action"] || 0} requiring user action.
+- Release and maintenance snapshot: ${highlightCounts.release || 0} highlighted own releases, including the dashboard release itself.
+- Live dashboard reviewer panel: exposes brief, CI, Pages, OSS log, MIT license, and governance links in one place.
+
+## Verification links
+
+- Dashboard CI workflow: ${markdownLink("actions/workflows/ci.yml", "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml")}
+- Pages deployment workflow: ${markdownLink("actions/workflows/pages/pages-build-deployment", "https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment")}
+- Machine-readable project snapshot: ${markdownLink("data/projects.json", "https://github.com/bte808/fun-project-dashboard/blob/main/data/projects.json")}
+- Machine-readable OSS PR snapshot: ${markdownLink("data/oss-contributions.json", "https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json")}
+
+## OSS contribution evidence
+
+- Merged PRs: ${listInlineLinks(mergedPulls, (pull) => markdownLink(`${pull.repoFullName}#${pull.number}`, pull.url))}
+- Open PRs with no failing checks: ${openPulls.length ? markdownLink("OSS contribution log", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md") : "None."}
+- Known user-action blockers: ${listInlineLinks(blockedPulls, (pull) => markdownLink(`${pull.repoFullName}#${pull.number}`, pull.url))}
+
+## Maintenance and governance
+
+- License: ${markdownLink("MIT License", "https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE")}
+- Contributing guide: ${markdownLink("CONTRIBUTING.md", "https://github.com/bte808/fun-project-dashboard/blob/main/CONTRIBUTING.md")}
+- Security policy: ${markdownLink("SECURITY.md", "https://github.com/bte808/fun-project-dashboard/blob/main/SECURITY.md")}
+- Code of conduct: ${markdownLink("CODE_OF_CONDUCT.md", "https://github.com/bte808/fun-project-dashboard/blob/main/CODE_OF_CONDUCT.md")}
+- Issue templates: ${markdownLink("bug report", "https://github.com/bte808/fun-project-dashboard/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml")}, ${markdownLink("improvement", "https://github.com/bte808/fun-project-dashboard/blob/main/.github/ISSUE_TEMPLATE/improvement.yml")}
+
+## Reproducibility
+
+\`\`\`bash
+RUN_DATE=YYYY-MM-DD npm run collect
+GITHUB_TOKEN="$(gh auth token)" npm run collect:oss
+npm run brief
+npm run check
+npm run check:release
+DASHBOARD_DOM_SMOKE_ONLY=1 npm run check
+\`\`\`
+
+The release-alignment check is intentionally part of CI so the package version, live dashboard footer, curated evidence, generated data, README summary, application brief, reviewer packet, and brief generator stay aligned to the same dashboard release.
 `;
 }
 
@@ -159,10 +231,15 @@ async function main() {
     readFile(projectsPath, "utf8").then(JSON.parse),
     readFile(ossPath, "utf8").then(JSON.parse)
   ]);
-  await mkdir(path.dirname(outputPath), { recursive: true });
+  await mkdir(path.dirname(briefOutputPath), { recursive: true });
   const brief = buildBrief(projectsData, ossData);
-  await writeFile(outputPath, `${brief.trim()}\n`, "utf8");
-  console.log(outputPath);
+  const reviewerPacket = buildReviewerPacket(projectsData, ossData);
+  await Promise.all([
+    writeFile(briefOutputPath, `${brief.trim()}\n`, "utf8"),
+    writeFile(reviewerPacketOutputPath, `${reviewerPacket.trim()}\n`, "utf8")
+  ]);
+  console.log(briefOutputPath);
+  console.log(reviewerPacketOutputPath);
 }
 
 main().catch((error) => {

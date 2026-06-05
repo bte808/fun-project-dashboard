@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-05T02:31:50.910Z",
-  "generatedAtShanghai": "2026-06-05 10:31:50 CST",
+  "generatedAt": "2026-06-05T07:31:42.870Z",
+  "generatedAtShanghai": "2026-06-05 15:31:42 CST",
   "source": "GitHub public pull request API",
   "pullRequests": [
     {
@@ -439,30 +439,24 @@
       "repoFullName": "apache/cloudberry-site",
       "url": "https://github.com/apache/cloudberry-site/pull/373",
       "title": "Fix broken FAQ link to Cloudberry vs Greenplum docs",
-      "state": "open",
+      "state": "closed",
       "isDraft": false,
       "mergeable": false,
-      "mergeableState": "blocked",
+      "mergeableState": "unknown",
       "reviewDecision": "",
-      "mergedAt": null,
+      "mergedAt": "2026-06-05T02:42:59Z",
       "headSha": "01b8bd71d26b186d6d1b999c4850bea9b39adb6e",
       "note": "greeting check passed",
       "blocker": "",
       "checks": {
         "total": 2,
-        "passed": 1,
+        "passed": 2,
         "failed": [],
-        "pending": [
-          {
-            "name": "publish",
-            "state": "queued",
-            "source": "check-run"
-          }
-        ],
+        "pending": [],
         "items": [
           {
             "name": "publish",
-            "state": "queued",
+            "state": "success",
             "source": "check-run"
           },
           {
@@ -472,8 +466,8 @@
           }
         ]
       },
-      "category": "open-green",
-      "statusText": "Open, blocked by required review or repository policy, greeting check passed, 1 pending check, waiting for review or maintainer follow-up."
+      "category": "merged",
+      "statusText": "Merged on 2026-06-05; greeting check passed."
     },
     {
       "owner": "apple",

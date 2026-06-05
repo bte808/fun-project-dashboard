@@ -6,7 +6,7 @@
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T07:15:19.791Z",
+    "generatedAt": "2026-06-05T07:38:33.623Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -61,10 +61,10 @@
         "kind": "external-pr"
       },
       {
-        "name": "rtk-ai/rtk#2273",
-        "url": "https://github.com/rtk-ai/rtk/pull/2273",
-        "reason": "外部 OSS draft PR：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签。",
-        "status": "needs-action",
+        "name": "apache/cloudberry-site#373",
+        "url": "https://github.com/apache/cloudberry-site/pull/373",
+        "reason": "外部 OSS PR 已 merged：修复 Cloudberry FAQ 断链；维护者已 approve，publish 与 greeting checks 通过。",
+        "status": "merged",
         "kind": "external-pr"
       },
       {
@@ -75,10 +75,10 @@
         "kind": "external-pr"
       },
       {
-        "name": "apache/cloudberry-site#373",
-        "url": "https://github.com/apache/cloudberry-site/pull/373",
-        "reason": "外部 OSS PR open：修复 Cloudberry FAQ 断链；GitHub greeting check 通过，等待评审。",
-        "status": "open",
+        "name": "rtk-ai/rtk#2273",
+        "url": "https://github.com/rtk-ai/rtk/pull/2273",
+        "reason": "外部 OSS draft PR：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签。",
+        "status": "needs-action",
         "kind": "external-pr"
       },
       {
@@ -89,9 +89,9 @@
         "kind": "external-pr"
       },
       {
-        "name": "fun-project-dashboard v0.2.3",
-        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.3",
-        "reason": "发布 standalone reviewer packet；新增一页式评审检查清单，并用 CI 检查 README、live panel、brief、evidence 与 generated data 的 release 链接保持一致。",
+        "name": "fun-project-dashboard v0.2.4",
+        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4",
+        "reason": "刷新外部 OSS 证据并发布 reviewer packet 生成器；Cloudberry PR 已 merged，brief 与 reviewer packet 可通过 npm run brief 一起生成。",
         "status": "release",
         "kind": "own-release"
       },

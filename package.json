@@ -6,6 +6,7 @@
   "scripts": {
     "collect": "node scripts/collect-public-data.mjs",
     "collect:oss": "node scripts/collect-oss-contributions.mjs",
+    "brief": "node scripts/build-application-brief.mjs",
     "check": "node scripts/smoke-test.mjs"
   }
 }

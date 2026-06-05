@@ -19,6 +19,7 @@ const dataScript = await readFile("data/projects.js", "utf8");
 const ossContributionsText = await readFile("data/oss-contributions.json", "utf8");
 const ossContributionsScript = await readFile("data/oss-contributions.js", "utf8");
 const ossContributionLog = await readFile("docs/oss-contribution-log.md", "utf8");
+const applicationBrief = await readFile("docs/codex-oss-application-brief.md", "utf8");
 const evidenceText = await readFile("data/evidence.json", "utf8").catch((error) => {
   if (error.code === "ENOENT") return "{\"highlights\":[]}";
   throw error;
@@ -53,6 +54,10 @@ assert(ossContributions.pullRequests.some((pull) => pull.category === "needs-use
 assert(ossContributionLog.includes(ossContributions.generatedAtShanghai), "OSS contribution log timestamp does not match JSON");
 assert(ossContributionLog.includes("Open / No Failing Checks"), "OSS contribution log missing open/no-failing section");
 assert(ossContributionLog.includes("Needs User Action"), "OSS contribution log missing user-action section");
+assert(applicationBrief.includes(ossContributions.generatedAtShanghai), "application brief timestamp does not match OSS JSON");
+assert(applicationBrief.includes("Codex for OSS application evidence brief"), "application brief missing title");
+assert(applicationBrief.includes("prebid/prebid.github.io#6598"), "application brief missing merged PR evidence");
+assert(applicationBrief.includes("Known User-Action Blockers"), "application brief missing blocker section");
 for (const item of expectedEvidenceHighlights) {
   assert(
     (data.meta.highlights || []).some((highlight) => highlight.name === item.name && highlight.url === item.url),
@@ -96,6 +101,7 @@ const requiredText = [
   "项目时间线",
   "OSS evidence",
   "外部 OSS PR 状态",
+  "申请证据 brief",
   "OSS 贡献记录",
   "复制今日摘要"
 ];

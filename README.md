@@ -94,6 +94,7 @@ git diff --check
 ```bash
 RUN_DATE=YYYY-MM-DD npm run collect
 GITHUB_TOKEN="$(gh auth token)" npm run collect:oss
+npm run brief
 npm run check
 ```
 

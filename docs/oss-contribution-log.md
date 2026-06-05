@@ -1,6 +1,6 @@
 # OSS contribution log
 
-Last verified: 2026-06-05 10:27:03 CST.
+Last verified: 2026-06-05 10:31:50 CST.
 
 This log tracks public external OSS pull requests that can be verified from GitHub. It is intentionally factual: merged PRs are separated from open PRs, and user-action blockers are called out directly.
 
@@ -25,7 +25,7 @@ This log tracks public external OSS pull requests that can be verified from GitH
 | [awslabs/cdk-eks-blueprints#1252](https://github.com/awslabs/cdk-eks-blueprints/pull/1252) | Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up. |
 | [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861) | Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up. |
 | [vectordotdev/vector#25574](https://github.com/vectordotdev/vector/pull/25574) | Open, blocked by required review or repository policy, CLA signed, spelling and semantic PR checks passed, no failing checks detected, waiting for review or maintainer follow-up. |
-| [apache/cloudberry-site#373](https://github.com/apache/cloudberry-site/pull/373) | Open, blocked by required review or repository policy, greeting check passed, no failing checks detected, waiting for review or maintainer follow-up. |
+| [apache/cloudberry-site#373](https://github.com/apache/cloudberry-site/pull/373) | Open, blocked by required review or repository policy, greeting check passed, 1 pending check, waiting for review or maintainer follow-up. |
 
 ## Needs User Action
 

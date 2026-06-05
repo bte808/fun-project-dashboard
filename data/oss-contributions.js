@@ -1,4 +1,4 @@
-{
+window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
   "generatedAt": "2026-06-05T02:31:50.910Z",
   "generatedAtShanghai": "2026-06-05 10:31:50 CST",
   "source": "GitHub public pull request API",
@@ -567,4 +567,4 @@
       "statusText": "Draft PR is mergeable, but CLAassistant reports the CLA is not signed."
     }
   ]
-}
+};

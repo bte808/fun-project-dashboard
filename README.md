@@ -70,7 +70,7 @@ git diff --check
 - 或 README 中明确出现每日趣味项目体系相关描述。
 - 今日 star 变化按 GitHub `stargazers` 公开 `starred_at` 时间戳估算；公开 API 无法识别当天已经取消的 star。
 - 额外 OSS 申请证据可放在 `data/evidence.json`，采集脚本会把匹配当天日期的外部 PR、release 或维护记录合并到“值得点开”列表。
-- 外部 OSS PR 状态列表来自 `data/oss-prs.json`，可用 `npm run collect:oss` 重新生成 `data/oss-contributions.json` 和 `docs/oss-contribution-log.md`。
+- 外部 OSS PR 状态列表来自 `data/oss-prs.json`，可用 `npm run collect:oss` 重新生成 `data/oss-contributions.json`、`data/oss-contributions.js` 和 `docs/oss-contribution-log.md`。
 - 不采集本机私有路径、隐私文件、token、登录态数据或非公开仓库内容。
 
 ## 每天什么时候更新

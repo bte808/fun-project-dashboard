@@ -17,6 +17,7 @@ const html = await readFile("index.html", "utf8");
 const jsonText = await readFile("data/projects.json", "utf8");
 const dataScript = await readFile("data/projects.js", "utf8");
 const ossContributionsText = await readFile("data/oss-contributions.json", "utf8");
+const ossContributionsScript = await readFile("data/oss-contributions.js", "utf8");
 const ossContributionLog = await readFile("docs/oss-contribution-log.md", "utf8");
 const evidenceText = await readFile("data/evidence.json", "utf8").catch((error) => {
   if (error.code === "ENOENT") return "{\"highlights\":[]}";
@@ -33,6 +34,7 @@ mkdirSync(swiftModuleCache, { recursive: true });
 
 assert(html.includes("id=\"app\""), "index.html is missing #app");
 assert(html.includes("data/projects.js"), "index.html is not loading local data/projects.js");
+assert(html.includes("data/oss-contributions.js"), "index.html is not loading local OSS contribution data");
 assert(Array.isArray(data.projects), "projects must be an array");
 assert(data.projects.length === data.metrics.totalProjects, "metrics.totalProjects does not match project count");
 assert(data.metrics.todayCommits === data.projects.reduce((sum, project) => sum + project.today.commitCount, 0), "today commit count mismatch");
@@ -69,6 +71,13 @@ assert(
   "data/projects.js does not match data/projects.json"
 );
 
+const ossDataContext = { window: {} };
+vm.runInNewContext(ossContributionsScript, ossDataContext, { filename: "data/oss-contributions.js" });
+assert(
+  JSON.stringify(ossDataContext.window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS) === JSON.stringify(ossContributions),
+  "data/oss-contributions.js does not match data/oss-contributions.json"
+);
+
 const inlineScripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((match) => match[1]);
 assert(inlineScripts.length > 0, "index.html has no inline app script");
 for (const script of inlineScripts) {
@@ -86,6 +95,7 @@ const requiredText = [
   "今日变动",
   "项目时间线",
   "OSS evidence",
+  "外部 OSS PR 状态",
   "OSS 贡献记录",
   "复制今日摘要"
 ];
@@ -133,6 +143,9 @@ function runDomFallbackSmoke(script) {
     "today-story",
     "evidence-summary",
     "highlights",
+    "oss-summary",
+    "oss-metrics",
+    "oss-pr-list",
     "view-tabs",
     "search",
     "tech-filter",
@@ -195,6 +208,9 @@ function runDomFallbackSmoke(script) {
     assert(elements.highlights.innerHTML.includes("merged"), "fallback render is missing evidence status labels");
     assert(elements["evidence-summary"].textContent.includes("merged"), "fallback render is missing evidence summary");
   }
+  assert(elements["oss-summary"].textContent.includes("tracked public PRs"), "fallback render is missing OSS PR summary");
+  assert(elements["oss-metrics"].innerHTML.includes("merged"), "fallback render is missing OSS PR metrics");
+  assert(elements["oss-pr-list"].innerHTML.includes("prebid/prebid.github.io"), "fallback render is missing OSS PR list");
   assert(elements["project-grid"].innerHTML.includes("project-card"), "fallback render produced no project cards");
   assert(elements["project-grid"].innerHTML.includes("fun-20260601-a-puff-pilot"), "fallback render is missing today's project");
   assert(elements["data-notes"].innerHTML.includes("GitHub API"), "fallback render is missing data warning notes");

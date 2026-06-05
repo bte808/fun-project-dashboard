@@ -375,6 +375,45 @@
       overflow-wrap: anywhere;
     }
 
+    .oss-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+    }
+
+    .oss-metric {
+      min-width: 0;
+      border-left: 3px solid var(--line);
+      padding-left: 10px;
+    }
+
+    .oss-metric strong {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .oss-metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .oss-pr-list li {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+
+    .oss-pr-list strong,
+    .oss-pr-list a {
+      overflow-wrap: anywhere;
+    }
+
     .project-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -619,6 +658,7 @@
       }
 
       .metric-grid,
+      .oss-metrics,
       .project-grid,
       .toolbar {
         grid-template-columns: 1fr;
@@ -669,6 +709,18 @@
             <p id="evidence-summary" class="panel-note">待补充</p>
             <ul id="highlights" class="highlight-list"></ul>
           </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="外部 OSS PR 状态摘要">
+        <div class="panel-header">
+          <h2>外部 OSS PR 状态</h2>
+          <a href="https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md">查看完整记录</a>
+        </div>
+        <div class="panel-body">
+          <p id="oss-summary" class="panel-note">待补充</p>
+          <div id="oss-metrics" class="oss-metrics"></div>
+          <ul id="oss-pr-list" class="change-list oss-pr-list"></ul>
         </div>
       </section>
 
@@ -748,11 +800,16 @@
   </div>
 
   <script src="data/projects.js"></script>
+  <script src="data/oss-contributions.js"></script>
   <script>
     const dashboardData = window.FUN_PROJECT_DASHBOARD_DATA || {
       meta: { title: "每日趣味项目总览仪表盘", todayStory: "数据未载入。", highlights: [] },
       metrics: { totalProjects: 0, todayNew: 0, todayUpdated: 0, todayCommits: 0, totalStars: 0, todayStarDelta: 0, needsReview: 0, techDistribution: {} },
       projects: []
+    };
+    const ossContributionData = window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS || {
+      generatedAtShanghai: "待补充",
+      pullRequests: []
     };
 
     const state = {
@@ -773,6 +830,9 @@
       todayStory: document.querySelector("#today-story"),
       evidenceSummary: document.querySelector("#evidence-summary"),
       highlights: document.querySelector("#highlights"),
+      ossSummary: document.querySelector("#oss-summary"),
+      ossMetrics: document.querySelector("#oss-metrics"),
+      ossPrList: document.querySelector("#oss-pr-list"),
       viewTabs: document.querySelector("#view-tabs"),
       search: document.querySelector("#search"),
       techFilter: document.querySelector("#tech-filter"),
@@ -873,6 +933,22 @@
       return ["merged", "open", "needs-action", "release", "updated", "new"].includes(safe) ? safe : "evidence";
     }
 
+    function ossCategoryLabel(category) {
+      const labels = {
+        merged: "merged",
+        "open-green": "open / no failing",
+        "needs-user-action": "needs action"
+      };
+      return labels[category] || "tracked";
+    }
+
+    function ossCategoryClass(category) {
+      if (category === "merged") return "merged";
+      if (category === "needs-user-action") return "needs-action";
+      if (category === "open-green") return "open";
+      return "evidence";
+    }
+
     async function copyText(text) {
       if (navigator.clipboard?.writeText) {
         try {
@@ -971,6 +1047,51 @@
           </li>
         `).join("")
         : `<li class="muted">未检测到今日值得置顶的公开变动。</li>`;
+    }
+
+    function renderOssContributions() {
+      const pulls = ossContributionData.pullRequests || [];
+      const counts = pulls.reduce((acc, pull) => {
+        const category = pull.category || "tracked";
+        acc[category] = (acc[category] || 0) + 1;
+        return acc;
+      }, {});
+      const total = pulls.length;
+      const merged = counts.merged || 0;
+      const openGreen = counts["open-green"] || 0;
+      const needsAction = counts["needs-user-action"] || 0;
+      elements.ossSummary.textContent = total
+        ? `${total} tracked public PRs · ${merged} merged · ${openGreen} open with no failing checks · ${needsAction} need user action · last verified ${ossContributionData.generatedAtShanghai || "待补充"}`
+        : "暂无外部 OSS PR 状态。";
+
+      const metricRows = [
+        ["tracked", total],
+        ["merged", merged],
+        ["open / no failing", openGreen],
+        ["needs action", needsAction]
+      ];
+      elements.ossMetrics.innerHTML = metricRows.map(([label, value]) => `
+        <div class="oss-metric">
+          <strong>${escapeHtml(value)}</strong>
+          <span>${escapeHtml(label)}</span>
+        </div>
+      `).join("");
+
+      const ordered = pulls.slice().sort((a, b) => {
+        const rank = { merged: 0, "open-green": 1, "needs-user-action": 2 };
+        return (rank[a.category] ?? 3) - (rank[b.category] ?? 3) || a.repoFullName.localeCompare(b.repoFullName);
+      });
+      elements.ossPrList.innerHTML = ordered.length
+        ? ordered.map((pull) => `
+          <li>
+            <span class="evidence-pill ${escapeHtml(ossCategoryClass(pull.category))}">${escapeHtml(ossCategoryLabel(pull.category))}</span>
+            <div>
+              <a href="${escapeHtml(pull.url)}">${escapeHtml(pull.repoFullName)}#${escapeHtml(pull.number)}</a>
+              <div class="muted">${escapeHtml(pull.statusText || pull.title || "待补充")}</div>
+            </div>
+          </li>
+        `).join("")
+        : `<li class="muted">暂无外部 OSS PR 状态。</li>`;
     }
 
     function renderViewTabs() {
@@ -1185,6 +1306,7 @@
 
       renderMetrics();
       renderHighlights();
+      renderOssContributions();
       renderViewTabs();
       renderFilters();
       renderTechChart();

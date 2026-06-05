@@ -8,6 +8,7 @@ const token = process.env.GITHUB_TOKEN || "";
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const configPath = path.resolve(scriptDir, "..", "data", "oss-prs.json");
 const outputPath = path.resolve(scriptDir, "..", "data", "oss-contributions.json");
+const scriptOutputPath = path.resolve(scriptDir, "..", "data", "oss-contributions.js");
 const markdownPath = path.resolve(scriptDir, "..", "docs", "oss-contribution-log.md");
 
 function headers(extra = {}) {
@@ -216,6 +217,11 @@ async function main() {
   await mkdir(path.dirname(outputPath), { recursive: true });
   await mkdir(path.dirname(markdownPath), { recursive: true });
   await writeFile(outputPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
+  await writeFile(
+    scriptOutputPath,
+    `window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = ${JSON.stringify(data, null, 2)};\n`,
+    "utf8"
+  );
   await writeFile(markdownPath, `${buildMarkdown(data)}\n`, "utf8");
 
   const summary = pullRequests.reduce((acc, record) => {

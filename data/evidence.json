@@ -44,6 +44,14 @@
       "date": "2026-06-05",
       "status": "open",
       "kind": "external-pr",
+      "name": "ParzivalHack/PySpector#68",
+      "url": "https://github.com/ParzivalHack/PySpector/pull/68",
+      "reason": "外部 OSS PR open：扩展 reporting.py 的 JSON、SARIF、HTML 与 console 单元测试覆盖；验证包含目标 pytest、Ruff、py_compile 与 git diff --check。"
+    },
+    {
+      "date": "2026-06-05",
+      "status": "open",
+      "kind": "external-pr",
       "name": "vectordotdev/vector#25574",
       "url": "https://github.com/vectordotdev/vector/pull/25574",
       "reason": "外部 OSS PR open：修复 aggregator 文档 typo；CLA 已通过，拼写与语义检查通过，等待评审。"

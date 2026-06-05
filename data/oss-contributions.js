@@ -1,6 +1,6 @@
 window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
-  "generatedAt": "2026-06-05T12:22:46.902Z",
-  "generatedAtShanghai": "2026-06-05 20:22:46 CST",
+  "generatedAt": "2026-06-05T12:38:53.491Z",
+  "generatedAtShanghai": "2026-06-05 20:38:53 CST",
   "source": "GitHub public pull request API",
   "pullRequests": [
     {
@@ -462,6 +462,32 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       },
       "category": "open-green",
       "statusText": "Open, blocked by required review or repository policy, README FAQ structure and whitespace checks passed, no check runs detected, waiting for review or maintainer follow-up."
+    },
+    {
+      "owner": "ParzivalHack",
+      "repo": "PySpector",
+      "number": 68,
+      "repoFullName": "ParzivalHack/PySpector",
+      "url": "https://github.com/ParzivalHack/PySpector/pull/68",
+      "title": "test: expand reporting coverage",
+      "state": "open",
+      "isDraft": false,
+      "mergeable": false,
+      "mergeableState": "blocked",
+      "reviewDecision": "",
+      "mergedAt": null,
+      "headSha": "376157eb8141ec243dd7cce1abf7f38e2a198861",
+      "note": "reporting unit tests, Ruff, py_compile, and whitespace checks passed",
+      "blocker": "",
+      "checks": {
+        "total": 0,
+        "passed": 0,
+        "failed": [],
+        "pending": [],
+        "items": []
+      },
+      "category": "open-green",
+      "statusText": "Open, blocked by required review or repository policy, reporting unit tests, Ruff, py_compile, and whitespace checks passed, no check runs detected, waiting for review or maintainer follow-up."
     },
     {
       "owner": "apple",

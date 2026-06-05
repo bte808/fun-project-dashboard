@@ -46,6 +46,10 @@
       "note": "README FAQ structure and whitespace checks passed"
     },
     {
+      "url": "https://github.com/ParzivalHack/PySpector/pull/68",
+      "note": "reporting unit tests, Ruff, py_compile, and whitespace checks passed"
+    },
+    {
       "url": "https://github.com/apple/container/pull/1646",
       "blocker": "Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac."
     },

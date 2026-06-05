@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-05 20:22:17 CST.
+Last generated: 2026-06-05 20:38:21 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -9,9 +9,9 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - Public dashboard: [fun-project-dashboard](https://bte808.github.io/fun-project-dashboard/)
 - Dashboard source: [bte808/fun-project-dashboard](https://github.com/bte808/fun-project-dashboard)
 - Public project snapshot: 48 tracked projects, 2 updated today, 2 public commits today.
-- OSS PR snapshot last verified: 2026-06-05 20:22:46 CST.
-- External OSS PR snapshot: 15 tracked PRs, 4 merged, 9 open with no failing checks, 2 requiring user action.
-- Release and maintenance snapshot: 5 own releases highlighted, 2 own projects updated today.
+- OSS PR snapshot last verified: 2026-06-05 20:38:53 CST.
+- External OSS PR snapshot: 16 tracked PRs, 4 merged, 10 open with no failing checks, 2 requiring user action.
+- Release and maintenance snapshot: 5 own releases highlighted, 1 own projects updated today.
 
 ## Dashboard Evidence Infrastructure
 
@@ -40,6 +40,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861): Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up.
 - [vectordotdev/vector#25574](https://github.com/vectordotdev/vector/pull/25574): Open, blocked by required review or repository policy, CLA signed, spelling and semantic PR checks passed, no failing checks detected, waiting for review or maintainer follow-up.
 - [ParzivalHack/PySpector#67](https://github.com/ParzivalHack/PySpector/pull/67): Open, blocked by required review or repository policy, README FAQ structure and whitespace checks passed, no check runs detected, waiting for review or maintainer follow-up.
+- [ParzivalHack/PySpector#68](https://github.com/ParzivalHack/PySpector/pull/68): Open, blocked by required review or repository policy, reporting unit tests, Ruff, py_compile, and whitespace checks passed, no check runs detected, waiting for review or maintainer follow-up.
 
 ## Own Project Releases
 

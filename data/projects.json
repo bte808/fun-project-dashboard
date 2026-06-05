@@ -6,7 +6,7 @@
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T12:22:17.699Z",
+    "generatedAt": "2026-06-05T12:38:21.239Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -14,7 +14,7 @@
       "startIso": "2026-06-04T16:00:00.000Z",
       "endIso": "2026-06-05T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 14 条公开证据置顶；当前总 star 0，今日可见 star 变化 +0。",
+    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 15 条公开证据置顶；当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
     "automationChecks": {
       "dailyIncubator": {
@@ -71,6 +71,13 @@
         "name": "ParzivalHack/PySpector#67",
         "url": "https://github.com/ParzivalHack/PySpector/pull/67",
         "reason": "外部 OSS PR open：为 PySpector README 增加折叠式 FAQ，并链接到目录；验证包含 git diff --check 与 README 结构检查。",
+        "status": "open",
+        "kind": "external-pr"
+      },
+      {
+        "name": "ParzivalHack/PySpector#68",
+        "url": "https://github.com/ParzivalHack/PySpector/pull/68",
+        "reason": "外部 OSS PR open：扩展 reporting.py 的 JSON、SARIF、HTML 与 console 单元测试覆盖；验证包含目标 pytest、Ruff、py_compile 与 git diff --check。",
         "status": "open",
         "kind": "external-pr"
       },
@@ -143,13 +150,6 @@
         "status": "updated",
         "kind": "project",
         "reason": "今天更新 1 个 commit；A tiny no-dependency daily canvas game about slinging a star core through a constellation field.；当前 0 star"
-      },
-      {
-        "name": "fun-20260604-b-safe-payout-card",
-        "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card",
-        "status": "updated",
-        "kind": "project",
-        "reason": "今天更新 1 个 commit；Local-first safe payout calculator for indie makers and small operators.；当前 0 star"
       }
     ],
     "collectionWarnings": []

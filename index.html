@@ -1003,6 +1003,7 @@
         open: "open",
         "needs-action": "needs action",
         release: "release",
+        profile: "profile",
         updated: "updated",
         new: "new"
       };
@@ -1011,7 +1012,7 @@
 
     function evidenceClass(status) {
       const safe = String(status || "evidence").toLowerCase();
-      return ["merged", "open", "needs-action", "release", "updated", "new"].includes(safe) ? safe : "evidence";
+      return ["merged", "open", "needs-action", "release", "profile", "updated", "new"].includes(safe) ? safe : "evidence";
     }
 
     function ossCategoryLabel(category) {

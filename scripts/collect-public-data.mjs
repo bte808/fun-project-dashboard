@@ -677,9 +677,9 @@ function buildData(projects, collectionWarnings = [], source = "GitHub public re
         ? `今天新建；${project.readme.oneLine}；当前 ${project.stars.total} star`
         : `今天更新 ${project.today.commitCount} 个 commit；${project.readme.oneLine}；当前 ${project.stars.total} star`
     }));
-  const highlights = [...evidenceHighlights, ...projectHighlights].slice(0, 14);
+  const highlights = [...evidenceHighlights, ...projectHighlights].slice(0, 16);
   const evidenceStory = evidenceHighlights.length
-    ? `；另有 ${evidenceHighlights.length} 条外部 OSS/release 证据置顶`
+    ? `；另有 ${evidenceHighlights.length} 条公开证据置顶`
     : "";
 
   return {

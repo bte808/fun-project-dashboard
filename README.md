@@ -2,7 +2,7 @@
 
 [![Dashboard CI](https://github.com/bte808/fun-project-dashboard/workflows/Dashboard%20CI/badge.svg)](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
 [![Pages deployment](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment)
-[在线仪表盘](https://bte808.github.io/fun-project-dashboard/) · [申请证据 brief](https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md) · [OSS 贡献记录](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md)
+[在线仪表盘](https://bte808.github.io/fun-project-dashboard/) · [申请证据 brief](https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md) · [OSS 贡献记录](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md) · [贡献指南](CONTRIBUTING.md) · [安全说明](SECURITY.md)
 
 这是 `bte808` 账号下每日趣味项目体系的公开总览页。它只负责汇总和展示已经发布的公开项目，不负责孵化新玩具，也不修改旧项目功能。
 
@@ -65,6 +65,13 @@ git diff --check
 ```
 
 GitHub Actions 会在 push、PR 和手动触发时运行同一组静态校验，并使用 `DASHBOARD_DOM_SMOKE_ONLY=1 npm run check` 验证已提交的数据快照。这个模式跳过 macOS 专属的 `WKWebView` 真机烟测，适合 Ubuntu CI；本机默认的 `npm run check` 仍会优先覆盖真实浏览器排版引擎。
+
+## 项目治理
+
+- 代码以 [MIT License](LICENSE) 发布。
+- 贡献前请先看 [CONTRIBUTING.md](CONTRIBUTING.md)，尤其是公开数据边界和验证命令。
+- 安全或隐私问题请按 [SECURITY.md](SECURITY.md) 处理，不要把 token、私有路径或敏感细节贴到公开 issue。
+- 讨论和协作默认遵守 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
 
 ## 数据从哪里来
 

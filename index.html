@@ -244,6 +244,66 @@
       font-weight: 700;
     }
 
+    .panel-note {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      overflow-wrap: anywhere;
+    }
+
+    .highlight-list li {
+      display: grid;
+      gap: 5px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .highlight-list li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .highlight-title {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .evidence-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .evidence-pill.merged {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .evidence-pill.open {
+      background: #e0f2fe;
+      color: #075985;
+    }
+
+    .evidence-pill.needs-action {
+      background: #fff4e5;
+      color: var(--amber);
+    }
+
+    .evidence-pill.release {
+      background: #fae8ff;
+      color: #86198f;
+    }
+
     .muted {
       color: var(--muted);
       overflow-wrap: anywhere;
@@ -602,9 +662,10 @@
         </div>
         <div class="panel">
           <div class="panel-header">
-            <h2>最值得点开 / star</h2>
+            <h2>OSS evidence / 值得点开</h2>
           </div>
           <div class="panel-body">
+            <p id="evidence-summary" class="panel-note">待补充</p>
             <ul id="highlights" class="highlight-list"></ul>
           </div>
         </div>
@@ -709,6 +770,7 @@
       copySummary: document.querySelector("#copy-summary"),
       metrics: document.querySelector("#metrics"),
       todayStory: document.querySelector("#today-story"),
+      evidenceSummary: document.querySelector("#evidence-summary"),
       highlights: document.querySelector("#highlights"),
       viewTabs: document.querySelector("#view-tabs"),
       search: document.querySelector("#search"),
@@ -781,7 +843,7 @@
       const metrics = dashboardData.metrics || {};
       const highlights = (meta.highlights || [])
         .slice(0, 3)
-        .map((item) => `${item.name}: ${item.reason}`);
+        .map((item) => `${evidenceLabel(item.status)} ${item.name}: ${item.reason}`);
 
       return [
         meta.title || "每日趣味项目总览仪表盘",
@@ -791,6 +853,23 @@
         `值得点开：${highlights.length ? highlights.join("；") : "暂无"}`,
         `来源：${meta.repositoryUrl || elements.repoLink.href}`
       ].join("\n");
+    }
+
+    function evidenceLabel(status) {
+      const labels = {
+        merged: "merged",
+        open: "open",
+        "needs-action": "needs action",
+        release: "release",
+        updated: "updated",
+        new: "new"
+      };
+      return labels[status] || "evidence";
+    }
+
+    function evidenceClass(status) {
+      const safe = String(status || "evidence").toLowerCase();
+      return ["merged", "open", "needs-action", "release", "updated", "new"].includes(safe) ? safe : "evidence";
     }
 
     async function copyText(text) {
@@ -873,10 +952,20 @@
 
     function renderHighlights() {
       const highlights = dashboardData.meta.highlights || [];
+      const counts = highlights.reduce((acc, item) => {
+        const status = evidenceLabel(item.status);
+        acc[status] = (acc[status] || 0) + 1;
+        return acc;
+      }, {});
+      const summary = Object.entries(counts).map(([status, count]) => `${count} ${status}`).join(" · ");
+      elements.evidenceSummary.textContent = summary || "暂无置顶证据。";
       elements.highlights.innerHTML = highlights.length
         ? highlights.map((item) => `
           <li>
-            <a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a>
+            <div class="highlight-title">
+              <span class="evidence-pill ${escapeHtml(evidenceClass(item.status))}">${escapeHtml(evidenceLabel(item.status))}</span>
+              <a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a>
+            </div>
             <div class="muted">${escapeHtml(item.reason)}</div>
           </li>
         `).join("")

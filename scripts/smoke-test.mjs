@@ -75,6 +75,7 @@ const requiredText = [
   "技术分布",
   "今日变动",
   "项目时间线",
+  "OSS evidence",
   "复制今日摘要"
 ];
 
@@ -119,6 +120,7 @@ function runDomFallbackSmoke(script) {
     "copy-summary",
     "metrics",
     "today-story",
+    "evidence-summary",
     "highlights",
     "view-tabs",
     "search",
@@ -179,6 +181,8 @@ function runDomFallbackSmoke(script) {
   assert(elements.metrics.innerHTML.includes("项目数"), "fallback render did not populate metrics");
   if (expectedEvidenceHighlights.length) {
     assert(elements.highlights.innerHTML.includes(expectedEvidenceHighlights[0].name), "fallback render is missing evidence highlights");
+    assert(elements.highlights.innerHTML.includes("merged"), "fallback render is missing evidence status labels");
+    assert(elements["evidence-summary"].textContent.includes("merged"), "fallback render is missing evidence summary");
   }
   assert(elements["project-grid"].innerHTML.includes("project-card"), "fallback render produced no project cards");
   assert(elements["project-grid"].innerHTML.includes("fun-20260601-a-puff-pilot"), "fallback render is missing today's project");

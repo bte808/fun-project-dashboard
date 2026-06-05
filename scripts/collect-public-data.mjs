@@ -622,7 +622,9 @@ async function readEvidenceHighlights() {
       .map((item) => ({
         name: item.name,
         url: item.url,
-        reason: item.reason
+        reason: item.reason,
+        status: item.status || "evidence",
+        kind: item.kind || "evidence"
       }));
   } catch (error) {
     if (error.code === "ENOENT") return [];
@@ -669,11 +671,13 @@ function buildData(projects, collectionWarnings = [], source = "GitHub public re
     .map((project) => ({
       name: project.name,
       url: project.url,
+      status: project.today.created ? "new" : "updated",
+      kind: "project",
       reason: project.today.created
         ? `今天新建；${project.readme.oneLine}；当前 ${project.stars.total} star`
         : `今天更新 ${project.today.commitCount} 个 commit；${project.readme.oneLine}；当前 ${project.stars.total} star`
     }));
-  const highlights = [...evidenceHighlights, ...projectHighlights].slice(0, 10);
+  const highlights = [...evidenceHighlights, ...projectHighlights].slice(0, 14);
   const evidenceStory = evidenceHighlights.length
     ? `；另有 ${evidenceHighlights.length} 条外部 OSS/release 证据置顶`
     : "";

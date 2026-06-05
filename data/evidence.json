@@ -68,9 +68,9 @@
       "date": "2026-06-05",
       "status": "release",
       "kind": "own-release",
-      "name": "maintainer-signal-board v0.7.2",
-      "url": "https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.2",
-      "reason": "发布 GitHub search issue imports；补齐跨仓库 issue triage fixture 与文档，CI、Pages、npm run validate 全部通过。"
+      "name": "maintainer-signal-board v0.7.3",
+      "url": "https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.3",
+      "reason": "发布 REST Search API import support；补齐 raw { items: [...] } fixture、repository_url 路由恢复与闭合条目回归测试，CI、Pages、npm test 全部通过。"
     },
     {
       "date": "2026-06-05",

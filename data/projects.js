@@ -6,7 +6,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T08:23:59.277Z",
+    "generatedAt": "2026-06-05T08:45:29.905Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -96,9 +96,9 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "kind": "own-release"
       },
       {
-        "name": "maintainer-signal-board v0.7.2",
-        "url": "https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.2",
-        "reason": "发布 GitHub search issue imports；补齐跨仓库 issue triage fixture 与文档，CI、Pages、npm run validate 全部通过。",
+        "name": "maintainer-signal-board v0.7.3",
+        "url": "https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.3",
+        "reason": "发布 REST Search API import support；补齐 raw { items: [...] } fixture、repository_url 路由恢复与闭合条目回归测试，CI、Pages、npm test 全部通过。",
         "status": "release",
         "kind": "own-release"
       },

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-05T07:31:42.870Z",
-  "generatedAtShanghai": "2026-06-05 15:31:42 CST",
+  "generatedAt": "2026-06-05T08:52:26.385Z",
+  "generatedAtShanghai": "2026-06-05 16:52:26 CST",
   "source": "GitHub public pull request API",
   "pullRequests": [
     {
@@ -348,7 +348,7 @@
       "state": "open",
       "isDraft": false,
       "mergeable": false,
-      "mergeableState": "blocked",
+      "mergeableState": "unknown",
       "reviewDecision": "",
       "mergedAt": null,
       "headSha": "442336298c5b87a4911a9f1c117dd3c8ca7dadeb",
@@ -373,7 +373,7 @@
         ]
       },
       "category": "open-green",
-      "statusText": "Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up."
+      "statusText": "Open, mergeability not reported, no failing checks detected, waiting for review or maintainer follow-up."
     },
     {
       "owner": "vectordotdev",

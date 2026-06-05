@@ -64,7 +64,7 @@ const dashboardEvidenceInfrastructure = [
 function releaseReason(item) {
   const notes = {
     "fun-project-dashboard v0.2.5": "Released CI action maintenance by moving Dashboard CI to actions/checkout@v6 and actions/setup-node@v6 while preserving evidence-alignment checks.",
-    "maintainer-signal-board v0.7.2": "Released GitHub search issue import support for cross-repository triage sweeps, with closed issue rows kept out of open maintainer load.",
+    "maintainer-signal-board v0.7.3": "Released REST Search API import support, deriving OWNER/REPO from repository_url and keeping closed REST search rows out of open maintainer load.",
     "fun-20260604-b-safe-payout-card v0.2.0": "Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.",
     "fun-20260604-a-star-sling v1.0.1": "Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.",
     "fun-20260604-c-construct-canvas v1.0.0": "Published the initial public release with Node tests, browser smoke verification, and a GitHub Pages demo."

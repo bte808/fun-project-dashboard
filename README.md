@@ -1,5 +1,9 @@
 # 每日趣味项目总览仪表盘
 
+[![Dashboard CI](https://github.com/bte808/fun-project-dashboard/workflows/Dashboard%20CI/badge.svg)](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
+[![Pages deployment](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment)
+[在线仪表盘](https://bte808.github.io/fun-project-dashboard/) · [申请证据 brief](https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md) · [OSS 贡献记录](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md)
+
 这是 `bte808` 账号下每日趣味项目体系的公开总览页。它只负责汇总和展示已经发布的公开项目，不负责孵化新玩具，也不修改旧项目功能。
 
 在线访问：https://bte808.github.io/fun-project-dashboard/

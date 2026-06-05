@@ -64,7 +64,7 @@ const dashboardEvidenceInfrastructure = [
 function releaseReason(item) {
   const notes = {
     "fun-project-dashboard v0.2.4": "Released a fresh evidence snapshot after apache/cloudberry-site#373 merged, and made the reviewer packet generated from the same data as the application brief.",
-    "maintainer-signal-board v0.7.0": "Released saved view presets; issue #12 closed; CI, Pages, local browser smoke, and live browser smoke passed.",
+    "maintainer-signal-board v0.7.1": "Released GitHub search PR import support for cross-repository review sweeps, with merged PR rows normalized out of open maintainer load.",
     "fun-20260604-b-safe-payout-card v0.2.0": "Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.",
     "fun-20260604-a-star-sling v1.0.1": "Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.",
     "fun-20260604-c-construct-canvas v1.0.0": "Published the initial public release with Node tests, browser smoke verification, and a GitHub Pages demo."

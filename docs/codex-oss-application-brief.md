@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-05 15:38:33 CST.
+Last generated: 2026-06-05 15:57:48 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -44,7 +44,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 ## Own Project Releases
 
 - [fun-project-dashboard v0.2.4](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4): Released a fresh evidence snapshot after apache/cloudberry-site#373 merged, and made the reviewer packet generated from the same data as the application brief.
-- [maintainer-signal-board v0.7.0](https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.0): Released saved view presets; issue #12 closed; CI, Pages, local browser smoke, and live browser smoke passed.
+- [maintainer-signal-board v0.7.1](https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.1): Released GitHub search PR import support for cross-repository review sweeps, with merged PR rows normalized out of open maintainer load.
 - [fun-20260604-b-safe-payout-card v0.2.0](https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0): Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.
 - [fun-20260604-a-star-sling v1.0.1](https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1): Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.
 - [fun-20260604-c-construct-canvas v1.0.0](https://github.com/bte808/fun-20260604-c-construct-canvas/releases/tag/v1.0.0): Published the initial public release with Node tests, browser smoke verification, and a GitHub Pages demo.

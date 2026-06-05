@@ -67,8 +67,16 @@ assert(reviewerPacket.includes(releaseUrl), "reviewer packet is missing the pack
 assert(reviewerPacket.includes("Dashboard CI workflow"), "reviewer packet is missing the CI workflow link");
 assert(reviewerPacket.includes("Pages deployment workflow"), "reviewer packet is missing the Pages workflow link");
 assert(reviewerPacket.includes("npm run check:release"), "reviewer packet is missing the release alignment command");
-assert(briefBuilder.includes(releaseName), "brief generator is missing the package release");
-assert(briefBuilder.includes(releaseUrl), "brief generator is missing the package release URL");
+assert(briefBuilder.includes("package.json"), "brief generator does not read package.json");
+assert(briefBuilder.includes("buildDashboardRelease"), "brief generator does not derive release metadata");
+assert(
+  !briefBuilder.includes(releaseName),
+  "brief generator hardcodes the current package release name instead of deriving it"
+);
+assert(
+  !briefBuilder.includes(releaseUrl),
+  "brief generator hardcodes the current package release URL instead of deriving it"
+);
 assert(briefBuilder.includes("docs/reviewer-packet.md"), "brief generator is missing the reviewer packet artifact link");
 
 console.log(JSON.stringify({

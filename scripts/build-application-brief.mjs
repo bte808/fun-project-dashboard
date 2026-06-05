@@ -3,10 +3,14 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const packagePath = path.resolve(scriptDir, "..", "package.json");
 const projectsPath = path.resolve(scriptDir, "..", "data", "projects.json");
 const ossPath = path.resolve(scriptDir, "..", "data", "oss-contributions.json");
 const briefOutputPath = path.resolve(scriptDir, "..", "docs", "codex-oss-application-brief.md");
 const reviewerPacketOutputPath = path.resolve(scriptDir, "..", "docs", "reviewer-packet.md");
+
+const DASHBOARD_RELEASE_NOTE = "Freezes the PySpector evidence packet with FAQ and reporting-test PRs recorded while preserving RTK cargo validation and transparent user-action blockers.";
+const DASHBOARD_RELEASE_REASON = "Released the PySpector evidence packet with README FAQ and reporting-test PRs recorded while preserving RTK cargo validation and transparent CLA/user-action blockers.";
 
 function countBy(items, key) {
   return items.reduce((acc, item) => {
@@ -28,42 +32,57 @@ function listInlineLinks(items, mapper) {
   return items.length ? items.map(mapper).join(", ") : "None.";
 }
 
-const dashboardEvidenceInfrastructure = [
-  {
-    label: "Latest release: fun-project-dashboard v0.2.7",
-    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.7",
-    note: "Freezes the PySpector evidence packet with FAQ and reporting-test PRs recorded while preserving RTK cargo validation and transparent user-action blockers."
-  },
-  {
-    label: "Dashboard CI workflow",
-    url: "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml",
-    note: "Public GitHub Actions workflow for Node syntax checks and committed-data smoke verification."
-  },
-  {
-    label: "GitHub Pages deployment workflow",
-    url: "https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment",
-    note: "Public deployment workflow for the live dashboard."
-  },
-  {
-    label: "MIT License",
-    url: "https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE",
-    note: "GitHub license API recognizes the repository as MIT-licensed."
-  },
-  {
-    label: "Contributing guide",
-    url: "https://github.com/bte808/fun-project-dashboard/blob/main/CONTRIBUTING.md",
-    note: "Documents local verification, public-data boundaries, and contribution expectations."
-  },
-  {
-    label: "Security policy",
-    url: "https://github.com/bte808/fun-project-dashboard/blob/main/SECURITY.md",
-    note: "Documents token/privacy boundaries and coordinated reporting expectations."
-  }
-];
+function buildDashboardRelease(packageData) {
+  const tag = `v${packageData.version}`;
+  return {
+    name: `fun-project-dashboard ${tag}`,
+    tag,
+    url: `https://github.com/bte808/fun-project-dashboard/releases/tag/${tag}`,
+    note: DASHBOARD_RELEASE_NOTE,
+    reason: DASHBOARD_RELEASE_REASON
+  };
+}
 
-function releaseReason(item) {
+function buildDashboardEvidenceInfrastructure(dashboardRelease) {
+  return [
+    {
+      label: `Latest release: ${dashboardRelease.name}`,
+      url: dashboardRelease.url,
+      note: dashboardRelease.note
+    },
+    {
+      label: "Dashboard CI workflow",
+      url: "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml",
+      note: "Public GitHub Actions workflow for Node syntax checks and committed-data smoke verification."
+    },
+    {
+      label: "GitHub Pages deployment workflow",
+      url: "https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment",
+      note: "Public deployment workflow for the live dashboard."
+    },
+    {
+      label: "MIT License",
+      url: "https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE",
+      note: "GitHub license API recognizes the repository as MIT-licensed."
+    },
+    {
+      label: "Contributing guide",
+      url: "https://github.com/bte808/fun-project-dashboard/blob/main/CONTRIBUTING.md",
+      note: "Documents local verification, public-data boundaries, and contribution expectations."
+    },
+    {
+      label: "Security policy",
+      url: "https://github.com/bte808/fun-project-dashboard/blob/main/SECURITY.md",
+      note: "Documents token/privacy boundaries and coordinated reporting expectations."
+    }
+  ];
+}
+
+function releaseReason(item, dashboardRelease) {
+  if (item.name === dashboardRelease.name) {
+    return dashboardRelease.reason;
+  }
   const notes = {
-    "fun-project-dashboard v0.2.7": "Released the PySpector evidence packet with README FAQ and reporting-test PRs recorded while preserving RTK cargo validation and transparent CLA/user-action blockers.",
     "maintainer-signal-board v0.7.3": "Released REST Search API import support, deriving OWNER/REPO from repository_url and keeping closed REST search rows out of open maintainer load.",
     "fun-20260604-b-safe-payout-card v0.2.0": "Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.",
     "fun-20260604-a-star-sling v1.0.1": "Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.",
@@ -88,7 +107,7 @@ function shanghaiDateTime(iso) {
   return `${map.year}-${map.month}-${map.day} ${map.hour}:${map.minute}:${map.second} CST`;
 }
 
-function buildBrief(projectsData, ossData) {
+function buildBrief(projectsData, ossData, dashboardRelease) {
   const meta = projectsData.meta || {};
   const metrics = projectsData.metrics || {};
   const highlights = meta.highlights || [];
@@ -99,6 +118,7 @@ function buildBrief(projectsData, ossData) {
   const openPulls = pulls.filter((pull) => pull.category === "open-green");
   const blockedPulls = pulls.filter((pull) => pull.category === "needs-user-action");
   const releases = highlights.filter((item) => item.status === "release");
+  const dashboardEvidenceInfrastructure = buildDashboardEvidenceInfrastructure(dashboardRelease);
 
   return `# Codex for OSS application evidence brief
 
@@ -129,7 +149,7 @@ ${listRows(openPulls, (pull) => `- ${markdownLink(`${pull.repoFullName}#${pull.n
 
 ## Own Project Releases
 
-${listRows(releases, (item) => `- ${markdownLink(item.name, item.url)}: ${releaseReason(item)}`)}
+${listRows(releases, (item) => `- ${markdownLink(item.name, item.url)}: ${releaseReason(item, dashboardRelease)}`)}
 
 ## Known User-Action Blockers
 
@@ -151,7 +171,7 @@ The generated artifacts are:
 
 - ${markdownLink("dashboard page", "https://bte808.github.io/fun-project-dashboard/")}
 - ${markdownLink("reviewer packet", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md")}
-- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.7")}
+- ${markdownLink("latest dashboard release", dashboardRelease.url)}
 - ${markdownLink("Dashboard CI workflow", "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml")}
 - ${markdownLink("OSS contribution log", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md")}
 - ${markdownLink("machine-readable OSS PR snapshot", "https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json")}
@@ -159,7 +179,7 @@ The generated artifacts are:
 `;
 }
 
-function buildReviewerPacket(projectsData, ossData) {
+function buildReviewerPacket(projectsData, ossData, dashboardRelease) {
   const meta = projectsData.meta || {};
   const metrics = projectsData.metrics || {};
   const highlights = meta.highlights || [];
@@ -180,7 +200,7 @@ This is the compact public checklist for reviewing the \`bte808\` daily fun proj
 
 - Live dashboard: ${markdownLink("bte808.github.io/fun-project-dashboard", "https://bte808.github.io/fun-project-dashboard/")}
 - Source repository: ${markdownLink("bte808/fun-project-dashboard", "https://github.com/bte808/fun-project-dashboard")}
-- Latest release: ${markdownLink("fun-project-dashboard v0.2.7", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.7")}
+- Latest release: ${markdownLink(dashboardRelease.name, dashboardRelease.url)}
 - Detailed application brief: ${markdownLink("Codex OSS application evidence brief", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md")}
 
 ## Evidence at a glance
@@ -227,13 +247,15 @@ The release-alignment check is intentionally part of CI so the package version, 
 }
 
 async function main() {
-  const [projectsData, ossData] = await Promise.all([
+  const [packageData, projectsData, ossData] = await Promise.all([
+    readFile(packagePath, "utf8").then(JSON.parse),
     readFile(projectsPath, "utf8").then(JSON.parse),
     readFile(ossPath, "utf8").then(JSON.parse)
   ]);
+  const dashboardRelease = buildDashboardRelease(packageData);
   await mkdir(path.dirname(briefOutputPath), { recursive: true });
-  const brief = buildBrief(projectsData, ossData);
-  const reviewerPacket = buildReviewerPacket(projectsData, ossData);
+  const brief = buildBrief(projectsData, ossData, dashboardRelease);
+  const reviewerPacket = buildReviewerPacket(projectsData, ossData, dashboardRelease);
   await Promise.all([
     writeFile(briefOutputPath, `${brief.trim()}\n`, "utf8"),
     writeFile(reviewerPacketOutputPath, `${reviewerPacket.trim()}\n`, "utf8")

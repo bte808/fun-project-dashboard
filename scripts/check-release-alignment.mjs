@@ -39,7 +39,10 @@ const releaseUrl = `https://github.com/bte808/fun-project-dashboard/releases/tag
 const footerText = `Dashboard version ${version}`;
 
 assert(/^\d+\.\d+\.\d+$/.test(version), `package version is not semver-like: ${version}`);
-assert(html.includes(footerText), "index.html footer version does not match package.json");
+assert(projectsData.meta?.dashboardVersion === version, "data/projects.json dashboardVersion does not match package.json");
+assert(projectsScript.includes(`"dashboardVersion": "${version}"`), "data/projects.js is missing the package dashboardVersion");
+assert(html.includes("dashboardData.meta.dashboardVersion"), "index.html footer does not derive the version from dashboard data");
+assert(!html.includes(footerText), "index.html hardcodes the current package version");
 assert(html.includes("Reviewer packet / 申请包"), "index.html is missing the reviewer packet panel");
 assert(html.includes("docs/reviewer-packet.md"), "index.html reviewer packet panel does not link to docs/reviewer-packet.md");
 assert(readme.includes(releaseName), "README latest refresh summary does not mention the package release");

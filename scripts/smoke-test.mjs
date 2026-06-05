@@ -50,6 +50,7 @@ assert(data.metrics.totalStars === data.projects.reduce((sum, project) => sum + 
 assert(data.metrics.todayStarDelta === data.projects.reduce((sum, project) => sum + (project.stars?.todayDelta || 0), 0), "today star delta mismatch");
 assert(data.meta?.runDate, "meta.runDate is required");
 assert(data.meta?.repositoryUrl, "meta.repositoryUrl is required");
+assert(data.meta?.dashboardVersion === packageData.version, "meta.dashboardVersion must match package.json");
 assert(data.meta?.starChangeNote, "meta.starChangeNote is required");
 assert(typeof data.meta?.todayStory === "string" && data.meta.todayStory.length > 0, "meta.todayStory is required");
 assert(Array.isArray(ossContributions.pullRequests), "oss-contributions pullRequests must be an array");
@@ -135,7 +136,8 @@ assert(html.includes("function normalizeSearchText"), "index.html is missing sea
 assert(html.includes("navigator.clipboard"), "index.html is missing clipboard support");
 assert(html.includes("overflow-wrap: anywhere"), "index.html is missing overflow-wrap protection for long content");
 assert(html.includes("@media (max-width: 760px)"), "index.html is missing the mobile layout breakpoint");
-assert(html.includes(dashboardVersionText), "index.html footer version is not aligned with the latest release");
+assert(html.includes("dashboardData.meta.dashboardVersion"), "index.html footer does not read the data version");
+assert(!html.includes(dashboardVersionText), "index.html hardcodes the current dashboard version");
 
 function createFakeElement(id = "") {
   return {
@@ -229,6 +231,7 @@ function runDomFallbackSmoke(script) {
 
   vm.runInNewContext(script, context, { filename: "index-inline-dom-fallback.js" });
 
+  assert(elements.footer.textContent.includes(dashboardVersionText), "fallback render did not populate footer version");
   assert(elements.metrics.innerHTML.includes("项目数"), "fallback render did not populate metrics");
   if (expectedEvidenceHighlights.length) {
     assert(elements.highlights.innerHTML.includes(expectedEvidenceHighlights[0].name), "fallback render is missing evidence highlights");

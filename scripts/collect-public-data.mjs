@@ -19,6 +19,7 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = process.env.LOCAL_FUN_REPO_ROOT
   || path.resolve(scriptDir, "..", "..");
 const evidencePath = path.resolve(scriptDir, "..", "data", "evidence.json");
+const packagePath = path.resolve(scriptDir, "..", "package.json");
 
 const funReadmeSignals = [
   /每日趣味项目/,
@@ -490,6 +491,11 @@ function packageDescription(repoPath) {
   }
 }
 
+async function dashboardVersion() {
+  const packageText = await readFile(packagePath, "utf8");
+  return JSON.parse(packageText).version;
+}
+
 function localReadme(repoPath) {
   return tryGit(["show", "HEAD:README.md"], repoPath)
     || tryGit(["show", "HEAD:readme.md"], repoPath)
@@ -535,7 +541,7 @@ async function localMirrorCandidates(previousData) {
   return candidates;
 }
 
-async function collectFromLocalMirrors(apiError) {
+async function collectFromLocalMirrors(apiError, version = "") {
   const previousData = await readPreviousData();
   const evidenceHighlights = await readEvidenceHighlights();
   const candidates = await localMirrorCandidates(previousData);
@@ -598,10 +604,16 @@ async function collectFromLocalMirrors(apiError) {
     });
   }
 
-  return buildData(projects, [
-    `GitHub API 获取失败，已降级使用本机 GitHub origin 镜像：${apiError.message}`,
-    "本轮无法刷新公开可见性、仓库描述、GitHub updated_at、总 star 或今日 star 变化；star 沿用上一轮公开快照，新仓库按 0 处理。"
-  ], "Local GitHub origin mirrors with previous public snapshot fallback", evidenceHighlights);
+  return buildData(
+    projects,
+    [
+      `GitHub API 获取失败，已降级使用本机 GitHub origin 镜像：${apiError.message}`,
+      "本轮无法刷新公开可见性、仓库描述、GitHub updated_at、总 star 或今日 star 变化；star 沿用上一轮公开快照，新仓库按 0 处理。"
+    ],
+    "Local GitHub origin mirrors with previous public snapshot fallback",
+    evidenceHighlights,
+    version
+  );
 }
 
 function statusFromText(matches, detectedNote, missingNote) {
@@ -632,7 +644,13 @@ async function readEvidenceHighlights() {
   }
 }
 
-function buildData(projects, collectionWarnings = [], source = "GitHub public repository API", evidenceHighlights = []) {
+function buildData(
+  projects,
+  collectionWarnings = [],
+  source = "GitHub public repository API",
+  evidenceHighlights = [],
+  version = ""
+) {
   projects.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   const techDistribution = projects.reduce((acc, project) => {
@@ -688,6 +706,7 @@ function buildData(projects, collectionWarnings = [], source = "GitHub public re
       owner,
       repository: dashboardRepo,
       repositoryUrl: `https://github.com/${owner}/${dashboardRepo}`,
+      dashboardVersion: version,
       runDate,
       timezone: "Asia/Shanghai",
       generatedAt: new Date().toISOString(),
@@ -753,11 +772,12 @@ async function writeDashboardData(data) {
 }
 
 async function main() {
+  const version = await dashboardVersion();
   let repos;
   try {
     repos = await paginate(`/users/${owner}/repos?type=owner&sort=created&direction=desc`);
   } catch (error) {
-    const data = await collectFromLocalMirrors(error);
+    const data = await collectFromLocalMirrors(error, version);
     await writeDashboardData(data);
     return;
   }
@@ -855,7 +875,13 @@ async function main() {
     });
   }
 
-  const data = buildData(projects, collectionWarnings, "GitHub public repository API", evidenceHighlights);
+  const data = buildData(
+    projects,
+    collectionWarnings,
+    "GitHub public repository API",
+    evidenceHighlights,
+    version
+  );
   await writeDashboardData(data);
 }
 

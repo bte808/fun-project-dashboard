@@ -1,6 +1,6 @@
 # Reviewer packet
 
-Last updated: 2026-06-05 19:26:16 CST.
+Last updated: 2026-06-05 19:33:03 CST.
 
 This is the compact public checklist for reviewing the `bte808` daily fun project evidence surface. It only links to public GitHub or GitHub Pages URLs.
 
@@ -14,7 +14,7 @@ This is the compact public checklist for reviewing the `bte808` daily fun projec
 ## Evidence at a glance
 
 - Public project snapshot: 48 tracked public projects, 2 updated today, 2 public commits today.
-- External OSS PR snapshot: 15 tracked PRs, 4 merged, 9 open with no failing checks, 2 requiring user action.
+- External OSS PR snapshot: 14 tracked PRs, 4 merged, 8 open with no failing checks, 2 requiring user action.
 - Release and maintenance snapshot: 5 highlighted own releases, including the dashboard release itself.
 - Live dashboard reviewer panel: exposes brief, CI, Pages, OSS log, MIT license, and governance links in one place.
 

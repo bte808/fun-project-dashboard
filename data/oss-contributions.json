@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-05T11:26:49.982Z",
-  "generatedAtShanghai": "2026-06-05 19:26:49 CST",
+  "generatedAt": "2026-06-05T11:33:34.100Z",
+  "generatedAtShanghai": "2026-06-05 19:33:34 CST",
   "source": "GitHub public pull request API",
   "pullRequests": [
     {
@@ -169,38 +169,6 @@
       },
       "category": "open-green",
       "statusText": "Open, mergeable, no check runs detected, waiting for review or maintainer follow-up."
-    },
-    {
-      "owner": "qgis",
-      "repo": "QGIS-Website",
-      "number": 1011,
-      "repoFullName": "qgis/QGIS-Website",
-      "url": "https://github.com/qgis/QGIS-Website/pull/1011",
-      "title": "Remove broken OGC conformance report links",
-      "state": "open",
-      "isDraft": false,
-      "mergeable": true,
-      "mergeableState": "unstable",
-      "reviewDecision": "",
-      "mergedAt": null,
-      "headSha": "ca8ecc76174a702b1632b9cc732647f5352f1b2b",
-      "note": "CLA signed",
-      "blocker": "",
-      "checks": {
-        "total": 1,
-        "passed": 1,
-        "failed": [],
-        "pending": [],
-        "items": [
-          {
-            "name": "license/cla",
-            "state": "success",
-            "source": "status"
-          }
-        ]
-      },
-      "category": "open-green",
-      "statusText": "Open, mergeable, CLA signed, no failing checks detected, waiting for review or maintainer follow-up."
     },
     {
       "owner": "cyberark",

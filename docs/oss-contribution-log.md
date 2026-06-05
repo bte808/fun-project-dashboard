@@ -1,6 +1,6 @@
 # OSS contribution log
 
-Last verified: 2026-06-05 19:26:49 CST.
+Last verified: 2026-06-05 19:33:34 CST.
 
 This log tracks public external OSS pull requests that can be verified from GitHub. It is intentionally factual: merged PRs are separated from open PRs, and user-action blockers are called out directly.
 
@@ -18,7 +18,6 @@ This log tracks public external OSS pull requests that can be verified from GitH
 | PR | Current public state |
 | --- | --- |
 | [decentraland/docs#108](https://github.com/decentraland/docs/pull/108) | Open, mergeable, no check runs detected, waiting for review or maintainer follow-up. |
-| [qgis/QGIS-Website#1011](https://github.com/qgis/QGIS-Website/pull/1011) | Open, mergeable, CLA signed, no failing checks detected, waiting for review or maintainer follow-up. |
 | [cyberark/conjur#3025](https://github.com/cyberark/conjur/pull/3025) | Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up. |
 | [mia-platform/documentation#2583](https://github.com/mia-platform/documentation/pull/2583) | Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up. |
 | [OWASP/wrongsecrets#2549](https://github.com/OWASP/wrongsecrets/pull/2549) | Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up. |

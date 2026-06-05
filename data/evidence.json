@@ -46,7 +46,7 @@
       "kind": "external-pr",
       "name": "rtk-ai/rtk#2273",
       "url": "https://github.com/rtk-ai/rtk/pull/2273",
-      "reason": "外部 OSS draft PR：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签。"
+      "reason": "外部 OSS PR 已从 draft 改为 ready for review：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签，上游 CI 等待维护者批准运行。"
     },
     {
       "date": "2026-06-05",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-05T08:52:26.385Z",
-  "generatedAtShanghai": "2026-06-05 16:52:26 CST",
+  "generatedAt": "2026-06-05T09:11:20.669Z",
+  "generatedAtShanghai": "2026-06-05 17:11:20 CST",
   "source": "GitHub public pull request API",
   "pullRequests": [
     {
@@ -348,7 +348,7 @@
       "state": "open",
       "isDraft": false,
       "mergeable": false,
-      "mergeableState": "unknown",
+      "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
       "headSha": "442336298c5b87a4911a9f1c117dd3c8ca7dadeb",
@@ -373,7 +373,7 @@
         ]
       },
       "category": "open-green",
-      "statusText": "Open, mergeability not reported, no failing checks detected, waiting for review or maintainer follow-up."
+      "statusText": "Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up."
     },
     {
       "owner": "vectordotdev",
@@ -525,14 +525,14 @@
       "url": "https://github.com/rtk-ai/rtk/pull/2273",
       "title": "fix(gh): passthrough run view job output",
       "state": "open",
-      "isDraft": true,
+      "isDraft": false,
       "mergeable": false,
       "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
       "headSha": "c65928dba99dc0da0fcd6c5fd01becbfb2445f0e",
       "note": "",
-      "blocker": "Draft PR is mergeable, but CLAassistant reports the CLA is not signed.",
+      "blocker": "Ready-for-review PR is mergeable, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork.",
       "checks": {
         "total": 2,
         "passed": 1,
@@ -558,7 +558,7 @@
         ]
       },
       "category": "needs-user-action",
-      "statusText": "Draft PR is mergeable, but CLAassistant reports the CLA is not signed."
+      "statusText": "Ready-for-review PR is mergeable, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork."
     }
   ]
 }

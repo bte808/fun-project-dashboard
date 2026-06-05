@@ -1,6 +1,6 @@
 # OSS contribution log
 
-Last verified: 2026-06-05 16:52:26 CST.
+Last verified: 2026-06-05 17:11:20 CST.
 
 This log tracks public external OSS pull requests that can be verified from GitHub. It is intentionally factual: merged PRs are separated from open PRs, and user-action blockers are called out directly.
 
@@ -24,7 +24,7 @@ This log tracks public external OSS pull requests that can be verified from GitH
 | [OWASP/wrongsecrets#2549](https://github.com/OWASP/wrongsecrets/pull/2549) | Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up. |
 | [apache/rocketmq-site#785](https://github.com/apache/rocketmq-site/pull/785) | Open, mergeable, no check runs detected, waiting for review or maintainer follow-up. |
 | [awslabs/cdk-eks-blueprints#1252](https://github.com/awslabs/cdk-eks-blueprints/pull/1252) | Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up. |
-| [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861) | Open, mergeability not reported, no failing checks detected, waiting for review or maintainer follow-up. |
+| [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861) | Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up. |
 | [vectordotdev/vector#25574](https://github.com/vectordotdev/vector/pull/25574) | Open, blocked by required review or repository policy, CLA signed, spelling and semantic PR checks passed, no failing checks detected, waiting for review or maintainer follow-up. |
 
 ## Needs User Action
@@ -32,5 +32,5 @@ This log tracks public external OSS pull requests that can be verified from GitH
 | PR | Blocker |
 | --- | --- |
 | [apple/container#1646](https://github.com/apple/container/pull/1646) | Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac. |
-| [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273) | Draft PR is mergeable, but CLAassistant reports the CLA is not signed. |
+| [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273) | Ready-for-review PR is mergeable, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork. |
 

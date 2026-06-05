@@ -51,7 +51,7 @@
     },
     {
       "url": "https://github.com/rtk-ai/rtk/pull/2273",
-      "blocker": "Draft PR is mergeable, but CLAassistant reports the CLA is not signed."
+      "blocker": "Ready-for-review PR is mergeable, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork."
     }
   ]
 }

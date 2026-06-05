@@ -104,7 +104,7 @@ GitHub Actions 会在 push、PR 和手动触发时运行同一组静态校验，
 - 今日公开 commit：2
 - 总 star：0
 - 今日可见 star 变化：+0（按 GitHub 公开 stargazers 数据估算；无法识别当天已取消的 star）
-- 公开检测结果：今日检测到 Star Sling 和 Safe Payout Card 维护提交；另有 12 条 OSS/release 证据置顶，包括 4 个已 merged 的外部 OSS PR、fun-project-dashboard v0.2.5、多个待评审 PR 和近期 release。
+- 公开检测结果：今日检测到 Star Sling 和 Safe Payout Card 维护提交；另有 12 条 OSS/release 证据置顶，包括 4 个已 merged 的外部 OSS PR、fun-project-dashboard v0.2.6、多个待评审 PR 和近期 release。
 
 手动刷新数据：
 

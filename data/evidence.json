@@ -60,9 +60,9 @@
       "date": "2026-06-05",
       "status": "release",
       "kind": "own-release",
-      "name": "fun-project-dashboard v0.2.5",
-      "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.5",
-      "reason": "发布 CI action maintenance；Dashboard CI 升级到 actions/checkout@v6 和 actions/setup-node@v6，并保持 release evidence alignment 与 DOM smoke 通过。"
+      "name": "fun-project-dashboard v0.2.6",
+      "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6",
+      "reason": "发布 RTK validation evidence packet；申请证据包记录 RTK ready-for-review PR 的本地 cargo fmt、cargo test --all、cargo clippy 验证，并保持 CLA/user-action blocker 透明。"
     },
     {
       "date": "2026-06-05",
@@ -70,7 +70,7 @@
       "kind": "profile",
       "name": "bte808 profile README evidence refresh",
       "url": "https://github.com/bte808/bte808",
-      "reason": "同步 GitHub profile 门面：RTK PR 已从 draft 改为 ready for review 并补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已从 review 列表移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.5。"
+      "reason": "同步 GitHub profile 门面：RTK PR 已从 draft 改为 ready for review 并补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已从 review 列表移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.6。"
     },
     {
       "date": "2026-06-05",

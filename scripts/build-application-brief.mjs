@@ -30,9 +30,9 @@ function listInlineLinks(items, mapper) {
 
 const dashboardEvidenceInfrastructure = [
   {
-    label: "Latest release: fun-project-dashboard v0.2.5",
-    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.5",
-    note: "Keeps the public evidence dashboard CI on current GitHub action majors while preserving release-alignment and committed-data smoke checks."
+    label: "Latest release: fun-project-dashboard v0.2.6",
+    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6",
+    note: "Freezes the RTK validation evidence packet with local cargo fmt, cargo test --all, and cargo clippy verification recorded while preserving transparent user-action blockers."
   },
   {
     label: "Dashboard CI workflow",
@@ -63,7 +63,7 @@ const dashboardEvidenceInfrastructure = [
 
 function releaseReason(item) {
   const notes = {
-    "fun-project-dashboard v0.2.5": "Released CI action maintenance by moving Dashboard CI to actions/checkout@v6 and actions/setup-node@v6 while preserving evidence-alignment checks.",
+    "fun-project-dashboard v0.2.6": "Released the RTK validation evidence packet with local cargo fmt, cargo test --all, and cargo clippy verification recorded while preserving transparent CLA/user-action blockers.",
     "maintainer-signal-board v0.7.3": "Released REST Search API import support, deriving OWNER/REPO from repository_url and keeping closed REST search rows out of open maintainer load.",
     "fun-20260604-b-safe-payout-card v0.2.0": "Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.",
     "fun-20260604-a-star-sling v1.0.1": "Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.",
@@ -151,7 +151,7 @@ The generated artifacts are:
 
 - ${markdownLink("dashboard page", "https://bte808.github.io/fun-project-dashboard/")}
 - ${markdownLink("reviewer packet", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md")}
-- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.5")}
+- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6")}
 - ${markdownLink("Dashboard CI workflow", "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml")}
 - ${markdownLink("OSS contribution log", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md")}
 - ${markdownLink("machine-readable OSS PR snapshot", "https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json")}
@@ -180,7 +180,7 @@ This is the compact public checklist for reviewing the \`bte808\` daily fun proj
 
 - Live dashboard: ${markdownLink("bte808.github.io/fun-project-dashboard", "https://bte808.github.io/fun-project-dashboard/")}
 - Source repository: ${markdownLink("bte808/fun-project-dashboard", "https://github.com/bte808/fun-project-dashboard")}
-- Latest release: ${markdownLink("fun-project-dashboard v0.2.5", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.5")}
+- Latest release: ${markdownLink("fun-project-dashboard v0.2.6", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.6")}
 - Detailed application brief: ${markdownLink("Codex OSS application evidence brief", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md")}
 
 ## Evidence at a glance

@@ -1,0 +1,57 @@
+{
+  "pullRequests": [
+    {
+      "url": "https://github.com/prebid/prebid.github.io/pull/6598",
+      "note": "markdownlint and preview checks passed"
+    },
+    {
+      "url": "https://github.com/MicrosoftDocs/azure-docs/pull/128553",
+      "note": "CLA and Learn Build validation passed"
+    },
+    {
+      "url": "https://github.com/OpenC3/cosmos/pull/3445",
+      "note": "maintainer approved, SonarCloud and security checks passed"
+    },
+    {
+      "url": "https://github.com/decentraland/docs/pull/108"
+    },
+    {
+      "url": "https://github.com/qgis/QGIS-Website/pull/1011",
+      "note": "CLA signed"
+    },
+    {
+      "url": "https://github.com/cyberark/conjur/pull/3025"
+    },
+    {
+      "url": "https://github.com/mia-platform/documentation/pull/2583"
+    },
+    {
+      "url": "https://github.com/OWASP/wrongsecrets/pull/2549"
+    },
+    {
+      "url": "https://github.com/apache/rocketmq-site/pull/785"
+    },
+    {
+      "url": "https://github.com/awslabs/cdk-eks-blueprints/pull/1252"
+    },
+    {
+      "url": "https://github.com/sapcc/helm-charts/pull/11861"
+    },
+    {
+      "url": "https://github.com/vectordotdev/vector/pull/25574",
+      "note": "CLA signed, spelling and semantic PR checks passed"
+    },
+    {
+      "url": "https://github.com/apache/cloudberry-site/pull/373",
+      "note": "greeting check passed"
+    },
+    {
+      "url": "https://github.com/apple/container/pull/1646",
+      "blocker": "Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac."
+    },
+    {
+      "url": "https://github.com/rtk-ai/rtk/pull/2273",
+      "blocker": "Draft PR is mergeable, but CLAassistant reports the CLA is not signed."
+    }
+  ]
+}

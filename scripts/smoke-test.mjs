@@ -16,11 +16,14 @@ function assert(condition, message) {
 const html = await readFile("index.html", "utf8");
 const jsonText = await readFile("data/projects.json", "utf8");
 const dataScript = await readFile("data/projects.js", "utf8");
+const ossContributionsText = await readFile("data/oss-contributions.json", "utf8");
+const ossContributionLog = await readFile("docs/oss-contribution-log.md", "utf8");
 const evidenceText = await readFile("data/evidence.json", "utf8").catch((error) => {
   if (error.code === "ENOENT") return "{\"highlights\":[]}";
   throw error;
 });
 const data = JSON.parse(jsonText);
+const ossContributions = JSON.parse(ossContributionsText);
 const evidence = JSON.parse(evidenceText);
 const expectedEvidenceHighlights = (Array.isArray(evidence.highlights) ? evidence.highlights : [])
   .filter((item) => (!item.date || item.date === data.meta?.runDate) && item.name && item.url && item.reason);
@@ -41,6 +44,13 @@ assert(data.meta?.runDate, "meta.runDate is required");
 assert(data.meta?.repositoryUrl, "meta.repositoryUrl is required");
 assert(data.meta?.starChangeNote, "meta.starChangeNote is required");
 assert(typeof data.meta?.todayStory === "string" && data.meta.todayStory.length > 0, "meta.todayStory is required");
+assert(Array.isArray(ossContributions.pullRequests), "oss-contributions pullRequests must be an array");
+assert(ossContributions.pullRequests.length >= 10, "oss-contributions should track at least 10 public PRs");
+assert(ossContributions.pullRequests.some((pull) => pull.category === "merged"), "oss-contributions missing merged PRs");
+assert(ossContributions.pullRequests.some((pull) => pull.category === "needs-user-action"), "oss-contributions missing user-action PRs");
+assert(ossContributionLog.includes(ossContributions.generatedAtShanghai), "OSS contribution log timestamp does not match JSON");
+assert(ossContributionLog.includes("Open / No Failing Checks"), "OSS contribution log missing open/no-failing section");
+assert(ossContributionLog.includes("Needs User Action"), "OSS contribution log missing user-action section");
 for (const item of expectedEvidenceHighlights) {
   assert(
     (data.meta.highlights || []).some((highlight) => highlight.name === item.name && highlight.url === item.url),

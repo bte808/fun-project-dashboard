@@ -6,7 +6,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T01:23:16.958Z",
+    "generatedAt": "2026-06-05T01:33:03.664Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -14,7 +14,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "startIso": "2026-06-04T16:00:00.000Z",
       "endIso": "2026-06-05T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另外新增外部 OSS PR rtk-ai/rtk#2273，并为 3 个近期项目补齐 release 证据。当前总 star 0，今日可见 star 变化 +0。",
+    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 4 条外部 OSS/release 证据置顶；当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
     "automationChecks": {
       "dailyIncubator": {
@@ -30,12 +30,12 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "wednesdayBooster": {
         "status": "not_detected",
         "label": "未检测到",
-        "note": "未检测到周三加料结果；今日 commit 信息为：有提交但无加料标识。"
+        "note": "今天不是周三，跳过周三加料检测。"
       },
       "sundayHealthCheck": {
-        "status": "detected",
-        "label": "已检测到",
-        "note": "检测到 1 个疑似周日体检相关 commit。"
+        "status": "not_detected",
+        "label": "未检测到",
+        "note": "今天不是周日，跳过周日体检检测。"
       }
     },
     "highlights": [
@@ -58,6 +58,16 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "name": "fun-20260604-c-construct-canvas v1.0.0",
         "url": "https://github.com/bte808/fun-20260604-c-construct-canvas/releases/tag/v1.0.0",
         "reason": "发布初始公开版本；已有 Node tests、browser smoke 与 GitHub Pages demo。"
+      },
+      {
+        "name": "fun-20260604-a-star-sling",
+        "url": "https://github.com/bte808/fun-20260604-a-star-sling",
+        "reason": "今天更新 1 个 commit；A tiny no-dependency daily canvas game about slinging a star core through a constellation field.；当前 0 star"
+      },
+      {
+        "name": "fun-20260604-b-safe-payout-card",
+        "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card",
+        "reason": "今天更新 1 个 commit；Local-first safe payout calculator for indie makers and small operators.；当前 0 star"
       }
     ],
     "collectionWarnings": []
@@ -2065,5 +2075,4 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "visibilitySource": "GitHub public repository data"
     }
   ]
-}
-;
+};

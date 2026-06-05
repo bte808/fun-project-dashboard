@@ -69,6 +69,7 @@ git diff --check
 - 仓库名匹配 `fun-*`。
 - 或 README 中明确出现每日趣味项目体系相关描述。
 - 今日 star 变化按 GitHub `stargazers` 公开 `starred_at` 时间戳估算；公开 API 无法识别当天已经取消的 star。
+- 额外 OSS 申请证据可放在 `data/evidence.json`，采集脚本会把匹配当天日期的外部 PR、release 或维护记录合并到“值得点开”列表。
 - 不采集本机私有路径、隐私文件、token、登录态数据或非公开仓库内容。
 
 ## 每天什么时候更新
@@ -78,14 +79,14 @@ git diff --check
 ## 最近一次自动刷新
 
 - 日期：2026-06-05（Asia/Shanghai）
-- 最近更新时间：2026-06-05 09:23:16
+- 最近更新时间：2026-06-05 09:33:03
 - 公开项目总数：48
 - 今日新建项目：0
 - 今日更新项目：2
 - 今日公开 commit：2
 - 总 star：0
 - 今日可见 star 变化：+0（按 GitHub 公开 stargazers 数据估算；无法识别当天已取消的 star）
-- 公开检测结果：今日检测到 Star Sling 和 Safe Payout Card 维护提交；另有外部 OSS draft PR [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273)，CLA 待签。
+- 公开检测结果：今日检测到 Star Sling 和 Safe Payout Card 维护提交；另有 4 条 OSS/release 证据置顶，包括外部 OSS draft PR [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273)，CLA 待签。
 
 手动刷新数据：
 

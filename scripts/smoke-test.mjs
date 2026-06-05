@@ -16,7 +16,14 @@ function assert(condition, message) {
 const html = await readFile("index.html", "utf8");
 const jsonText = await readFile("data/projects.json", "utf8");
 const dataScript = await readFile("data/projects.js", "utf8");
+const evidenceText = await readFile("data/evidence.json", "utf8").catch((error) => {
+  if (error.code === "ENOENT") return "{\"highlights\":[]}";
+  throw error;
+});
 const data = JSON.parse(jsonText);
+const evidence = JSON.parse(evidenceText);
+const expectedEvidenceHighlights = (Array.isArray(evidence.highlights) ? evidence.highlights : [])
+  .filter((item) => (!item.date || item.date === data.meta?.runDate) && item.name && item.url && item.reason);
 const dashboardPath = fileURLToPath(new URL("../index.html", import.meta.url));
 const swiftModuleCache = path.join(tmpdir(), "fun-project-dashboard-swift-module-cache");
 mkdirSync(swiftModuleCache, { recursive: true });
@@ -34,6 +41,12 @@ assert(data.meta?.runDate, "meta.runDate is required");
 assert(data.meta?.repositoryUrl, "meta.repositoryUrl is required");
 assert(data.meta?.starChangeNote, "meta.starChangeNote is required");
 assert(typeof data.meta?.todayStory === "string" && data.meta.todayStory.length > 0, "meta.todayStory is required");
+for (const item of expectedEvidenceHighlights) {
+  assert(
+    (data.meta.highlights || []).some((highlight) => highlight.name === item.name && highlight.url === item.url),
+    `expected evidence highlight is missing from data: ${item.name}`
+  );
+}
 assert(data.projects.every((project) => Array.isArray(project.today?.commits)), "every project must include today.commits");
 assert(data.projects.every((project) => Array.isArray(project.today?.files)), "every project must include today.files");
 assert(data.projects.every((project) => typeof project.stars?.total === "number"), "every project must include stars.total");
@@ -164,6 +177,9 @@ function runDomFallbackSmoke(script) {
   vm.runInNewContext(script, context, { filename: "index-inline-dom-fallback.js" });
 
   assert(elements.metrics.innerHTML.includes("项目数"), "fallback render did not populate metrics");
+  if (expectedEvidenceHighlights.length) {
+    assert(elements.highlights.innerHTML.includes(expectedEvidenceHighlights[0].name), "fallback render is missing evidence highlights");
+  }
   assert(elements["project-grid"].innerHTML.includes("project-card"), "fallback render produced no project cards");
   assert(elements["project-grid"].innerHTML.includes("fun-20260601-a-puff-pilot"), "fallback render is missing today's project");
   assert(elements["data-notes"].innerHTML.includes("GitHub API"), "fallback render is missing data warning notes");

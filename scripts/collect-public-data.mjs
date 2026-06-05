@@ -7,6 +7,9 @@ import { fileURLToPath } from "node:url";
 const owner = process.env.GITHUB_OWNER || "bte808";
 const dashboardRepo = process.env.DASHBOARD_REPO || "fun-project-dashboard";
 const runDate = process.env.RUN_DATE || dateInShanghai(new Date().toISOString());
+const runDateWeekday = new Date(`${runDate}T12:00:00Z`).getUTCDay();
+const isRunDateWednesday = runDateWeekday === 3;
+const isRunDateSunday = runDateWeekday === 0;
 const apiBase = "https://api.github.com";
 const token = process.env.GITHUB_TOKEN || "";
 const startIso = new Date(`${runDate}T00:00:00+08:00`).toISOString();
@@ -15,6 +18,7 @@ const maxGithubRetries = Number(process.env.GITHUB_MAX_RETRIES || 2);
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = process.env.LOCAL_FUN_REPO_ROOT
   || path.resolve(scriptDir, "..", "..");
+const evidencePath = path.resolve(scriptDir, "..", "data", "evidence.json");
 
 const funReadmeSignals = [
   /每日趣味项目/,
@@ -533,6 +537,7 @@ async function localMirrorCandidates(previousData) {
 
 async function collectFromLocalMirrors(apiError) {
   const previousData = await readPreviousData();
+  const evidenceHighlights = await readEvidenceHighlights();
   const candidates = await localMirrorCandidates(previousData);
   const projects = [];
 
@@ -596,7 +601,7 @@ async function collectFromLocalMirrors(apiError) {
   return buildData(projects, [
     `GitHub API 获取失败，已降级使用本机 GitHub origin 镜像：${apiError.message}`,
     "本轮无法刷新公开可见性、仓库描述、GitHub updated_at、总 star 或今日 star 变化；star 沿用上一轮公开快照，新仓库按 0 处理。"
-  ], "Local GitHub origin mirrors with previous public snapshot fallback");
+  ], "Local GitHub origin mirrors with previous public snapshot fallback", evidenceHighlights);
 }
 
 function statusFromText(matches, detectedNote, missingNote) {
@@ -607,7 +612,25 @@ function statusFromText(matches, detectedNote, missingNote) {
   };
 }
 
-function buildData(projects, collectionWarnings = [], source = "GitHub public repository API") {
+async function readEvidenceHighlights() {
+  try {
+    const raw = await readFile(evidencePath, "utf8");
+    const parsed = JSON.parse(raw);
+    const highlights = Array.isArray(parsed.highlights) ? parsed.highlights : [];
+    return highlights
+      .filter((item) => (!item.date || item.date === runDate) && item.name && item.url && item.reason)
+      .map((item) => ({
+        name: item.name,
+        url: item.url,
+        reason: item.reason
+      }));
+  } catch (error) {
+    if (error.code === "ENOENT") return [];
+    throw new Error(`Evidence highlights invalid: ${error.message}`);
+  }
+}
+
+function buildData(projects, collectionWarnings = [], source = "GitHub public repository API", evidenceHighlights = []) {
   projects.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   const techDistribution = projects.reduce((acc, project) => {
@@ -626,10 +649,20 @@ function buildData(projects, collectionWarnings = [], source = "GitHub public re
   const totalStars = projects.reduce((sum, project) => sum + project.stars.total, 0);
   const todayStarDelta = projects.reduce((sum, project) => sum + project.stars.todayDelta, 0);
   const commitText = todayCommits.map((commit) => commit.message).join("\n");
-  const wednesdayMatches = todayCommits.filter((commit) => /周三|wednesday|加料|extra|bonus/i.test(commit.message));
-  const sundayMatches = todayCommits.filter((commit) => /周日|sunday|体检|health|audit|复查|weekly check/i.test(commit.message));
+  const wednesdayMatches = isRunDateWednesday
+    ? todayCommits.filter((commit) => /周三|wednesday|加料|extra|bonus/i.test(commit.message))
+    : [];
+  const sundayMatches = isRunDateSunday
+    ? todayCommits.filter((commit) => /周日|sunday|体检|health|audit|复查|weekly check/i.test(commit.message))
+    : [];
+  const wednesdayMissingNote = isRunDateWednesday
+    ? `未检测到周三加料结果；今日 commit 信息为：${commitText ? "有提交但无加料标识" : "无可见提交"}。`
+    : "今天不是周三，跳过周三加料检测。";
+  const sundayMissingNote = isRunDateSunday
+    ? "未检测到周日体检结果。"
+    : "今天不是周日，跳过周日体检检测。";
 
-  const highlights = todayUpdatedProjects
+  const projectHighlights = todayUpdatedProjects
     .slice()
     .sort((a, b) => b.today.commitCount - a.today.commitCount || new Date(b.createdAt) - new Date(a.createdAt))
     .slice(0, 4)
@@ -640,6 +673,10 @@ function buildData(projects, collectionWarnings = [], source = "GitHub public re
         ? `今天新建；${project.readme.oneLine}；当前 ${project.stars.total} star`
         : `今天更新 ${project.today.commitCount} 个 commit；${project.readme.oneLine}；当前 ${project.stars.total} star`
     }));
+  const highlights = [...evidenceHighlights, ...projectHighlights].slice(0, 6);
+  const evidenceStory = evidenceHighlights.length
+    ? `；另有 ${evidenceHighlights.length} 条外部 OSS/release 证据置顶`
+    : "";
 
   return {
     meta: {
@@ -655,8 +692,8 @@ function buildData(projects, collectionWarnings = [], source = "GitHub public re
       scanRule: "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
       todayWindowUtc: { startIso, endIso },
       todayStory: todayUpdatedProjects.length
-        ? `今天公开仓库中检测到 ${todayNewProjects.length} 个新建项目、${todayUpdatedProjects.length} 个今日有变动的项目，共 ${todayCommits.length} 个 commit；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`
-        : `今天未检测到公开趣味项目仓库的可见变动；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`,
+        ? `今天公开仓库中检测到 ${todayNewProjects.length} 个新建项目、${todayUpdatedProjects.length} 个今日有变动的项目，共 ${todayCommits.length} 个 commit${evidenceStory}；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`
+        : `今天未检测到公开趣味项目仓库的可见变动${evidenceStory}；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`,
       starChangeNote: source === "GitHub public repository API"
         ? "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。"
         : "本轮 GitHub API 不可用，今日 star 变化无法确认；页面保留上一轮公开快照中的总 star，新项目按 0 处理。",
@@ -674,12 +711,12 @@ function buildData(projects, collectionWarnings = [], source = "GitHub public re
         wednesdayBooster: statusFromText(
           wednesdayMatches,
           (matches) => `检测到 ${matches.length} 个疑似周三加料相关 commit。`,
-          `未检测到周三加料结果；今日 commit 信息为：${commitText ? "有提交但无加料标识" : "无可见提交"}。`
+          wednesdayMissingNote
         ),
         sundayHealthCheck: statusFromText(
           sundayMatches,
           (matches) => `检测到 ${matches.length} 个疑似周日体检相关 commit。`,
-          "未检测到周日体检结果。"
+          sundayMissingNote
         )
       },
       highlights,
@@ -739,6 +776,7 @@ async function main() {
   }
 
   const projects = [];
+  const evidenceHighlights = await readEvidenceHighlights();
 
   for (const item of candidates) {
     const { repo, readme } = item;
@@ -813,103 +851,8 @@ async function main() {
     });
   }
 
-  projects.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-
-  const techDistribution = projects.reduce((acc, project) => {
-    acc[project.primaryLanguage] = (acc[project.primaryLanguage] || 0) + 1;
-    return acc;
-  }, {});
-
-  const todayNewProjects = projects.filter((project) => project.today.created);
-  const todayUpdatedProjects = projects.filter((project) => project.today.updated);
-  const oldMaintenance = projects.filter((project) => !project.today.created && project.today.commitCount > 0);
-  const todayCommits = projects.flatMap((project) => project.today.commits.map((commit) => ({
-    ...commit,
-    project: project.name,
-    projectUrl: project.url
-  })));
-  const totalStars = projects.reduce((sum, project) => sum + project.stars.total, 0);
-  const todayStarDelta = projects.reduce((sum, project) => sum + project.stars.todayDelta, 0);
-  const commitText = todayCommits.map((commit) => commit.message).join("\n");
-  const wednesdayMatches = todayCommits.filter((commit) => /周三|wednesday|加料|extra|bonus/i.test(commit.message));
-  const sundayMatches = todayCommits.filter((commit) => /周日|sunday|体检|health|audit|复查|weekly check/i.test(commit.message));
-
-  const highlights = todayUpdatedProjects
-    .slice()
-    .sort((a, b) => b.today.commitCount - a.today.commitCount || new Date(b.createdAt) - new Date(a.createdAt))
-    .slice(0, 4)
-    .map((project) => ({
-      name: project.name,
-      url: project.url,
-      reason: project.today.created
-        ? `今天新建；${project.readme.oneLine}；当前 ${project.stars.total} star`
-        : `今天更新 ${project.today.commitCount} 个 commit；${project.readme.oneLine}；当前 ${project.stars.total} star`
-    }));
-
-  const data = {
-    meta: {
-      title: `${runDate} 每日趣味项目总览仪表盘`,
-      owner,
-      repository: dashboardRepo,
-      repositoryUrl: `https://github.com/${owner}/${dashboardRepo}`,
-      runDate,
-      timezone: "Asia/Shanghai",
-      generatedAt: new Date().toISOString(),
-      generatedAtShanghaiDate: dateInShanghai(new Date().toISOString()),
-      source: "GitHub public repository API",
-      scanRule: "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
-      todayWindowUtc: { startIso, endIso },
-      todayStory: todayUpdatedProjects.length
-        ? `今天公开仓库中检测到 ${todayNewProjects.length} 个新建项目、${todayUpdatedProjects.length} 个今日有变动的项目，共 ${todayCommits.length} 个 commit；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`
-        : `今天未检测到公开趣味项目仓库的可见变动；当前总 star ${totalStars}，今日可见 star 变化 +${todayStarDelta}。`,
-      starChangeNote: "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
-      automationChecks: {
-        dailyIncubator: statusFromText(
-          todayNewProjects,
-          (matches) => `公开 fun-* 仓库中检测到 ${matches.length} 个今天创建的项目。`,
-          "未检测到今天新建的公开 fun-* 项目。"
-        ),
-        oldProjectMaintenance: statusFromText(
-          oldMaintenance,
-          (matches) => `检测到 ${matches.length} 个旧项目今天有公开 commit。`,
-          "未检测到今天维护旧项目的公开 commit。"
-        ),
-        wednesdayBooster: statusFromText(
-          wednesdayMatches,
-          (matches) => `检测到 ${matches.length} 个疑似周三加料相关 commit。`,
-          `未检测到周三加料结果；今日 commit 信息为：${commitText ? "有提交但无加料标识" : "无可见提交"}。`
-        ),
-        sundayHealthCheck: statusFromText(
-          sundayMatches,
-          (matches) => `检测到 ${matches.length} 个疑似周日体检相关 commit。`,
-          "未检测到周日体检结果。"
-        )
-      },
-      highlights,
-      collectionWarnings
-    },
-    metrics: {
-      totalProjects: projects.length,
-      todayNew: todayNewProjects.length,
-      todayUpdated: todayUpdatedProjects.length,
-      todayCommits: todayCommits.length,
-      totalStars,
-      todayStarDelta,
-      needsReview: projects.filter((project) => project.needsReview).length,
-      techDistribution
-    },
-    projects
-  };
-
-  await mkdir("data", { recursive: true });
-  await writeFile("data/projects.json", `${JSON.stringify(data, null, 2)}\n`, "utf8");
-  await writeFile(
-    "data/projects.js",
-    `window.FUN_PROJECT_DASHBOARD_DATA = ${JSON.stringify(data, null, 2)};\n`,
-    "utf8"
-  );
-
-  console.log(JSON.stringify(data.metrics, null, 2));
+  const data = buildData(projects, collectionWarnings, "GitHub public repository API", evidenceHighlights);
+  await writeDashboardData(data);
 }
 
 main().catch((error) => {

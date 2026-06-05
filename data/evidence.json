@@ -1,0 +1,28 @@
+{
+  "highlights": [
+    {
+      "date": "2026-06-05",
+      "name": "rtk-ai/rtk#2273",
+      "url": "https://github.com/rtk-ai/rtk/pull/2273",
+      "reason": "外部 OSS draft PR：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签。"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "fun-20260604-b-safe-payout-card v0.2.0",
+      "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0",
+      "reason": "发布 audit trail export；issue #1 已关闭，验证包含 core test 与 desktop/mobile browser smoke。"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "fun-20260604-a-star-sling v1.0.1",
+      "url": "https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1",
+      "reason": "发布自包含 browser smoke 修复；live GitHub Pages URL 已通过 desktop/mobile 验证。"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "fun-20260604-c-construct-canvas v1.0.0",
+      "url": "https://github.com/bte808/fun-20260604-c-construct-canvas/releases/tag/v1.0.0",
+      "reason": "发布初始公开版本；已有 Node tests、browser smoke 与 GitHub Pages demo。"
+    }
+  ]
+}

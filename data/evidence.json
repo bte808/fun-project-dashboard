@@ -2,9 +2,45 @@
   "highlights": [
     {
       "date": "2026-06-05",
+      "name": "MicrosoftDocs/azure-docs#128553",
+      "url": "https://github.com/MicrosoftDocs/azure-docs/pull/128553",
+      "reason": "外部 OSS PR 已 merged：修复 Azure Backup 文档语法问题；CLA 与 Learn Build validation 已通过。"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "OpenC3/cosmos#3445",
+      "url": "https://github.com/OpenC3/cosmos/pull/3445",
+      "reason": "外部 OSS PR 已 merged：修复 reference architecture 文档 typo；维护者已 approve，SonarCloud 与安全检查通过。"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "prebid/prebid.github.io#6598",
+      "url": "https://github.com/prebid/prebid.github.io/pull/6598",
+      "reason": "外部 OSS PR 已 merged：修复 SharedId 文档 typo；维护者已 approve，markdownlint 与预览检查通过。"
+    },
+    {
+      "date": "2026-06-05",
       "name": "rtk-ai/rtk#2273",
       "url": "https://github.com/rtk-ai/rtk/pull/2273",
       "reason": "外部 OSS draft PR：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签。"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "vectordotdev/vector#25574",
+      "url": "https://github.com/vectordotdev/vector/pull/25574",
+      "reason": "外部 OSS PR open：修复 aggregator 文档 typo；CLA 已通过，拼写与语义检查通过，等待评审。"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "apache/cloudberry-site#373",
+      "url": "https://github.com/apache/cloudberry-site/pull/373",
+      "reason": "外部 OSS PR open：修复 Cloudberry FAQ 断链；GitHub greeting check 通过，等待评审。"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "apple/container#1646",
+      "url": "https://github.com/apple/container/pull/1646",
+      "reason": "外部 OSS PR open：维护者反馈内容可行；构建通过，但需要按项目规则补签 signed commit。"
     },
     {
       "date": "2026-06-05",

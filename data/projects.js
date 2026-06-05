@@ -6,7 +6,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T01:33:03.664Z",
+    "generatedAt": "2026-06-05T01:58:20.252Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -14,7 +14,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "startIso": "2026-06-04T16:00:00.000Z",
       "endIso": "2026-06-05T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 4 条外部 OSS/release 证据置顶；当前总 star 0，今日可见 star 变化 +0。",
+    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 10 条外部 OSS/release 证据置顶；当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
     "automationChecks": {
       "dailyIncubator": {
@@ -40,9 +40,39 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     },
     "highlights": [
       {
+        "name": "MicrosoftDocs/azure-docs#128553",
+        "url": "https://github.com/MicrosoftDocs/azure-docs/pull/128553",
+        "reason": "外部 OSS PR 已 merged：修复 Azure Backup 文档语法问题；CLA 与 Learn Build validation 已通过。"
+      },
+      {
+        "name": "OpenC3/cosmos#3445",
+        "url": "https://github.com/OpenC3/cosmos/pull/3445",
+        "reason": "外部 OSS PR 已 merged：修复 reference architecture 文档 typo；维护者已 approve，SonarCloud 与安全检查通过。"
+      },
+      {
+        "name": "prebid/prebid.github.io#6598",
+        "url": "https://github.com/prebid/prebid.github.io/pull/6598",
+        "reason": "外部 OSS PR 已 merged：修复 SharedId 文档 typo；维护者已 approve，markdownlint 与预览检查通过。"
+      },
+      {
         "name": "rtk-ai/rtk#2273",
         "url": "https://github.com/rtk-ai/rtk/pull/2273",
         "reason": "外部 OSS draft PR：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签。"
+      },
+      {
+        "name": "vectordotdev/vector#25574",
+        "url": "https://github.com/vectordotdev/vector/pull/25574",
+        "reason": "外部 OSS PR open：修复 aggregator 文档 typo；CLA 已通过，拼写与语义检查通过，等待评审。"
+      },
+      {
+        "name": "apache/cloudberry-site#373",
+        "url": "https://github.com/apache/cloudberry-site/pull/373",
+        "reason": "外部 OSS PR open：修复 Cloudberry FAQ 断链；GitHub greeting check 通过，等待评审。"
+      },
+      {
+        "name": "apple/container#1646",
+        "url": "https://github.com/apple/container/pull/1646",
+        "reason": "外部 OSS PR open：维护者反馈内容可行；构建通过，但需要按项目规则补签 signed commit。"
       },
       {
         "name": "fun-20260604-b-safe-payout-card v0.2.0",
@@ -58,16 +88,6 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "name": "fun-20260604-c-construct-canvas v1.0.0",
         "url": "https://github.com/bte808/fun-20260604-c-construct-canvas/releases/tag/v1.0.0",
         "reason": "发布初始公开版本；已有 Node tests、browser smoke 与 GitHub Pages demo。"
-      },
-      {
-        "name": "fun-20260604-a-star-sling",
-        "url": "https://github.com/bte808/fun-20260604-a-star-sling",
-        "reason": "今天更新 1 个 commit；A tiny no-dependency daily canvas game about slinging a star core through a constellation field.；当前 0 star"
-      },
-      {
-        "name": "fun-20260604-b-safe-payout-card",
-        "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card",
-        "reason": "今天更新 1 个 commit；Local-first safe payout calculator for indie makers and small operators.；当前 0 star"
       }
     ],
     "collectionWarnings": []

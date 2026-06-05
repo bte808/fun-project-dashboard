@@ -9,8 +9,8 @@ const ossPath = path.resolve(scriptDir, "..", "data", "oss-contributions.json");
 const briefOutputPath = path.resolve(scriptDir, "..", "docs", "codex-oss-application-brief.md");
 const reviewerPacketOutputPath = path.resolve(scriptDir, "..", "docs", "reviewer-packet.md");
 
-const DASHBOARD_RELEASE_NOTE = "Freezes the PySpector evidence packet with FAQ and reporting-test PRs recorded while preserving RTK cargo validation and transparent user-action blockers.";
-const DASHBOARD_RELEASE_REASON = "Released the PySpector evidence packet with README FAQ and reporting-test PRs recorded while preserving RTK cargo validation and transparent CLA/user-action blockers.";
+const DASHBOARD_RELEASE_NOTE = "Freezes release automation hardening so dashboard version metadata and reviewer brief release links derive from package.json.";
+const DASHBOARD_RELEASE_REASON = "Released release automation hardening: dashboard footer metadata and reviewer brief release links now derive from package.json, reducing manual drift in future evidence packets.";
 
 function countBy(items, key) {
   return items.reduce((acc, item) => {

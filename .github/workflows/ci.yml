@@ -1,0 +1,36 @@
+name: Dashboard CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    name: Static dashboard smoke
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check script syntax
+        run: |
+          node --check scripts/collect-public-data.mjs
+          node --check scripts/collect-oss-contributions.mjs
+          node --check scripts/build-application-brief.mjs
+          node --check scripts/smoke-test.mjs
+
+      - name: Run committed data smoke test
+        run: npm run check
+        env:
+          DASHBOARD_DOM_SMOKE_ONLY: "1"

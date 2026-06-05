@@ -188,6 +188,7 @@ function runDomFallbackSmoke(script) {
   const context = {
     window: {
       FUN_PROJECT_DASHBOARD_DATA: data,
+      FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS: ossContributions,
       setTimeout() {}
     },
     document: fakeDocument,
@@ -218,11 +219,17 @@ function runDomFallbackSmoke(script) {
   assert(elements["oss-metrics"].innerHTML.includes("merged"), "fallback render is missing OSS PR metrics");
   assert(elements["oss-pr-list"].innerHTML.includes("prebid/prebid.github.io"), "fallback render is missing OSS PR list");
   assert(elements["project-grid"].innerHTML.includes("project-card"), "fallback render produced no project cards");
-  assert(elements["project-grid"].innerHTML.includes("fun-20260601-a-puff-pilot"), "fallback render is missing today's project");
-  assert(elements["data-notes"].innerHTML.includes("GitHub API"), "fallback render is missing data warning notes");
-
   const firstToday = data.projects.find((project) => project.today.updated);
   assert(firstToday, "fallback data has no today-updated project");
+  assert(elements["project-grid"].innerHTML.includes(firstToday.name), "fallback render is missing today's project");
+  const expectedNotes = [data.meta?.starChangeNote, ...(data.meta?.collectionWarnings || [])].filter(Boolean);
+  assert(
+    expectedNotes.length
+      ? elements["data-notes"].innerHTML.includes(expectedNotes[0])
+      : elements["data-notes"].innerHTML.includes("未检测到数据采集告警"),
+    "fallback render is missing data notes"
+  );
+
   elements.search.value = firstToday.name;
   elements.search.listeners.input({ target: elements.search });
   assert(elements["project-grid"].innerHTML.includes(firstToday.name), "fallback search did not keep target project");
@@ -260,6 +267,12 @@ function runDomFallbackSmoke(script) {
     searchedProject: firstToday.name,
     usedFallback: true
   };
+}
+
+if (process.env.DASHBOARD_DOM_SMOKE_ONLY === "1") {
+  const fallback = runDomFallbackSmoke(inlineScripts[0]);
+  console.log(`DOM smoke forced by DASHBOARD_DOM_SMOKE_ONLY: ${JSON.stringify(fallback)}`);
+  process.exit(0);
 }
 
 const browserSmoke = spawnSync(

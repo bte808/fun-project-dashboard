@@ -54,9 +54,13 @@ npm run check
 
 ```bash
 node --check scripts/collect-public-data.mjs
+node --check scripts/collect-oss-contributions.mjs
+node --check scripts/build-application-brief.mjs
 node --check scripts/smoke-test.mjs
 git diff --check
 ```
+
+GitHub Actions 会在 push、PR 和手动触发时运行同一组静态校验，并使用 `DASHBOARD_DOM_SMOKE_ONLY=1 npm run check` 验证已提交的数据快照。这个模式跳过 macOS 专属的 `WKWebView` 真机烟测，适合 Ubuntu CI；本机默认的 `npm run check` 仍会优先覆盖真实浏览器排版引擎。
 
 ## 数据从哪里来
 

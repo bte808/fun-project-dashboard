@@ -1,0 +1,36 @@
+# OSS contribution log
+
+Last verified: 2026-06-05 10:12:38 CST.
+
+This log tracks public external OSS pull requests that can be verified from GitHub. It is intentionally factual: merged PRs are separated from open PRs, and user-action blockers are called out directly.
+
+## Merged
+
+| PR | Evidence |
+| --- | --- |
+| [prebid/prebid.github.io#6598](https://github.com/prebid/prebid.github.io/pull/6598) | Merged on 2026-06-04; markdownlint and preview checks passed. |
+| [MicrosoftDocs/azure-docs#128553](https://github.com/MicrosoftDocs/azure-docs/pull/128553) | Merged on 2026-06-04; CLA and Learn Build validation passed. |
+| [OpenC3/cosmos#3445](https://github.com/OpenC3/cosmos/pull/3445) | Merged on 2026-06-04; maintainer approved, SonarCloud and security checks passed. |
+
+## Open And Green
+
+| PR | Current public state |
+| --- | --- |
+| [decentraland/docs#108](https://github.com/decentraland/docs/pull/108) | Open, mergeable, no failing checks detected. |
+| [qgis/QGIS-Website#1011](https://github.com/qgis/QGIS-Website/pull/1011) | Open, mergeable, CLA signed, no failing checks detected. |
+| [cyberark/conjur#3025](https://github.com/cyberark/conjur/pull/3025) | Open, mergeable, review required, no failing checks detected. |
+| [mia-platform/documentation#2583](https://github.com/mia-platform/documentation/pull/2583) | Open, mergeable, review required, no failing checks detected. |
+| [OWASP/wrongsecrets#2549](https://github.com/OWASP/wrongsecrets/pull/2549) | Open, mergeable, review required, no failing checks detected. |
+| [apache/rocketmq-site#785](https://github.com/apache/rocketmq-site/pull/785) | Open, mergeable, no failing checks detected. |
+| [awslabs/cdk-eks-blueprints#1252](https://github.com/awslabs/cdk-eks-blueprints/pull/1252) | Open, mergeable, review required, no failing checks detected. |
+| [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861) | Open, mergeable, review required, no failing checks detected. |
+| [vectordotdev/vector#25574](https://github.com/vectordotdev/vector/pull/25574) | Open, mergeable, CLA signed, spelling and semantic PR checks passed. |
+| [apache/cloudberry-site#373](https://github.com/apache/cloudberry-site/pull/373) | Open, mergeable, greeting check passed, review required. |
+
+## Needs User Action
+
+| PR | Blocker |
+| --- | --- |
+| [apple/container#1646](https://github.com/apple/container/pull/1646) | Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac. |
+| [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273) | Draft PR is mergeable, but CLAassistant reports the CLA is not signed. |
+

@@ -76,6 +76,7 @@ const requiredText = [
   "今日变动",
   "项目时间线",
   "OSS evidence",
+  "OSS 贡献记录",
   "复制今日摘要"
 ];
 

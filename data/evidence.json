@@ -36,6 +36,14 @@
       "date": "2026-06-05",
       "status": "open",
       "kind": "external-pr",
+      "name": "ParzivalHack/PySpector#67",
+      "url": "https://github.com/ParzivalHack/PySpector/pull/67",
+      "reason": "外部 OSS PR open：为 PySpector README 增加折叠式 FAQ，并链接到目录；验证包含 git diff --check 与 README 结构检查。"
+    },
+    {
+      "date": "2026-06-05",
+      "status": "open",
+      "kind": "external-pr",
       "name": "vectordotdev/vector#25574",
       "url": "https://github.com/vectordotdev/vector/pull/25574",
       "reason": "外部 OSS PR open：修复 aggregator 文档 typo；CLA 已通过，拼写与语义检查通过，等待评审。"
@@ -70,7 +78,7 @@
       "kind": "profile",
       "name": "bte808 profile README evidence refresh",
       "url": "https://github.com/bte808/bte808",
-      "reason": "同步 GitHub profile 门面：RTK PR 已从 draft 改为 ready for review 并补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已从 review 列表移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.6。"
+      "reason": "同步 GitHub profile 门面：新增 PySpector README FAQ PR，RTK PR 已补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.6。"
     },
     {
       "date": "2026-06-05",

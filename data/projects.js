@@ -6,7 +6,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T11:57:01.056Z",
+    "generatedAt": "2026-06-05T12:22:17.699Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -14,7 +14,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "startIso": "2026-06-04T16:00:00.000Z",
       "endIso": "2026-06-05T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 13 条公开证据置顶；当前总 star 0，今日可见 star 变化 +0。",
+    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 14 条公开证据置顶；当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
     "automationChecks": {
       "dailyIncubator": {
@@ -68,6 +68,13 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "kind": "external-pr"
       },
       {
+        "name": "ParzivalHack/PySpector#67",
+        "url": "https://github.com/ParzivalHack/PySpector/pull/67",
+        "reason": "外部 OSS PR open：为 PySpector README 增加折叠式 FAQ，并链接到目录；验证包含 git diff --check 与 README 结构检查。",
+        "status": "open",
+        "kind": "external-pr"
+      },
+      {
         "name": "vectordotdev/vector#25574",
         "url": "https://github.com/vectordotdev/vector/pull/25574",
         "reason": "外部 OSS PR open：修复 aggregator 文档 typo；CLA 已通过，拼写与语义检查通过，等待评审。",
@@ -98,7 +105,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       {
         "name": "bte808 profile README evidence refresh",
         "url": "https://github.com/bte808/bte808",
-        "reason": "同步 GitHub profile 门面：RTK PR 已从 draft 改为 ready for review 并补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已从 review 列表移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.6。",
+        "reason": "同步 GitHub profile 门面：新增 PySpector README FAQ PR，RTK PR 已补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.6。",
         "status": "profile",
         "kind": "profile"
       },

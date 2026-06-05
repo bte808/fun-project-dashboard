@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-05 19:33:03 CST.
+Last generated: 2026-06-05 19:46:35 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -9,7 +9,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - Public dashboard: [fun-project-dashboard](https://bte808.github.io/fun-project-dashboard/)
 - Dashboard source: [bte808/fun-project-dashboard](https://github.com/bte808/fun-project-dashboard)
 - Public project snapshot: 48 tracked projects, 2 updated today, 2 public commits today.
-- OSS PR snapshot last verified: 2026-06-05 19:33:34 CST.
+- OSS PR snapshot last verified: 2026-06-05 19:47:09 CST.
 - External OSS PR snapshot: 14 tracked PRs, 4 merged, 8 open with no failing checks, 2 requiring user action.
 - Release and maintenance snapshot: 5 own releases highlighted, 2 own projects updated today.
 
@@ -51,7 +51,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 ## Known User-Action Blockers
 
 - [apple/container#1646](https://github.com/apple/container/pull/1646): Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac.
-- [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273): Ready-for-review PR is mergeable, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork.
+- [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273): Ready-for-review PR has local cargo fmt, cargo test --all, and cargo clippy --all-targets verification recorded, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork.
 
 ## Reproducibility
 

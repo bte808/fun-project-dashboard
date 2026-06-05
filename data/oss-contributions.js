@@ -1,6 +1,6 @@
 window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
-  "generatedAt": "2026-06-05T11:33:34.100Z",
-  "generatedAtShanghai": "2026-06-05 19:33:34 CST",
+  "generatedAt": "2026-06-05T11:47:09.357Z",
+  "generatedAtShanghai": "2026-06-05 19:47:09 CST",
   "source": "GitHub public pull request API",
   "pullRequests": [
     {
@@ -500,10 +500,10 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergedAt": null,
       "headSha": "c65928dba99dc0da0fcd6c5fd01becbfb2445f0e",
       "note": "",
-      "blocker": "Ready-for-review PR is mergeable, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork.",
+      "blocker": "Ready-for-review PR has local cargo fmt, cargo test --all, and cargo clippy --all-targets verification recorded, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork.",
       "checks": {
-        "total": 2,
-        "passed": 1,
+        "total": 3,
+        "passed": 2,
         "failed": [],
         "pending": [
           {
@@ -519,6 +519,11 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
             "source": "check-run"
           },
           {
+            "name": "check-target",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
             "name": "license/cla",
             "state": "pending",
             "source": "status"
@@ -526,7 +531,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
         ]
       },
       "category": "needs-user-action",
-      "statusText": "Ready-for-review PR is mergeable, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork."
+      "statusText": "Ready-for-review PR has local cargo fmt, cargo test --all, and cargo clippy --all-targets verification recorded, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork."
     }
   ]
 };

@@ -6,7 +6,7 @@
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T11:33:03.661Z",
+    "generatedAt": "2026-06-05T11:46:35.640Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -77,7 +77,7 @@
       {
         "name": "rtk-ai/rtk#2273",
         "url": "https://github.com/rtk-ai/rtk/pull/2273",
-        "reason": "外部 OSS PR 已从 draft 改为 ready for review：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签，上游 CI 等待维护者批准运行。",
+        "reason": "外部 OSS PR 已从 draft 改为 ready for review：修复 gh run view --job 输出应 passthrough 的回归；本地 cargo fmt、cargo test --all 与 cargo clippy --all-targets 已通过；CLA 待签，上游 CI 等待维护者批准运行。",
         "status": "needs-action",
         "kind": "external-pr"
       },
@@ -98,7 +98,7 @@
       {
         "name": "bte808 profile README evidence refresh",
         "url": "https://github.com/bte808/bte808",
-        "reason": "同步 GitHub profile 门面：RTK PR 已从 draft 改为 ready for review，Cloudberry PR 已归入 merged，QGIS duplicate PR 已从 review 列表移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.5。",
+        "reason": "同步 GitHub profile 门面：RTK PR 已从 draft 改为 ready for review 并补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已从 review 列表移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.5。",
         "status": "profile",
         "kind": "profile"
       },

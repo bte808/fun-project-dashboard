@@ -1,6 +1,6 @@
 # OSS contribution log
 
-Last verified: 2026-06-05 19:33:34 CST.
+Last verified: 2026-06-05 19:47:09 CST.
 
 This log tracks public external OSS pull requests that can be verified from GitHub. It is intentionally factual: merged PRs are separated from open PRs, and user-action blockers are called out directly.
 
@@ -31,5 +31,5 @@ This log tracks public external OSS pull requests that can be verified from GitH
 | PR | Blocker |
 | --- | --- |
 | [apple/container#1646](https://github.com/apple/container/pull/1646) | Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac. |
-| [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273) | Ready-for-review PR is mergeable, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork. |
+| [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273) | Ready-for-review PR has local cargo fmt, cargo test --all, and cargo clippy --all-targets verification recorded, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork. |
 

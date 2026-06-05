@@ -46,7 +46,7 @@
       "kind": "external-pr",
       "name": "rtk-ai/rtk#2273",
       "url": "https://github.com/rtk-ai/rtk/pull/2273",
-      "reason": "外部 OSS PR 已从 draft 改为 ready for review：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签，上游 CI 等待维护者批准运行。"
+      "reason": "外部 OSS PR 已从 draft 改为 ready for review：修复 gh run view --job 输出应 passthrough 的回归；本地 cargo fmt、cargo test --all 与 cargo clippy --all-targets 已通过；CLA 待签，上游 CI 等待维护者批准运行。"
     },
     {
       "date": "2026-06-05",
@@ -70,7 +70,7 @@
       "kind": "profile",
       "name": "bte808 profile README evidence refresh",
       "url": "https://github.com/bte808/bte808",
-      "reason": "同步 GitHub profile 门面：RTK PR 已从 draft 改为 ready for review，Cloudberry PR 已归入 merged，QGIS duplicate PR 已从 review 列表移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.5。"
+      "reason": "同步 GitHub profile 门面：RTK PR 已从 draft 改为 ready for review 并补充本地 cargo 验证，Cloudberry PR 已归入 merged，QGIS duplicate PR 已从 review 列表移除，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.5。"
     },
     {
       "date": "2026-06-05",

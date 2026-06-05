@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-05 15:57:48 CST.
+Last generated: 2026-06-05 16:08:03 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -15,7 +15,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 
 ## Dashboard Evidence Infrastructure
 
-- [Latest release: fun-project-dashboard v0.2.4](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4): Refreshes merged external OSS evidence and generates the reviewer packet from the same source data as the application brief.
+- [Latest release: fun-project-dashboard v0.2.5](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.5): Keeps the public evidence dashboard CI on current GitHub action majors while preserving release-alignment and committed-data smoke checks.
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml): Public GitHub Actions workflow for Node syntax checks and committed-data smoke verification.
 - [GitHub Pages deployment workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment): Public deployment workflow for the live dashboard.
 - [MIT License](https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE): GitHub license API recognizes the repository as MIT-licensed.
@@ -43,7 +43,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 
 ## Own Project Releases
 
-- [fun-project-dashboard v0.2.4](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4): Released a fresh evidence snapshot after apache/cloudberry-site#373 merged, and made the reviewer packet generated from the same data as the application brief.
+- [fun-project-dashboard v0.2.5](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.5): Released CI action maintenance by moving Dashboard CI to actions/checkout@v6 and actions/setup-node@v6 while preserving evidence-alignment checks.
 - [maintainer-signal-board v0.7.1](https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.1): Released GitHub search PR import support for cross-repository review sweeps, with merged PR rows normalized out of open maintainer load.
 - [fun-20260604-b-safe-payout-card v0.2.0](https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0): Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.
 - [fun-20260604-a-star-sling v1.0.1](https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1): Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.
@@ -70,7 +70,7 @@ The generated artifacts are:
 
 - [dashboard page](https://bte808.github.io/fun-project-dashboard/)
 - [reviewer packet](https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md)
-- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4)
+- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.5)
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
 - [OSS contribution log](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md)
 - [machine-readable OSS PR snapshot](https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json)

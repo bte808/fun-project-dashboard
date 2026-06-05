@@ -6,7 +6,7 @@
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T07:57:48.275Z",
+    "generatedAt": "2026-06-05T08:08:03.072Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -89,9 +89,9 @@
         "kind": "external-pr"
       },
       {
-        "name": "fun-project-dashboard v0.2.4",
-        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.4",
-        "reason": "刷新外部 OSS 证据并发布 reviewer packet 生成器；Cloudberry PR 已 merged，brief 与 reviewer packet 可通过 npm run brief 一起生成。",
+        "name": "fun-project-dashboard v0.2.5",
+        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.5",
+        "reason": "发布 CI action maintenance；Dashboard CI 升级到 actions/checkout@v6 和 actions/setup-node@v6，并保持 release evidence alignment 与 DOM smoke 通过。",
         "status": "release",
         "kind": "own-release"
       },

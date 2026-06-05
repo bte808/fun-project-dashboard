@@ -755,6 +755,11 @@
           <p class="panel-note">A compact public trail for reviewers: what was built, how it is verified, and how the repository handles basic OSS maintenance.</p>
           <ul class="packet-list">
             <li>
+              <strong>Reviewer packet</strong>
+              <a href="https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md">One-page review checklist</a>
+              <span>Compact public trail for release, CI, Pages, OSS status, license, and governance.</span>
+            </li>
+            <li>
               <strong>Application brief</strong>
               <a href="https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md">Codex OSS evidence brief</a>
               <span>Reviewer-facing summary of merged PRs, open PRs, releases, CI, Pages, license, and governance.</span>
@@ -872,7 +877,7 @@
       </div>
     </main>
 
-    <footer id="footer">Dashboard version 0.2.2</footer>
+    <footer id="footer">Dashboard version 0.2.3</footer>
   </div>
 
   <script src="data/projects.js"></script>
@@ -1378,7 +1383,7 @@
       elements.subtitle.textContent = `${dashboardData.meta.todayStory} 数据源：${dashboardData.meta.source}。`;
       elements.repoLink.href = dashboardData.meta.repositoryUrl;
       elements.todayStory.textContent = dashboardData.meta.todayStory;
-      elements.footer.textContent = `Dashboard version 0.2.2 · 最近更新时间 ${formatDateTime(dashboardData.meta.generatedAt)} · ${dashboardData.meta.scanRule}`;
+      elements.footer.textContent = `Dashboard version 0.2.3 · 最近更新时间 ${formatDateTime(dashboardData.meta.generatedAt)} · ${dashboardData.meta.scanRule}`;
 
       renderMetrics();
       renderHighlights();

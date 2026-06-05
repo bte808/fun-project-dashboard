@@ -20,6 +20,7 @@ const ossContributionsText = await readFile("data/oss-contributions.json", "utf8
 const ossContributionsScript = await readFile("data/oss-contributions.js", "utf8");
 const ossContributionLog = await readFile("docs/oss-contribution-log.md", "utf8");
 const applicationBrief = await readFile("docs/codex-oss-application-brief.md", "utf8");
+const reviewerPacket = await readFile("docs/reviewer-packet.md", "utf8");
 const packageText = await readFile("package.json", "utf8");
 const evidenceText = await readFile("data/evidence.json", "utf8").catch((error) => {
   if (error.code === "ENOENT") return "{\"highlights\":[]}";
@@ -67,6 +68,9 @@ assert(applicationBrief.includes("MIT License"), "application brief missing lice
 assert(applicationBrief.includes("DASHBOARD_DOM_SMOKE_ONLY=1 npm run check"), "application brief missing CI-compatible smoke command");
 assert(applicationBrief.includes("prebid/prebid.github.io#6598"), "application brief missing merged PR evidence");
 assert(applicationBrief.includes("Known User-Action Blockers"), "application brief missing blocker section");
+assert(reviewerPacket.includes(dashboardReleaseName), "reviewer packet missing latest dashboard release evidence");
+assert(reviewerPacket.includes("Dashboard CI workflow"), "reviewer packet missing CI workflow link");
+assert(reviewerPacket.includes("npm run check:release"), "reviewer packet missing release alignment command");
 for (const item of expectedEvidenceHighlights) {
   assert(
     (data.meta.highlights || []).some((highlight) => highlight.name === item.name && highlight.url === item.url),
@@ -110,6 +114,7 @@ const requiredText = [
   "项目时间线",
   "OSS evidence",
   "Reviewer packet / 申请包",
+  "One-page review checklist",
   "Application brief",
   "Dashboard CI workflow",
   "MIT License",

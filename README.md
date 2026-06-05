@@ -2,7 +2,7 @@
 
 [![Dashboard CI](https://github.com/bte808/fun-project-dashboard/workflows/Dashboard%20CI/badge.svg)](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
 [![Pages deployment](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment)
-[在线仪表盘](https://bte808.github.io/fun-project-dashboard/) · [申请证据 brief](https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md) · [OSS 贡献记录](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md) · [贡献指南](CONTRIBUTING.md) · [安全说明](SECURITY.md)
+[在线仪表盘](https://bte808.github.io/fun-project-dashboard/) · [Reviewer packet](https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md) · [申请证据 brief](https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md) · [OSS 贡献记录](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md) · [贡献指南](CONTRIBUTING.md) · [安全说明](SECURITY.md)
 
 这是 `bte808` 账号下每日趣味项目体系的公开总览页。它只负责汇总和展示已经发布的公开项目，不负责孵化新玩具，也不修改旧项目功能。
 
@@ -97,14 +97,14 @@ GitHub Actions 会在 push、PR 和手动触发时运行同一组静态校验，
 ## 最近一次自动刷新
 
 - 日期：2026-06-05（Asia/Shanghai）
-- 最近更新时间：2026-06-05 15:04:07
+- 最近更新时间：2026-06-05 15:15:19
 - 公开项目总数：48
 - 今日新建项目：0
 - 今日更新项目：2
 - 今日公开 commit：2
 - 总 star：0
 - 今日可见 star 变化：+0（按 GitHub 公开 stargazers 数据估算；无法识别当天已取消的 star）
-- 公开检测结果：今日检测到 Star Sling 和 Safe Payout Card 维护提交；另有 12 条 OSS/release 证据置顶，包括 3 个已 merged 的外部 OSS PR、fun-project-dashboard v0.2.2、多个待评审 PR 和近期 release。
+- 公开检测结果：今日检测到 Star Sling 和 Safe Payout Card 维护提交；另有 12 条 OSS/release 证据置顶，包括 3 个已 merged 的外部 OSS PR、fun-project-dashboard v0.2.3、多个待评审 PR 和近期 release。
 
 手动刷新数据：
 

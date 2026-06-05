@@ -25,9 +25,9 @@ function listRows(items, mapper) {
 
 const dashboardEvidenceInfrastructure = [
   {
-    label: "Latest release: fun-project-dashboard v0.2.2",
-    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.2",
-    note: "Adds CI release-alignment checks so package metadata, live page version, curated evidence, generated data, and reviewer brief stay in sync."
+    label: "Latest release: fun-project-dashboard v0.2.3",
+    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.3",
+    note: "Adds a standalone reviewer packet and keeps it wired into the live dashboard, README, generated evidence, and CI alignment checks."
   },
   {
     label: "Dashboard CI workflow",
@@ -58,7 +58,7 @@ const dashboardEvidenceInfrastructure = [
 
 function releaseReason(item) {
   const notes = {
-    "fun-project-dashboard v0.2.2": "Released the release alignment guard: CI now checks package metadata, live page version, curated evidence, generated data, and reviewer brief for a single dashboard release version.",
+    "fun-project-dashboard v0.2.3": "Released the standalone reviewer packet: a one-page public checklist for release, CI, Pages, OSS PR status, license, governance, and reproducibility evidence.",
     "maintainer-signal-board v0.7.0": "Released saved view presets; issue #12 closed; CI, Pages, local browser smoke, and live browser smoke passed.",
     "fun-20260604-b-safe-payout-card v0.2.0": "Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.",
     "fun-20260604-a-star-sling v1.0.1": "Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.",
@@ -145,7 +145,8 @@ DASHBOARD_DOM_SMOKE_ONLY=1 npm run check
 The generated artifacts are:
 
 - ${markdownLink("dashboard page", "https://bte808.github.io/fun-project-dashboard/")}
-- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.2")}
+- ${markdownLink("reviewer packet", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md")}
+- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.3")}
 - ${markdownLink("Dashboard CI workflow", "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml")}
 - ${markdownLink("OSS contribution log", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md")}
 - ${markdownLink("machine-readable OSS PR snapshot", "https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json")}

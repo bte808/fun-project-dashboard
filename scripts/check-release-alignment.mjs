@@ -17,6 +17,7 @@ const [
   projectsData,
   projectsScript,
   applicationBrief,
+  reviewerPacket,
   briefBuilder,
   readme
 ] = await Promise.all([
@@ -26,6 +27,7 @@ const [
   readJson("data/projects.json"),
   readFile("data/projects.js", "utf8"),
   readFile("docs/codex-oss-application-brief.md", "utf8"),
+  readFile("docs/reviewer-packet.md", "utf8"),
   readFile("scripts/build-application-brief.mjs", "utf8"),
   readFile("README.md", "utf8")
 ]);
@@ -39,7 +41,9 @@ const footerText = `Dashboard version ${version}`;
 assert(/^\d+\.\d+\.\d+$/.test(version), `package version is not semver-like: ${version}`);
 assert(html.includes(footerText), "index.html footer version does not match package.json");
 assert(html.includes("Reviewer packet / 申请包"), "index.html is missing the reviewer packet panel");
+assert(html.includes("docs/reviewer-packet.md"), "index.html reviewer packet panel does not link to docs/reviewer-packet.md");
 assert(readme.includes(releaseName), "README latest refresh summary does not mention the package release");
+assert(readme.includes("docs/reviewer-packet.md"), "README does not link to docs/reviewer-packet.md");
 
 const evidenceHighlights = Array.isArray(evidenceData.highlights) ? evidenceData.highlights : [];
 assert(
@@ -58,8 +62,14 @@ assert(projectsScript.includes(releaseUrl), "data/projects.js is missing the gen
 assert(applicationBrief.includes(releaseName), "application brief is missing the package release");
 assert(applicationBrief.includes(releaseUrl), "application brief is missing the package release URL");
 assert(applicationBrief.includes("Dashboard Evidence Infrastructure"), "application brief is missing dashboard infrastructure evidence");
+assert(reviewerPacket.includes(releaseName), "reviewer packet is missing the package release");
+assert(reviewerPacket.includes(releaseUrl), "reviewer packet is missing the package release URL");
+assert(reviewerPacket.includes("Dashboard CI workflow"), "reviewer packet is missing the CI workflow link");
+assert(reviewerPacket.includes("Pages deployment workflow"), "reviewer packet is missing the Pages workflow link");
+assert(reviewerPacket.includes("npm run check:release"), "reviewer packet is missing the release alignment command");
 assert(briefBuilder.includes(releaseName), "brief generator is missing the package release");
 assert(briefBuilder.includes(releaseUrl), "brief generator is missing the package release URL");
+assert(briefBuilder.includes("docs/reviewer-packet.md"), "brief generator is missing the reviewer packet artifact link");
 
 console.log(JSON.stringify({
   ok: true,

@@ -7,7 +7,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     "dashboardVersion": "0.2.8",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T13:15:08.873Z",
+    "generatedAt": "2026-06-05T13:23:20.549Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -113,7 +113,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       {
         "name": "bte808 profile README evidence refresh",
         "url": "https://github.com/bte808/bte808",
-        "reason": "同步 GitHub profile 门面：新增 PySpector README FAQ PR 与 reporting test PR，RTK PR 已补充本地 cargo 验证，Cloudberry PR 已归入 merged，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.8。",
+        "reason": "同步 GitHub profile 门面：新增 Codex OSS application brief 直达入口，保留 PySpector README FAQ PR 与 reporting test PR，RTK PR 已补充本地 cargo 验证，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.8。",
         "status": "profile",
         "kind": "profile"
       },

@@ -20,13 +20,17 @@ const ossContributionsText = await readFile("data/oss-contributions.json", "utf8
 const ossContributionsScript = await readFile("data/oss-contributions.js", "utf8");
 const ossContributionLog = await readFile("docs/oss-contribution-log.md", "utf8");
 const applicationBrief = await readFile("docs/codex-oss-application-brief.md", "utf8");
+const packageText = await readFile("package.json", "utf8");
 const evidenceText = await readFile("data/evidence.json", "utf8").catch((error) => {
   if (error.code === "ENOENT") return "{\"highlights\":[]}";
   throw error;
 });
 const data = JSON.parse(jsonText);
 const ossContributions = JSON.parse(ossContributionsText);
+const packageData = JSON.parse(packageText);
 const evidence = JSON.parse(evidenceText);
+const dashboardReleaseName = `fun-project-dashboard v${packageData.version}`;
+const dashboardVersionText = `Dashboard version ${packageData.version}`;
 const expectedEvidenceHighlights = (Array.isArray(evidence.highlights) ? evidence.highlights : [])
   .filter((item) => (!item.date || item.date === data.meta?.runDate) && item.name && item.url && item.reason);
 const dashboardPath = fileURLToPath(new URL("../index.html", import.meta.url));
@@ -57,7 +61,7 @@ assert(ossContributionLog.includes("Needs User Action"), "OSS contribution log m
 assert(applicationBrief.includes(ossContributions.generatedAtShanghai), "application brief timestamp does not match OSS JSON");
 assert(applicationBrief.includes("Codex for OSS application evidence brief"), "application brief missing title");
 assert(applicationBrief.includes("Dashboard Evidence Infrastructure"), "application brief missing dashboard infrastructure section");
-assert(applicationBrief.includes("fun-project-dashboard v0.2.1"), "application brief missing latest dashboard release evidence");
+assert(applicationBrief.includes(dashboardReleaseName), "application brief missing latest dashboard release evidence");
 assert(applicationBrief.includes("Dashboard CI workflow"), "application brief missing CI evidence");
 assert(applicationBrief.includes("MIT License"), "application brief missing license evidence");
 assert(applicationBrief.includes("DASHBOARD_DOM_SMOKE_ONLY=1 npm run check"), "application brief missing CI-compatible smoke command");
@@ -126,7 +130,7 @@ assert(html.includes("function normalizeSearchText"), "index.html is missing sea
 assert(html.includes("navigator.clipboard"), "index.html is missing clipboard support");
 assert(html.includes("overflow-wrap: anywhere"), "index.html is missing overflow-wrap protection for long content");
 assert(html.includes("@media (max-width: 760px)"), "index.html is missing the mobile layout breakpoint");
-assert(html.includes("Dashboard version 0.2.1"), "index.html footer version is not aligned with the latest release");
+assert(html.includes(dashboardVersionText), "index.html footer version is not aligned with the latest release");
 
 function createFakeElement(id = "") {
   return {

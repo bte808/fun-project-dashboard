@@ -6,7 +6,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T06:52:17.435Z",
+    "generatedAt": "2026-06-05T07:04:07.267Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -89,9 +89,9 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "kind": "external-pr"
       },
       {
-        "name": "fun-project-dashboard v0.2.1",
-        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.1",
-        "reason": "发布 reviewer packet dashboard；在线页面一屏展示申请 brief、CI workflow、Pages demo、OSS 状态记录、MIT license 与治理文档。",
+        "name": "fun-project-dashboard v0.2.2",
+        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.2",
+        "reason": "发布 release alignment guard；CI 会检查 package、页面 footer、evidence、brief 与 generated data 是否指向同一个 dashboard release。",
         "status": "release",
         "kind": "own-release"
       },

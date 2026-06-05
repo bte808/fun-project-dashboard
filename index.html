@@ -872,7 +872,7 @@
       </div>
     </main>
 
-    <footer id="footer">Dashboard version 0.2.1</footer>
+    <footer id="footer">Dashboard version 0.2.2</footer>
   </div>
 
   <script src="data/projects.js"></script>
@@ -1378,7 +1378,7 @@
       elements.subtitle.textContent = `${dashboardData.meta.todayStory} 数据源：${dashboardData.meta.source}。`;
       elements.repoLink.href = dashboardData.meta.repositoryUrl;
       elements.todayStory.textContent = dashboardData.meta.todayStory;
-      elements.footer.textContent = `Dashboard version 0.2.1 · 最近更新时间 ${formatDateTime(dashboardData.meta.generatedAt)} · ${dashboardData.meta.scanRule}`;
+      elements.footer.textContent = `Dashboard version 0.2.2 · 最近更新时间 ${formatDateTime(dashboardData.meta.generatedAt)} · ${dashboardData.meta.scanRule}`;
 
       renderMetrics();
       renderHighlights();

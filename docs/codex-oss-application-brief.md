@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-05 14:52:17 CST.
+Last generated: 2026-06-05 15:04:07 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -15,7 +15,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 
 ## Dashboard Evidence Infrastructure
 
-- [Latest release: fun-project-dashboard v0.2.1](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.1): Publishes the live reviewer packet dashboard with brief, CI, Pages, OSS status, license, and governance links.
+- [Latest release: fun-project-dashboard v0.2.2](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.2): Adds CI release-alignment checks so package metadata, live page version, curated evidence, generated data, and reviewer brief stay in sync.
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml): Public GitHub Actions workflow for Node syntax checks and committed-data smoke verification.
 - [GitHub Pages deployment workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment): Public deployment workflow for the live dashboard.
 - [MIT License](https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE): GitHub license API recognizes the repository as MIT-licensed.
@@ -43,7 +43,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 
 ## Own Project Releases
 
-- [fun-project-dashboard v0.2.1](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.1): Released the reviewer packet dashboard: live page now surfaces the application brief, CI workflow, Pages demo, OSS status log, MIT license, and governance docs in one public panel.
+- [fun-project-dashboard v0.2.2](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.2): Released the release alignment guard: CI now checks package metadata, live page version, curated evidence, generated data, and reviewer brief for a single dashboard release version.
 - [maintainer-signal-board v0.7.0](https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.0): Released saved view presets; issue #12 closed; CI, Pages, local browser smoke, and live browser smoke passed.
 - [fun-20260604-b-safe-payout-card v0.2.0](https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0): Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.
 - [fun-20260604-a-star-sling v1.0.1](https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1): Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.
@@ -69,7 +69,7 @@ DASHBOARD_DOM_SMOKE_ONLY=1 npm run check
 The generated artifacts are:
 
 - [dashboard page](https://bte808.github.io/fun-project-dashboard/)
-- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.1)
+- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.2)
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
 - [OSS contribution log](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md)
 - [machine-readable OSS PR snapshot](https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json)

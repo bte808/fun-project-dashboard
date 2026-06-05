@@ -28,7 +28,11 @@ jobs:
           node --check scripts/collect-public-data.mjs
           node --check scripts/collect-oss-contributions.mjs
           node --check scripts/build-application-brief.mjs
+          node --check scripts/check-release-alignment.mjs
           node --check scripts/smoke-test.mjs
+
+      - name: Check release evidence alignment
+        run: npm run check:release
 
       - name: Run committed data smoke test
         run: npm run check

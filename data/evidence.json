@@ -60,9 +60,9 @@
       "date": "2026-06-05",
       "status": "release",
       "kind": "own-release",
-      "name": "fun-project-dashboard v0.2.0",
-      "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0",
-      "reason": "发布 CI-backed OSS evidence dashboard；包含申请 brief、公开 CI、Pages 状态 badge、MIT license、贡献指南、安全说明与 issue templates。"
+      "name": "fun-project-dashboard v0.2.1",
+      "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.1",
+      "reason": "发布 reviewer packet dashboard；在线页面一屏展示申请 brief、CI workflow、Pages demo、OSS 状态记录、MIT license 与治理文档。"
     },
     {
       "date": "2026-06-05",

@@ -57,8 +57,8 @@ assert(ossContributionLog.includes("Needs User Action"), "OSS contribution log m
 assert(applicationBrief.includes(ossContributions.generatedAtShanghai), "application brief timestamp does not match OSS JSON");
 assert(applicationBrief.includes("Codex for OSS application evidence brief"), "application brief missing title");
 assert(applicationBrief.includes("Dashboard Evidence Infrastructure"), "application brief missing dashboard infrastructure section");
-assert(applicationBrief.includes("fun-project-dashboard v0.2.0"), "application brief missing latest dashboard release evidence");
-assert(applicationBrief.includes("Dashboard CI green run"), "application brief missing CI evidence");
+assert(applicationBrief.includes("fun-project-dashboard v0.2.1"), "application brief missing latest dashboard release evidence");
+assert(applicationBrief.includes("Dashboard CI workflow"), "application brief missing CI evidence");
 assert(applicationBrief.includes("MIT License"), "application brief missing license evidence");
 assert(applicationBrief.includes("DASHBOARD_DOM_SMOKE_ONLY=1 npm run check"), "application brief missing CI-compatible smoke command");
 assert(applicationBrief.includes("prebid/prebid.github.io#6598"), "application brief missing merged PR evidence");
@@ -126,7 +126,7 @@ assert(html.includes("function normalizeSearchText"), "index.html is missing sea
 assert(html.includes("navigator.clipboard"), "index.html is missing clipboard support");
 assert(html.includes("overflow-wrap: anywhere"), "index.html is missing overflow-wrap protection for long content");
 assert(html.includes("@media (max-width: 760px)"), "index.html is missing the mobile layout breakpoint");
-assert(html.includes("Dashboard version 0.2.0"), "index.html footer version is not aligned with the latest release");
+assert(html.includes("Dashboard version 0.2.1"), "index.html footer version is not aligned with the latest release");
 
 function createFakeElement(id = "") {
   return {

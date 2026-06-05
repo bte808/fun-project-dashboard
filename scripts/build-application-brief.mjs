@@ -25,19 +25,19 @@ function listRows(items, mapper) {
 
 const dashboardEvidenceInfrastructure = [
   {
-    label: "Latest release: fun-project-dashboard v0.2.0",
-    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0",
-    note: "Publishes the CI-backed OSS evidence dashboard with reviewer brief links, governance docs, status badges, and verification evidence."
+    label: "Latest release: fun-project-dashboard v0.2.1",
+    url: "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.1",
+    note: "Publishes the live reviewer packet dashboard with brief, CI, Pages, OSS status, license, and governance links."
   },
   {
-    label: "Dashboard CI green run",
-    url: "https://github.com/bte808/fun-project-dashboard/actions/runs/26999250848",
-    note: "Public GitHub Actions run for Node syntax checks and committed-data smoke verification."
+    label: "Dashboard CI workflow",
+    url: "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml",
+    note: "Public GitHub Actions workflow for Node syntax checks and committed-data smoke verification."
   },
   {
-    label: "GitHub Pages deployment",
-    url: "https://github.com/bte808/fun-project-dashboard/actions/runs/26999250497",
-    note: "Public deployment run for the live dashboard."
+    label: "GitHub Pages deployment workflow",
+    url: "https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment",
+    note: "Public deployment workflow for the live dashboard."
   },
   {
     label: "MIT License",
@@ -58,7 +58,7 @@ const dashboardEvidenceInfrastructure = [
 
 function releaseReason(item) {
   const notes = {
-    "fun-project-dashboard v0.2.0": "Released the CI-backed OSS evidence dashboard with application brief links, public CI, Pages status badges, MIT license, contributing guide, security policy, code of conduct, and issue templates.",
+    "fun-project-dashboard v0.2.1": "Released the reviewer packet dashboard: live page now surfaces the application brief, CI workflow, Pages demo, OSS status log, MIT license, and governance docs in one public panel.",
     "maintainer-signal-board v0.7.0": "Released saved view presets; issue #12 closed; CI, Pages, local browser smoke, and live browser smoke passed.",
     "fun-20260604-b-safe-payout-card v0.2.0": "Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.",
     "fun-20260604-a-star-sling v1.0.1": "Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.",
@@ -145,7 +145,7 @@ DASHBOARD_DOM_SMOKE_ONLY=1 npm run check
 The generated artifacts are:
 
 - ${markdownLink("dashboard page", "https://bte808.github.io/fun-project-dashboard/")}
-- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.0")}
+- ${markdownLink("latest dashboard release", "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.1")}
 - ${markdownLink("Dashboard CI workflow", "https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml")}
 - ${markdownLink("OSS contribution log", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md")}
 - ${markdownLink("machine-readable OSS PR snapshot", "https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json")}

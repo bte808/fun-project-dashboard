@@ -6,7 +6,7 @@
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
     "runDate": "2026-06-05",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-04T18:17:51.725Z",
+    "generatedAt": "2026-06-05T01:23:16.958Z",
     "generatedAtShanghaiDate": "2026-06-05",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
@@ -14,7 +14,7 @@
       "startIso": "2026-06-04T16:00:00.000Z",
       "endIso": "2026-06-05T15:59:59.999Z"
     },
-    "todayStory": "今天未检测到公开趣味项目仓库的可见变动；当前总 star 0，今日可见 star 变化 +0。",
+    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另外新增外部 OSS PR rtk-ai/rtk#2273，并为 3 个近期项目补齐 release 证据。当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
     "automationChecks": {
       "dailyIncubator": {
@@ -23,29 +23,50 @@
         "note": "未检测到今天新建的公开 fun-* 项目。"
       },
       "oldProjectMaintenance": {
-        "status": "not_detected",
-        "label": "未检测到",
-        "note": "未检测到今天维护旧项目的公开 commit。"
+        "status": "detected",
+        "label": "已检测到",
+        "note": "检测到 2 个旧项目今天有公开 commit。"
       },
       "wednesdayBooster": {
         "status": "not_detected",
         "label": "未检测到",
-        "note": "未检测到周三加料结果；今日 commit 信息为：无可见提交。"
+        "note": "未检测到周三加料结果；今日 commit 信息为：有提交但无加料标识。"
       },
       "sundayHealthCheck": {
-        "status": "not_detected",
-        "label": "未检测到",
-        "note": "未检测到周日体检结果。"
+        "status": "detected",
+        "label": "已检测到",
+        "note": "检测到 1 个疑似周日体检相关 commit。"
       }
     },
-    "highlights": [],
+    "highlights": [
+      {
+        "name": "rtk-ai/rtk#2273",
+        "url": "https://github.com/rtk-ai/rtk/pull/2273",
+        "reason": "外部 OSS draft PR：修复 gh run view --job 输出应 passthrough 的回归；当前 mergeable，CLA 待签。"
+      },
+      {
+        "name": "fun-20260604-b-safe-payout-card v0.2.0",
+        "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0",
+        "reason": "发布 audit trail export；issue #1 已关闭，验证包含 core test 与 desktop/mobile browser smoke。"
+      },
+      {
+        "name": "fun-20260604-a-star-sling v1.0.1",
+        "url": "https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1",
+        "reason": "发布自包含 browser smoke 修复；live GitHub Pages URL 已通过 desktop/mobile 验证。"
+      },
+      {
+        "name": "fun-20260604-c-construct-canvas v1.0.0",
+        "url": "https://github.com/bte808/fun-20260604-c-construct-canvas/releases/tag/v1.0.0",
+        "reason": "发布初始公开版本；已有 Node tests、browser smoke 与 GitHub Pages demo。"
+      }
+    ],
     "collectionWarnings": []
   },
   "metrics": {
     "totalProjects": 48,
     "todayNew": 0,
-    "todayUpdated": 0,
-    "todayCommits": 0,
+    "todayUpdated": 2,
+    "todayCommits": 2,
     "totalStars": 0,
     "todayStarDelta": 0,
     "needsReview": 34,
@@ -60,12 +81,12 @@
       "description": "A tiny no-dependency daily canvas game about slinging a star core through a constellation field.",
       "defaultBranch": "main",
       "createdAt": "2026-06-04T02:56:19Z",
-      "updatedAt": "2026-06-04T02:56:35Z",
+      "updatedAt": "2026-06-04T19:51:58Z",
       "createdDateShanghai": "2026-06-04",
-      "updatedDateShanghai": "2026-06-04",
+      "updatedDateShanghai": "2026-06-05",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 38384,
+        "JavaScript": 39592,
         "CSS": 4215,
         "HTML": 2945
       },
@@ -84,10 +105,60 @@
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "da6975ff6fc01744a2bcffdbbb68afdcf223e7e1",
+            "shortSha": "da6975f",
+            "url": "https://github.com/bte808/fun-20260604-a-star-sling/commit/da6975ff6fc01744a2bcffdbbb68afdcf223e7e1",
+            "message": "Make browser smoke test self-contained",
+            "committedAt": "2026-06-04T19:51:52Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 2,
+                "deletions": 0,
+                "changes": 2
+              },
+              {
+                "filename": "package.json",
+                "status": "modified",
+                "additions": 1,
+                "deletions": 1,
+                "changes": 2
+              },
+              {
+                "filename": "scripts/browser-smoke.mjs",
+                "status": "modified",
+                "additions": 45,
+                "deletions": 7,
+                "changes": 52
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "package.json",
+            "status": "modified",
+            "additions": 1,
+            "deletions": 1
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 2,
+            "deletions": 0
+          },
+          {
+            "filename": "scripts/browser-smoke.mjs",
+            "status": "modified",
+            "additions": 45,
+            "deletions": 7
+          }
+        ]
       },
       "needsReview": false,
       "visibilitySource": "GitHub public repository data"
@@ -98,14 +169,14 @@
       "description": "Local-first safe payout calculator for indie makers and small operators.",
       "defaultBranch": "main",
       "createdAt": "2026-06-04T02:37:44Z",
-      "updatedAt": "2026-06-04T02:37:57Z",
+      "updatedAt": "2026-06-04T19:46:44Z",
       "createdDateShanghai": "2026-06-04",
-      "updatedDateShanghai": "2026-06-04",
+      "updatedDateShanghai": "2026-06-05",
       "primaryLanguage": "JavaScript",
       "languages": {
-        "JavaScript": 32637,
-        "CSS": 6234,
-        "HTML": 6215
+        "JavaScript": 39146,
+        "HTML": 7185,
+        "CSS": 6826
       },
       "type": "效率工具",
       "stars": {
@@ -122,10 +193,125 @@
       },
       "today": {
         "created": false,
-        "updated": false,
-        "commitCount": 0,
-        "commits": [],
-        "files": []
+        "updated": true,
+        "commitCount": 1,
+        "commits": [
+          {
+            "sha": "16f94f26d95d9f846b4f308e9398228c110e22e8",
+            "shortSha": "16f94f2",
+            "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card/commit/16f94f26d95d9f846b4f308e9398228c110e22e8",
+            "message": "Add payout audit trail export",
+            "committedAt": "2026-06-04T19:46:37Z",
+            "files": [
+              {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 7,
+                "deletions": 3,
+                "changes": 10
+              },
+              {
+                "filename": "index.html",
+                "status": "modified",
+                "additions": 22,
+                "deletions": 0,
+                "changes": 22
+              },
+              {
+                "filename": "package.json",
+                "status": "modified",
+                "additions": 1,
+                "deletions": 1,
+                "changes": 2
+              },
+              {
+                "filename": "scripts/verify-browser.mjs",
+                "status": "modified",
+                "additions": 11,
+                "deletions": 0,
+                "changes": 11
+              },
+              {
+                "filename": "src/app.js",
+                "status": "modified",
+                "additions": 55,
+                "deletions": 3,
+                "changes": 58
+              },
+              {
+                "filename": "src/core.js",
+                "status": "modified",
+                "additions": 109,
+                "deletions": 0,
+                "changes": 109
+              },
+              {
+                "filename": "styles.css",
+                "status": "modified",
+                "additions": 38,
+                "deletions": 0,
+                "changes": 38
+              },
+              {
+                "filename": "tests/core.test.mjs",
+                "status": "modified",
+                "additions": 18,
+                "deletions": 0,
+                "changes": 18
+              }
+            ]
+          }
+        ],
+        "files": [
+          {
+            "filename": "index.html",
+            "status": "modified",
+            "additions": 22,
+            "deletions": 0
+          },
+          {
+            "filename": "package.json",
+            "status": "modified",
+            "additions": 1,
+            "deletions": 1
+          },
+          {
+            "filename": "README.md",
+            "status": "modified",
+            "additions": 7,
+            "deletions": 3
+          },
+          {
+            "filename": "scripts/verify-browser.mjs",
+            "status": "modified",
+            "additions": 11,
+            "deletions": 0
+          },
+          {
+            "filename": "src/app.js",
+            "status": "modified",
+            "additions": 55,
+            "deletions": 3
+          },
+          {
+            "filename": "src/core.js",
+            "status": "modified",
+            "additions": 109,
+            "deletions": 0
+          },
+          {
+            "filename": "styles.css",
+            "status": "modified",
+            "additions": 38,
+            "deletions": 0
+          },
+          {
+            "filename": "tests/core.test.mjs",
+            "status": "modified",
+            "additions": 18,
+            "deletions": 0
+          }
+        ]
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"

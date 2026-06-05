@@ -78,14 +78,14 @@ git diff --check
 ## 最近一次自动刷新
 
 - 日期：2026-06-05（Asia/Shanghai）
-- 最近更新时间：2026-06-05 02:17:51
+- 最近更新时间：2026-06-05 09:23:16
 - 公开项目总数：48
 - 今日新建项目：0
-- 今日更新项目：0
-- 今日公开 commit：0
+- 今日更新项目：2
+- 今日公开 commit：2
 - 总 star：0
 - 今日可见 star 变化：+0（按 GitHub 公开 stargazers 数据估算；无法识别当天已取消的 star）
-- 公开检测结果：每日孵化未检测到；旧项目维护未检测到；周三加料未检测到；周日体检未检测到。
+- 公开检测结果：今日检测到 Star Sling 和 Safe Payout Card 维护提交；另有外部 OSS draft PR [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273)，CLA 待签。
 
 手动刷新数据：
 

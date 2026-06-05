@@ -414,6 +414,38 @@
       overflow-wrap: anywhere;
     }
 
+    .packet-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .packet-list li {
+      display: grid;
+      gap: 5px;
+      min-width: 0;
+      border-left: 3px solid var(--teal);
+      padding-left: 12px;
+    }
+
+    .packet-list strong,
+    .packet-list a,
+    .packet-list span {
+      overflow-wrap: anywhere;
+    }
+
+    .packet-list strong {
+      font-size: 0.88rem;
+    }
+
+    .packet-list span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
     .project-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -659,6 +691,7 @@
 
       .metric-grid,
       .oss-metrics,
+      .packet-list,
       .project-grid,
       .toolbar {
         grid-template-columns: 1fr;
@@ -710,6 +743,48 @@
             <p id="evidence-summary" class="panel-note">待补充</p>
             <ul id="highlights" class="highlight-list"></ul>
           </div>
+        </div>
+      </section>
+
+      <section class="panel reviewer-packet" aria-label="Reviewer packet">
+        <div class="panel-header">
+          <h2>Reviewer packet / 申请包</h2>
+          <a href="https://github.com/bte808/fun-project-dashboard/releases/latest">Latest release</a>
+        </div>
+        <div class="panel-body">
+          <p class="panel-note">A compact public trail for reviewers: what was built, how it is verified, and how the repository handles basic OSS maintenance.</p>
+          <ul class="packet-list">
+            <li>
+              <strong>Application brief</strong>
+              <a href="https://github.com/bte808/fun-project-dashboard/blob/main/docs/codex-oss-application-brief.md">Codex OSS evidence brief</a>
+              <span>Reviewer-facing summary of merged PRs, open PRs, releases, CI, Pages, license, and governance.</span>
+            </li>
+            <li>
+              <strong>Green CI</strong>
+              <a href="https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml">Dashboard CI workflow</a>
+              <span>Syntax checks plus committed-data smoke coverage for the static dashboard.</span>
+            </li>
+            <li>
+              <strong>Live deploy</strong>
+              <a href="https://bte808.github.io/fun-project-dashboard/">GitHub Pages dashboard</a>
+              <span>Public dashboard with cacheable JSON and JavaScript snapshots.</span>
+            </li>
+            <li>
+              <strong>OSS status log</strong>
+              <a href="https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md">Contribution status</a>
+              <span>Tracks merged, open/no-failing-checks, and user-action PR states.</span>
+            </li>
+            <li>
+              <strong>License</strong>
+              <a href="https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE">MIT License</a>
+              <span>Public reuse terms recognized by GitHub's license API.</span>
+            </li>
+            <li>
+              <strong>Governance</strong>
+              <a href="https://github.com/bte808/fun-project-dashboard/blob/main/CONTRIBUTING.md">Contributing and security docs</a>
+              <span>Contribution, security, code of conduct, and issue template basics are in place.</span>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -797,7 +872,7 @@
       </div>
     </main>
 
-    <footer id="footer">Dashboard version 0.1.0</footer>
+    <footer id="footer">Dashboard version 0.2.0</footer>
   </div>
 
   <script src="data/projects.js"></script>
@@ -1303,7 +1378,7 @@
       elements.subtitle.textContent = `${dashboardData.meta.todayStory} 数据源：${dashboardData.meta.source}。`;
       elements.repoLink.href = dashboardData.meta.repositoryUrl;
       elements.todayStory.textContent = dashboardData.meta.todayStory;
-      elements.footer.textContent = `Dashboard version 0.1.0 · 最近更新时间 ${formatDateTime(dashboardData.meta.generatedAt)} · ${dashboardData.meta.scanRule}`;
+      elements.footer.textContent = `Dashboard version 0.2.0 · 最近更新时间 ${formatDateTime(dashboardData.meta.generatedAt)} · ${dashboardData.meta.scanRule}`;
 
       renderMetrics();
       renderHighlights();

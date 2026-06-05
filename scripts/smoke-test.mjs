@@ -105,6 +105,11 @@ const requiredText = [
   "今日变动",
   "项目时间线",
   "OSS evidence",
+  "Reviewer packet / 申请包",
+  "Application brief",
+  "Dashboard CI workflow",
+  "MIT License",
+  "Governance",
   "外部 OSS PR 状态",
   "申请证据 brief",
   "OSS 贡献记录",
@@ -121,6 +126,7 @@ assert(html.includes("function normalizeSearchText"), "index.html is missing sea
 assert(html.includes("navigator.clipboard"), "index.html is missing clipboard support");
 assert(html.includes("overflow-wrap: anywhere"), "index.html is missing overflow-wrap protection for long content");
 assert(html.includes("@media (max-width: 760px)"), "index.html is missing the mobile layout breakpoint");
+assert(html.includes("Dashboard version 0.2.0"), "index.html footer version is not aligned with the latest release");
 
 function createFakeElement(id = "") {
   return {

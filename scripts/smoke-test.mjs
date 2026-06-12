@@ -247,10 +247,25 @@ function runDomFallbackSmoke(script) {
   assert(elements["oss-summary"].textContent.includes("tracked public PRs"), "fallback render is missing OSS PR summary");
   assert(elements["oss-metrics"].innerHTML.includes("merged"), "fallback render is missing OSS PR metrics");
   assert(elements["oss-pr-list"].innerHTML.includes("prebid/prebid.github.io"), "fallback render is missing OSS PR list");
-  assert(elements["project-grid"].innerHTML.includes("project-card"), "fallback render produced no project cards");
   const firstToday = data.projects.find((project) => project.today.updated);
-  assert(firstToday, "fallback data has no today-updated project");
-  assert(elements["project-grid"].innerHTML.includes(firstToday.name), "fallback render is missing today's project");
+  let searchTarget = firstToday;
+  let reviewTarget = data.projects.find((project) => project.needsReview);
+  if (firstToday) {
+    assert(elements["project-grid"].innerHTML.includes("project-card"), "fallback render produced no project cards");
+    assert(elements["project-grid"].innerHTML.includes(firstToday.name), "fallback render is missing today's project");
+  } else {
+    assert(elements["project-grid"].innerHTML.includes("没有匹配当前条件的项目"), "fallback render is missing empty today state");
+    assert(reviewTarget, "fallback data has no review project");
+    elements["view-tabs"].listeners.click({
+      target: {
+        closest(selector) {
+          return selector === "button[data-view]" ? { dataset: { view: "review" } } : null;
+        }
+      }
+    });
+    assert(elements["project-grid"].innerHTML.includes("project-card"), "fallback review view produced no project cards");
+    searchTarget = reviewTarget;
+  }
   const expectedNotes = [data.meta?.starChangeNote, ...(data.meta?.collectionWarnings || [])].filter(Boolean);
   assert(
     expectedNotes.length
@@ -259,9 +274,9 @@ function runDomFallbackSmoke(script) {
     "fallback render is missing data notes"
   );
 
-  elements.search.value = firstToday.name;
+  elements.search.value = searchTarget.name;
   elements.search.listeners.input({ target: elements.search });
-  assert(elements["project-grid"].innerHTML.includes(firstToday.name), "fallback search did not keep target project");
+  assert(elements["project-grid"].innerHTML.includes(searchTarget.name), "fallback search did not keep target project");
 
   elements["view-tabs"].listeners.click({
     target: {
@@ -272,7 +287,6 @@ function runDomFallbackSmoke(script) {
   });
   assert(elements.feedback.textContent.includes("当前显示"), "fallback review tab did not update feedback");
 
-  const reviewTarget = data.projects.find((project) => project.needsReview);
   assert(reviewTarget, "fallback data has no review project");
   elements.search.value = "";
   elements.search.listeners.input({ target: elements.search });
@@ -293,7 +307,7 @@ function runDomFallbackSmoke(script) {
     ok: true,
     todayProjects: data.projects.filter((project) => project.today.updated).length,
     reviewProjects: data.projects.filter((project) => project.needsReview).length,
-    searchedProject: firstToday.name,
+    searchedProject: searchTarget.name,
     usedFallback: true
   };
 }

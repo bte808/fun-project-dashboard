@@ -1,6 +1,6 @@
 window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
-  "generatedAt": "2026-06-05T13:23:51.688Z",
-  "generatedAtShanghai": "2026-06-05 21:23:51 CST",
+  "generatedAt": "2026-06-12T09:32:02.771Z",
+  "generatedAtShanghai": "2026-06-12 17:32:02 CST",
   "source": "GitHub public pull request API",
   "pullRequests": [
     {
@@ -16,6 +16,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "unknown",
       "reviewDecision": "",
       "mergedAt": "2026-06-04T15:25:24Z",
+      "closedAt": "2026-06-04T15:25:24Z",
       "headSha": "2fc4b15eb60c77ed259f80d31f4be149aa0934cd",
       "note": "markdownlint and preview checks passed",
       "blocker": "",
@@ -73,6 +74,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "unknown",
       "reviewDecision": "",
       "mergedAt": "2026-06-04T15:15:43Z",
+      "closedAt": "2026-06-04T15:15:43Z",
       "headSha": "1df5ab16644695bbca6a3bae930bb181671c4e8b",
       "note": "CLA and Learn Build validation passed",
       "blocker": "",
@@ -110,6 +112,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "unknown",
       "reviewDecision": "",
       "mergedAt": "2026-06-04T17:12:35Z",
+      "closedAt": "2026-06-04T17:12:35Z",
       "headSha": "7c387648837090fb330c305527ba11903ee18093",
       "note": "maintainer approved, SonarCloud and security checks passed",
       "blocker": "",
@@ -157,6 +160,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "clean",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": null,
       "headSha": "99ecf64a88260f38986256896e38e5ac2fcdddf6",
       "note": "",
       "blocker": "",
@@ -183,6 +187,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": null,
       "headSha": "6d5b5748bc6eb0f67738705d6b8d476247a3a56e",
       "note": "",
       "blocker": "",
@@ -209,6 +214,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": null,
       "headSha": "2422a4b63170740b72afe46dfb1dab4cf420148b",
       "note": "",
       "blocker": "",
@@ -235,24 +241,117 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "repoFullName": "OWASP/wrongsecrets",
       "url": "https://github.com/OWASP/wrongsecrets/pull/2549",
       "title": "Fix GCP deployment documentation typo",
-      "state": "open",
+      "state": "closed",
       "isDraft": false,
       "mergeable": false,
-      "mergeableState": "blocked",
+      "mergeableState": "unknown",
       "reviewDecision": "",
-      "mergedAt": null,
+      "mergedAt": "2026-06-12T05:46:21Z",
+      "closedAt": "2026-06-12T05:46:21Z",
       "headSha": "1e4154b2743d76f1a1cf1a59aa8697035f6b0490",
-      "note": "",
+      "note": "maintainer approved and merged; Dead Link Checker failure came from existing repository links outside the typo diff",
       "blocker": "",
       "checks": {
-        "total": 0,
-        "passed": 0,
-        "failed": [],
+        "total": 17,
+        "passed": 16,
+        "failed": [
+          {
+            "name": "linkChecker",
+            "state": "failure",
+            "source": "check-run"
+          }
+        ],
         "pending": [],
-        "items": []
+        "items": [
+          {
+            "name": "CodeQL",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "javaDocGenerator",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "DAST test with ZAP",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Test with podman",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Test with minikube and Vault",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Cypress Test for Challenges",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Test with minikube",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "test with java",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "execute java spotbugs",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "lint javacode",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "linkChecker",
+            "state": "failure",
+            "source": "check-run"
+          },
+          {
+            "name": "run tests",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Pre-commit check",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "terraform-fmt",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Container test",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Challenge 51 compose test",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Analyze (java)",
+            "state": "success",
+            "source": "check-run"
+          }
+        ]
       },
-      "category": "open-green",
-      "statusText": "Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up."
+      "category": "merged",
+      "statusText": "Merged on 2026-06-12; maintainer approved and merged; Dead Link Checker failure came from existing repository links outside the typo diff."
     },
     {
       "owner": "apache",
@@ -267,6 +366,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "unstable",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": null,
       "headSha": "16685bdb4a1feaebd29e5cfcb763bfb132be8826",
       "note": "",
       "blocker": "",
@@ -293,6 +393,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": null,
       "headSha": "b24327de55394839ce19275fdb1ce82cc581bcd3",
       "note": "",
       "blocker": "",
@@ -319,15 +420,21 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": null,
       "headSha": "442336298c5b87a4911a9f1c117dd3c8ca7dadeb",
       "note": "",
       "blocker": "",
       "checks": {
-        "total": 2,
-        "passed": 2,
+        "total": 3,
+        "passed": 3,
         "failed": [],
         "pending": [],
         "items": [
+          {
+            "name": "helm-unittest",
+            "state": "success",
+            "source": "check-run"
+          },
           {
             "name": "ci/concourse/test-prometheus-rules",
             "state": "success",
@@ -350,55 +457,532 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "repoFullName": "vectordotdev/vector",
       "url": "https://github.com/vectordotdev/vector/pull/25574",
       "title": "docs(website): Fix typo in aggregator documentation",
-      "state": "open",
+      "state": "closed",
       "isDraft": false,
       "mergeable": false,
-      "mergeableState": "blocked",
+      "mergeableState": "unknown",
       "reviewDecision": "",
-      "mergedAt": null,
+      "mergedAt": "2026-06-08T19:32:50Z",
+      "closedAt": "2026-06-08T19:32:50Z",
       "headSha": "04b192947066e13c23f64f66fe221934ea6d30f2",
       "note": "CLA signed, spelling and semantic PR checks passed",
       "blocker": "",
       "checks": {
-        "total": 6,
-        "passed": 6,
-        "failed": [],
+        "total": 100,
+        "passed": 99,
+        "failed": [
+          {
+            "name": "validate-changelog",
+            "state": "failure",
+            "source": "check-run"
+          }
+        ],
         "pending": [],
         "items": [
-          {
-            "name": "remove_label",
-            "state": "skipped",
-            "source": "check-run"
-          },
           {
             "name": "CLAAssistant",
             "state": "success",
             "source": "check-run"
           },
           {
-            "name": "label",
+            "name": "make-test-docs",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "regression",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "packaging",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "deny",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "cross",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "k8s",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "unit-mac",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "component-features",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "unit-windows",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "coverage",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-test-behavior",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-test-vector-api",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "regression-parse",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-check-examples",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "cli",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "validate-changelog",
             "state": "success",
             "source": "check-run"
           },
           {
-            "name": "Check Spelling",
+            "name": "Validate review",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "e2e-tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Signal result to PR",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "build-test-runner",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "integration-tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "(PR review) Signal pending to PR",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "remove_label",
             "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "remove_label",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "regression",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "unit-mac",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "k8s",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "cross",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "coverage",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "deny",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "packaging",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "component-features",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "regression-parse",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-test-docs",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-check-examples",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "unit-windows",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "cli",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-test-behavior",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-test-vector-api",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Validate review",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "validate-changelog",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Signal result to PR",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "integration-tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "e2e-tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "build-test-runner",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "(PR review) Signal pending to PR",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Test Suite",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "run-test-integration-windows",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "test-integration-windows",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "VRL - Linux",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "test",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check code format",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "run-check-generated-vrl-docs",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check events",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check Rust Docs",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check Cue docs",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "check-generated-vrl-docs",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Build VRL Playground",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check Generated Docs",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check scripts",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check that the 3rd-party license file is up to date",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check clippy",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Check Markdown",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "test-deny-licenses",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "test-deny",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "remove_label",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "integration-tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Integration Test Suite",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "e2e-tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "build-test-runner",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes / int_tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes / e2e_tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes / source",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "changes",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "changes",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "validate-changelog",
+            "state": "failure",
+            "source": "check-run"
+          },
+          {
+            "name": "K8s E2E Suite",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "Build - x86_64-unknown-linux-gnu",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "K8s ${{ matrix.kubernetes_version.version }} / ${{ matrix.container_runtime }} (${{ matrix.kubernetes_version.role }})",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes / int_tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Compute K8s test plan",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes / e2e_tests",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes / source",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "cross-linux",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-test-docs",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "unit-windows",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "make-test-behavior",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "test-cli",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "unit-mac",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "install-sh",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "Master Merge Queue Suite",
+            "state": "success",
+            "source": "check-run"
+          },
+          {
+            "name": "make-check-examples",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "test-vector-api",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "check-msrv",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "changes",
+            "state": "skipped",
+            "source": "check-run"
+          },
+          {
+            "name": "approval_check",
+            "state": "skipped",
             "source": "check-run"
           },
           {
             "name": "Check Semantic PR",
             "state": "success",
             "source": "check-run"
-          },
-          {
-            "name": "add_label",
-            "state": "success",
-            "source": "check-run"
           }
         ]
       },
-      "category": "open-green",
-      "statusText": "Open, blocked by required review or repository policy, CLA signed, spelling and semantic PR checks passed, no failing checks detected, waiting for review or maintainer follow-up."
+      "category": "merged",
+      "statusText": "Merged on 2026-06-08; CLA signed, spelling and semantic PR checks passed."
     },
     {
       "owner": "apache",
@@ -413,6 +997,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "unknown",
       "reviewDecision": "",
       "mergedAt": "2026-06-05T02:42:59Z",
+      "closedAt": "2026-06-05T02:42:59Z",
       "headSha": "01b8bd71d26b186d6d1b999c4850bea9b39adb6e",
       "note": "greeting check passed",
       "blocker": "",
@@ -444,13 +1029,14 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "repoFullName": "ParzivalHack/PySpector",
       "url": "https://github.com/ParzivalHack/PySpector/pull/67",
       "title": "docs: add README FAQ section",
-      "state": "open",
+      "state": "closed",
       "isDraft": false,
       "mergeable": false,
-      "mergeableState": "blocked",
+      "mergeableState": "unknown",
       "reviewDecision": "",
-      "mergedAt": null,
-      "headSha": "26c2ce48ed32341d9d9cddae55e9e0c3a33b4c85",
+      "mergedAt": "2026-06-05T15:17:07Z",
+      "closedAt": "2026-06-05T15:17:07Z",
+      "headSha": "4856088c1421ba30c4c9d2b5f1fdfc8258719640",
       "note": "README FAQ structure and whitespace checks passed",
       "blocker": "",
       "checks": {
@@ -460,8 +1046,8 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
         "pending": [],
         "items": []
       },
-      "category": "open-green",
-      "statusText": "Open, blocked by required review or repository policy, README FAQ structure and whitespace checks passed, no check runs detected, waiting for review or maintainer follow-up."
+      "category": "merged",
+      "statusText": "Merged on 2026-06-05; README FAQ structure and whitespace checks passed."
     },
     {
       "owner": "ParzivalHack",
@@ -470,14 +1056,15 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "repoFullName": "ParzivalHack/PySpector",
       "url": "https://github.com/ParzivalHack/PySpector/pull/68",
       "title": "test: expand reporting coverage",
-      "state": "open",
+      "state": "closed",
       "isDraft": false,
       "mergeable": false,
-      "mergeableState": "blocked",
+      "mergeableState": "dirty",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": "2026-06-05T14:56:50Z",
       "headSha": "376157eb8141ec243dd7cce1abf7f38e2a198861",
-      "note": "reporting unit tests, Ruff, py_compile, and whitespace checks passed",
+      "note": "Closed by maintainer without merge after targeted reporting tests, Ruff, py_compile, and whitespace checks passed",
       "blocker": "",
       "checks": {
         "total": 0,
@@ -486,8 +1073,8 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
         "pending": [],
         "items": []
       },
-      "category": "open-green",
-      "statusText": "Open, blocked by required review or repository policy, reporting unit tests, Ruff, py_compile, and whitespace checks passed, no check runs detected, waiting for review or maintainer follow-up."
+      "category": "closed",
+      "statusText": "Closed without merge on 2026-06-05. Closed by maintainer without merge after targeted reporting tests, Ruff, py_compile, and whitespace checks passed."
     },
     {
       "owner": "apple",
@@ -502,6 +1089,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": null,
       "headSha": "b2e0a97d0cd351a406f4e038480809851438dc88",
       "note": "",
       "blocker": "Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac.",
@@ -550,6 +1138,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
+      "closedAt": null,
       "headSha": "c65928dba99dc0da0fcd6c5fd01becbfb2445f0e",
       "note": "",
       "blocker": "Ready-for-review PR has local cargo fmt, cargo test --all, and cargo clippy --all-targets verification recorded, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork.",

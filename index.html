@@ -299,6 +299,11 @@
       color: var(--amber);
     }
 
+    .evidence-pill.closed {
+      background: #f1f5f9;
+      color: #475569;
+    }
+
     .evidence-pill.release {
       background: #fae8ff;
       color: #86198f;
@@ -1002,6 +1007,7 @@
         merged: "merged",
         open: "open",
         "needs-action": "needs action",
+        closed: "closed",
         release: "release",
         profile: "profile",
         updated: "updated",
@@ -1012,14 +1018,15 @@
 
     function evidenceClass(status) {
       const safe = String(status || "evidence").toLowerCase();
-      return ["merged", "open", "needs-action", "release", "profile", "updated", "new"].includes(safe) ? safe : "evidence";
+      return ["merged", "open", "needs-action", "closed", "release", "profile", "updated", "new"].includes(safe) ? safe : "evidence";
     }
 
     function ossCategoryLabel(category) {
       const labels = {
         merged: "merged",
         "open-green": "open / no failing",
-        "needs-user-action": "needs action"
+        "needs-user-action": "needs action",
+        closed: "closed"
       };
       return labels[category] || "tracked";
     }
@@ -1028,6 +1035,7 @@
       if (category === "merged") return "merged";
       if (category === "needs-user-action") return "needs-action";
       if (category === "open-green") return "open";
+      if (category === "closed") return "closed";
       return "evidence";
     }
 
@@ -1142,15 +1150,17 @@
       const merged = counts.merged || 0;
       const openGreen = counts["open-green"] || 0;
       const needsAction = counts["needs-user-action"] || 0;
+      const closed = counts.closed || 0;
       elements.ossSummary.textContent = total
-        ? `${total} tracked public PRs · ${merged} merged · ${openGreen} open with no failing checks · ${needsAction} need user action · last verified ${ossContributionData.generatedAtShanghai || "待补充"}`
+        ? `${total} tracked public PRs · ${merged} merged · ${openGreen} open with no failing checks · ${needsAction} need user action · ${closed} closed · last verified ${ossContributionData.generatedAtShanghai || "待补充"}`
         : "暂无外部 OSS PR 状态。";
 
       const metricRows = [
         ["tracked", total],
         ["merged", merged],
         ["open / no failing", openGreen],
-        ["needs action", needsAction]
+        ["needs action", needsAction],
+        ["closed", closed]
       ];
       elements.ossMetrics.innerHTML = metricRows.map(([label, value]) => `
         <div class="oss-metric">
@@ -1160,7 +1170,7 @@
       `).join("");
 
       const ordered = pulls.slice().sort((a, b) => {
-        const rank = { merged: 0, "open-green": 1, "needs-user-action": 2 };
+        const rank = { merged: 0, "open-green": 1, "needs-user-action": 2, closed: 3 };
         return (rank[a.category] ?? 3) - (rank[b.category] ?? 3) || a.repoFullName.localeCompare(b.repoFullName);
       });
       elements.ossPrList.innerHTML = ordered.length

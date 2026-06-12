@@ -96,15 +96,15 @@ GitHub Actions 会在 push、PR 和手动触发时运行同一组静态校验，
 
 ## 最近一次自动刷新
 
-- 日期：2026-06-05（Asia/Shanghai）
-- 最近更新时间：2026-06-05 21:07:57
+- 日期：2026-06-12（Asia/Shanghai）
+- 最近更新时间：2026-06-12 17:29:29
 - 公开项目总数：48
 - 今日新建项目：0
-- 今日更新项目：2
-- 今日公开 commit：2
+- 今日更新项目：0
+- 今日公开 commit：0
 - 总 star：0
 - 今日可见 star 变化：+0（按 GitHub 公开 stargazers 数据估算；无法识别当天已取消的 star）
-- 公开检测结果：今日检测到 Star Sling 和 Safe Payout Card 维护提交；外部 OSS PR 快照为 4 merged / 10 open-green / 2 needs-action，公开证据置顶包含 fun-project-dashboard v0.2.8、profile evidence refresh 和近期 release。
+- 公开检测结果：今日未检测到 fun 项目仓库可见变动；外部 OSS PR 快照为 7 merged / 6 open-green / 2 needs-action / 1 closed，公开证据置顶包含 OWASP、Vector、PySpector FAQ 合并记录、profile evidence cleanup 与 fun-project-dashboard v0.2.9。
 
 手动刷新数据：
 

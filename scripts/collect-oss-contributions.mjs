@@ -99,6 +99,7 @@ function summarizeChecks(checkRuns = [], statuses = []) {
 
 function categoryFor(record) {
   if (record.mergedAt) return "merged";
+  if (record.state === "closed") return "closed";
   if (record.blocker || record.checks.failed.length > 0 || record.isDraft) return "needs-user-action";
   return "open-green";
 }
@@ -111,6 +112,12 @@ function statusText(record) {
 
   if (record.category === "needs-user-action") {
     return record.blocker || failedPhrase(record);
+  }
+
+  if (record.category === "closed") {
+    const date = record.closedAt ? record.closedAt.slice(0, 10) : "unknown date";
+    const note = record.note ? ` ${record.note}.` : "";
+    return `Closed without merge on ${date}.${note}`;
   }
 
   const note = record.note ? `${record.note}, ` : "";
@@ -160,11 +167,12 @@ function buildMarkdown(data) {
     "",
     `Last verified: ${data.generatedAtShanghai}.`,
     "",
-    "This log tracks public external OSS pull requests that can be verified from GitHub. It is intentionally factual: merged PRs are separated from open PRs, and user-action blockers are called out directly.",
+    "This log tracks public external OSS pull requests that can be verified from GitHub. It is intentionally factual: merged PRs are separated from open PRs, user-action blockers, and closed-without-merge work.",
     "",
     markdownTable(data.pullRequests, "merged", "Merged", "Evidence"),
     markdownTable(data.pullRequests, "open-green", "Open / No Failing Checks", "Current public state"),
-    markdownTable(data.pullRequests, "needs-user-action", "Needs User Action", "Blocker")
+    markdownTable(data.pullRequests, "needs-user-action", "Needs User Action", "Blocker"),
+    markdownTable(data.pullRequests, "closed", "Closed / Not Merged", "Outcome")
   ].join("\n");
 }
 
@@ -190,6 +198,7 @@ async function collect(configItem) {
     mergeableState: pull.mergeable_state || "unknown",
     reviewDecision: "",
     mergedAt: pull.merged_at,
+    closedAt: pull.closed_at,
     headSha: pull.head.sha,
     note: configItem.note || "",
     blocker: configItem.blocker || "",

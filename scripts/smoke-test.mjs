@@ -57,9 +57,14 @@ assert(Array.isArray(ossContributions.pullRequests), "oss-contributions pullRequ
 assert(ossContributions.pullRequests.length >= 10, "oss-contributions should track at least 10 public PRs");
 assert(ossContributions.pullRequests.some((pull) => pull.category === "merged"), "oss-contributions missing merged PRs");
 assert(ossContributions.pullRequests.some((pull) => pull.category === "needs-user-action"), "oss-contributions missing user-action PRs");
+assert(
+  ossContributions.pullRequests.every((pull) => pull.mergedAt || pull.state !== "closed" || pull.category === "closed"),
+  "closed unmerged PRs must not be reported as open or needs-action"
+);
 assert(ossContributionLog.includes(ossContributions.generatedAtShanghai), "OSS contribution log timestamp does not match JSON");
 assert(ossContributionLog.includes("Open / No Failing Checks"), "OSS contribution log missing open/no-failing section");
 assert(ossContributionLog.includes("Needs User Action"), "OSS contribution log missing user-action section");
+assert(ossContributionLog.includes("Closed / Not Merged"), "OSS contribution log missing closed section");
 assert(applicationBrief.includes(ossContributions.generatedAtShanghai), "application brief timestamp does not match OSS JSON");
 assert(applicationBrief.includes("Codex for OSS application evidence brief"), "application brief missing title");
 assert(applicationBrief.includes("Dashboard Evidence Infrastructure"), "application brief missing dashboard infrastructure section");
@@ -69,6 +74,7 @@ assert(applicationBrief.includes("MIT License"), "application brief missing lice
 assert(applicationBrief.includes("DASHBOARD_DOM_SMOKE_ONLY=1 npm run check"), "application brief missing CI-compatible smoke command");
 assert(applicationBrief.includes("prebid/prebid.github.io#6598"), "application brief missing merged PR evidence");
 assert(applicationBrief.includes("Known User-Action Blockers"), "application brief missing blocker section");
+assert(applicationBrief.includes("Closed Without Merge"), "application brief missing closed-without-merge section");
 assert(reviewerPacket.includes(dashboardReleaseName), "reviewer packet missing latest dashboard release evidence");
 assert(reviewerPacket.includes("Dashboard CI workflow"), "reviewer packet missing CI workflow link");
 assert(reviewerPacket.includes("npm run check:release"), "reviewer packet missing release alignment command");

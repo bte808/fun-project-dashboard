@@ -9,8 +9,8 @@ const ossPath = path.resolve(scriptDir, "..", "data", "oss-contributions.json");
 const briefOutputPath = path.resolve(scriptDir, "..", "docs", "codex-oss-application-brief.md");
 const reviewerPacketOutputPath = path.resolve(scriptDir, "..", "docs", "reviewer-packet.md");
 
-const DASHBOARD_RELEASE_NOTE = "Freezes release automation hardening so dashboard version metadata and reviewer brief release links derive from package.json.";
-const DASHBOARD_RELEASE_REASON = "Released release automation hardening: dashboard footer metadata and reviewer brief release links now derive from package.json, reducing manual drift in future evidence packets.";
+const DASHBOARD_RELEASE_NOTE = "Freezes the June 12 OSS evidence refresh with closed-PR accounting and newly merged external PRs.";
+const DASHBOARD_RELEASE_REASON = "Released the June 12 OSS evidence refresh: newly merged external PRs are promoted, closed-without-merge work is separated from open review evidence, and reviewer-facing summaries stay honest.";
 
 function countBy(items, key) {
   return items.reduce((acc, item) => {
@@ -117,6 +117,7 @@ function buildBrief(projectsData, ossData, dashboardRelease) {
   const mergedPulls = pulls.filter((pull) => pull.category === "merged");
   const openPulls = pulls.filter((pull) => pull.category === "open-green");
   const blockedPulls = pulls.filter((pull) => pull.category === "needs-user-action");
+  const closedPulls = pulls.filter((pull) => pull.category === "closed");
   const releases = highlights.filter((item) => item.status === "release");
   const dashboardEvidenceInfrastructure = buildDashboardEvidenceInfrastructure(dashboardRelease);
 
@@ -132,7 +133,7 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - Dashboard source: ${markdownLink("bte808/fun-project-dashboard", meta.repositoryUrl || "https://github.com/bte808/fun-project-dashboard")}
 - Public project snapshot: ${metrics.totalProjects || 0} tracked projects, ${metrics.todayUpdated || 0} updated today, ${metrics.todayCommits || 0} public commits today.
 - OSS PR snapshot last verified: ${ossData.generatedAtShanghai || "unknown"}.
-- External OSS PR snapshot: ${pulls.length} tracked PRs, ${pullCounts.merged || 0} merged, ${pullCounts["open-green"] || 0} open with no failing checks, ${pullCounts["needs-user-action"] || 0} requiring user action.
+- External OSS PR snapshot: ${pulls.length} tracked PRs, ${pullCounts.merged || 0} merged, ${pullCounts["open-green"] || 0} open with no failing checks, ${pullCounts["needs-user-action"] || 0} requiring user action, ${pullCounts.closed || 0} closed without merge.
 - Release and maintenance snapshot: ${highlightCounts.release || 0} own releases highlighted, ${highlightCounts.updated || 0} own projects updated today.
 
 ## Dashboard Evidence Infrastructure
@@ -146,6 +147,10 @@ ${listRows(mergedPulls, (pull) => `- ${markdownLink(`${pull.repoFullName}#${pull
 ## Open PRs With No Failing Checks
 
 ${listRows(openPulls, (pull) => `- ${markdownLink(`${pull.repoFullName}#${pull.number}`, pull.url)}: ${pull.statusText}`)}
+
+## Closed Without Merge
+
+${listRows(closedPulls, (pull) => `- ${markdownLink(`${pull.repoFullName}#${pull.number}`, pull.url)}: ${pull.statusText}`)}
 
 ## Own Project Releases
 
@@ -189,6 +194,7 @@ function buildReviewerPacket(projectsData, ossData, dashboardRelease) {
   const mergedPulls = pulls.filter((pull) => pull.category === "merged");
   const openPulls = pulls.filter((pull) => pull.category === "open-green");
   const blockedPulls = pulls.filter((pull) => pull.category === "needs-user-action");
+  const closedPulls = pulls.filter((pull) => pull.category === "closed");
 
   return `# Reviewer packet
 
@@ -206,7 +212,7 @@ This is the compact public checklist for reviewing the \`bte808\` daily fun proj
 ## Evidence at a glance
 
 - Public project snapshot: ${metrics.totalProjects || 0} tracked public projects, ${metrics.todayUpdated || 0} updated today, ${metrics.todayCommits || 0} public commits today.
-- External OSS PR snapshot: ${pulls.length} tracked PRs, ${pullCounts.merged || 0} merged, ${pullCounts["open-green"] || 0} open with no failing checks, ${pullCounts["needs-user-action"] || 0} requiring user action.
+- External OSS PR snapshot: ${pulls.length} tracked PRs, ${pullCounts.merged || 0} merged, ${pullCounts["open-green"] || 0} open with no failing checks, ${pullCounts["needs-user-action"] || 0} requiring user action, ${pullCounts.closed || 0} closed without merge.
 - Release and maintenance snapshot: ${highlightCounts.release || 0} highlighted own releases, including the dashboard release itself.
 - Live dashboard reviewer panel: exposes brief, CI, Pages, OSS log, MIT license, and governance links in one place.
 
@@ -222,6 +228,7 @@ This is the compact public checklist for reviewing the \`bte808\` daily fun proj
 - Merged PRs: ${listInlineLinks(mergedPulls, (pull) => markdownLink(`${pull.repoFullName}#${pull.number}`, pull.url))}
 - Open PRs with no failing checks: ${openPulls.length ? markdownLink("OSS contribution log", "https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md") : "None."}
 - Known user-action blockers: ${listInlineLinks(blockedPulls, (pull) => markdownLink(`${pull.repoFullName}#${pull.number}`, pull.url))}
+- Closed without merge: ${listInlineLinks(closedPulls, (pull) => markdownLink(`${pull.repoFullName}#${pull.number}`, pull.url))}
 
 ## Maintenance and governance
 

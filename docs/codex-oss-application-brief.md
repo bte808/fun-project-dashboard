@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-05 21:23:20 CST.
+Last generated: 2026-06-12 17:29:29 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -8,14 +8,14 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 
 - Public dashboard: [fun-project-dashboard](https://bte808.github.io/fun-project-dashboard/)
 - Dashboard source: [bte808/fun-project-dashboard](https://github.com/bte808/fun-project-dashboard)
-- Public project snapshot: 48 tracked projects, 2 updated today, 2 public commits today.
-- OSS PR snapshot last verified: 2026-06-05 21:23:51 CST.
-- External OSS PR snapshot: 16 tracked PRs, 4 merged, 10 open with no failing checks, 2 requiring user action.
-- Release and maintenance snapshot: 5 own releases highlighted, 1 own projects updated today.
+- Public project snapshot: 48 tracked projects, 0 updated today, 0 public commits today.
+- OSS PR snapshot last verified: 2026-06-12 17:32:02 CST.
+- External OSS PR snapshot: 16 tracked PRs, 7 merged, 6 open with no failing checks, 2 requiring user action, 1 closed without merge.
+- Release and maintenance snapshot: 1 own releases highlighted, 0 own projects updated today.
 
 ## Dashboard Evidence Infrastructure
 
-- [Latest release: fun-project-dashboard v0.2.8](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.8): Freezes release automation hardening so dashboard version metadata and reviewer brief release links derive from package.json.
+- [Latest release: fun-project-dashboard v0.2.9](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9): Freezes the June 12 OSS evidence refresh with closed-PR accounting and newly merged external PRs.
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml): Public GitHub Actions workflow for Node syntax checks and committed-data smoke verification.
 - [GitHub Pages deployment workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment): Public deployment workflow for the live dashboard.
 - [MIT License](https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE): GitHub license API recognizes the repository as MIT-licensed.
@@ -27,28 +27,27 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - [prebid/prebid.github.io#6598](https://github.com/prebid/prebid.github.io/pull/6598): Merged on 2026-06-04; markdownlint and preview checks passed.
 - [MicrosoftDocs/azure-docs#128553](https://github.com/MicrosoftDocs/azure-docs/pull/128553): Merged on 2026-06-04; CLA and Learn Build validation passed.
 - [OpenC3/cosmos#3445](https://github.com/OpenC3/cosmos/pull/3445): Merged on 2026-06-04; maintainer approved, SonarCloud and security checks passed.
+- [OWASP/wrongsecrets#2549](https://github.com/OWASP/wrongsecrets/pull/2549): Merged on 2026-06-12; maintainer approved and merged; Dead Link Checker failure came from existing repository links outside the typo diff.
+- [vectordotdev/vector#25574](https://github.com/vectordotdev/vector/pull/25574): Merged on 2026-06-08; CLA signed, spelling and semantic PR checks passed.
 - [apache/cloudberry-site#373](https://github.com/apache/cloudberry-site/pull/373): Merged on 2026-06-05; greeting check passed.
+- [ParzivalHack/PySpector#67](https://github.com/ParzivalHack/PySpector/pull/67): Merged on 2026-06-05; README FAQ structure and whitespace checks passed.
 
 ## Open PRs With No Failing Checks
 
 - [decentraland/docs#108](https://github.com/decentraland/docs/pull/108): Open, mergeable, no check runs detected, waiting for review or maintainer follow-up.
 - [cyberark/conjur#3025](https://github.com/cyberark/conjur/pull/3025): Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up.
 - [mia-platform/documentation#2583](https://github.com/mia-platform/documentation/pull/2583): Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up.
-- [OWASP/wrongsecrets#2549](https://github.com/OWASP/wrongsecrets/pull/2549): Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up.
 - [apache/rocketmq-site#785](https://github.com/apache/rocketmq-site/pull/785): Open, mergeable, no check runs detected, waiting for review or maintainer follow-up.
 - [awslabs/cdk-eks-blueprints#1252](https://github.com/awslabs/cdk-eks-blueprints/pull/1252): Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up.
 - [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861): Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up.
-- [vectordotdev/vector#25574](https://github.com/vectordotdev/vector/pull/25574): Open, blocked by required review or repository policy, CLA signed, spelling and semantic PR checks passed, no failing checks detected, waiting for review or maintainer follow-up.
-- [ParzivalHack/PySpector#67](https://github.com/ParzivalHack/PySpector/pull/67): Open, blocked by required review or repository policy, README FAQ structure and whitespace checks passed, no check runs detected, waiting for review or maintainer follow-up.
-- [ParzivalHack/PySpector#68](https://github.com/ParzivalHack/PySpector/pull/68): Open, blocked by required review or repository policy, reporting unit tests, Ruff, py_compile, and whitespace checks passed, no check runs detected, waiting for review or maintainer follow-up.
+
+## Closed Without Merge
+
+- [ParzivalHack/PySpector#68](https://github.com/ParzivalHack/PySpector/pull/68): Closed without merge on 2026-06-05. Closed by maintainer without merge after targeted reporting tests, Ruff, py_compile, and whitespace checks passed.
 
 ## Own Project Releases
 
-- [fun-project-dashboard v0.2.8](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.8): Released release automation hardening: dashboard footer metadata and reviewer brief release links now derive from package.json, reducing manual drift in future evidence packets.
-- [maintainer-signal-board v0.7.3](https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.3): Released REST Search API import support, deriving OWNER/REPO from repository_url and keeping closed REST search rows out of open maintainer load.
-- [fun-20260604-b-safe-payout-card v0.2.0](https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0): Released audit trail export; issue #1 closed; core tests and desktop/mobile browser smoke passed.
-- [fun-20260604-a-star-sling v1.0.1](https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1): Released self-contained browser smoke verification; live GitHub Pages desktop/mobile checks passed.
-- [fun-20260604-c-construct-canvas v1.0.0](https://github.com/bte808/fun-20260604-c-construct-canvas/releases/tag/v1.0.0): Published the initial public release with Node tests, browser smoke verification, and a GitHub Pages demo.
+- [fun-project-dashboard v0.2.9](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9): Released the June 12 OSS evidence refresh: newly merged external PRs are promoted, closed-without-merge work is separated from open review evidence, and reviewer-facing summaries stay honest.
 
 ## Known User-Action Blockers
 
@@ -71,7 +70,7 @@ The generated artifacts are:
 
 - [dashboard page](https://bte808.github.io/fun-project-dashboard/)
 - [reviewer packet](https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md)
-- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.8)
+- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9)
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
 - [OSS contribution log](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md)
 - [machine-readable OSS PR snapshot](https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json)

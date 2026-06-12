@@ -22,7 +22,8 @@
       "url": "https://github.com/mia-platform/documentation/pull/2583"
     },
     {
-      "url": "https://github.com/OWASP/wrongsecrets/pull/2549"
+      "url": "https://github.com/OWASP/wrongsecrets/pull/2549",
+      "note": "maintainer approved and merged; Dead Link Checker failure came from existing repository links outside the typo diff"
     },
     {
       "url": "https://github.com/apache/rocketmq-site/pull/785"
@@ -47,7 +48,7 @@
     },
     {
       "url": "https://github.com/ParzivalHack/PySpector/pull/68",
-      "note": "reporting unit tests, Ruff, py_compile, and whitespace checks passed"
+      "note": "Closed by maintainer without merge after targeted reporting tests, Ruff, py_compile, and whitespace checks passed"
     },
     {
       "url": "https://github.com/apple/container/pull/1646",

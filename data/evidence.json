@@ -1,6 +1,46 @@
 {
   "highlights": [
     {
+      "date": "2026-06-12",
+      "status": "merged",
+      "kind": "external-pr",
+      "name": "OWASP/wrongsecrets#2549",
+      "url": "https://github.com/OWASP/wrongsecrets/pull/2549",
+      "reason": "外部 OSS PR 已 merged：修复 GCP deployment README 语法问题；维护者 approve 并致谢。Dead Link Checker 红点来自仓库既有外链，不是本次 typo diff 引入。"
+    },
+    {
+      "date": "2026-06-12",
+      "status": "merged",
+      "kind": "external-pr",
+      "name": "vectordotdev/vector#25574",
+      "url": "https://github.com/vectordotdev/vector/pull/25574",
+      "reason": "外部 OSS PR 已 merged：修复 aggregator 文档 typo；CLA、拼写与语义检查通过，获得维护者 approval。"
+    },
+    {
+      "date": "2026-06-12",
+      "status": "merged",
+      "kind": "external-pr",
+      "name": "ParzivalHack/PySpector#67",
+      "url": "https://github.com/ParzivalHack/PySpector/pull/67",
+      "reason": "外部 OSS PR 已 merged：为 PySpector README 增加折叠式 FAQ；维护者调整后 approve 并合并。"
+    },
+    {
+      "date": "2026-06-12",
+      "status": "profile",
+      "kind": "profile",
+      "name": "bte808 profile OSS evidence cleanup",
+      "url": "https://github.com/bte808/bte808",
+      "reason": "同步 GitHub profile 门面：把 OWASP、Vector、PySpector FAQ 移到 merged，移除已关闭未合并的 PySpector reporting PR，保留 RTK CLA 与 Apple signed-commit 用户动作 blocker。"
+    },
+    {
+      "date": "2026-06-12",
+      "status": "release",
+      "kind": "own-release",
+      "name": "fun-project-dashboard v0.2.9",
+      "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9",
+      "reason": "发布 June 12 OSS evidence refresh；新增 closed-without-merge 分类，避免关闭未合并 PR 被误算为 open-green，并冻结 7 merged / 6 open-green / 2 needs-action / 1 closed 的公开 PR 快照。"
+    },
+    {
       "date": "2026-06-05",
       "status": "merged",
       "kind": "external-pr",

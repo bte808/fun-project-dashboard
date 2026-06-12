@@ -1,21 +1,21 @@
 window.FUN_PROJECT_DASHBOARD_DATA = {
   "meta": {
-    "title": "2026-06-05 每日趣味项目总览仪表盘",
+    "title": "2026-06-12 每日趣味项目总览仪表盘",
     "owner": "bte808",
     "repository": "fun-project-dashboard",
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
-    "dashboardVersion": "0.2.8",
-    "runDate": "2026-06-05",
+    "dashboardVersion": "0.2.9",
+    "runDate": "2026-06-12",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-05T13:23:20.549Z",
-    "generatedAtShanghaiDate": "2026-06-05",
+    "generatedAt": "2026-06-12T09:29:29.950Z",
+    "generatedAtShanghaiDate": "2026-06-12",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
     "todayWindowUtc": {
-      "startIso": "2026-06-04T16:00:00.000Z",
-      "endIso": "2026-06-05T15:59:59.999Z"
+      "startIso": "2026-06-11T16:00:00.000Z",
+      "endIso": "2026-06-12T15:59:59.999Z"
     },
-    "todayStory": "今天公开仓库中检测到 0 个新建项目、2 个今日有变动的项目，共 2 个 commit；另有 15 条公开证据置顶；当前总 star 0，今日可见 star 变化 +0。",
+    "todayStory": "今天未检测到公开趣味项目仓库的可见变动；另有 5 条公开证据置顶；当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
     "automationChecks": {
       "dailyIncubator": {
@@ -24,9 +24,9 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
         "note": "未检测到今天新建的公开 fun-* 项目。"
       },
       "oldProjectMaintenance": {
-        "status": "detected",
-        "label": "已检测到",
-        "note": "检测到 2 个旧项目今天有公开 commit。"
+        "status": "not_detected",
+        "label": "未检测到",
+        "note": "未检测到今天维护旧项目的公开 commit。"
       },
       "wednesdayBooster": {
         "status": "not_detected",
@@ -41,116 +41,39 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     },
     "highlights": [
       {
-        "name": "MicrosoftDocs/azure-docs#128553",
-        "url": "https://github.com/MicrosoftDocs/azure-docs/pull/128553",
-        "reason": "外部 OSS PR 已 merged：修复 Azure Backup 文档语法问题；CLA 与 Learn Build validation 已通过。",
+        "name": "OWASP/wrongsecrets#2549",
+        "url": "https://github.com/OWASP/wrongsecrets/pull/2549",
+        "reason": "外部 OSS PR 已 merged：修复 GCP deployment README 语法问题；维护者 approve 并致谢。Dead Link Checker 红点来自仓库既有外链，不是本次 typo diff 引入。",
         "status": "merged",
         "kind": "external-pr"
       },
       {
-        "name": "OpenC3/cosmos#3445",
-        "url": "https://github.com/OpenC3/cosmos/pull/3445",
-        "reason": "外部 OSS PR 已 merged：修复 reference architecture 文档 typo；维护者已 approve，SonarCloud 与安全检查通过。",
-        "status": "merged",
-        "kind": "external-pr"
-      },
-      {
-        "name": "prebid/prebid.github.io#6598",
-        "url": "https://github.com/prebid/prebid.github.io/pull/6598",
-        "reason": "外部 OSS PR 已 merged：修复 SharedId 文档 typo；维护者已 approve，markdownlint 与预览检查通过。",
-        "status": "merged",
-        "kind": "external-pr"
-      },
-      {
-        "name": "apache/cloudberry-site#373",
-        "url": "https://github.com/apache/cloudberry-site/pull/373",
-        "reason": "外部 OSS PR 已 merged：修复 Cloudberry FAQ 断链；维护者已 approve，publish 与 greeting checks 通过。",
+        "name": "vectordotdev/vector#25574",
+        "url": "https://github.com/vectordotdev/vector/pull/25574",
+        "reason": "外部 OSS PR 已 merged：修复 aggregator 文档 typo；CLA、拼写与语义检查通过，获得维护者 approval。",
         "status": "merged",
         "kind": "external-pr"
       },
       {
         "name": "ParzivalHack/PySpector#67",
         "url": "https://github.com/ParzivalHack/PySpector/pull/67",
-        "reason": "外部 OSS PR open：为 PySpector README 增加折叠式 FAQ，并链接到目录；验证包含 git diff --check 与 README 结构检查。",
-        "status": "open",
+        "reason": "外部 OSS PR 已 merged：为 PySpector README 增加折叠式 FAQ；维护者调整后 approve 并合并。",
+        "status": "merged",
         "kind": "external-pr"
       },
       {
-        "name": "ParzivalHack/PySpector#68",
-        "url": "https://github.com/ParzivalHack/PySpector/pull/68",
-        "reason": "外部 OSS PR open：扩展 reporting.py 的 JSON、SARIF、HTML 与 console 单元测试覆盖；验证包含目标 pytest、Ruff、py_compile 与 git diff --check。",
-        "status": "open",
-        "kind": "external-pr"
-      },
-      {
-        "name": "vectordotdev/vector#25574",
-        "url": "https://github.com/vectordotdev/vector/pull/25574",
-        "reason": "外部 OSS PR open：修复 aggregator 文档 typo；CLA 已通过，拼写与语义检查通过，等待评审。",
-        "status": "open",
-        "kind": "external-pr"
-      },
-      {
-        "name": "rtk-ai/rtk#2273",
-        "url": "https://github.com/rtk-ai/rtk/pull/2273",
-        "reason": "外部 OSS PR 已从 draft 改为 ready for review：修复 gh run view --job 输出应 passthrough 的回归；本地 cargo fmt、cargo test --all 与 cargo clippy --all-targets 已通过；CLA 待签，上游 CI 等待维护者批准运行。",
-        "status": "needs-action",
-        "kind": "external-pr"
-      },
-      {
-        "name": "apple/container#1646",
-        "url": "https://github.com/apple/container/pull/1646",
-        "reason": "外部 OSS PR open：维护者反馈内容可行；构建通过，但需要按项目规则补签 signed commit。",
-        "status": "needs-action",
-        "kind": "external-pr"
-      },
-      {
-        "name": "fun-project-dashboard v0.2.8",
-        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.8",
-        "reason": "发布 release automation hardening packet；仪表盘版本号和申请 brief release metadata 均从 package.json 派生，减少后续证据包发布时的手改漂移。",
-        "status": "release",
-        "kind": "own-release"
-      },
-      {
-        "name": "bte808 profile README evidence refresh",
+        "name": "bte808 profile OSS evidence cleanup",
         "url": "https://github.com/bte808/bte808",
-        "reason": "同步 GitHub profile 门面：新增 Codex OSS application brief 直达入口，保留 PySpector README FAQ PR 与 reporting test PR，RTK PR 已补充本地 cargo 验证，最新 release 指向 Maintainer Signal Board v0.7.3 与 Fun Project Dashboard v0.2.8。",
+        "reason": "同步 GitHub profile 门面：把 OWASP、Vector、PySpector FAQ 移到 merged，移除已关闭未合并的 PySpector reporting PR，保留 RTK CLA 与 Apple signed-commit 用户动作 blocker。",
         "status": "profile",
         "kind": "profile"
       },
       {
-        "name": "maintainer-signal-board v0.7.3",
-        "url": "https://github.com/bte808/maintainer-signal-board/releases/tag/v0.7.3",
-        "reason": "发布 REST Search API import support；补齐 raw { items: [...] } fixture、repository_url 路由恢复与闭合条目回归测试，CI、Pages、npm test 全部通过。",
+        "name": "fun-project-dashboard v0.2.9",
+        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9",
+        "reason": "发布 June 12 OSS evidence refresh；新增 closed-without-merge 分类，避免关闭未合并 PR 被误算为 open-green，并冻结 7 merged / 6 open-green / 2 needs-action / 1 closed 的公开 PR 快照。",
         "status": "release",
         "kind": "own-release"
-      },
-      {
-        "name": "fun-20260604-b-safe-payout-card v0.2.0",
-        "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card/releases/tag/v0.2.0",
-        "reason": "发布 audit trail export；issue #1 已关闭，验证包含 core test 与 desktop/mobile browser smoke。",
-        "status": "release",
-        "kind": "own-release"
-      },
-      {
-        "name": "fun-20260604-a-star-sling v1.0.1",
-        "url": "https://github.com/bte808/fun-20260604-a-star-sling/releases/tag/v1.0.1",
-        "reason": "发布自包含 browser smoke 修复；live GitHub Pages URL 已通过 desktop/mobile 验证。",
-        "status": "release",
-        "kind": "own-release"
-      },
-      {
-        "name": "fun-20260604-c-construct-canvas v1.0.0",
-        "url": "https://github.com/bte808/fun-20260604-c-construct-canvas/releases/tag/v1.0.0",
-        "reason": "发布初始公开版本；已有 Node tests、browser smoke 与 GitHub Pages demo。",
-        "status": "release",
-        "kind": "own-release"
-      },
-      {
-        "name": "fun-20260604-a-star-sling",
-        "url": "https://github.com/bte808/fun-20260604-a-star-sling",
-        "status": "updated",
-        "kind": "project",
-        "reason": "今天更新 1 个 commit；A tiny no-dependency daily canvas game about slinging a star core through a constellation field.；当前 0 star"
       }
     ],
     "collectionWarnings": []
@@ -158,8 +81,8 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
   "metrics": {
     "totalProjects": 48,
     "todayNew": 0,
-    "todayUpdated": 2,
-    "todayCommits": 2,
+    "todayUpdated": 0,
+    "todayCommits": 0,
     "totalStars": 0,
     "todayStarDelta": 0,
     "needsReview": 34,
@@ -198,60 +121,10 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "da6975ff6fc01744a2bcffdbbb68afdcf223e7e1",
-            "shortSha": "da6975f",
-            "url": "https://github.com/bte808/fun-20260604-a-star-sling/commit/da6975ff6fc01744a2bcffdbbb68afdcf223e7e1",
-            "message": "Make browser smoke test self-contained",
-            "committedAt": "2026-06-04T19:51:52Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 2,
-                "deletions": 0,
-                "changes": 2
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 1,
-                "changes": 2
-              },
-              {
-                "filename": "scripts/browser-smoke.mjs",
-                "status": "modified",
-                "additions": 45,
-                "deletions": 7,
-                "changes": 52
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "package.json",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 1
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 2,
-            "deletions": 0
-          },
-          {
-            "filename": "scripts/browser-smoke.mjs",
-            "status": "modified",
-            "additions": 45,
-            "deletions": 7
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": false,
       "visibilitySource": "GitHub public repository data"
@@ -286,125 +159,10 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       },
       "today": {
         "created": false,
-        "updated": true,
-        "commitCount": 1,
-        "commits": [
-          {
-            "sha": "16f94f26d95d9f846b4f308e9398228c110e22e8",
-            "shortSha": "16f94f2",
-            "url": "https://github.com/bte808/fun-20260604-b-safe-payout-card/commit/16f94f26d95d9f846b4f308e9398228c110e22e8",
-            "message": "Add payout audit trail export",
-            "committedAt": "2026-06-04T19:46:37Z",
-            "files": [
-              {
-                "filename": "README.md",
-                "status": "modified",
-                "additions": 7,
-                "deletions": 3,
-                "changes": 10
-              },
-              {
-                "filename": "index.html",
-                "status": "modified",
-                "additions": 22,
-                "deletions": 0,
-                "changes": 22
-              },
-              {
-                "filename": "package.json",
-                "status": "modified",
-                "additions": 1,
-                "deletions": 1,
-                "changes": 2
-              },
-              {
-                "filename": "scripts/verify-browser.mjs",
-                "status": "modified",
-                "additions": 11,
-                "deletions": 0,
-                "changes": 11
-              },
-              {
-                "filename": "src/app.js",
-                "status": "modified",
-                "additions": 55,
-                "deletions": 3,
-                "changes": 58
-              },
-              {
-                "filename": "src/core.js",
-                "status": "modified",
-                "additions": 109,
-                "deletions": 0,
-                "changes": 109
-              },
-              {
-                "filename": "styles.css",
-                "status": "modified",
-                "additions": 38,
-                "deletions": 0,
-                "changes": 38
-              },
-              {
-                "filename": "tests/core.test.mjs",
-                "status": "modified",
-                "additions": 18,
-                "deletions": 0,
-                "changes": 18
-              }
-            ]
-          }
-        ],
-        "files": [
-          {
-            "filename": "index.html",
-            "status": "modified",
-            "additions": 22,
-            "deletions": 0
-          },
-          {
-            "filename": "package.json",
-            "status": "modified",
-            "additions": 1,
-            "deletions": 1
-          },
-          {
-            "filename": "README.md",
-            "status": "modified",
-            "additions": 7,
-            "deletions": 3
-          },
-          {
-            "filename": "scripts/verify-browser.mjs",
-            "status": "modified",
-            "additions": 11,
-            "deletions": 0
-          },
-          {
-            "filename": "src/app.js",
-            "status": "modified",
-            "additions": 55,
-            "deletions": 3
-          },
-          {
-            "filename": "src/core.js",
-            "status": "modified",
-            "additions": 109,
-            "deletions": 0
-          },
-          {
-            "filename": "styles.css",
-            "status": "modified",
-            "additions": 38,
-            "deletions": 0
-          },
-          {
-            "filename": "tests/core.test.mjs",
-            "status": "modified",
-            "additions": 18,
-            "deletions": 0
-          }
-        ]
+        "updated": false,
+        "commitCount": 0,
+        "commits": [],
+        "files": []
       },
       "needsReview": true,
       "visibilitySource": "GitHub public repository data"

@@ -1,19 +1,19 @@
 window.FUN_PROJECT_DASHBOARD_DATA = {
   "meta": {
-    "title": "2026-06-12 每日趣味项目总览仪表盘",
+    "title": "2026-07-08 每日趣味项目总览仪表盘",
     "owner": "bte808",
     "repository": "fun-project-dashboard",
     "repositoryUrl": "https://github.com/bte808/fun-project-dashboard",
-    "dashboardVersion": "0.2.9",
-    "runDate": "2026-06-12",
+    "dashboardVersion": "0.2.10",
+    "runDate": "2026-07-08",
     "timezone": "Asia/Shanghai",
-    "generatedAt": "2026-06-12T09:29:29.950Z",
-    "generatedAtShanghaiDate": "2026-06-12",
+    "generatedAt": "2026-07-08T14:19:23.398Z",
+    "generatedAtShanghaiDate": "2026-07-08",
     "source": "GitHub public repository API",
     "scanRule": "Public owner repositories matching fun-* or README daily-fun-project signals; dashboard and profile repos excluded from project stats.",
     "todayWindowUtc": {
-      "startIso": "2026-06-11T16:00:00.000Z",
-      "endIso": "2026-06-12T15:59:59.999Z"
+      "startIso": "2026-07-07T16:00:00.000Z",
+      "endIso": "2026-07-08T15:59:59.999Z"
     },
     "todayStory": "今天未检测到公开趣味项目仓库的可见变动；另有 5 条公开证据置顶；当前总 star 0，今日可见 star 变化 +0。",
     "starChangeNote": "今日 star 变化按 GitHub stargazers 公开 starred_at 时间戳估算；公开 API 无法识别当天已取消的 star。",
@@ -31,7 +31,7 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
       "wednesdayBooster": {
         "status": "not_detected",
         "label": "未检测到",
-        "note": "今天不是周三，跳过周三加料检测。"
+        "note": "未检测到周三加料结果；今日 commit 信息为：无可见提交。"
       },
       "sundayHealthCheck": {
         "status": "not_detected",
@@ -41,37 +41,37 @@ window.FUN_PROJECT_DASHBOARD_DATA = {
     },
     "highlights": [
       {
-        "name": "OWASP/wrongsecrets#2549",
-        "url": "https://github.com/OWASP/wrongsecrets/pull/2549",
-        "reason": "外部 OSS PR 已 merged：修复 GCP deployment README 语法问题；维护者 approve 并致谢。Dead Link Checker 红点来自仓库既有外链，不是本次 typo diff 引入。",
+        "name": "sapcc/helm-charts#11861",
+        "url": "https://github.com/sapcc/helm-charts/pull/11861",
+        "reason": "外部 OSS PR 已 merged：修复 helm-charts README typo；维护者 review approved，helm-unittest 与 Concourse checks 通过。",
         "status": "merged",
         "kind": "external-pr"
       },
       {
-        "name": "vectordotdev/vector#25574",
-        "url": "https://github.com/vectordotdev/vector/pull/25574",
-        "reason": "外部 OSS PR 已 merged：修复 aggregator 文档 typo；CLA、拼写与语义检查通过，获得维护者 approval。",
-        "status": "merged",
+        "name": "awslabs/cdk-eks-blueprints#1252",
+        "url": "https://github.com/awslabs/cdk-eks-blueprints/pull/1252",
+        "reason": "处理 CI/merge feedback：在原 core concepts typo PR 上补修过期 Paralus/gMaestro Slack invite，并 merge upstream main 解除冲突、带入当前 Union docs link fix；目标文件本地 markdown-link-check 已通过，新 checks 等待回传。",
+        "status": "open",
         "kind": "external-pr"
       },
       {
-        "name": "ParzivalHack/PySpector#67",
-        "url": "https://github.com/ParzivalHack/PySpector/pull/67",
-        "reason": "外部 OSS PR 已 merged：为 PySpector README 增加折叠式 FAQ；维护者调整后 approve 并合并。",
-        "status": "merged",
+        "name": "apple/container#1646",
+        "url": "https://github.com/apple/container/pull/1646",
+        "reason": "外部 OSS PR 已 closed without merge：维护者此前确认内容方向可行，但因 signed commit/rebase 未完成而按 inactivity 关闭；如继续需要用户本人配置签名并重新提交。",
+        "status": "closed",
         "kind": "external-pr"
       },
       {
-        "name": "bte808 profile OSS evidence cleanup",
+        "name": "bte808 profile OSS evidence refresh",
         "url": "https://github.com/bte808/bte808",
-        "reason": "同步 GitHub profile 门面：把 OWASP、Vector、PySpector FAQ 移到 merged，移除已关闭未合并的 PySpector reporting PR，保留 RTK CLA 与 Apple signed-commit 用户动作 blocker。",
+        "reason": "同步 GitHub profile 门面：新增 sapcc merged PR，移除 Apple container 的 in-review 展示，并保留 RTK CLA blocker 与 awslabs CI feedback follow-up。",
         "status": "profile",
         "kind": "profile"
       },
       {
-        "name": "fun-project-dashboard v0.2.9",
-        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9",
-        "reason": "发布 June 12 OSS evidence refresh；新增 closed-without-merge 分类，避免关闭未合并 PR 被误算为 open-green，并冻结 7 merged / 6 open-green / 2 needs-action / 1 closed 的公开 PR 快照。",
+        "name": "fun-project-dashboard v0.2.10",
+        "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.10",
+        "reason": "发布 July 8 OSS feedback refresh；把 sapcc 合并、Apple 关闭、awslabs CI feedback 处理结果同步到公开 dashboard、reviewer packet 与 application brief。",
         "status": "release",
         "kind": "own-release"
       }

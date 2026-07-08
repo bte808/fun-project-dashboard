@@ -1,6 +1,46 @@
 {
   "highlights": [
     {
+      "date": "2026-07-08",
+      "status": "merged",
+      "kind": "external-pr",
+      "name": "sapcc/helm-charts#11861",
+      "url": "https://github.com/sapcc/helm-charts/pull/11861",
+      "reason": "外部 OSS PR 已 merged：修复 helm-charts README typo；维护者 review approved，helm-unittest 与 Concourse checks 通过。"
+    },
+    {
+      "date": "2026-07-08",
+      "status": "open",
+      "kind": "external-pr",
+      "name": "awslabs/cdk-eks-blueprints#1252",
+      "url": "https://github.com/awslabs/cdk-eks-blueprints/pull/1252",
+      "reason": "处理 CI/merge feedback：在原 core concepts typo PR 上补修过期 Paralus/gMaestro Slack invite，并 merge upstream main 解除冲突、带入当前 Union docs link fix；目标文件本地 markdown-link-check 已通过，新 checks 等待回传。"
+    },
+    {
+      "date": "2026-07-08",
+      "status": "closed",
+      "kind": "external-pr",
+      "name": "apple/container#1646",
+      "url": "https://github.com/apple/container/pull/1646",
+      "reason": "外部 OSS PR 已 closed without merge：维护者此前确认内容方向可行，但因 signed commit/rebase 未完成而按 inactivity 关闭；如继续需要用户本人配置签名并重新提交。"
+    },
+    {
+      "date": "2026-07-08",
+      "status": "profile",
+      "kind": "profile",
+      "name": "bte808 profile OSS evidence refresh",
+      "url": "https://github.com/bte808/bte808",
+      "reason": "同步 GitHub profile 门面：新增 sapcc merged PR，移除 Apple container 的 in-review 展示，并保留 RTK CLA blocker 与 awslabs CI feedback follow-up。"
+    },
+    {
+      "date": "2026-07-08",
+      "status": "release",
+      "kind": "own-release",
+      "name": "fun-project-dashboard v0.2.10",
+      "url": "https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.10",
+      "reason": "发布 July 8 OSS feedback refresh；把 sapcc 合并、Apple 关闭、awslabs CI feedback 处理结果同步到公开 dashboard、reviewer packet 与 application brief。"
+    },
+    {
       "date": "2026-06-12",
       "status": "merged",
       "kind": "external-pr",

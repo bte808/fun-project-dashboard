@@ -1,6 +1,6 @@
 window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
-  "generatedAt": "2026-06-12T09:32:02.771Z",
-  "generatedAtShanghai": "2026-06-12 17:32:02 CST",
+  "generatedAt": "2026-07-08T14:18:06.175Z",
+  "generatedAtShanghai": "2026-07-08 22:18:06 CST",
   "source": "GitHub public pull request API",
   "pullRequests": [
     {
@@ -156,8 +156,8 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "title": "Fix broken GitHub documentation links",
       "state": "open",
       "isDraft": false,
-      "mergeable": true,
-      "mergeableState": "clean",
+      "mergeable": false,
+      "mergeableState": "dirty",
       "reviewDecision": "",
       "mergedAt": null,
       "closedAt": null,
@@ -171,8 +171,8 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
         "pending": [],
         "items": []
       },
-      "category": "open-green",
-      "statusText": "Open, mergeable, no check runs detected, waiting for review or maintainer follow-up."
+      "category": "needs-user-action",
+      "statusText": "Merge conflict detected; contributor refresh is required."
     },
     {
       "owner": "cyberark",
@@ -363,7 +363,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "state": "open",
       "isDraft": false,
       "mergeable": true,
-      "mergeableState": "unstable",
+      "mergeableState": "clean",
       "reviewDecision": "",
       "mergedAt": null,
       "closedAt": null,
@@ -371,14 +371,20 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "note": "",
       "blocker": "",
       "checks": {
-        "total": 0,
-        "passed": 0,
+        "total": 1,
+        "passed": 1,
         "failed": [],
         "pending": [],
-        "items": []
+        "items": [
+          {
+            "name": "build (22.18.0)",
+            "state": "success",
+            "source": "check-run"
+          }
+        ]
       },
       "category": "open-green",
-      "statusText": "Open, mergeable, no check runs detected, waiting for review or maintainer follow-up."
+      "statusText": "Open, mergeable, no failing checks detected, waiting for review or maintainer follow-up."
     },
     {
       "owner": "awslabs",
@@ -394,8 +400,8 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "reviewDecision": "",
       "mergedAt": null,
       "closedAt": null,
-      "headSha": "b24327de55394839ce19275fdb1ce82cc581bcd3",
-      "note": "",
+      "headSha": "0742f7c1b150f7051ed69009d3b8a60086e8fcfd",
+      "note": "Link-check CI feedback handled by replacing stale Paralus and gMaestro Slack invite links, then merging upstream main to pick up the current Union docs link fix; targeted markdown-link-check passed locally",
       "blocker": "",
       "checks": {
         "total": 0,
@@ -405,7 +411,7 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
         "items": []
       },
       "category": "open-green",
-      "statusText": "Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up."
+      "statusText": "Open, blocked by required review or repository policy, Link-check CI feedback handled by replacing stale Paralus and gMaestro Slack invite links, then merging upstream main to pick up the current Union docs link fix; targeted markdown-link-check passed locally, no check runs detected, waiting for review or maintainer follow-up."
     },
     {
       "owner": "sapcc",
@@ -414,15 +420,15 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "repoFullName": "sapcc/helm-charts",
       "url": "https://github.com/sapcc/helm-charts/pull/11861",
       "title": "Fix README typos",
-      "state": "open",
+      "state": "closed",
       "isDraft": false,
       "mergeable": false,
-      "mergeableState": "blocked",
+      "mergeableState": "unknown",
       "reviewDecision": "",
-      "mergedAt": null,
-      "closedAt": null,
+      "mergedAt": "2026-06-17T15:40:27Z",
+      "closedAt": "2026-06-17T15:40:27Z",
       "headSha": "442336298c5b87a4911a9f1c117dd3c8ca7dadeb",
-      "note": "",
+      "note": "review approved and merged",
       "blocker": "",
       "checks": {
         "total": 3,
@@ -447,8 +453,8 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
           }
         ]
       },
-      "category": "open-green",
-      "statusText": "Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up."
+      "category": "merged",
+      "statusText": "Merged on 2026-06-17; review approved and merged."
     },
     {
       "owner": "vectordotdev",
@@ -1083,16 +1089,16 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
       "repoFullName": "apple/container",
       "url": "https://github.com/apple/container/pull/1646",
       "title": "Restore macOS 15 networking troubleshooting steps",
-      "state": "open",
+      "state": "closed",
       "isDraft": false,
       "mergeable": false,
       "mergeableState": "blocked",
       "reviewDecision": "",
       "mergedAt": null,
-      "closedAt": null,
+      "closedAt": "2026-06-25T15:44:28Z",
       "headSha": "b2e0a97d0cd351a406f4e038480809851438dc88",
-      "note": "",
-      "blocker": "Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac.",
+      "note": "closed by maintainer due to inactivity; reopening would require rebasing to current main and providing a signed commit",
+      "blocker": "",
       "checks": {
         "total": 3,
         "passed": 2,
@@ -1122,8 +1128,8 @@ window.FUN_PROJECT_DASHBOARD_OSS_CONTRIBUTIONS = {
           }
         ]
       },
-      "category": "needs-user-action",
-      "statusText": "Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac."
+      "category": "closed",
+      "statusText": "Closed without merge on 2026-06-25. closed by maintainer due to inactivity; reopening would require rebasing to current main and providing a signed commit."
     },
     {
       "owner": "rtk-ai",

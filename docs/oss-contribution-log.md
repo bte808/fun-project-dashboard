@@ -1,6 +1,6 @@
 # OSS contribution log
 
-Last verified: 2026-06-12 17:32:02 CST.
+Last verified: 2026-07-08 22:18:06 CST.
 
 This log tracks public external OSS pull requests that can be verified from GitHub. It is intentionally factual: merged PRs are separated from open PRs, user-action blockers, and closed-without-merge work.
 
@@ -12,6 +12,7 @@ This log tracks public external OSS pull requests that can be verified from GitH
 | [MicrosoftDocs/azure-docs#128553](https://github.com/MicrosoftDocs/azure-docs/pull/128553) | Merged on 2026-06-04; CLA and Learn Build validation passed. |
 | [OpenC3/cosmos#3445](https://github.com/OpenC3/cosmos/pull/3445) | Merged on 2026-06-04; maintainer approved, SonarCloud and security checks passed. |
 | [OWASP/wrongsecrets#2549](https://github.com/OWASP/wrongsecrets/pull/2549) | Merged on 2026-06-12; maintainer approved and merged; Dead Link Checker failure came from existing repository links outside the typo diff. |
+| [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861) | Merged on 2026-06-17; review approved and merged. |
 | [vectordotdev/vector#25574](https://github.com/vectordotdev/vector/pull/25574) | Merged on 2026-06-08; CLA signed, spelling and semantic PR checks passed. |
 | [apache/cloudberry-site#373](https://github.com/apache/cloudberry-site/pull/373) | Merged on 2026-06-05; greeting check passed. |
 | [ParzivalHack/PySpector#67](https://github.com/ParzivalHack/PySpector/pull/67) | Merged on 2026-06-05; README FAQ structure and whitespace checks passed. |
@@ -20,18 +21,16 @@ This log tracks public external OSS pull requests that can be verified from GitH
 
 | PR | Current public state |
 | --- | --- |
-| [decentraland/docs#108](https://github.com/decentraland/docs/pull/108) | Open, mergeable, no check runs detected, waiting for review or maintainer follow-up. |
 | [cyberark/conjur#3025](https://github.com/cyberark/conjur/pull/3025) | Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up. |
 | [mia-platform/documentation#2583](https://github.com/mia-platform/documentation/pull/2583) | Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up. |
-| [apache/rocketmq-site#785](https://github.com/apache/rocketmq-site/pull/785) | Open, mergeable, no check runs detected, waiting for review or maintainer follow-up. |
-| [awslabs/cdk-eks-blueprints#1252](https://github.com/awslabs/cdk-eks-blueprints/pull/1252) | Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up. |
-| [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861) | Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up. |
+| [apache/rocketmq-site#785](https://github.com/apache/rocketmq-site/pull/785) | Open, mergeable, no failing checks detected, waiting for review or maintainer follow-up. |
+| [awslabs/cdk-eks-blueprints#1252](https://github.com/awslabs/cdk-eks-blueprints/pull/1252) | Open, blocked by required review or repository policy, Link-check CI feedback handled by replacing stale Paralus and gMaestro Slack invite links, then merging upstream main to pick up the current Union docs link fix; targeted markdown-link-check passed locally, no check runs detected, waiting for review or maintainer follow-up. |
 
 ## Needs User Action
 
 | PR | Blocker |
 | --- | --- |
-| [apple/container#1646](https://github.com/apple/container/pull/1646) | Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac. |
+| [decentraland/docs#108](https://github.com/decentraland/docs/pull/108) | Merge conflict detected; contributor refresh is required. |
 | [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273) | Ready-for-review PR has local cargo fmt, cargo test --all, and cargo clippy --all-targets verification recorded, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork. |
 
 ## Closed / Not Merged
@@ -39,4 +38,5 @@ This log tracks public external OSS pull requests that can be verified from GitH
 | PR | Outcome |
 | --- | --- |
 | [ParzivalHack/PySpector#68](https://github.com/ParzivalHack/PySpector/pull/68) | Closed without merge on 2026-06-05. Closed by maintainer without merge after targeted reporting tests, Ruff, py_compile, and whitespace checks passed. |
+| [apple/container#1646](https://github.com/apple/container/pull/1646) | Closed without merge on 2026-06-25. closed by maintainer due to inactivity; reopening would require rebasing to current main and providing a signed commit. |
 

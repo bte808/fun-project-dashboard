@@ -100,7 +100,7 @@ function summarizeChecks(checkRuns = [], statuses = []) {
 function categoryFor(record) {
   if (record.mergedAt) return "merged";
   if (record.state === "closed") return "closed";
-  if (record.blocker || record.checks.failed.length > 0 || record.isDraft) return "needs-user-action";
+  if (record.blocker || record.mergeableState === "dirty" || record.checks.failed.length > 0 || record.isDraft) return "needs-user-action";
   return "open-green";
 }
 
@@ -143,6 +143,9 @@ function checkPhrase(record) {
 }
 
 function failedPhrase(record) {
+  if (record.mergeableState === "dirty") {
+    return "Merge conflict detected; contributor refresh is required.";
+  }
   const failedNames = record.checks.failed.map((check) => check.name).join(", ");
   return failedNames ? `Failing checks: ${failedNames}.` : "Needs contributor action.";
 }

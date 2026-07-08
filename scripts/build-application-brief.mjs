@@ -9,8 +9,8 @@ const ossPath = path.resolve(scriptDir, "..", "data", "oss-contributions.json");
 const briefOutputPath = path.resolve(scriptDir, "..", "docs", "codex-oss-application-brief.md");
 const reviewerPacketOutputPath = path.resolve(scriptDir, "..", "docs", "reviewer-packet.md");
 
-const DASHBOARD_RELEASE_NOTE = "Freezes the June 12 OSS evidence refresh with closed-PR accounting and newly merged external PRs.";
-const DASHBOARD_RELEASE_REASON = "Released the June 12 OSS evidence refresh: newly merged external PRs are promoted, closed-without-merge work is separated from open review evidence, and reviewer-facing summaries stay honest.";
+const DASHBOARD_RELEASE_NOTE = "Freezes the July 8 OSS feedback refresh with merged, closed, and CI-feedback outcomes reconciled.";
+const DASHBOARD_RELEASE_REASON = "Released the July 8 OSS feedback refresh: SAP helm-charts is promoted to merged, Apple container is moved to closed-without-merge, and the AWS cdk-eks-blueprints CI feedback response is recorded.";
 
 function countBy(items, key) {
   return items.reduce((acc, item) => {

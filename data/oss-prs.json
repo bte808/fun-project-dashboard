@@ -29,10 +29,12 @@
       "url": "https://github.com/apache/rocketmq-site/pull/785"
     },
     {
-      "url": "https://github.com/awslabs/cdk-eks-blueprints/pull/1252"
+      "url": "https://github.com/awslabs/cdk-eks-blueprints/pull/1252",
+      "note": "Link-check CI feedback handled by replacing stale Paralus and gMaestro Slack invite links, then merging upstream main to pick up the current Union docs link fix; targeted markdown-link-check passed locally"
     },
     {
-      "url": "https://github.com/sapcc/helm-charts/pull/11861"
+      "url": "https://github.com/sapcc/helm-charts/pull/11861",
+      "note": "review approved and merged"
     },
     {
       "url": "https://github.com/vectordotdev/vector/pull/25574",
@@ -52,7 +54,7 @@
     },
     {
       "url": "https://github.com/apple/container/pull/1646",
-      "blocker": "Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac."
+      "note": "closed by maintainer due to inactivity; reopening would require rebasing to current main and providing a signed commit"
     },
     {
       "url": "https://github.com/rtk-ai/rtk/pull/2273",

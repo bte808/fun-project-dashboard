@@ -1,6 +1,6 @@
 # Codex for OSS application evidence brief
 
-Last generated: 2026-06-12 17:29:29 CST.
+Last generated: 2026-07-08 22:19:23 CST.
 
 This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub account. It links only to public GitHub or GitHub Pages URLs, and separates completed evidence from open work and user-action blockers.
 
@@ -9,13 +9,13 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - Public dashboard: [fun-project-dashboard](https://bte808.github.io/fun-project-dashboard/)
 - Dashboard source: [bte808/fun-project-dashboard](https://github.com/bte808/fun-project-dashboard)
 - Public project snapshot: 48 tracked projects, 0 updated today, 0 public commits today.
-- OSS PR snapshot last verified: 2026-06-12 17:32:02 CST.
-- External OSS PR snapshot: 16 tracked PRs, 7 merged, 6 open with no failing checks, 2 requiring user action, 1 closed without merge.
+- OSS PR snapshot last verified: 2026-07-08 22:18:06 CST.
+- External OSS PR snapshot: 16 tracked PRs, 8 merged, 4 open with no failing checks, 2 requiring user action, 2 closed without merge.
 - Release and maintenance snapshot: 1 own releases highlighted, 0 own projects updated today.
 
 ## Dashboard Evidence Infrastructure
 
-- [Latest release: fun-project-dashboard v0.2.9](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9): Freezes the June 12 OSS evidence refresh with closed-PR accounting and newly merged external PRs.
+- [Latest release: fun-project-dashboard v0.2.10](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.10): Freezes the July 8 OSS feedback refresh with merged, closed, and CI-feedback outcomes reconciled.
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml): Public GitHub Actions workflow for Node syntax checks and committed-data smoke verification.
 - [GitHub Pages deployment workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/pages/pages-build-deployment): Public deployment workflow for the live dashboard.
 - [MIT License](https://github.com/bte808/fun-project-dashboard/blob/main/LICENSE): GitHub license API recognizes the repository as MIT-licensed.
@@ -28,30 +28,30 @@ This is a reviewer-facing summary of public OSS evidence for the bte808 GitHub a
 - [MicrosoftDocs/azure-docs#128553](https://github.com/MicrosoftDocs/azure-docs/pull/128553): Merged on 2026-06-04; CLA and Learn Build validation passed.
 - [OpenC3/cosmos#3445](https://github.com/OpenC3/cosmos/pull/3445): Merged on 2026-06-04; maintainer approved, SonarCloud and security checks passed.
 - [OWASP/wrongsecrets#2549](https://github.com/OWASP/wrongsecrets/pull/2549): Merged on 2026-06-12; maintainer approved and merged; Dead Link Checker failure came from existing repository links outside the typo diff.
+- [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861): Merged on 2026-06-17; review approved and merged.
 - [vectordotdev/vector#25574](https://github.com/vectordotdev/vector/pull/25574): Merged on 2026-06-08; CLA signed, spelling and semantic PR checks passed.
 - [apache/cloudberry-site#373](https://github.com/apache/cloudberry-site/pull/373): Merged on 2026-06-05; greeting check passed.
 - [ParzivalHack/PySpector#67](https://github.com/ParzivalHack/PySpector/pull/67): Merged on 2026-06-05; README FAQ structure and whitespace checks passed.
 
 ## Open PRs With No Failing Checks
 
-- [decentraland/docs#108](https://github.com/decentraland/docs/pull/108): Open, mergeable, no check runs detected, waiting for review or maintainer follow-up.
 - [cyberark/conjur#3025](https://github.com/cyberark/conjur/pull/3025): Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up.
 - [mia-platform/documentation#2583](https://github.com/mia-platform/documentation/pull/2583): Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up.
-- [apache/rocketmq-site#785](https://github.com/apache/rocketmq-site/pull/785): Open, mergeable, no check runs detected, waiting for review or maintainer follow-up.
-- [awslabs/cdk-eks-blueprints#1252](https://github.com/awslabs/cdk-eks-blueprints/pull/1252): Open, blocked by required review or repository policy, no check runs detected, waiting for review or maintainer follow-up.
-- [sapcc/helm-charts#11861](https://github.com/sapcc/helm-charts/pull/11861): Open, blocked by required review or repository policy, no failing checks detected, waiting for review or maintainer follow-up.
+- [apache/rocketmq-site#785](https://github.com/apache/rocketmq-site/pull/785): Open, mergeable, no failing checks detected, waiting for review or maintainer follow-up.
+- [awslabs/cdk-eks-blueprints#1252](https://github.com/awslabs/cdk-eks-blueprints/pull/1252): Open, blocked by required review or repository policy, Link-check CI feedback handled by replacing stale Paralus and gMaestro Slack invite links, then merging upstream main to pick up the current Union docs link fix; targeted markdown-link-check passed locally, no check runs detected, waiting for review or maintainer follow-up.
 
 ## Closed Without Merge
 
 - [ParzivalHack/PySpector#68](https://github.com/ParzivalHack/PySpector/pull/68): Closed without merge on 2026-06-05. Closed by maintainer without merge after targeted reporting tests, Ruff, py_compile, and whitespace checks passed.
+- [apple/container#1646](https://github.com/apple/container/pull/1646): Closed without merge on 2026-06-25. closed by maintainer due to inactivity; reopening would require rebasing to current main and providing a signed commit.
 
 ## Own Project Releases
 
-- [fun-project-dashboard v0.2.9](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9): Released the June 12 OSS evidence refresh: newly merged external PRs are promoted, closed-without-merge work is separated from open review evidence, and reviewer-facing summaries stay honest.
+- [fun-project-dashboard v0.2.10](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.10): Released the July 8 OSS feedback refresh: SAP helm-charts is promoted to merged, Apple container is moved to closed-without-merge, and the AWS cdk-eks-blueprints CI feedback response is recorded.
 
 ## Known User-Action Blockers
 
-- [apple/container#1646](https://github.com/apple/container/pull/1646): Build passed and maintainer feedback says the change looks good, but the repository requires signed commits. Local Git signing is not configured on this Mac.
+- [decentraland/docs#108](https://github.com/decentraland/docs/pull/108): Merge conflict detected; contributor refresh is required.
 - [rtk-ai/rtk#2273](https://github.com/rtk-ai/rtk/pull/2273): Ready-for-review PR has local cargo fmt, cargo test --all, and cargo clippy --all-targets verification recorded, but CLAassistant reports the CLA is not signed; upstream CI is waiting for maintainer approval to run on the fork.
 
 ## Reproducibility
@@ -70,7 +70,7 @@ The generated artifacts are:
 
 - [dashboard page](https://bte808.github.io/fun-project-dashboard/)
 - [reviewer packet](https://github.com/bte808/fun-project-dashboard/blob/main/docs/reviewer-packet.md)
-- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.9)
+- [latest dashboard release](https://github.com/bte808/fun-project-dashboard/releases/tag/v0.2.10)
 - [Dashboard CI workflow](https://github.com/bte808/fun-project-dashboard/actions/workflows/ci.yml)
 - [OSS contribution log](https://github.com/bte808/fun-project-dashboard/blob/main/docs/oss-contribution-log.md)
 - [machine-readable OSS PR snapshot](https://github.com/bte808/fun-project-dashboard/blob/main/data/oss-contributions.json)
